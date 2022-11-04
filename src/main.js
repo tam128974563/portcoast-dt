@@ -21,7 +21,7 @@ const main = () => {
     app.use(bodyparser.json());
     app.use(compression());
     app.use('/public', express.static(path.join(utils.rootPath, '/public')));
-    app.use(favicon(path.join(utils.rootPath, '/public/images', 'favicon.ico')));
+    app.use(favicon(path.join(utils.rootPath, '/public/images/', 'favicon.ico')));
     app.use(express.static(path.join(utils.rootPath, '/public'), {
         maxAge: 259000000
     }));

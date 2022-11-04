@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="" />
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="favicon.ico">
+   
 
     <%- include('partials/css.ejs') %>
 
@@ -40,7 +40,7 @@
                     <div class="row row-bottom-padded-md">
                         <div class="col-md-6">
                             <div class="about-img animate-box" data-animate-effect="fadeInLeft"
-                                style="background-image: url(images/img_bg_2.jpg);">
+                                style="background-image: url(/public/images/img_bg_2.jpg);">
                             </div>
                         </div>
                         <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
@@ -163,7 +163,7 @@
             </div>
 
 
-            <div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);"
+            <div id="colorlib-counter" class="colorlib-counters" style="background-image: url(/public/images/cover_bg_1.jpg);"
                 data-stellar-background-ratio="0.5">
                 <div class="overlay"></div>
                 <div class="colorlib-narrow-content">
@@ -219,26 +219,7 @@
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <!-- Flexslider -->
-    <script src="js/jquery.flexslider-min.js"></script>
-    <!-- Sticky Kit -->
-    <script src="js/sticky-kit.min.js"></script>
-    <!-- Owl carousel -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Counters -->
-    <script src="js/jquery.countTo.js"></script>
-
-
-    <!-- MAIN JS -->
-    <script src="js/main.js"></script>
+    <%- include('partials/js.ejs')%>
 
 </body>
 

@@ -1,17 +1,17 @@
 <% if(lang == "en"){%>
 <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-    <a href="index" id="colorlib-logo">
-        <img src="images/logo-portcoast-dt.png" alt="EduWell Template">
+    <a href="/" id="colorlib-logo">
+        <img src="/public/images/logo-portcoast-dt.png" alt="EduWell Template">
     </a>
     <nav id="colorlib-main-menu" role="navigation">
         <ul>
-            <li <%if(page == "a"){%> <% }%> ><a href="index">Home</a></li>
-            <li <%if(page == "a"){%> <% }%> ><a href="about">About us</a></li>
-            <li <%if(page == "a"){%> <% }%> ><a href="appliaction">Appliaction</a></li>
-            <li <%if(page == "a"){%> <% }%> ><a href="services">Service</a></li>
-            <li <%if(page == "a"){%> <% }%> ><a href="projects">Projects</a></li>
-            <li <%if(page == "a"){%> <% }%> ><a href="contact">Contact</a></li>
-            <!-- <li><img src="/images/icon/vietnam.svg"> <img src="/images/icon/united-kingdom.svg"></li> -->
+            <li <%if(page == ""){%> class="colorlib-active" <% }%>><a href="/">Home</a></li>
+            <li <%if(page == "about"){%> class="colorlib-active" <% }%>><a href="about">About us</a></li>
+            <li <%if(page == "appliaction"){%> class="colorlib-active" <% }%>><a href="appliaction">Appliaction</a></li>
+            <li <%if(page == "services"){%> class="colorlib-active" <% }%>><a href="services">Service</a></li>
+            <li <%if(page == "projects"){%> class="colorlib-active" <% }%>><a href="projects">Projects</a></li>
+            <li <%if(page == "contact"){%> class="colorlib-active" <% }%>><a href="contact">Contact</a></li>
+            <!-- <li><img src="/public/images/icon/vietnam.svg"> <img src="/public/images/icon/united-kingdom.svg"></li> -->
         </ul>
     </nav>
 
@@ -19,34 +19,41 @@
     <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 
         <a href="index" id="colorlib-logo">
-            <img src="images/logo-portcoast-dt.png" alt="EduWell Template">
+            <img src="/public/images/logo-portcoast-dt.png" alt="EduWell Template">
         </a>
         <nav id="colorlib-main-menu" role="navigation">
             <ul>
-                <li <%if(page == "a"){%> <% }%> ><a href="index">Trang chủ</a></li>
-                <li <%if(page == "a"){%> <% }%> ><a href="about">Giới thiệu</a></li>
-                <li <%if(page == "a"){%> <% }%> ><a href="appliaction">Ứng dụng</a></li>
-                <li <%if(page == "a"){%> <% }%> ><a href="services">Dịch vụ</a></li>
-                <li <%if(page == "a"){%> <% }%> ><a href="projects">Dự án</a></li>
-                <li <%if(page == "a"){%> <% }%> ><a href="contact">Liên hệ</a></li>
-                <!-- <li><img src="/images/icon/vietnam.svg"> <img src="/images/icon/united-kingdom.svg"></li> -->
+                <li <%if(page == "trang-chu"){%> class="colorlib-active" class="colorlib-active" <% }%>><a
+                        href="trang-chu">Trang chủ</a></li>
+                <li <%if(page == "ve-chung-toi"){%> class="colorlib-active" <% }%>><a href="ve-chung-toi">Giới thiệu</a>
+                </li>
+                <li <%if(page == "ung-dung"){%> class="colorlib-active" <% }%>><a href="ung-dung">Ứng dụng</a></li>
+                <li <%if(page == "dich-vu"){%> class="colorlib-active" <% }%>><a href="dich-vu">Dịch vụ</a></li>
+                <li <%if(page == "du-an"){%> class="colorlib-active" <% }%>><a href="du-an">Dự án</a></li>
+                <li <%if(page == "lien-he"){%> class="colorlib-active" <% }%>><a href="lien-he">Liên hệ</a></li>
+
             </ul>
         </nav>
         <% } %>
         <div class="colorlib-footer">
             <ul>
                 <% if(lang == "en"){%>
-                <li style="font-size: 12px; "><a href="index" style="color:blue">ENG</a> | <a href="trang-chu">VIE</a>
+                <li style="font-size: 12px; "><a href="index" class="colorlib-active">ENG</a> | <a
+                        href="trang-chu">VIE</a>
                     <% } else { %>
-                <li style="font-size: 12px;"><a href="index">ENG</a> | <a style="color:blue" href="trang-chu">VIE</a>
+                <li style="font-size: 12px;"><a href="index">ENG</a> | <a class="colorlib-active"
+                        href="trang-chu">VIE</a>
                     <%}%>
                 </li>
             </ul>
             <ul>
-                <li <%if(page == "a"){%> <% }%> ><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li <%if(page == "a"){%> <% }%> ><a href="#"><i class="icon-twitter2"></i></a></li>
-                <li <%if(page == "a"){%> <% }%> ><a href="#"><i class="icon-linkedin2"></i></a></li>
-                <li <%if(page == "a"){%> <% }%> ><a href="#"><i class="icon-youtube"></i></a></li>
+                <li ><a href="#"><i class="icon-facebook2"></i></a></li>
+                <li ><a href="#"><i class="icon-twitter2"></i></a>
+                </li>
+                <li ><a href="#"><i class="icon-linkedin2"></i></a>
+                </li>
+                <li><a href="#"><i class="icon-youtube"></i></a>
+                </li>
             </ul>
         </div>
     </aside>
