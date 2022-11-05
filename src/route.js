@@ -65,6 +65,7 @@ const viPageController = (req, res) => {
 const createRoutes = () => {
     const route = Router();
     route.get('/', homePage)
+    route.get('/en', (req, res) => res.redirect('/'));
     route.get('/en/:id', enPageController);
     route.get('/vi/:id', viPageController);
 
