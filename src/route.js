@@ -25,8 +25,8 @@ const pages = [{
     en: "contact",
     vi: "lien-he"
 }, {
-    en: "",
-    vi: ""
+    en: "frequently-asked-questions",
+    vi: "nhung-cau-hoi-thuong-gap-faqs"
 }, {
     en: "",
     vi: ""

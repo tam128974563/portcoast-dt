@@ -168,12 +168,12 @@ figure {
   background: $brand-primary;
 }
 
-#colorlib-page {
+#pcc-page {
     width: 100%;
     overflow: hidden;
     position: relative;
 }
-#colorlib-aside {
+#pcc-aside {
 	padding-top: 3em;
 	padding-bottom: 40px;
 	padding-left: 3em;
@@ -196,7 +196,7 @@ figure {
 		@include translateX(-270px);
 		padding-top: 4em;
 	}
-	#colorlib-logo {
+	#pcc-logo {
 		text-align: right;
 		font-weight: 700;
 		font-size: 22px;
@@ -215,7 +215,7 @@ figure {
 			padding-right: .3em;
 		}
 	}
-	#colorlib-main-menu {
+	#pcc-main-menu {
 		ul {
 			text-align: center;
 			margin: 0;
@@ -272,7 +272,7 @@ figure {
 						}
 					}
 				}
-				&.colorlib-active {
+				&.pcc-active {
 					a {
 						color: $brand-primary;
 						&:after {
@@ -288,7 +288,7 @@ figure {
 			}
 		}
 	}
-	.colorlib-footer {
+	.pcc-footer {
 		position: absolute;
 		bottom: 40px;
 		right: 0;
@@ -328,7 +328,7 @@ figure {
 	}
 }
 
-#colorlib-main {
+#pcc-main {
 	width: 80%;
 	float: right;
 	@include transition(.5s);
@@ -341,7 +341,7 @@ figure {
 }
 
 
-#colorlib-hero {
+#pcc-intro {
 	min-height: 500px;
 	background: $brand-white url(../images/loader.gif) no-repeat center center;
 	width: 100%;
@@ -451,7 +451,7 @@ figure {
 						font-size: 30px;
 					}
 				}s
-				.colorlib-lead{
+				.pcc-lead{
 					font-size: 20px;
 					color: $brand-white;
 				}
@@ -488,21 +488,21 @@ figure {
 body {
 	&.offcanvas {
 		overflow-x: hidden;
-		#colorlib-aside {
+		#pcc-aside {
 			@include translateX(0);
 			width: 270px;
 			background: $brand-footer;
 			z-index: 999;
 			position: fixed;
 		}
-		#colorlib-main, .colorlib-nav-toggle {
+		#pcc-main, .pcc-nav-toggle {
 			top: 0;
 			@include translateX(270px);
 		}
 	}
 }
 
-.colorlib-narrow-content{
+.pcc-narrow-content{
 	padding: 0 2.5em;
 	@media screen and(max-width: $screen-sm){
 		padding: 0 1em;
@@ -513,11 +513,11 @@ body {
 	padding: 0;
 }
 
-.colorlib-blog,
-.colorlib-work,
-.colorlib-about,
-.colorlib-services,
-.colorlib-contact{
+.pcc-blog,
+.pcc-application,
+.pcc-solution,
+.pcc-application,
+.pcc-contact{
 	padding-top: 4em;
 	padding-bottom: 9em;
 	clear: both;
@@ -543,7 +543,7 @@ body {
 	position: relative;
 }
 
-.colorlib-heading {
+.pcc-heading {
 	font-size: 18px;
 	margin-bottom: 4em;
 	font-weight: 500;
@@ -744,13 +744,13 @@ content: "\ea1c";
 	}
 }
 
-.colorlib-feature {
+.pcc-feature {
 	text-align: left;
 	width: 100%;
 	float: left;
 	margin-bottom: 40px;
 	position: relative;
-	.colorlib-icon {
+	.pcc-icon {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -771,7 +771,7 @@ content: "\ea1c";
 			}
 		}
 	}
-	.colorlib-text {
+	.pcc-text {
 		padding-left: 120px;
 		width: 100%;
 		h2, h3 {
@@ -787,11 +787,11 @@ content: "\ea1c";
 			text-transform: uppercase;
 		}
 	}
-	&.colorlib-feature-sm {
-		.colorlib-text {
+	&.pcc-feature-sm {
+		.pcc-text {
 			margin-top: 30px;
 		}
-		.colorlib-icon {
+		.pcc-icon {
 			i {
 				color: $brand-primary;
 				font-size: 40px;
@@ -804,8 +804,8 @@ content: "\ea1c";
 }
 
 
-.colorlib-feature-lg{
-	.colorlib-text {
+.pcc-feature-lg{
+	.pcc-text {
 		h2, h3 {
 			margin: 0;
 			padding: 0;
@@ -1039,12 +1039,12 @@ content: "\ea1c";
 
 
 //COUNTER
-#colorlib-counter{
+#pcc-quote{
 	position: relative;
 	clear: both;
 	margin-bottom: 5em;
 }
-.colorlib-counters {
+.pcc-quotes {
 	padding: 3em 0;
 	background-size: cover;
 	background-attachment: fixed;
@@ -1078,7 +1078,7 @@ content: "\ea1c";
 	.counter-wrap{
 		border: 1px solid red !important;
 	}
-	.colorlib-counter {
+	.pcc-quote {
 		font-size: 40px;
 		display: block;
 		color: rgba($brand-white,1);
@@ -1087,7 +1087,7 @@ content: "\ea1c";
 		font-weight: 700;
 		margin-bottom: .3em;
 	}
-	.colorlib-counter-label {
+	.pcc-quote-label {
 		color: rgba($brand-white,.7);
 		text-transform: uppercase;
 		font-size: 14px;
@@ -1098,7 +1098,7 @@ content: "\ea1c";
 }
 
 
-.colorlib-lead {
+.pcc-lead {
 	font-size: 18px;
 	line-height: 1.5;
 }
@@ -1112,7 +1112,7 @@ content: "\ea1c";
 }
 
 
-.colorlib-social {
+.pcc-social {
 	padding: 0;
 	margin: 0;
 	text-align: center;
@@ -1151,7 +1151,7 @@ content: "\ea1c";
 	}
 }
 
-.colorlib-bg-color{
+.pcc-bg-color{
 	background: lighten($brand-black,98%);
 	position: relative;
 }
@@ -1346,7 +1346,7 @@ content: "\ea1c";
 }
 
 // Burger Menu
-.colorlib-nav-toggle {
+.pcc-nav-toggle {
   cursor: pointer;
   text-decoration: none;
   &.active i {
@@ -1400,22 +1400,22 @@ content: "\ea1c";
   }
 }
 
-.colorlib-nav-toggle i::before {
+.pcc-nav-toggle i::before {
   top: -7px;
 }
-.colorlib-nav-toggle i::after {
+.pcc-nav-toggle i::after {
   bottom: -7px;
 }
-.colorlib-nav-toggle:hover i::before {
+.pcc-nav-toggle:hover i::before {
   top: -10px;
 }
-.colorlib-nav-toggle:hover i::after {
+.pcc-nav-toggle:hover i::after {
   bottom: -10px;
 }
-.colorlib-nav-toggle.active i {
+.pcc-nav-toggle.active i {
 	background: transparent;
 }
-.colorlib-nav-toggle.active i::before {
+.pcc-nav-toggle.active i::before {
   top:0;
   -webkit-transform: rotateZ(45deg);
      -moz-transform: rotateZ(45deg);
@@ -1423,7 +1423,7 @@ content: "\ea1c";
        -o-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
-.colorlib-nav-toggle.active i::after {
+.pcc-nav-toggle.active i::after {
   bottom:0;
   -webkit-transform: rotateZ(-45deg);
      -moz-transform: rotateZ(-45deg);
@@ -1431,7 +1431,7 @@ content: "\ea1c";
        -o-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
 }
-.colorlib-nav-toggle {
+.pcc-nav-toggle {
   	position: fixed;
   	left: -4px;
 	top: 0px;

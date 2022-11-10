@@ -1,57 +1,78 @@
 <% if(lang == "en"){%>
-<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-    <a href="/" id="colorlib-logo">
-        <img src="/public/images/logo-portcoast-dt.png" alt="EduWell Template">
+<aside id="pcc-aside" role="complementary" class="border js-fullheight">
+    <a href="/" id="pcc-logo">
+        <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
     </a>
-    <nav id="colorlib-main-menu" role="navigation">
+    <nav id="pcc-main-menu" role="navigation">
         <ul>
-            <li <%if(page == " "){%> class="colorlib-active" <% }%>><a href="/">Home</a></li>
-            <li <%if(page == "about"){%> class="colorlib-active" <% }%>><a href="/en/about">About us</a></li>
-            <li <%if(page == "application"){%> class="colorlib-active" <% }%>><a href="/en/application">Appliaction</a>
+            <li <%if(page == " "){%> class="pcc-active" <% }%>><a href="/">Home</a></li>
+            <li <%if(page == "about"){%> class="pcc-active" <% }%>><a href="/en/about">About us</a></li>
+            <li <%if(page == "application"){%> class="pcc-active" <% }%>><a href="/en/application">Applications</a>
             </li>
-            <li <%if(page == "services"){%> class="colorlib-active" <% }%>><a href="/en/services">Service</a></li>
-            <li <%if(page == "projects"){%> class="colorlib-active" <% }%>><a href="/en/projects">Projects</a></li>
-            <li <%if(page == "contact"){%> class="colorlib-active" <% }%>><a href="/en/contact">Contact</a></li>
+            <li <%if(page == "services"){%> class="pcc-active" <% }%>><a href="/en/services">Services</a></li>
+            <li <%if(page == "projects"){%> class="pcc-active" <% }%>><a>Projects</a></li>
+            <li <%if(page == "frequently-asked-questions"){%> class="pcc-active" <% }%>><a href="/en/frequently-asked-questions">FAQs</a></li>
+            <li <%if(page == "contact"){%> class="pcc-active" <% }%>><a href="/en/contact">Contact</a></li>
             <!-- <li><img src="/public/images/icon/vietnam.svg"> <img src="/public/images/icon/united-kingdom.svg"></li> -->
         </ul>
     </nav>
+    <div class="pcc-footer">
+        <ul style="margin: 2rem 0;">
+            <li style="font-size: 14px; ">
+                <a <% if(lang != "en"){ %> class="pcc-active" <% } %> href="/vi/<%= vi%>">VIE</a>
+                |
+                <a <% if(lang == "en"){ %> class="pcc-active" <% } %> href="/en/<%= en %>">ENG</a>
+        </ul>
+        <ul>
+            <li><a href="https://www.facebook.com/portcoastdt" target="_blank"><i class="icon-facebook2"></i></a></li>
+            <li><a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i class="icon-linkedin2"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber" target="_blank"><i class="icon-youtube"></i></a>
+            </li>
+        </ul>
+    </div>
 
     <% } else { %>
-    <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+    <aside id="pcc-aside" role="complementary" class="border js-fullheight">
 
-        <a href="index" id="colorlib-logo">
-            <img src="/public/images/logo-portcoast-dt.png" alt="EduWell Template">
+        <a href="/vi/trang-chu" id="pcc-logo">
+            <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
         </a>
-        <nav id="colorlib-main-menu" role="navigation">
+        <nav id="pcc-main-menu" role="navigation">
             <ul>
-                <li <%if(page == "trang-chu"){%> class="colorlib-active" class="colorlib-active" <% }%>><a
+                <li <%if(page == "trang-chu"){%> class="pcc-active" class="pcc-active" <% }%>><a
                         href="trang-chu">Trang chủ</a></li>
-                <li <%if(page == "ve-chung-toi"){%> class="colorlib-active" <% }%>><a href="/vi/ve-chung-toi">Giới
+                <li <%if(page == "ve-chung-toi"){%> class="pcc-active" <% }%>><a href="/vi/ve-chung-toi">Giới
                         thiệu</a>
                 </li>
-                <li <%if(page == "ung-dung"){%> class="colorlib-active" <% }%>><a href="/vi/ung-dung">Ứng dụng</a></li>
-                <li <%if(page == "dich-vu"){%> class="colorlib-active" <% }%>><a href="/vi/dich-vu">Dịch vụ</a></li>
-                <li <%if(page == "du-an"){%> class="colorlib-active" <% }%>><a href="/vi/du-an">Dự án</a></li>
-                <li <%if(page == "lien-he"){%> class="colorlib-active" <% }%>><a href="/vi/lien-he">Liên hệ</a></li>
+                <li <%if(page == "ung-dung"){%> class="pcc-active" <% }%>><a href="/vi/ung-dung">Ứng dụng</a></li>
+                <li <%if(page == "dich-vu"){%> class="pcc-active" <% }%>><a href="/vi/dich-vu">Dịch vụ</a></li>
+                <li <%if(page == "du-an"){%> class="pcc-active" <% }%>><a>Dự án</a></li>
+                <li <%if(page == "nhung-cau-hoi-thuong-gap-faqs"){%> class="pcc-active" <% }%>><a href="/vi/nhung-cau-hoi-thuong-gap-faqs">FAQS</a></li>
+                <li <%if(page == "lien-he"){%> class="pcc-active" <% }%>><a href="/vi/lien-he">Liên hệ</a></li>
 
             </ul>
         </nav>
-        <% } %>
-        <div class="colorlib-footer">
-            <ul>
-                <li style="font-size: 12px; ">
-                    <a <% if(lang == "en"){ %> class="colorlib-active" <% } %> href="/en/<%= en %>">ENG</a>
+        <div class="pcc-footer">
+            <!-- <p><small>Điện thoại: <a>(84-28) 62970345; 62970341</a>
+				<span>Email: <a>info@portcoast.com.vn</a></span></small></p> -->
+            <ul style="margin: 2rem 0;">
+                <li style="font-size: 14px; ">
+                    <a <% if(lang != "en"){ %> class="pcc-active" <% } %> href="/vi/<%= vi%>">VIE</a>
                     |
-                    <a <% if(lang != "en"){ %> class="colorlib-active" <% } %> href="/vi/<%= vi%>">VIE</a>
+                    <a <% if(lang == "en"){ %> class="pcc-active" <% } %> href="/en/<%= en %>">ENG</a>
             </ul>
             <ul>
-                <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li><a href="#"><i class="icon-twitter2"></i></a>
+                <li><a href="https://www.facebook.com/portcoastdt" target="_blank"><i class="icon-facebook2"></i></a></li>
+                <li><a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>
                 </li>
-                <li><a href="#"><i class="icon-linkedin2"></i></a>
+                <li><a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i class="icon-linkedin2"></i></a>
                 </li>
-                <li><a href="#"><i class="icon-youtube"></i></a>
+                <li><a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber" target="_blank"><i class="icon-youtube"></i></a>
                 </li>
             </ul>
         </div>
+        <% } %>
     </aside>

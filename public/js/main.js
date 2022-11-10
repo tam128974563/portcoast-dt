@@ -47,8 +47,8 @@
 
 
     var counterWayPoint = function () {
-        if ($('#colorlib-counter').length > 0) {
-            $('#colorlib-counter').waypoint(function (direction) {
+        if ($('#pcc-quote').length > 0) {
+            $('#pcc-quote').waypoint(function (direction) {
 
                 if (direction === 'down' && !$(this.element).hasClass('animated')) {
                     setTimeout(counter, 400);
@@ -102,7 +102,7 @@
 
     var burgerMenu = function () {
 
-        $('.js-colorlib-nav-toggle').on('click', function (event) {
+        $('.js-pcc-nav-toggle').on('click', function (event) {
             event.preventDefault();
             var $this = $(this);
 
@@ -123,13 +123,13 @@
     var mobileMenuOutsideClick = function () {
 
         $(document).click(function (e) {
-            var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
+            var container = $("#pcc-aside, .js-pcc-nav-toggle");
             if (!container.is(e.target) && container.has(e.target).length === 0) {
 
                 if ($('body').hasClass('offcanvas')) {
 
                     $('body').removeClass('offcanvas');
-                    $('.js-colorlib-nav-toggle').removeClass('active');
+                    $('.js-pcc-nav-toggle').removeClass('active');
 
                 }
 
@@ -140,7 +140,7 @@
             if ($('body').hasClass('offcanvas')) {
 
                 $('body').removeClass('offcanvas');
-                $('.js-colorlib-nav-toggle').removeClass('active');
+                $('.js-pcc-nav-toggle').removeClass('active');
 
             }
         });
@@ -149,7 +149,7 @@
 
     var sliderMain = function () {
 
-        $('#colorlib-hero .flexslider').flexslider({
+        $('#pcc-intro .flexslider').flexslider({
             animation: "fade",
             slideshowSpeed: 5000,
             directionNav: true,
@@ -225,7 +225,7 @@
             ]
         })
     };
-    $('.owl-service-item').owlCarousel({
+    $('.owl-logo-item').owlCarousel({
         items: 4,
         loop: true,
         dots: false,
