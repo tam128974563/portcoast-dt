@@ -541,7 +541,7 @@ body.offcanvas .pcc-nav-toggle {
   margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.7);
   font-size: 14px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -669,7 +669,7 @@ body.offcanvas .pcc-nav-toggle {
   margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.7);
   font-size: 14px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   line-height: 1.5;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -691,7 +691,7 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 @media screen and (max-width: 768px) {
-  .pcc-equipment .icon {
+  .pcc-equipment .icon { 3px;
     width: 92%;
   }
 }
@@ -703,7 +703,6 @@ body.offcanvas .pcc-nav-toggle {
 .pcc-equipment .pcc-text h2,
 .pcc-equipment .pcc-text h3 {
   margin: 2rem 0 2rem 0;
-  height: 2rem;
   padding: 0;
 }
 
@@ -712,9 +711,10 @@ body.offcanvas .pcc-nav-toggle {
   margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.7);
   font-size: 14px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
+	line-height: inherit;
 }
 
 .pcc-equipment .pcc-text p {
@@ -777,7 +777,7 @@ body.offcanvas .pcc-nav-toggle {
   margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.7);
   font-size: 14px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -866,7 +866,7 @@ body.offcanvas .pcc-nav-toggle {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.4) !important;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 400;
 }
 
