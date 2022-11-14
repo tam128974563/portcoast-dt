@@ -28,8 +28,8 @@ const pages = [{
     en: "frequently-asked-questions",
     vi: "nhung-cau-hoi-thuong-gap-faqs"
 }, {
-    en: "",
-    vi: ""
+    en: "solutions",
+    vi: "giai-phap"
 }, {
     en: "",
     vi: ""
