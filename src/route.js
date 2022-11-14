@@ -1,11 +1,8 @@
 const {
     Router,
 } = require('express');
-
-// const pages = {
-//     "vi": ["trang-chu", "ve-chung-toi", "dich-vu", "ung-dung", "du-an"],
-//     "en": ["index", "about", "services", "contact", "projects", "application"]
-// };
+const utils = require('./utils.js');
+const path = require('path');
 const pages = [{
     en: " ",
     vi: "trang-chu"
@@ -33,6 +30,9 @@ const pages = [{
 }, {
     en: "",
     vi: ""
+}, {
+    en: "surveying",
+    vi: "khao-sat"
 }]
 const homePage = (req, res) => {
     res.render('index', {
@@ -42,21 +42,46 @@ const homePage = (req, res) => {
         vi: "trang-chu",
     });
 }
-const enPageController = (req, res) => {
-    const url = pages.filter(item => item.en === `${req.params.id}`)[0];
+
+const pageController = (req, res) => {
+    let url;
+    if (req.url.indexOf("en") !== -1) {
+        url = {
+            lang: "en",
+            ...pages.filter(item => item.en === `${req.params.id}`)[0],
+        };
+    } else {
+        url = {
+            lang: "vi",
+            ...pages.filter(item => item.vi === `${req.params.id}`)[0],
+        };
+    }
     res.render(`${req.params.id}`, {
-        lang: "en",
+        lang: url.lang,
         page: req.params.id,
         en: url.en,
         vi: url.vi,
-
     });
 }
-const viPageController = (req, res) => {
-    const url = pages.filter(item => item.vi === `${req.params.id}`)[0];
-    res.render(`${req.params.id}`, {
-        lang: "vi",
-        page: req.params.id,
+
+const subPageController = (req, res) => {
+    let root = path.join(utils.rootPath, "views");
+    let url;
+    if (req.url.indexOf("en") !== -1) {
+        url = {
+            lang: "en",
+            ...pages.filter(item => item.en === `${req.params.id}`)[0],
+        };
+    } else {
+        url = {
+            lang: "vi",
+            ...pages.filter(item => item.vi === `${req.params.id}`)[0],
+        };
+    }
+    res.render(`${req.params.folder}/${req.params.page}`, {
+        dir: path.join(utils.rootPath, '/views/'),
+        lang: url.lang,
+        page: req.params.folder,
         en: url.en,
         vi: url.vi,
     });
@@ -65,13 +90,16 @@ const viPageController = (req, res) => {
 const createRoutes = () => {
     const route = Router();
     route.get('/', homePage)
+    //Eng route
     route.get('/en', (req, res) => res.redirect('/'));
-    route.get('/en/:id', enPageController);
-    route.get('/vi/:id', viPageController);
+    route.get('/en/:id', pageController);
+    route.get('/en/:folder/:page', subPageController);
+    //Vi route
+    route.get('/vi/:id', pageController);
+    route.get('/vi/:folder/:page', subPageController);
 
     return route;
 }
-
 const route = createRoutes();
 
 module.exports = route;

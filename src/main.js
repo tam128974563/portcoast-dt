@@ -25,6 +25,7 @@ const main = () => {
     app.use(express.static(path.join(utils.rootPath, '/public'), {
         maxAge: 259000000
     }));
+
     app.set('view engine', 'ejs');
 
     app.use('/', route);
