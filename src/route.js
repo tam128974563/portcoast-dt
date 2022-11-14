@@ -33,7 +33,7 @@ const pages = [{
 }, {
     en: "surveying",
     vi: "khao-sat"
-}]
+}];
 const homePage = (req, res) => {
     res.render('index', {
         lang: "en",
@@ -65,25 +65,27 @@ const pageController = (req, res) => {
 }
 
 const subPageController = (req, res) => {
-    let root = path.join(utils.rootPath, "views");
     let url;
     if (req.url.indexOf("en") !== -1) {
         url = {
             lang: "en",
-            ...pages.filter(item => item.en === `${req.params.id}`)[0],
+            ...pages.filter(item => item.en === `${req.params.page}`)[0],
+            folder: pages.filter(item => item.en === `${req.params.folder}`)[0]
         };
     } else {
         url = {
             lang: "vi",
-            ...pages.filter(item => item.vi === `${req.params.id}`)[0],
+            ...pages.filter(item => item.vi === `${req.params.page}`)[0],
+            folder: pages.filter(item => item.vi === `${req.params.folder}`)[0]
         };
     }
+    console.log(url)
     res.render(`${req.params.folder}/${req.params.page}`, {
         dir: path.join(utils.rootPath, '/views/'),
         lang: url.lang,
         page: req.params.folder,
-        en: url.en,
-        vi: url.vi,
+        en: `${url.folder.en}/${url.en}`,
+        vi: `${url.folder.vi}/${url.vi}`,
     });
 }
 
