@@ -28,8 +28,8 @@ const pages = [{
     en: "solutions",
     vi: "giai-phap"
 }, {
-    en: "",
-    vi: ""
+    en: "3d-laser-scanning",
+    vi: "khao-sat-hien-trang-3d-laser"
 }, {
     en: "surveying",
     vi: "khao-sat"
@@ -65,21 +65,24 @@ const pageController = (req, res) => {
 }
 
 const subPageController = (req, res) => {
+  
     let url;
-    if (req.url.indexOf("en") !== -1) {
+    if (req.url.indexOf("/en/") !== -1) {
         url = {
             lang: "en",
+            folder: pages.filter(item => item.en === `${req.params.folder}`)[0],
             ...pages.filter(item => item.en === `${req.params.page}`)[0],
-            folder: pages.filter(item => item.en === `${req.params.folder}`)[0]
         };
+     
     } else {
+     
         url = {
             lang: "vi",
+            folder: pages.filter(item => item.vi === `${req.params.folder}`)[0],
             ...pages.filter(item => item.vi === `${req.params.page}`)[0],
-            folder: pages.filter(item => item.vi === `${req.params.folder}`)[0]
         };
     }
-    console.log(url)
+
     res.render(`${req.params.folder}/${req.params.page}`, {
         dir: path.join(utils.rootPath, '/views/'),
         lang: url.lang,
