@@ -10,8 +10,8 @@ const pages = [{
     en: "about",
     vi: "ve-chung-toi"
 }, {
-    en: "application",
-    vi: "ung-dung"
+    en: "products",
+    vi: "san-pham"
 }, {
     en: "services",
     vi: "dich-vu"
@@ -33,7 +33,17 @@ const pages = [{
 }, {
     en: "surveying",
     vi: "khao-sat"
-}];
+}, {
+    en: "hydrological-survey",
+    vi: "khao-sat-thuy-van"
+}, {
+    en: "topographical-survey",
+    vi: "khao-sat-dia-hinh-uav"
+}, {
+    en: "mobile-mapping",
+    vi: "lap-ban-do-di-dong-mobile-mapping"
+},
+];
 const homePage = (req, res) => {
     res.render('index', {
         lang: "en",
