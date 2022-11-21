@@ -32,7 +32,7 @@ const pages = [{
     vi: "khao-sat-hien-trang-3d-laser"
 }, {
     en: "surveying",
-    vi: "khao-sat"
+    vi: "khao-sat-xay-dung"
 }, {
     en: "hydrological-survey",
     vi: "khao-sat-thuy-van"
