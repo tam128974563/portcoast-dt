@@ -8,7 +8,7 @@ const pages = [{
     vi: "trang-chu"
 }, {
     en: "about",
-    vi: "ve-chung-toi"
+    vi: "gioi-thieu"
 }, {
     en: "products",
     vi: "san-pham"
