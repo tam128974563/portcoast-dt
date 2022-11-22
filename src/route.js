@@ -42,8 +42,7 @@ const pages = [{
 }, {
     en: "mobile-mapping",
     vi: "lap-ban-do-di-dong-mobile-mapping"
-},
-];
+}, ];
 const homePage = (req, res) => {
     res.render('index', {
         lang: "en",
@@ -75,7 +74,7 @@ const pageController = (req, res) => {
 }
 
 const subPageController = (req, res) => {
-  
+
     let url;
     if (req.url.indexOf("/en/") !== -1) {
         url = {
@@ -83,9 +82,9 @@ const subPageController = (req, res) => {
             folder: pages.filter(item => item.en === `${req.params.folder}`)[0],
             ...pages.filter(item => item.en === `${req.params.page}`)[0],
         };
-     
+
     } else {
-     
+
         url = {
             lang: "vi",
             folder: pages.filter(item => item.vi === `${req.params.folder}`)[0],
@@ -101,6 +100,9 @@ const subPageController = (req, res) => {
         vi: `${url.folder.vi}/${url.vi}`,
     });
 }
+const sitemap = (req, res) => {
+    res.sendFile(path.join(utils.rootPath, '/src/sitemap.xml'));
+}
 
 const createRoutes = () => {
     const route = Router();
@@ -112,6 +114,7 @@ const createRoutes = () => {
     //Vi route
     route.get('/vi/:id', pageController);
     route.get('/vi/:folder/:page', subPageController);
+    route.get('/sitemap.xml', sitemap)
 
     return route;
 }
