@@ -42,7 +42,15 @@ const pages = [{
 }, {
     en: "mobile-mapping",
     vi: "lap-ban-do-di-dong-mobile-mapping"
-}, ];
+},{
+    en: "gis-and-bim-integration",
+    vi: "ket-hop-gis-va-bim"
+},
+{
+    en: "",
+    vi: ""
+}, 
+ ];
 const homePage = (req, res) => {
     res.render('index', {
         lang: "en",
