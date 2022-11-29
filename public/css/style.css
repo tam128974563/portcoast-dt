@@ -60,17 +60,20 @@ h6 {
 
 figure {
   margin-bottom: 2.5em;
-  float: left;
+  float:center;
   width: 100%;
 }
-
+.img-fluid {
+  width: 100%;
+}
 figure figcaption {
   font-size: 16px;
   width: 80%;
-  margin: 20px auto 0px auto;
+  margin: 10px auto 0px auto;
   color: #b3b3b3;
   font-style: italic;
   font-family: "Quicksand", Arial, sans-serif;
+  text-align: center;
 }
 
 @media screen and (max-width: 480px) {

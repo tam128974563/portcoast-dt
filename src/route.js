@@ -47,6 +47,16 @@ const pages = [{
     vi: "ket-hop-gis-va-bim"
 },
 {
+    en: "digital-twin",
+    vi: "ban-sao-ky-thuat-so"
+},
+,
+{
+    en: "",
+    vi: ""
+},
+,
+{
     en: "",
     vi: ""
 }, 
