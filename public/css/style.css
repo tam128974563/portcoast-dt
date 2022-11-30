@@ -334,12 +334,19 @@ ul li a.pcc-active {
   height: 100vh;
 }
 video {
-  z-index: 1;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 110%;
-
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #000;
 }
 .overlay1 {
   width: 100%;
@@ -371,11 +378,14 @@ video {
     padding: 0 3rem;
     top: -45%;
   }
+.bg-video-wrap .pcc-text h1 {
+  font-size: 40px !important;
+  }
 }
 .bg-video-wrap .pcc-text h1 {
   color: #fff;
   font-weight: 800;
-  font-size: 45px;
+  font-size: 50px;
 }
 
 body.offcanvas {
@@ -1128,7 +1138,11 @@ body.offcanvas .pcc-nav-toggle {
   line-height: 80px;
   vertical-align: middle;
 }
-
+#get-in-touch ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 #pcc-brands {
   padding: 3em 0 3em 0;
 }
