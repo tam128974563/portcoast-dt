@@ -480,7 +480,7 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 .pcc-heading {
-  font-size: 18px;
+  font-size: 23px;
   margin-bottom: 4em;
   font-weight: 600;
   text-transform: uppercase;
@@ -506,6 +506,7 @@ body.offcanvas .pcc-nav-toggle {
 @media screen and (max-width: 768px) {
   .pcc-heading {
     margin-bottom: 3em;
+    font-size: 19px;
   }
 }
 
