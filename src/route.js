@@ -52,8 +52,8 @@ const pages = [{
 },
 ,
 {
-    en: "",
-    vi: ""
+    en: "bim",
+    vi: "bim"
 },
 ,
 {
