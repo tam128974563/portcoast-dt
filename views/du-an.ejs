@@ -4,37 +4,52 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Balay Template</title>
+    <meta http-equiv="content-language" content="vi" />
+    <title>Dự án - Trung tâm chuyển đổi số Portcoast | Dịch vụ BIM & GIS | Scan to BIM & Khảo sát 3D Laser</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="description"
+        content="" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/cover-application.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi"
+        content="Dự án - Trung tâm chuyển đổi số Portcoast | Dịch vụ BIM & GIS | Scan to BIM & Khảo sát 3D Laser" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/du-an" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
 
     <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+    <meta property="og:title"
+        content="Dự án - Trung tâm chuyển đổi số Portcoast | Dịch vụ BIM & GIS | Scan to BIM & Khảo sát 3D Laser" />
+    <meta property="og:description"
+        content="" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/cover-application.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/du-an" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    
-
-    <%- include('partials/css.ejs') %>
-
+    <meta name="twitter:title"
+        content="Dự án - Trung tâm chuyển đổi số Portcoast | Dịch vụ BIM & GIS | Scan to BIM & Khảo sát 3D Laser" />
+    <meta name="twitter:description"
+        content="" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/cover-application.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/du-an" />
+    <%- include ('partials/css.ejs')%>
 </head>
 
 <body>
     <div id="pcc-page">
         <a href="#" class="js-pcc-nav-toggle pcc-nav-toggle"><i></i></a>
         <%- include('partials/nav.ejs') %>
-
         <div id="pcc-main">
-            <div class="pcc-application">
+            <div class="pcc-projects">
                 <div class="pcc-narrow-content">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
@@ -44,137 +59,69 @@
                         </div>
                     </div>
                     <div class="row row-bottom-padded-md">
-                        <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="project" style="background-image: url(/public/images/img-1.jpg);">
-                                <div class="desc">
-                                    <div class="con">
-                                        <h3><a href="work.html">Dự án 01</a></h3>
-                                        <span>Building</span>
-                                        <p class="icon">
-                                            <span><a href="#"><i class="icon-share3"></i></a></span>
-                                            <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                            <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="filtering col-sm-12 text-center animate-box" data-animate-effect="fadeInLeft">
+                            <span style="margin: 15px;" data-filter="*" class="active">Tất cả</span>
+                            <span style="margin: 15px;" data-filter=".industry" class="">Công nghiệp & Năng lượng</span>
+                            <span style="margin: 15px;" data-filter=".architecture" class="">Kiến trúc & Xây dựng</span>
+                            <span style="margin: 15px;" data-filter=".port" class="">Cảng & Công trình ngoài khơi</span>
+                            <span style="margin: 15px;" data-filter=".heritage" class="">Di sản</span>
+                            <span style="margin: 15px;" data-filter=".infrastructure" class="">Cơ sở hạ tầng</span>
+                            <span style="margin: 15px;" data-filter=".interior" class="">Quản lý cơ sở vật chất</span>
                         </div>
-                        <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="project" style="background-image: url(/public/images/img-2.jpg);">
-                                <div class="desc">
-                                    <div class="con">
-                                        <h3><a href="work.html">Dự án 02</a></h3>
-                                        <span>House, Apartment</span>
-                                        <p class="icon">
-                                            <span><a href="#"><i class="icon-share3"></i></a></span>
-                                            <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                            <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                        </p>
+                    </div>
+                    <div class="row row-bottom-padded-md animate-box" data-animate-effect="fadeInLeft">
+                        <div class="gallery">
+                            <div class="col-md-4 col-sm-6 heritage">
+                                <div class="blog-entry">
+                                    <a href="/vi/du-an/nha-hat-thanh-pho-ho-chi-minh" class="blog-img"><img src="/public/images/projects/saigon-opera-house/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/vi/du-an/nha-hat-thanh-pho-ho-chi-minh">Nhà hát Thành phố Hồ Chí Minh</a></h3>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="project" style="background-image: url(/public/images/img-8.jpg);">
-                                <div class="desc">
-                                    <div class="con">
-                                        <h3><a href="work.html">Dự án 03</a></h3>
-                                        <span>Dining Room</span>
-                                        <p class="icon">
-                                            <span><a href="#"><i class="icon-share3"></i></a></span>
-                                            <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                            <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                        </p>
+                            <div class="col-md-4 col-sm-6 architecture">
+                                <div class="blog-entry">
+                                    <a href="/vi/du-an/merryland-quy-nhon" class="blog-img"><img src="/public/images/projects/merryland-quy-nhon/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/vi/du-an/merryland-quy-nhon">MerryLand Quy Nhơn</a></h3>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="project" style="background-image: url(/public/images/img-4.jpg);">
-                                <div class="desc">
-                                    <div class="con">
-                                        <h3><a href="work.html">Dự án 04</a></h3>
-                                        <span>House, Building</span>
-                                        <p class="icon">
-                                            <span><a href="#"><i class="icon-share3"></i></a></span>
-                                            <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                            <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                        </p>
+                            <div class="col-md-4 col-sm-6 port">
+                                <div class="blog-entry">
+                                    <a href="/vi/du-an/trung-tam-logistics-cai-mep-ha" class="blog-img"><img src="/public/images/projects/logistics-cai-mep-ha/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/vi/du-an/trung-tam-logistics-cai-mep-ha">Trung tâm Logistic Cái Mép Hạ</a></h3>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="project" style="background-image: url(/public/images/img-5.jpg);">
-                                <div class="desc">
-                                    <div class="con">
-                                        <h3><a href="work.html">Dự án 05</a></h3>
-                                        <span>Condo, Pad</span>
-                                        <p class="icon">
-                                            <span><a href="#"><i class="icon-share3"></i></a></span>
-                                            <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                            <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                        </p>
+                            <div class="col-md-4 col-sm-6 infrastructure">
+                                <div class="blog-entry">
+                                    <a href="/vi/du-an/tuyen-so-1-duong-sat-do-thi-tphcm" class="blog-img"><img src="/public/images/projects/metro-saigon/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/vi/du-an/tuyen-so-1-duong-sat-do-thi-tphcm">Tuyến số 1 (Đường sắt đô thị TP. Hồ Chí Minh)</a></h3>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="project" style="background-image: url(/public/images/img-9.jpg);">
-                                <div class="desc">
-                                    <div class="con">
-                                        <h3><a href="work.html">Dự án 04</a></h3>
-                                        <span>House, Building</span>
-                                        <p class="icon">
-                                            <span><a href="#"><i class="icon-share3"></i></a></span>
-                                            <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                            <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                        </p>
+                            <div class="col-md-4 col-sm-6 port">
+                                <div class="blog-entry">
+                                    <a href="/vi/du-an/cang-sai-gon-hiep-phuoc" class="blog-img"><img src="/public/images/projects/saigon-hiep-phuoc-port/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/vi/du-an/cang-sai-gon-hiep-phuoc">Cảng Sài Gòn - Hiệp Phước</a></h3>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="project" style="background-image: url(/public/images/img-3.jpg);">
-                                <div class="desc">
-                                    <div class="con">
-                                        <h3><a href="work.html">Dự án 03</a></h3>
-                                        <span>Dining Room</span>
-                                        <p class="icon">
-                                            <span><a href="#"><i class="icon-share3"></i></a></span>
-                                            <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                            <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="project" style="background-image: url(/public/images/img-6.jpg);">
-                                <div class="desc">
-                                    <div class="con">
-                                        <h3><a href="work.html">Dự án 06</a></h3>
-                                        <span>Table, Chairs</span>
-                                        <p class="icon">
-                                            <span><a href="#"><i class="icon-share3"></i></a></span>
-                                            <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                            <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                        <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="project" style="background-image: url(/public/images/img-7.jpg);">
-                                <div class="desc">
-                                    <div class="con">
-                                        <h3><a href="work.html">Nhà hát Thành phố Hồ Chí Minh</a></h3>
-                                        <span>House, Apartment</span>
-                                        <p class="icon">
-                                            <span><a href="#"><i class="icon-share3"></i></a></span>
-                                            <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                            <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                        </p>
+                            <div class="col-md-4 col-sm-6 port">
+                                <div class="blog-entry">
+                                    <a href="/vi/du-an/cang-hyosung-vina-chemicals" class="blog-img"><img src="/public/images/projects/hyosung-vina-chemicals-port/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/vi/du-an/cang-hyosung-vina-chemicals">Cảng Hyosung Vina Chemicals</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -185,22 +132,16 @@
                             <ul class="pagination">
                                 <li class="disabled"><a href="#">&laquo;</a></li>
                                 <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
                                 <li><a href="#">&raquo;</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <%- include ('partials/brands.ejs')%>
-			<%- include ('partials/footer.ejs')%>
+            <%- include ('partials/footer.ejs')%>
         </div>
     </div>
-
-     <%- include('partials/js.ejs') %>
-
+    <%- include('partials/js.ejs') %>
 </body>
 
 </html>

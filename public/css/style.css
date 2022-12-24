@@ -448,6 +448,7 @@ body.offcanvas .pcc-nav-toggle {
 .pcc-services,
 .pcc-solution,
 .pcc-application,
+.pcc-projects,
 .pcc-contact {
   padding-top: 4em;
   padding-bottom: 6em;
@@ -1714,3 +1715,34 @@ body.offcanvas .pcc-nav-toggle {
   line-height: 1rem;
   font-size: 2rem;
 }
+
+.filtering .active {
+  border-color: #0093dd;
+  color: #0093dd;
+}
+
+.filtering span {
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-right: 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.single-gallery-image {
+  margin-top: 30px;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  height: 300px;
+  -webkit-transition: all .3s ease 0s;
+  -moz-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s
+}
+
+
+ 

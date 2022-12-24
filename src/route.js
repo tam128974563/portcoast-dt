@@ -57,9 +57,41 @@ const pages = [{
 },
 ,
 {
+    en: "3d-mesh-models",
+    vi: "mo-hinh-luoi-3d-mesh"
+},
+{
+    en: "merryland-quy-nhon",
+    vi: "merryland-quy-nhon"
+},
+{
+    en: "sai-gon-opera-house",
+    vi: "nha-hat-thanh-pho-ho-chi-minh"
+},
+{
+    en: "cai-mep-ha-logistics-center",
+    vi: "trung-tam-logistics-cai-mep-ha"
+},
+{
+    en: "ho-chi-minh-city-urban-railway-line-1",
+    vi: "tuyen-so-1-duong-sat-do-thi-tphcm"
+},
+{
+    en: "sai-gon-hiep-phuoc-port",
+    vi: "cang-sai-gon-hiep-phuoc"
+},
+{
+    en: "hyosung-vina-chemicals-port",
+    vi: "cang-hyosung-vina-chemicals"
+},
+{
     en: "",
     vi: ""
-}, 
+},
+{
+    en: "",
+    vi: ""
+},
  ];
 const homePage = (req, res) => {
     res.render('index', {
