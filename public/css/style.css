@@ -208,7 +208,7 @@ figure figcaption {
   bottom: 7px;
   left: 0;
   right: 0;
-  background-color: #0093de;
+  background-color: #5cb85c;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
@@ -238,10 +238,10 @@ figure figcaption {
 }
 
 #pcc-aside #pcc-main-menu ul li.pcc-active a {
-  color: #0093de;
+  color: #5cb85c;
 }
 ul li a.pcc-active {
-  color: #0093de !important;
+  color: #5cb85c !important;
   
   
 
@@ -449,6 +449,7 @@ body.offcanvas .pcc-nav-toggle {
 .pcc-solution,
 .pcc-application,
 .pcc-projects,
+.pcc-blog,
 .pcc-contact {
   padding-top: 4em;
   padding-bottom: 6em;
@@ -498,7 +499,7 @@ body.offcanvas .pcc-nav-toggle {
   width: 60px;
   height: 4px;
   content: '';
-  background: #0093de;
+  background: #5cb85c;
 }
 
 .pcc-heading span {
@@ -1312,16 +1313,16 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 .btn-primary {
-  background: #0093de;
+  background: #5cb85c;
   color: #fff;
-  border: 2px solid #0093de;
+  border: 2px solid #5cb85c;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: #5cb85c!important;
-  border-color: #5cb85c !important;
+  background: #0093de !important;
+  border-color: #0093de !important;
 }
 
 .btn-primary.btn-outline {
