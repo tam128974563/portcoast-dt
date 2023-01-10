@@ -1,12 +1,31 @@
 {
-  "dependencies": {
-    "body-parser": "^1.20.1",
-    "compression": "^1.7.4",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "helmet": "^6.0.0",
-    "http": "^0.0.1-security",
-    "mongoose": "^6.7.1",
-    "serve-favicon": "^2.5.0"
-  }
+    "dependencies": {
+        "body-parser": "^1.20.1",
+        "compression": "^1.7.4",
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "helmet": "^6.0.0",
+        "http": "^0.0.1-security",
+        "mongoose": "^6.7.1",
+        "serve-favicon": "^2.5.0"
+    },
+    "name": "portcoast-dt",
+    "description": "��#\u0000 \u0000p\u0000o\u0000r\u0000t\u0000c\u0000o\u0000a\u0000s\u0000t\u0000-\u0000d\u0000t\u0000\r\u0000 \u0000",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node src\\main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tam128974563/portcoast-dt.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tam128974563/portcoast-dt/issues"
+    },
+    "homepage": "https://github.com/tam128974563/portcoast-dt#readme"
 }

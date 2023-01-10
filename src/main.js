@@ -9,11 +9,14 @@ const favicon = require('serve-favicon');
 
 const utils = require('./utils');
 const route = require('./route')
-const db = () => {
-
-}
+const db = require('./connectDB');
 
 const main = () => {
+    try {
+        db()
+    } catch (error) {
+        console.log(error)
+    }
     const app = express();
     app.use(bodyparser.urlencoded({
         extended: true,
