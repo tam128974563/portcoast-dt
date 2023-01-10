@@ -21,6 +21,9 @@ const pages = [{
 }, {
     en: "contact",
     vi: "lien-he"
+},{
+    en: "news",
+    vi: "tin-tuc"
 }, {
     en: "frequently-asked-questions",
     vi: "nhung-cau-hoi-thuong-gap-faqs"
@@ -85,8 +88,28 @@ const pages = [{
     vi: "cang-hyosung-vina-chemicals"
 },
 {
-    en: "",
-    vi: ""
+    en: "360-virtual-tours",
+    vi: "tham-quan-ao-360"
+},
+{
+    en: "deformation-and-deflection-surveys",
+    vi: "khao-sat-bien-dang-va-chuyen-vi"
+},
+{
+    en: "clash-detection",
+    vi: "phat-hien-xung-dot"
+},
+{
+    en: "volume-surveys",
+    vi: "khao-sat-khoi-luong"
+},
+{
+    en: "scan-to-bim",
+    vi: "scan-to-bim"
+},
+{
+    en: "point-cloud-model",
+    vi: "mo-hinh-dam-may-diem"
 },
 {
     en: "",
