@@ -7,11 +7,9 @@ const ProjectSchema = new Schema({
     url_en: String,
     url_vi: String,
     folder: String,
-    date_en: String,
-    date_vi: String,
-    description_en: String,
-    description_vi: String,
-    original_url: String,
+    location_en: String,
+    location_vi: String,
+    button: Array,
     index: String,
 });
 module.exports = mongoose.model('Project', ProjectSchema, 'Project');
