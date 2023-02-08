@@ -28,10 +28,12 @@ body {
 }
 
 a {
-  color: #0093de;
+  color: rgba(0, 0, 0, 0.7);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  font-weight: 600;
+
 }
 
 a:hover,
@@ -104,7 +106,8 @@ figure figcaption {
   position: relative;
 }
 #pcc-page h4{
-  font-weight:bolder;
+ text-transform: uppercase;
+ font-weight: 500;
 }
 #particles-js {
   z-index: -1;
