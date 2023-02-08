@@ -4,8 +4,10 @@ const {
 const utils = require('./utils.js');
 const path = require('path');
 const news = require('./newsController');
+const project = require('./projectController');
 
 const pages = [{
+<<<<<<< HEAD
     en: " ",
     vi: "trang-chu"
 }, {
@@ -106,8 +108,8 @@ const pages = [{
     vi: "khao-sat-khoi-luong"
 },
 {
-    en: "truviews",
-    vi: "truviews"
+    en: "scan-to-bim",
+    vi: "scan-to-bim"
 },
 {
     en: "point-cloud-model",
@@ -118,6 +120,95 @@ const pages = [{
     vi: ""
 },
  ];
+=======
+        en: " ",
+        vi: "trang-chu"
+    }, {
+        en: "about",
+        vi: "gioi-thieu"
+    }, {
+        en: "products",
+        vi: "san-pham"
+    }, {
+        en: "services",
+        vi: "dich-vu"
+    }, {
+        en: "projects",
+        vi: "du-an"
+    }, {
+        en: "contact",
+        vi: "lien-he"
+    }, {
+        en: "frequently-asked-questions",
+        vi: "nhung-cau-hoi-thuong-gap-faqs"
+    }, {
+        en: "solutions",
+        vi: "giai-phap"
+    }, {
+        en: "3d-laser-scanning",
+        vi: "khao-sat-hien-trang-3d-laser"
+    }, {
+        en: "surveying",
+        vi: "khao-sat-xay-dung"
+    }, {
+        en: "hydrological-survey",
+        vi: "khao-sat-thuy-van"
+    }, {
+        en: "topographical-survey",
+        vi: "khao-sat-dia-hinh-uav"
+    }, {
+        en: "mobile-mapping",
+        vi: "lap-ban-do-di-dong-mobile-mapping"
+    }, {
+        en: "gis-and-bim-integration",
+        vi: "ket-hop-gis-va-bim"
+    },
+    {
+        en: "digital-twin",
+        vi: "ban-sao-ky-thuat-so"
+    }, ,
+    {
+        en: "bim",
+        vi: "bim"
+    }, ,
+    {
+        en: "3d-mesh-models",
+        vi: "mo-hinh-luoi-3d-mesh"
+    },
+    {
+        en: "merryland-quy-nhon",
+        vi: "merryland-quy-nhon"
+    },
+    {
+        en: "sai-gon-opera-house",
+        vi: "nha-hat-thanh-pho-ho-chi-minh"
+    },
+    {
+        en: "cai-mep-ha-logistics-center",
+        vi: "trung-tam-logistics-cai-mep-ha"
+    },
+    {
+        en: "ho-chi-minh-city-urban-railway-line-1",
+        vi: "tuyen-so-1-duong-sat-do-thi-tphcm"
+    },
+    {
+        en: "sai-gon-hiep-phuoc-port",
+        vi: "cang-sai-gon-hiep-phuoc"
+    },
+    {
+        en: "hyosung-vina-chemicals-port",
+        vi: "cang-hyosung-vina-chemicals"
+    },
+    {
+        en: "",
+        vi: ""
+    },
+    {
+        en: "",
+        vi: ""
+    },
+];
+>>>>>>> dc13105efdad3cfb45481e752e2c40cdb7bb418c
 const homePage = (req, res) => {
     res.render('index', {
         lang: "en",
@@ -193,6 +284,10 @@ const createRoutes = () => {
     //News route
     route.get('/add/news', news.addForm);
     route.post('/add/news', news.add);
+    //Project route
+    route.get('/add/project', project.addForm);
+    route.post('/add/project', project.add);
+    route.get('/project', project.route);
     return route;
 }
 const route = createRoutes();
