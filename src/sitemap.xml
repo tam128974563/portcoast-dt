@@ -9,113 +9,318 @@
 
 <url>
   <loc>https://portcoast-bim.com/</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/about</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/solutions</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/products</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/projects</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/news</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/frequently-asked-questions</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/contact</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/vi/trang-chu</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/solutions/surveying</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://portcoast-bim.com/vi/ve-chung-toi</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <loc>https://portcoast-bim.com/en/solutions/bim</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/solutions/gis-and-bim-integration</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/solutions/digital-twin</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/projects/sai-gon-opera-house</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/projects/merryland-quy-nhon</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/projects/cai-mep-ha-logistics-center</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/projects/ho-chi-minh-city-urban-railway-line-1</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/projects/sai-gon-hiep-phuoc-port</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/projects/hyosung-vina-chemicals-port</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/gioi-thieu</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/vi/giai-phap</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/vi/san-pham</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/products/truviews</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/products/bim-models</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/products/3d-mesh-models</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/products/deformation-and-deflection-surveys</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/products/volume-surveys</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/products/clash-detection</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/products/3d-mapping</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/products/360-virtual-tours</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/du-an</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/tin-tuc</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/news/portcoast-presented-at-a-seminar-about-digital-transformation-the-foundation-for-building-a-smart-city</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/vi/nhung-cau-hoi-thuong-gap-faqs</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/vi/lien-he</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/vi/giai-phap/khao-sat-xay-dung</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/giai-phap/bim</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/giai-phap/ket-hop-gis-va-bim</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/giai-phap/ban-sao-ky-thuat-so</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/du-an/nha-hat-thanh-pho-ho-chi-minh</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/du-an/merryland-quy-nhon</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/du-an/trung-tam-logistics-cai-mep-ha</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/du-an/tuyen-so-1-duong-sat-do-thi-tphcm</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/du-an/cang-sai-gon-hiep-phuoc</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/du-an/cang-hyosung-vina-chemicals</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/solutions/hydrological-survey</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/solutions/3d-laser-scanning</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/solutions/topographical-survey</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/en/solutions/mobile-mapping</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://portcoast-bim.com/vi/san-pham/mo-hinh-dam-may-diem</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/san-pham/truviews</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/san-pham/mo-hinh-bim</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/san-pham/mo-hinh-luoi</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/san-pham/khao-sat-bien-dang-va-chuyen-vi</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/san-pham/khao-sat-khoi-luong</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/san-pham/phat-hien-xung-dot</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/san-pham/lap-ban-do-3d</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/vi/san-pham/tham-quan-ao-360</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
   <loc>https://portcoast-bim.com/vi/giai-phap/khao-sat-thuy-van</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/vi/giai-phap/khao-sat-hien-trang-3d-laser</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/vi/giai-phap/khao-sat-dia-hinh-uav</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://portcoast-bim.com/vi/giai-phap/lap-ban-do-di-dong-mobile-mapping</loc>
-  <lastmod>2022-11-22T08:55:11+00:00</lastmod>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
   <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://portcoast-bim.com/en/products/point-cloud-model</loc>
+  <lastmod>2023-02-15T07:27:49+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 
 
