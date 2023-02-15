@@ -69,7 +69,7 @@
     },
     {
         "en": "3d-mesh-models",
-        "vi": "mo-hinh-luoi-3d-mesh"
+        "vi": "mo-hinh-luoi"
     },
     {
         "en": "merryland-quy-nhon",
@@ -118,6 +118,22 @@
     {
         "en": "point-cloud-model",
         "vi": "mo-hinh-dam-may-diem"
+    },
+    {
+        "en": "bim-models",
+        "vi": "mo-hinh-bim"
+    },
+    {
+        "en": "3d-mapping",
+        "vi": "lap-ban-do-3d"
+    },
+    {
+        "en": "",
+        "vi": ""
+    },
+    {
+        "en": "",
+        "vi": ""
     },
     {
         "en": "",
