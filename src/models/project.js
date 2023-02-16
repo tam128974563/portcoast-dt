@@ -9,6 +9,7 @@ const ProjectSchema = new Schema({
     folder: String,
     location_en: String,
     location_vi: String,
+    tag: String,
     button: Array,
     index: String,
 });

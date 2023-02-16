@@ -8,14 +8,14 @@ const addForm = (req, res) => {
 
 const add = (req, res) => {
     console.log(req.body)
-    const project = new Project();
+    // const project = new Project();
 
-    Object.assign(project, req.body);
+    // Object.assign(project, req.body);
 
-    project.save((err) => {
-        if (err) throw (err);
-        res.redirect('/add/project');
-    });
+    // project.save((err) => {
+    //     if (err) throw (err);
+    //     res.redirect('/add/project');
+    // });
 };
 
 
@@ -45,10 +45,16 @@ const route = async (req, res) => {
     const allProjects = await Project.find({}).sort({
         index_number: -1
     });
+    console.log(allProjects)
     const count = await Project.countDocuments();
-    res.render('projects', {
+    res.render('projects-clone', {
         content: allProjects,
         count,
+        lang: "en",
+        page: "",
+        vi: "",
+        en: "",
+        project: allProjects,
     })
 }
 
