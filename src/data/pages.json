@@ -1,3 +1,114 @@
+[{
+        en: " ",
+        vi: "trang-chu"
+    }, {
+        en: "about",
+        vi: "gioi-thieu"
+    }, {
+        en: "products",
+        vi: "san-pham"
+    }, {
+        en: "services",
+        vi: "dich-vu"
+    }, {
+        en: "projects",
+        vi: "du-an"
+    }, {
+        en: "contact",
+        vi: "lien-he"
+    }, {
+        en: "news",
+        vi: "tin-tuc"
+    }, {
+        en: "frequently-asked-questions",
+        vi: "nhung-cau-hoi-thuong-gap-faqs"
+    }, {
+        en: "solutions",
+        vi: "giai-phap"
+    }, {
+        en: "3d-laser-scanning",
+        vi: "khao-sat-hien-trang-3d-laser"
+    }, {
+        en: "surveying",
+        vi: "khao-sat-xay-dung"
+    }, {
+        en: "hydrological-survey",
+        vi: "khao-sat-thuy-van"
+    }, {
+        en: "topographical-survey",
+        vi: "khao-sat-dia-hinh-uav"
+    }, {
+        en: "mobile-mapping",
+        vi: "lap-ban-do-di-dong-mobile-mapping"
+    }, {
+        en: "gis-and-bim-integration",
+        vi: "ket-hop-gis-va-bim"
+    },
+    {
+        en: "digital-twin",
+        vi: "ban-sao-ky-thuat-so"
+    }, ,
+    {
+        en: "bim",
+        vi: "bim"
+    },
+    {
+        en: "3d-mesh-models",
+        vi: "mo-hinh-luoi-3d-mesh"
+    },
+    {
+        en: "merryland-quy-nhon",
+        vi: "merryland-quy-nhon"
+    },
+    {
+        en: "sai-gon-opera-house",
+        vi: "nha-hat-thanh-pho-ho-chi-minh"
+    },
+    {
+        en: "cai-mep-ha-logistics-center",
+        vi: "trung-tam-logistics-cai-mep-ha"
+    },
+    {
+        en: "ho-chi-minh-city-urban-railway-line-1",
+        vi: "tuyen-so-1-duong-sat-do-thi-tphcm"
+    },
+    {
+        en: "sai-gon-hiep-phuoc-port",
+        vi: "cang-sai-gon-hiep-phuoc"
+    },
+    {
+        en: "hyosung-vina-chemicals-port",
+        vi: "cang-hyosung-vina-chemicals"
+    },
+    {
+        en: "360-virtual-tours",
+        vi: "tham-quan-ao-360"
+    },
+    {
+        en: "deformation-and-deflection-surveys",
+        vi: "khao-sat-bien-dang-va-chuyen-vi"
+    },
+    {
+        en: "clash-detection",
+        vi: "phat-hien-xung-dot"
+    },
+    {
+        en: "volume-surveys",
+        vi: "khao-sat-khoi-luong"
+    },
+    {
+        en: "truviews",
+        vi: "truviews"
+    },
+    {
+        en: "point-cloud-model",
+        vi: "mo-hinh-dam-may-diem"
+    },
+    {
+        en: "",
+        vi: ""
+    },
+<<<<<<< Updated upstream
 [
     {
         "en": " ",
@@ -139,4 +250,6 @@
         "en": "",
         "vi": ""
     }
+=======
+>>>>>>> Stashed changes
 ]
