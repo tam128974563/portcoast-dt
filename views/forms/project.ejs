@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-offset-3">
                 <h1>Add Project </h1>
-                <form method="post">
+                <form method="post" id="form">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="form-group">
@@ -38,37 +38,101 @@
                                 <input type="text" id="folder" class="form-control" name="folder">
                             </div>
                             <div class="form-group">
-                                <label for="date_eng">Date Eng: </label>
-                                <input type="text" id="date_eng" class="form-control" name="date_eng">
-                            </div>
-                            <!-- <button type="button" onclick="generate()">Create URL and folder</button> -->
-                            <div class="form-group">
-                                <label for="date_vi">Date Vi: </label>
-                                <input type="text" id="date_vi" class="form-control" name="date_vi">
+                                <label for="location_en">location Eng: </label>
+                                <input type="text" id="location_en" class="form-control" name="location_en">
                             </div>
                             <div class="form-group">
-                                <label for="description_eng">Description Eng: </label>
-                                <input type="text" id="description_eng" class="form-control" name="description_eng">
+                                <label for="location_vi">location Vi: </label>
+                                <input type="text" id="location_vi" class="form-control" name="location_vi">
                             </div>
                             <div class="form-group">
-                                <label for="description_vi">Description Vi: </label>
-                                <input type="text" id="description_vi" class="form-control" name="description_vi">
+                                <label for="tags">Tags: </label>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <div style="display: flex; flex-wrap: wrap;">
+                                            <div style="width: 33.33%">
+                                                <input type="checkbox" name="tags[]" id="tags1" value="industry">
+                                                <label for="tags1">Industry</label>
+                                            </div>
+                                            <div style="width: 33.33%">
+                                                <input type="checkbox" name="tags[]" id="tags2" value="architecture">
+                                                <label style="" for="tags2">Architecture</label>
+                                            </div>
+                                            <div style="width: 33.33%">
+                                                <input type="checkbox" name="tags[]" id="tags3" value="port">
+                                                <label for="tags3">Port & Offshore</label>
+                                            </div>
+                                            <div style="width: 33.33%">
+                                                <input type="checkbox" name="tags[]" id="tags4" value="heritage">
+                                                <label for="tags4">Heritage</label>
+                                            </div>
+                                            <div style="width: 33.33%">
+                                                <input type="checkbox" name="tags[]" id="tags3" value="infrastructure">
+                                                <label for="tags3">Infrastructure</label>
+                                            </div>
+                                            <div style="width: 33.33%">
+                                                <input type="checkbox" name="tags[]" id="tags3" value="management">
+                                                <label for="tags3">Facility Management</label>
+                                            </div>
+                                            <!-- repeat the above code for each group of 3 checkboxes -->
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="button">Button1 Name</label>
+                                    <input type="text" class="form-control" id="button" name="button[0][name]">
+                                </div>
+                                <div class="form-group">
+                                    <label for="button">Button1 URL</label>
+                                    <input type="text" class="form-control" id="button" name="button[0][url]">
+                                </div>
+                                <button type="button" onclick="addButton()">Add Button</button>
+                                <div class="form-group">
+                                    <label for="index">Index number: </label>
+                                    <input type="text" id="index" class="form-control" name="index">
+                                </div>
+                                <button type="submit" class="btn btn-success">Submit</button>
                             </div>
-                            <div class="form-group">
-                                <label for="original_url">Original URL </label>
-                                <input type="text" id="original_url" class="form-control" name="original_url">
-                            </div>
-                            <div class="form-group">
-                                <label for="index">Index number: </label>
-                                <input type="text" id="index" class="form-control" name="index">
-                            </div>
-                            <button type="submit" class="btn btn-success">Submit</button>
                         </div>
-                    </div>
                 </form>
             </div>
         </div>
     </div>
 </body>
+<script>
+    const formGroup = (type, number) => {
+        let formRow = document.createElement("div");
+        formRow.classList.add("form-group");
+        let label = document.createElement("label");
+        label.setAttribute("for", "button")
+        label.innerText = `Button ${number} ${type}`
+        let field = document.createElement("input");
+        let fieldAttr = {
+            type: "text",
+            id: "button",
+            name: `button[${number}][${type}]`,
+            class: "form-control",
+        };
+        const setAttr = (element, attributes) => {
+            Object.keys(attributes).forEach(attr => {
+                element.setAttribute(attr, attributes[attr]);
+            });
+        }
+        setAttr(field, fieldAttr)
+        formRow.appendChild(label);
+        formRow.appendChild(field);
+        return formRow
+    }
+
+    const addButton = () => {
+        let rowCount = document.getElementsByClassName("panel-body")[0].children;
+        let buttonCount = (rowCount.length - 10) / 2;
+        document.getElementsByClassName("panel-body")[0].insertBefore(formGroup("name", buttonCount + 1),
+            rowCount[rowCount.length - 3])
+        document.getElementsByClassName("panel-body")[0].insertBefore(formGroup("url", buttonCount + 1),
+            rowCount[rowCount.length - 3])
+    }
+</script>
 
 </html>
