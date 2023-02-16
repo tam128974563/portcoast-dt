@@ -13,7 +13,7 @@ const db = require('./connectDB');
 
 const main = () => {
     try {
-       // db()
+        db()
     } catch (error) {
         console.log(error)
     }
