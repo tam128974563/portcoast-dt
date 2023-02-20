@@ -64,20 +64,19 @@ const list = async (req, res) => {
 }
 
 const route = async (req, res) => {
-    const allProjects = await Project.find({}).sort({
+    const project = await Project.find({}).sort({
         index_number: -1
-    });
-    console.log(allProjects)
-    const count = await Project.countDocuments();
-    res.render('projects-clone', {
-        content: allProjects,
-        count,
-        lang: "en",
-        page: "",
-        vi: "",
-        en: "",
-        project: allProjects,
-    })
+    }).lean();
+    const options = {
+        page: `${req.url.substring(4)}`,
+        project,
+        ...utils.getUrl(req.url)
+    }
+    if (req.url === "/vi/du-an") {
+        res.render('du-an', options)
+    } else {
+        res.render('projects', options)
+    }
 }
 
 module.exports = {
