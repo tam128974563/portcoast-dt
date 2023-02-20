@@ -85,6 +85,9 @@ const createRoutes = () => {
     //Project route
     route.get('/add/project', project.addForm);
     route.post('/add/project', project.add);
+    route.get('/list/project', project.list);
+    route.get('/edit/project/:id', project.editForm)
+    route.post('/edit/project/:id', project.edit)
     route.get('/project', project.route);
     return route;
 }
