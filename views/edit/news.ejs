@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add News</title>
+    <title>Edit News</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -13,55 +13,69 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-offset-3">
-                <h1>Add News </h1>
+                <h1>Edit News </h1>
                 <form method="post">
                     <div class="panel panel-default">
                         <div class="panel-body" id="form">
                             <div class="form-group">
                                 <label for="title_en">News Title Eng: </label>
-                                <input type="text" id="title_en" class="form-control" name="title_en">
+                                <input type="text" id="title_en" class="form-control" name="title_en"
+                                    value="<%= item.title_en%>">
                             </div>
                             <div class="form-group">
                                 <label for="title_vi">News Title Vi: </label>
-                                <input type="text" id="title_vi" class="form-control" name="title_vi">
+                                <input type="text" id="title_vi" class="form-control" name="title_vi"
+                                    value="<%=item.title_vi%>">
                             </div>
                             <div class="form-group" id="date">
                                 <label for="date">Date: </label>
                                 <div>
                                     <label for="day">Day</label>
-                                    <select name="day" id="day"></select>
+                                    <select name="day" id="day">
+                                        <option value="<%=item.day%>"><%=item.day%></option>
+                                    </select>
                                     <label for="month">Month</label>
-                                    <select name="month" id="month"></select>
-                                    <label for="year">Year</label>
-                                    <select name="year" id="year"></select>
+                                    <select name="month" id="month">
+                                        <option value="<%=item.month%>"><%=item.month%></option>
+                                    </select>
+                                    <label for=" year">Year</label>
+                                    <select name="year" id="year">
+                                        <option value="<%=item.year%>"><%=item.year%></option>
+                                    </select>
                                 </div>
-                                <button type="button" id="getToday">Get today</button>
+                                <button type=" button" id="getToday">Get today</button>
                             </div>
-                            <button type="button" id="generateUrlFolder">Generate URL and Folder</button>
+                            <button type="button" id="myButton">Click me</button>
                             <div class="form-group">
                                 <label for="url_en">URL eng: </label>
-                                <input type="text" id="url_en" class="form-control" name="url_en">
+                                <input type="text" id="url_en" class="form-control" name="url_en"
+                                    value="<%=item.url_en%>">
                             </div>
-                            <div class="form-group">
+                            <div class=" form-group">
                                 <label for="url_vi">URL vi: </label>
-                                <input type="text" id="url_vi" class="form-control" name="url_vi">
+                                <input type="text" id="url_vi" class="form-control" name="url_vi"
+                                    value="<%=item.url_vi%>">
                             </div>
 
-                            <div class="form-group">
+                            <div class=" form-group">
                                 <label for="folder">Folder name: </label>
-                                <input type="text" id="folder" class="form-control" name="folder">
+                                <input type="text" id="folder" class="form-control" name="folder"
+                                    value="<%=item.folder%>">
                             </div>
                             <div>
-                                <label for="tag">Tag</label>
-                                <select name="tag" id="tag">
-                                    <option selected value="activity">Activity</option>
-                                    <option value="news">News</option>
+                                <label for=" tag">Tag
+                                    <select name="tag" id="tag">
 
-                                </select>
+                                        <option value="news" <%=(item.tag === "news")?'selected': ''%>>News</option>
+                                        <option <%=(item.tag === "activity")?'selected': ''%> value="activity">Activity
+                                        </option>
+
+                                    </select>
+                                </label>
                             </div>
                             <div class="form-group">
                                 <label for="original_url">Original URL </label>
-                                <input type="text" id="original_url" class="form-control" name="original_url" disabled>
+                                <input type="text" id="original_url" class="form-control" name="original_url">
                             </div>
                             <div class="form-group">
                                 <label for="description_en">Description Eng: </label>
@@ -139,9 +153,9 @@
         document.getElementById('year').value = today.getFullYear();
     })
 
-    const generateUrlFolder = document.getElementById('generateUrlFolder');
+    const myButton = document.getElementById('myButton');
 
-    generateUrlFolder.addEventListener('click', () => {
+    myButton.addEventListener('click', () => {
         const day = document.getElementById("day").value;
         const month = (document.getElementById("month").value < 10) ?
             `0${document.getElementById("month").value}` : document.getElementById("month")
@@ -166,6 +180,7 @@
                 document.getElementById('folder').value = data.folder;
             });
     });
+
     const tags = document.getElementById('tag');
     const originURL = document.getElementById('original_url');
     if (tags.value !== "news") {
@@ -177,5 +192,6 @@
         } else originURL.disabled = false;
     });
 </script>
+
 
 </html>

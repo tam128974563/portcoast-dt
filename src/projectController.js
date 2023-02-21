@@ -29,7 +29,7 @@ const editForm = async (req, res) => {
     })
 }
 const edit = (req, res) => {
-    console.log(req.body)
+
     Project.findByIdAndUpdate({
         _id: req.params.id
     }, {

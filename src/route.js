@@ -18,7 +18,6 @@ const homePage = (req, res) => {
 
 const pageController = (req, res) => {
     let url = utils.getUrl(req.url);
-    console.log(url)
     res.render(`${req.params.id}`, {
         lang: url.lang,
         page: req.params.id,
@@ -36,16 +35,13 @@ const subPageController = (req, res) => {
             folder: pages.filter(item => item.en === `${req.params.folder}`)[0],
             ...pages.filter(item => item.en === `${req.params.page}`)[0],
         };
-
     } else {
-
         url = {
             lang: "vi",
             folder: pages.filter(item => item.vi === `${req.params.folder}`)[0],
             ...pages.filter(item => item.vi === `${req.params.page}`)[0],
         };
     }
-
     res.render(`${req.params.folder}/${req.params.page}`, {
         dir: path.join(utils.rootPath, '/views/'),
         lang: url.lang,
@@ -58,8 +54,23 @@ const sitemap = (req, res) => {
     res.sendFile(path.join(utils.rootPath, '/src/sitemap.xml'));
 }
 
+const clearAccent = (req, res) => {
+    const url_en = utils.clearAccent(req.body.title_en);
+    const url_vi = utils.clearAccent(req.body.title_vi);
+    const folder = `${req.body.date.split("/").reverse().join("")}-${url_en}`;
+    const data = {
+        url_en,
+        url_vi,
+        folder,
+    };
+    res.json(data);
+}
+
 const createRoutes = () => {
     const route = Router();
+    //Api route
+    route.post('/api/clean-accent', clearAccent)
+
     route.get('/', homePage)
     //Eng route
     route.get('/en', (req, res) => res.redirect('/'));
@@ -74,12 +85,15 @@ const createRoutes = () => {
     //News route
     route.get('/add/news', news.addForm);
     route.post('/add/news', news.add);
+    route.get('/edit/news/:id', news.editForm);
     //Project route
     route.get('/add/project', project.addForm);
     route.post('/add/project', project.add);
     route.get('/list/project', project.list);
-    route.get('/edit/project/:id', project.editForm)
-    route.post('/edit/project/:id', project.edit)
+    route.get('/edit/project/:id', project.editForm);
+    route.post('/edit/project/:id', project.edit);
+
+
 
     return route;
 }
