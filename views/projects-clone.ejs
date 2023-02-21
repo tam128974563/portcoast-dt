@@ -26,8 +26,7 @@
     <!-- Facebook and Twitter integration -->
     <meta property="og:title"
         content="Projects - Portcoast Digital Transformation Center | BIM & GIS Services | Scan to BIM & 3D Laser Scanning" />
-    <meta property="og:description"
-        content="" />
+    <meta property="og:description" content="" />
     <meta property="og:image" content="https://portcoast-bim.com/public/images/cover-services.jpg" />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="600" />
@@ -37,8 +36,7 @@
 
     <meta name="twitter:title"
         content="Projects - Portcoast Digital Transformation Center | BIM & GIS Services | Scan to BIM & 3D Laser Scanning" />
-    <meta name="twitter:description"
-        content="" />
+    <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="https://portcoast-bim.com/public/images/cover-services.jpg" />
     <meta name="twitter:url" content="https://portcoast-bim.com/en/projects" />
     <meta name="twitter:card" content="summary" />
@@ -74,7 +72,7 @@
                     <div class="row row-bottom-padded-md animate-box" data-animate-effect="fadeInLeft">
                         <div class="gallery">
                             <%for(let i = 0; i < content.length; i++){ %>
-                            <div class="col-md-4 col-sm-6 <%= project[i].tags %> port">
+                            <div class="col-md-4 col-sm-6 <%= project[i].tags.join(" ") %>">
                                 <div class="blog-entry">
                                     <a href="/en/projects/<%= project[i].url_en %>" class=" blog-img"><img
                                             src="/public/images/projects/<%= project[i].folder%>/cover.jpg"

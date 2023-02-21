@@ -7,16 +7,14 @@
     <meta http-equiv="content-language" content="vi" />
     <title>Dự án | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="" />
+    <meta name="description" content="" />
     <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
     <meta name="author" content="PortcoastDT" />
     <meta name="robots" content="noodp, index, follow">
     <meta name="thumbnail" content="https://portcoast-bim.com/public/images/cover-application.jpg" />
 
     <!-- GEO -->
-    <meta name="DC.title" lang="vi"
-        content="Dự án | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
+    <meta name="DC.title" lang="vi" content="Dự án | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
     <meta name="geo.region" content="VN" />
     <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
     <meta name="DC.identifier" content="https://portcoast-bim.com/vi/du-an" />
@@ -24,10 +22,8 @@
     <meta name="ICBM" content="10.798656, 106.664696" />
 
     <!-- Facebook and Twitter integration -->
-    <meta property="og:title"
-        content="Dự án | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
-    <meta property="og:description"
-        content="" />
+    <meta property="og:title" content="Dự án | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
+    <meta property="og:description" content="" />
     <meta property="og:image" content="https://portcoast-bim.com/public/images/cover-application.jpg" />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="600" />
@@ -35,10 +31,8 @@
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:type" content="website" />
 
-    <meta name="twitter:title"
-        content="Dự án | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
-    <meta name="twitter:description"
-        content="" />
+    <meta name="twitter:title" content="Dự án | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
+    <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="https://portcoast-bim.com/public/images/cover-application.jpg" />
     <meta name="twitter:url" content="https://portcoast-bim.com/vi/du-an" />
     <%- include ('partials/css.ejs')%>
@@ -71,60 +65,20 @@
                     </div>
                     <div class="row row-bottom-padded-md animate-box" data-animate-effect="fadeInLeft">
                         <div class="gallery">
-                            <div class="col-md-4 col-sm-6 heritage">
-                                <div class="projects-entry">
-                                    <a href="/vi/du-an/nha-hat-thanh-pho-ho-chi-minh" class="projects-img"><img src="/public/images/projects/saigon-opera-house/cover.jpg"
+                            <%for(let i = 0; i < project.length; i++){ %>
+                            <div class="col-md-4 col-sm-6 <%= project[i].tags.join(" ") %>">
+                                <div class="blog-entry">
+                                    <a href="/en/projects/<%= project[i].url_vi %>" class=" blog-img"><img
+                                            src="/public/images/projects/<%= project[i].folder%>/cover.jpg"
                                             class="img-responsive" alt=""></a>
                                     <div class="desc">
-                                        <h3><a href="/vi/du-an/nha-hat-thanh-pho-ho-chi-minh">Nhà hát Thành phố Hồ Chí Minh</a></h3>
+                                        <h3><a href="/en/projects/<%= project[i].url_vi %>">
+                                                <%= project[i].title_vi%></a>
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 architecture">
-                                <div class="projects-entry">
-                                    <a href="/vi/du-an/merryland-quy-nhon" class="projects-img"><img src="/public/images/projects/merryland-quy-nhon/cover.jpg"
-                                            class="img-responsive" alt=""></a>
-                                    <div class="desc">
-                                        <h3><a href="/vi/du-an/merryland-quy-nhon">MerryLand Quy Nhơn</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 port">
-                                <div class="projects-entry">
-                                    <a href="/vi/du-an/trung-tam-logistics-cai-mep-ha" class="projects-img"><img src="/public/images/projects/logistics-cai-mep-ha/cover.jpg"
-                                            class="img-responsive" alt=""></a>
-                                    <div class="desc">
-                                        <h3><a href="/vi/du-an/trung-tam-logistics-cai-mep-ha">Trung tâm Logistic Cái Mép Hạ</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 infrastructure">
-                                <div class="projects-entry">
-                                    <a href="/vi/du-an/tuyen-so-1-duong-sat-do-thi-tphcm" class="projects-img"><img src="/public/images/projects/metro-saigon/cover.jpg"
-                                            class="img-responsive" alt=""></a>
-                                    <div class="desc">
-                                        <h3><a href="/vi/du-an/tuyen-so-1-duong-sat-do-thi-tphcm">Tuyến số 1 (Đường sắt đô thị TP. Hồ Chí Minh)</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 port">
-                                <div class="projects-entry">
-                                    <a href="/vi/du-an/cang-sai-gon-hiep-phuoc" class="projects-img"><img src="/public/images/projects/saigon-hiep-phuoc-port/cover.jpg"
-                                            class="img-responsive" alt=""></a>
-                                    <div class="desc">
-                                        <h3><a href="/vi/du-an/cang-sai-gon-hiep-phuoc">Cảng Sài Gòn - Hiệp Phước</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 port">
-                                <div class="projects-entry">
-                                    <a href="/vi/du-an/cang-hyosung-vina-chemicals" class="projects-img"><img src="/public/images/projects/hyosung-vina-chemicals-port/cover.jpg"
-                                            class="img-responsive" alt=""></a>
-                                    <div class="desc">
-                                        <h3><a href="/vi/du-an/cang-hyosung-vina-chemicals">Cảng Hyosung Vina Chemicals</a></h3>
-                                    </div>
-                                </div>
-                            </div>
+                            <%}%>
                         </div>
                     </div>
                     <div class="row">
@@ -139,9 +93,9 @@
                 </div>
             </div>
             <%- include ('partials/footer.ejs')%>
-        </div>
-    </div>
-    <%- include('partials/js.ejs') %>
+                        </div>
+                    </div>
+                    <%- include('partials/js.ejs') %>
 </body>
 
 </html>

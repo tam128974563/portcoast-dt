@@ -17,18 +17,8 @@ const homePage = (req, res) => {
 }
 
 const pageController = (req, res) => {
-    let url;
-    if (req.url.indexOf("en") !== -1) {
-        url = {
-            lang: "en",
-            ...pages.filter(item => item.en === `${req.params.id}`)[0],
-        };
-    } else {
-        url = {
-            lang: "vi",
-            ...pages.filter(item => item.vi === `${req.params.id}`)[0],
-        };
-    }
+    let url = utils.getUrl(req.url);
+    console.log(url)
     res.render(`${req.params.id}`, {
         lang: url.lang,
         page: req.params.id,
@@ -73,9 +63,11 @@ const createRoutes = () => {
     route.get('/', homePage)
     //Eng route
     route.get('/en', (req, res) => res.redirect('/'));
+    route.get('/en/projects', project.route);
     route.get('/en/:id', pageController);
     route.get('/en/:folder/:page', subPageController);
     //Vi route
+    route.get('/vi/du-an', project.route)
     route.get('/vi/:id', pageController);
     route.get('/vi/:folder/:page', subPageController);
     route.get('/sitemap.xml', sitemap)
@@ -85,7 +77,10 @@ const createRoutes = () => {
     //Project route
     route.get('/add/project', project.addForm);
     route.post('/add/project', project.add);
-    route.get('/project', project.route);
+    route.get('/list/project', project.list);
+    route.get('/edit/project/:id', project.editForm)
+    route.post('/edit/project/:id', project.edit)
+
     return route;
 }
 const route = createRoutes();
