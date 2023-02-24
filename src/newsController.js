@@ -7,7 +7,6 @@ const addForm = (req, res) => {
 }
 const add = (req, res) => {
     const news = new News();
-    //req.body.date = `${req.body.day}/${(req.body.month < 10)?`0${req.body.month}` :req.body.month}/${req.body.year}`;
     Object.assign(news, req.body);
     console.log(req.body)
     console.log(news)
@@ -73,7 +72,7 @@ const route = async (req, res) => {
     if (req.url === "/vi/du-an") {
         res.render('du-an', options)
     } else {
-        res.render('newss', options)
+        res.render('news', options)
     }
 }
 

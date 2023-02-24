@@ -1,10 +1,15 @@
 const {
     Router,
 } = require('express');
-const utils = require('./utils.js');
 const path = require('path');
+const passport = require('passport');
+//const LocalStrategy = require('passport-local').Strategy;
+
+const utils = require('./utils.js');
 const news = require('./newsController');
 const project = require('./projectController');
+
+const users = require('./data/user.json');
 
 const pages = require('./data/pages.json');
 const homePage = (req, res) => {
@@ -15,6 +20,16 @@ const homePage = (req, res) => {
         vi: "trang-chu",
     });
 }
+
+// passport.use(new LocalStrategy(
+//     verify = (username, password, done) => {
+//         let user = users.filter(user => user.user === username);
+//         if (user.length !== 1) return done(null, false);
+//         if (user.password !== password) return done(null, false);
+//         return done(null, user);
+//     }
+// ));
+
 
 const pageController = (req, res) => {
     let url = utils.getUrl(req.url);
@@ -57,6 +72,7 @@ const sitemap = (req, res) => {
 const clearAccent = (req, res) => {
     const url_en = utils.clearAccent(req.body.title_en);
     const url_vi = utils.clearAccent(req.body.title_vi);
+    console.log(req.body.date)
     const folder = `${req.body.date.split("/").reverse().join("")}-${url_en}`;
     const data = {
         url_en,
@@ -65,6 +81,12 @@ const clearAccent = (req, res) => {
     };
     res.json(data);
 }
+const loginForm = (req, res) => {
+    res.render("forms/login");
+}
+const login = (req, res) => {
+    console.log(req.body)
+}
 
 const createRoutes = () => {
     const route = Router();
@@ -72,6 +94,7 @@ const createRoutes = () => {
     route.post('/api/clean-accent', clearAccent)
 
     route.get('/', homePage)
+    route.get('/news', news.route);
     //Eng route
     route.get('/en', (req, res) => res.redirect('/'));
     route.get('/en/projects', project.route);
@@ -92,6 +115,10 @@ const createRoutes = () => {
     route.get('/list/project', project.list);
     route.get('/edit/project/:id', project.editForm);
     route.post('/edit/project/:id', project.edit);
+
+    //Login route
+    route.get('/login', loginForm);
+    route.post('/login', login);
 
 
 
