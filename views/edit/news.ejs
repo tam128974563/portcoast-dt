@@ -66,8 +66,13 @@
                                 <label for=" tag">Tag
                                     <select name="tag" id="tag">
 
-                                        <option value="news" <%=(item.tag === "news")?'selected': ''%>>News</option>
-                                        <option <%=(item.tag === "activity")?'selected': ''%> value="activity">Activity
+                                        <option value="News-Tin Tức" <%=(item.tag === "News-Tin Tức")?'selected': ''%>>
+                                            News-Tin
+                                            Tức
+                                        </option>
+                                        <option <%=(item.tag === "Activity-Hoạt Động")?'selected': ''%>
+                                            value="Activity-Hoạt Động">
+                                            Activity-Hoạt Động
                                         </option>
 
                                     </select>
@@ -75,20 +80,23 @@
                             </div>
                             <div class="form-group">
                                 <label for="original_url">Original URL </label>
-                                <input type="text" id="original_url" class="form-control" name="original_url">
+                                <input type="text" id="original_url" class="form-control" name="original_url"
+                                    value="<%=item.original_url%>">
                             </div>
                             <div class="form-group">
                                 <label for="description_en">Description Eng: </label>
-                                <input type="text" id="description_en" class="form-control" name="description_en">
+                                <input type="text" id="description_en" class="form-control" name="description_en"
+                                    value="<%=item.description_en%>">
                             </div>
                             <div class="form-group">
                                 <label for="description_vi">Description Vi: </label>
-                                <input type="text" id="description_vi" class="form-control" name="description_vi">
+                                <input type="text" id="description_vi" class="form-control" name="description_vi"
+                                    value="<%=item.description_vi%>">
                             </div>
 
                             <div class="form-group">
                                 <label for="index">Index number: </label>
-                                <input type="text" id="index" class="form-control" name="index">
+                                <input type="text" id="index" class="form-control" name="index" value="<%=item.index%>">
                             </div>
                             <button type="submit" class="btn btn-success">Submit</button>
                         </div>
@@ -183,11 +191,11 @@
 
     const tags = document.getElementById('tag');
     const originURL = document.getElementById('original_url');
-    if (tags.value !== "news") {
+    if (tags.value !== "News-Tin Tức") {
         originURL.disabled = true;
     } else originURL.disabled = false;
     tags.addEventListener('change', () => {
-        if (tags.value !== "news") {
+        if (tags.value !== "News-Tin Tức") {
             originURL.disabled = true;
         } else originURL.disabled = false;
     });

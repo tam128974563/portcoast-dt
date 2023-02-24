@@ -14,8 +14,7 @@
     <meta name="thumbnail" content="https://portcoast-bim.com/public/images/cover-application.jpg" />
 
     <!-- GEO -->
-    <meta name="DC.title" lang="vi"
-        content="Tin tức | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
+    <meta name="DC.title" lang="vi" content="Tin tức | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
     <meta name="geo.region" content="VN" />
     <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
     <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc" />
@@ -23,8 +22,7 @@
     <meta name="ICBM" content="10.798656, 106.664696" />
 
     <!-- Facebook and Twitter integration -->
-    <meta property="og:title"
-        content="Tin tức | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
+    <meta property="og:title" content="Tin tức | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
     <meta property="og:description" content="" />
     <meta property="og:image" content="https://portcoast-bim.com/public/images/cover-application.jpg" />
     <meta property="og:image:width" content="800" />
@@ -33,8 +31,7 @@
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:type" content="website" />
 
-    <meta name="twitter:title"
-        content="Tin tức | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
+    <meta name="twitter:title" content="Tin tức | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
     <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="https://portcoast-bim.com/public/images/cover-application.jpg" />
     <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc" />
@@ -57,54 +54,30 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="blog-entry">
-                                <a href="/vi/tin-tuc/portcoast-dt-trinh-bay-tai-hoi-thao-chuyen-doi-so-nen-tang-xay-dung-thanh-pho-thong-minh" class="blog-img"><img src="/public/images/news/20221217-portcoast-presented-at-a-seminar-about-digital-transformation-the-foundation-for-building-a-smart-city/cover.jpg"
-                                        class="img-responsive" alt=""></a>
-                                <div class="desc">
-                                    <span><small>Hoạt động | 17/12/2022</small></span>
-                                    <h3><a href="/vi/tin-tuc/portcoast-dt-trinh-bay-tai-hoi-thao-chuyen-doi-so-nen-tang-xay-dung-thanh-pho-thong-minh">Hội thảo “Chuyển đổi số - Nền tảng xây dựng thành phố thông
-                                            minh”</a></h3>
-                                    <p>Ngày 17/12/2022 tại Hà Nội, đã diễn ra buổi Hội thảo khoa học với chủ đề “Chuyển
-                                        đổi số - Nền tảng xây dựng đô thị thông minh” do Tổng hội Xây dựng Việt Nam và
-                                        các đơn vị phối hợp tổ chức.</p>
+                        <%for(let item of news){%>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="blog-entry">
+                                    <a href="/vi/tin-tuc/<%= item.url_vi%>" class="blog-img"><img
+                                            src="/public/images/news/<%= item.folder%>/cover.jpg" class="img-responsive"
+                                            alt=""></a>
+                                    <div class="desc">
+                                        <span><small><%=item.tag.split("-")[1]%> |
+                                                <%= [item.day,item.month,item.year].join("/")%></small></span>
+                                        <h3><a href="/vi/tin-tuc/<%= item.url_vi%>"><%=item.title_vi%></a></h3>
+                                        <p><%= item.description_vi%></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="blog-entry">
-                                <a href="/vi/tin-tuc/tap-doan-deo-ca-day-manh-ap-dung-cong-nghe-so-trong-quan-tri-du-an-giao-thong" class="blog-img"><img src="/public/images/news/20221216-deo-ca-group-promotes-the-application-of-digital-technology-in-traffic-project-management/cover.jpg"
-                                        class="img-responsive" alt=""></a>
-                                <div class="desc">
-                                    <span><small>Tin tức | 16/12/2022 | baodautu.vn</small></span>
-                                    <h3><a href="/vi/tin-tuc/tap-doan-deo-ca-day-manh-ap-dung-cong-nghe-so-trong-quan-tri-du-an-giao-thong">Tập đoàn Đèo Cả đẩy mạnh áp dụng công nghệ số trong quản trị
-                                            dự án giao thông</a></h3>
-                                    <p>Tập đoàn Đèo Cả sẽ hợp tác với các đơn vị tư vấn hàng đầu trong nước để đẩy mạnh
-                                        ứng dụng công nghệ số trong khảo sát, thiết kế và quản lý dự án hạ tầng giao
-                                        thông.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="blog-entry">
-                                <a href="/vi/tin-tuc/portcoast-ky-ket-hop-tac-chien-luoc-voi-hung-thinh-incons-day-manh-chuyen-doi-so-trong-xay-dung" class="blog-img"><img src="/public/images/news/20220916-portcoast-sign-an-MOU-with-hung-thinh-incons-joint-stock-company/cover.jpg"
-                                        class="img-responsive" alt=""></a>
-                                <div class="desc">
-                                    <span><small>Hoạt động | 16/09/2022</small></span>
-                                    <h3><a href="/vi/tin-tuc/portcoast-ky-ket-hop-tac-chien-luoc-voi-hung-thinh-incons-day-manh-chuyen-doi-so-trong-xay-dung">Portcoast ký kết hợp tác chiến lược với Hưng Thịnh Incons,
-                                            đẩy mạnh chuyển đổi số trong xây dựng</a></h3>
-                                    <p>Portcoast ký kết hợp tác chiến lược với Hưng Thinh nhằm thúc đẩy ứng dụng công nghệ chuyển đổi số trong xây dựng.</p>
-                                </div>
-                            </div>
-                        </div>
+                            <%}%>
                     </div>
                 </div>
             </section>
             <%- include ('partials/footer.ejs')%>
-        </div>
-    </div>
+                        </div>
+                    </div>
 
-    <%- include ('partials/js.ejs')%>
+                    <%- include ('partials/js.ejs')%>
 
 </body>
 

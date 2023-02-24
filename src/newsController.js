@@ -8,8 +8,6 @@ const addForm = (req, res) => {
 const add = (req, res) => {
     const news = new News();
     Object.assign(news, req.body);
-    console.log(req.body)
-    console.log(news)
     news.save((err) => {
         if (err) throw (err);
         res.redirect('/add/news');
@@ -21,7 +19,6 @@ const editForm = async (req, res) => {
     const item = await News.findById({
         _id: req.params.id
     });
-    console.log(item)
     res.render('edit/news', {
         item
     })
@@ -53,8 +50,7 @@ const list = async (req, res) => {
     const allNews = await News.find({}).sort({
         _id: -1
     }).lean();
-    console.log((allNews[2].tags.join(" ")));
-    console.log(typeof (allNews[2].tags.join(" ")));
+
     res.render('list/news', {
         news: allNews
     });
@@ -69,8 +65,8 @@ const route = async (req, res) => {
         news,
         ...utils.getUrl(req.url)
     }
-    if (req.url === "/vi/du-an") {
-        res.render('du-an', options)
+    if (req.url === "/vi/tin-tuc") {
+        res.render('tin-tuc', options)
     } else {
         res.render('news', options)
     }
