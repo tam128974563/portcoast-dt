@@ -3,7 +3,8 @@ const {
 } = require('express');
 const path = require('path');
 const passport = require('passport');
-//const LocalStrategy = require('passport-local').Strategy;
+const LocalStrategy = require('passport-local').Strategy;
+
 
 const utils = require('./utils.js');
 const news = require('./newsController');
@@ -21,18 +22,45 @@ const homePage = (req, res) => {
     });
 }
 
-// passport.use(new LocalStrategy(
-//     verify = (username, password, done) => {
-//         let user = users.filter(user => user.user === username);
-//         if (user.length !== 1) return done(null, false);
-//         if (user.password !== password) return done(null, false);
-//         return done(null, user);
-//     }
-// ));
+passport.use(new LocalStrategy(
+    verify = (username, password, done) => {
+        let [
+            user
+        ] = users.filter(user => user.user === username);
+        console.log(user)
+        if (user === undefined) {
+            console.log('incorect')
+            return done(null, false), {
+                //message: 'Incorrect User'
+            };
+        }
+        if (user.pass !== password) {
+            console.log('wrong passs')
+            return done(null, false, {
+                //message: 'Incorrect password'
+            });
+        }
+        return done(null, user);
+    }
+));
 
+passport.serializeUser(function (user, cb) {
+    process.nextTick(function () {
+        cb(null, {
+            id: user.id,
+            username: user.username
+        });
+    });
+});
 
+passport.deserializeUser(function (user, cb) {
+    process.nextTick(function () {
+        return cb(null, user);
+    });
+});
 const pageController = (req, res) => {
     let url = utils.getUrl(req.url);
+    console.log(req.params.id)
     res.render(`${req.params.id}`, {
         lang: url.lang,
         page: req.params.id,
@@ -98,10 +126,16 @@ const createRoutes = () => {
     //Eng route
     route.get('/en', (req, res) => res.redirect('/'));
     route.get('/en/projects', project.route);
+    route.get('/en/projects/:id', project.page)
+    route.get('/en/news', news.route);
+    route.get('/en/news/:id', news.page);
     route.get('/en/:id', pageController);
     route.get('/en/:folder/:page', subPageController);
     //Vi route
     route.get('/vi/du-an', project.route)
+    route.get('/vi/tin-tuc', news.route)
+    route.get('/vi/du-an/:id', project.page)
+    route.get('/vi/tin-tuc/:id', news.page)
     route.get('/vi/:id', pageController);
     route.get('/vi/:folder/:page', subPageController);
     route.get('/sitemap.xml', sitemap)
@@ -109,6 +143,8 @@ const createRoutes = () => {
     route.get('/add/news', news.addForm);
     route.post('/add/news', news.add);
     route.get('/edit/news/:id', news.editForm);
+    route.post('/edit/news/:id', news.edit);
+    route.get('/list/news', news.list);
     //Project route
     route.get('/add/project', project.addForm);
     route.post('/add/project', project.add);
@@ -118,7 +154,14 @@ const createRoutes = () => {
 
     //Login route
     route.get('/login', loginForm);
-    route.post('/login', login);
+    route.post('/login', passport.authenticate('local', {
+        failureRedirect: '/loginFailed',
+
+        // failureMessage: true
+    }), (req, res) => {
+        console.log(req.body)
+        res.redirect('/loginSuccess');
+    });
 
 
 
