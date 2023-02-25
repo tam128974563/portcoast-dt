@@ -60,7 +60,6 @@ passport.deserializeUser(function (user, cb) {
 });
 const pageController = (req, res) => {
     let url = utils.getUrl(req.url);
-    console.log(req.params.id)
     res.render(`${req.params.id}`, {
         lang: url.lang,
         page: req.params.id,
@@ -156,7 +155,6 @@ const createRoutes = () => {
     route.get('/login', loginForm);
     route.post('/login', passport.authenticate('local', {
         failureRedirect: '/loginFailed',
-
         // failureMessage: true
     }), (req, res) => {
         console.log(req.body)

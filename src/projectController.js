@@ -62,7 +62,20 @@ const list = async (req, res) => {
         project: allProject
     });
 }
-
+const page = async (req, res) => {
+    const url = req.url.split("/")
+    console.log(url)
+    const page = await Project.findOne({
+        [`url_${url[1]}`]: req.params.id
+    }).lean();
+    const options = {
+        lang: url[1],
+        page: url[2],
+        en: `projects/${page.url_en}`,
+        vi: `du-an/${page.url_vi}`,
+    }
+    res.render(`${url[2]}/${page[`url_${url[1]}`]}`, options);
+}
 const route = async (req, res) => {
     const project = await Project.find({}).sort({
         index_number: -1
@@ -86,5 +99,6 @@ module.exports = {
     list,
     editForm,
     edit,
-    pagination
+    pagination,
+    page
 }

@@ -55,7 +55,19 @@ const list = async (req, res) => {
         news: allNews
     });
 }
-
+const page = async (req, res) => {
+    const url = req.url.split("/")
+    const page = await News.findOne({
+        [`url_${url[1]}`]: req.params.id
+    }).lean();
+    const options = {
+        lang: url[1],
+        page: url[2],
+        en: `news/${page.url_en}`,
+        vi: `tin-tuc/${page.url_vi}`,
+    }
+    res.render(`${url[2]}/${page[`url_${url[1]}`]}`, options);
+}
 const route = async (req, res) => {
     const news = await News.find({}).sort({
         index_number: -1
@@ -79,5 +91,6 @@ module.exports = {
     list,
     editForm,
     edit,
-    pagination
+    pagination,
+    page
 }
