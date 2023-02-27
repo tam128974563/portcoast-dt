@@ -3,7 +3,9 @@ const path = require('path');
 const root = path.dirname(__dirname);
 const pages = require('./data/pages.json')
 const getUrl = (url) => {
-    if (url.indexOf("en") !== -1) {
+
+    if (url.indexOf("/en/") !== -1) {
+        console.log(...pages.filter(item => item.en === `${url.substring(4)}`))
         return {
             lang: "en",
             ...pages.filter(item => item.en === `${url.substring(4)}`)[0],
