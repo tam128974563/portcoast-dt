@@ -55,28 +55,28 @@
                     </div>
                     <div class="row">
                         <%for(let item of news){%>
-                            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="blog-entry">
-                                    <a href="/vi/tin-tuc/<%= item.url_vi%>" class="blog-img"><img
-                                            src="/public/images/news/<%= item.folder%>/cover.jpg" class="img-responsive"
-                                            alt=""></a>
-                                    <div class="desc">
-                                        <span><small><%=item.tag.split("-")[1]%> |
-                                                <%= [item.day,item.month,item.year].join("/")%></small></span>
-                                        <h3><a href="/vi/tin-tuc/<%= item.url_vi%>"><%=item.title_vi%></a></h3>
-                                        <p><%= item.description_vi%></p>
-                                    </div>
+                        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                            <div class="blog-entry">
+                                <a href="/vi/tin-tuc/<%= item.url_vi%>" class="blog-img"><img
+                                        src="/public/images/news/<%= item.folder%>/cover.jpg" class="img-responsive"
+                                        alt=""></a>
+                                <div class="desc">
+                                    <span><small><%=item.tag.split("-")[1]%> |
+                                            <%= [item.day,item.month,item.year].join("/")%></small></span>
+                                    <h3><a href="/vi/tin-tuc/<%= item.url_vi%>"><%=item.title_vi%></a></h3>
+                                    <p><%= item.description_vi%></p>
                                 </div>
                             </div>
+                        </div>
                         <%}%>
                     </div>
                 </div>
             </section>
             <%- include ('partials/footer.ejs')%>
-                        </div>
                     </div>
+                </div>
 
-                    <%- include ('partials/js.ejs')%>
+                <%- include ('partials/js.ejs')%>
 
 </body>
 
