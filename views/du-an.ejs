@@ -43,10 +43,10 @@
         <a href="#" class="js-pcc-nav-toggle pcc-nav-toggle"><i></i></a>
         <%- include('partials/nav.ejs') %>
         <div id="pcc-main">
-            <div class="pcc-projects">
+            <section class="pcc-projects">
                 <div class="pcc-narrow-content">
                     <div class="row">
-                        <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                        <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
                             data-animate-effect="fadeInLeft">
                             <span class="heading-meta">Dự án</span>
                             <h2 class="pcc-heading">Các dự án nổi bật</h2>
@@ -68,9 +68,9 @@
                             <%for(let i = 0; i < project.length; i++){ %>
                             <div class="col-md-4 col-sm-6 <%= project[i].tags.join(" ") %>">
                                 <div class="blog-entry">
-                                    <a href="/vi/du-an/<%= project[i].url_vi %>" class=" blog-img"><img
+                                    <a href="/vi/du-an/<%= project[i].url_vi %>" class="blog-img"><img
                                             src="/public/images/projects/<%= project[i].folder%>/cover.jpg"
-                                            class="img-responsive" alt=""></a>
+                                            class="img-responsive" alt="<%= project[i].title_vi%>"></a>
                                     <div class="desc">
                                         <h3><a href="/vi/du-an/<%= project[i].url_vi %>">
                                                 <%= project[i].title_vi%></a>
@@ -80,18 +80,18 @@
                             </div>
                             <%}%>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                            <ul class="pagination">
-                                <li class="disabled"><a href="#">&laquo;</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">&raquo;</a></li>
-                            </ul>
+                        <div class="row">
+                            <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                <ul style="float: right;" class="pagination">
+                                    <li class="disabled"><a href="#">&laquo;</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">&raquo;</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section >
             <%- include ('partials/footer.ejs')%>
                         </div>
                     </div>
