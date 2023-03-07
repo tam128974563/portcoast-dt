@@ -11,6 +11,7 @@ const news = require('./newsController');
 const project = require('./projectController');
 
 const users = require('./data/user.json');
+const home = require('./hompageController');
 
 const pages = require('./data/pages.json');
 const homePage = (req, res) => {
@@ -40,6 +41,7 @@ passport.use(new LocalStrategy(
                 //message: 'Incorrect password'
             });
         }
+        console.log(user)
         return done(null, user);
     }
 ));
@@ -47,8 +49,7 @@ passport.use(new LocalStrategy(
 passport.serializeUser(function (user, cb) {
     process.nextTick(function () {
         cb(null, {
-            id: user.id,
-            username: user.username
+            user
         });
     });
 });
@@ -59,7 +60,9 @@ passport.deserializeUser(function (user, cb) {
     });
 });
 const pageController = (req, res) => {
+    console.log((req.user))
     let url = utils.getUrl(req.url);
+    console.log(url)
     res.render(`${req.params.id}`, {
         lang: url.lang,
         page: req.params.id,
@@ -99,7 +102,6 @@ const sitemap = (req, res) => {
 const clearAccent = (req, res) => {
     const url_en = utils.clearAccent(req.body.title_en);
     const url_vi = utils.clearAccent(req.body.title_vi);
-    console.log(req.body.date)
     const folder = `${req.body.date.split("/").reverse().join("")}-${url_en}`;
     const data = {
         url_en,
@@ -115,15 +117,30 @@ const login = (req, res) => {
     console.log(req.body)
 }
 
+const authenticatedCheck = (role) => {
+    return (req, res, next) => {
+        if (req.isAuthenticated() && req.user.user.role.includes(role)) {
+            return next()
+        }
+        res.redirect('/login')
+    };
+}
+
+
+const dashboard = (req, res) => {
+    console.log(req.user);
+    res.render('dashboard');
+}
+
 const createRoutes = () => {
     const route = Router();
     //Api route
     route.post('/api/clean-accent', clearAccent)
 
-    route.get('/', homePage)
-    route.get('/news', news.route);
+    route.get('/' || '/vi/trang-chu', home.route)
+
     //Eng route
-    route.get('/en', (req, res) => res.redirect('/'));
+    route.get('/en' || '/en/', (req, res) => res.redirect('/'));
     route.get('/en/projects', project.route);
     route.get('/en/projects/:id', project.page)
     route.get('/en/news', news.route);
@@ -150,18 +167,25 @@ const createRoutes = () => {
     route.get('/list/project', project.list);
     route.get('/edit/project/:id', project.editForm);
     route.post('/edit/project/:id', project.edit);
-
     //Login route
     route.get('/login', loginForm);
     route.post('/login', passport.authenticate('local', {
-        failureRedirect: '/loginFailed',
+        failureRedirect: '/login',
         // failureMessage: true
     }), (req, res) => {
-        console.log(req.body)
-        res.redirect('/loginSuccess');
+        console.log(req.user)
+        res.redirect('/');
     });
+    route.get('/dashboard', authenticatedCheck("dashboard"), dashboard);
+    route.post('/logout', function (req, res, next) {
 
-
+        req.logout(function (err) {
+            if (err) {
+                return next(err);
+            }
+            res.redirect('/');
+        });
+    });
 
     return route;
 }

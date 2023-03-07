@@ -199,21 +199,70 @@
                     </div>
                     <div class="row row-bottom-padded-md animate-box" data-animate-effect="fadeInLeft">
                         <div class="gallery">
-                            <%for(let i = 0; i < project.length; i++){ %>
-                            <div class="col-md-4 col-sm-6 <%= project[i].tags.join(" ") %>">
-                                <div class="blog-entry">
-                                    <a href="/en/projects/<%= project[i].url_en %>" class=" blog-img"><img
-                                            src="/public/images/projects/<%= project[i].folder%>/cover.jpg"
+                            <div class="col-md-4 col-sm-6 heritage">
+                                <div class="projects-entry">
+                                    <a href="/en/projects/sai-gon-opera-house" class="projects-img"><img
+                                            src="/public/images/projects/saigon-opera-house/cover.jpg"
                                             class="img-responsive" alt=""></a>
                                     <div class="desc">
-                                        <h3><a href="/en/projects/<%= project[i].url_en %>">
-                                                <%= project[i].title_en%></a>
+                                        <h3><a href="/en/projects/sai-gon-opera-house">Saigon Opera House</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 architecture">
+                                <div class="projects-entry">
+                                    <a href="/en/projects/merryland-quy-nhon" class="projects-img"><img
+                                            src="/public/images/projects/merryland-quy-nhon/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/en/projects/merryland-quy-nhon">MerryLand Quy Nhon</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 port">
+                                <div class="projects-entry">
+                                    <a href="/en/projects/cai-mep-ha-logistics-center" class="projects-img"><img
+                                            src="/public/images/projects/logistics-cai-mep-ha/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/en/projects/cai-mep-ha-logistics-center">Cai Mep Ha Logistics
+                                                Center</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 infrastructure">
+                                <div class="projects-entry">
+                                    <a href="/en/projects/line-1-ho-chi-minh-city-metro" class="projects-img"><img
+                                            src="/public/images/projects/metro-saigon/cover.jpg" class="img-responsive"
+                                            alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/en/projects/line-1-ho-chi-minh-city-metro">Line 1, Ho Chi Minh
+                                                City Metro</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 port">
+                                <div class="projects-entry">
+                                    <a href="/en/projects/sai-gon-hiep-phuoc-port" class="projects-img"><img
+                                            src="/public/images/projects/saigon-hiep-phuoc-port/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/en/projects/sai-gon-hiep-phuoc-port">Sai Gon - Hiep Phuoc Port</a>
                                         </h3>
                                     </div>
                                 </div>
                             </div>
-                            <%}%>
-                         
+                            <div class="col-md-4 col-sm-6 port">
+                                <div class="projects-entry">
+                                    <a href="/en/projects/hyosung-vina-chemicals-port" class="projects-img"><img
+                                            src="/public/images/projects/hyosung-vina-chemicals-port/cover.jpg"
+                                            class="img-responsive" alt=""></a>
+                                    <div class="desc">
+                                        <h3><a href="/en/projects/hyosung-vina-chemicals-port">Hyosung Vina Chemicals
+                                                Port</a></h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -229,22 +278,60 @@
                         </div>
                     </div>
                     <div class="row">
-                          <%for(let item of news){%>
-                            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="blog-entry">
-                                    <a href="/en/news/<%= item.url_en%>" class="blog-img"><img
-                                            src="/public/images/news/<%= item.folder%>/cover.jpg" class="img-responsive"
-                                            alt=""></a>
-                                    <div class="desc">
-                                        <span><small><%=item.tag.split("-")[0]%> |
-                                                <%= [item.day,item.month,item.year].join("/")%></small></span>
-                                        <h3><a href="/en/news/<%= item.url_en%>"><%=item.title_en%></a></h3>
-                                        <p><%= item.description_en%></p>
-                                    </div>
+                        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                            <div class="blog-entry">
+                                <a href="/en/news/portcoast-dt-presented-at-a-seminar-about-digital-transformation-the-foundation-for-building-a-smart-city"
+                                    class="blog-img"><img
+                                        src="/public/images/news/20221217-portcoast-presented-at-a-seminar-about-digital-transformation-the-foundation-for-building-a-smart-city/cover.jpg"
+                                        class="img-responsive" alt=""></a>
+                                <div class="desc">
+                                    <span><small>Activities | December 17, 2022</small></span>
+                                    <h3><a
+                                            href="/en/news/portcoast-dt-presented-at-a-seminar-about-digital-transformation-the-foundation-for-building-a-smart-city">Portcoast
+                                            DT present at a seminar about "Digital transformation - The foundation
+                                            for building a smart city"</a></h3>
+                                    <p>On the morning of December 17, 2022, in Hanoi, a scientific seminar with the
+                                        theme "Digital transformation - The foundation for building a smart city" was
+                                        organized by the Viet Nam Federation of Civil Engineering Association (VFCEA)
+                                        and other organizations.</p>
                                 </div>
                             </div>
-                            <%}%>
-                    
+                        </div>
+                        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                            <div class="blog-entry">
+                                <a href="/en/news/deo-ca-group-promotes-the-application-of-digital-technology-in-traffic-project-management"
+                                    class="blog-img"><img
+                                        src="/public/images/news/20221216-deo-ca-group-promotes-the-application-of-digital-technology-in-traffic-project-management/cover.jpg"
+                                        class="img-responsive" alt=""></a>
+                                <div class="desc">
+                                    <span><small>News | December 16, 2022 | baodautu.vn</small></span>
+                                    <h3><a
+                                            href="/en/news/deo-ca-group-promotes-the-application-of-digital-technology-in-traffic-project-management">Deo
+                                            Ca Group promotes the application of digital technology in traffic project
+                                            management</a></h3>
+                                    <p>Deo Ca Group will cooperate with leading consulting units in the country to
+                                        promote the application of digital technology in surveying, designing and
+                                        managing transport infrastructure projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                            <div class="blog-entry">
+                                <a href="/en/news/portcoast-sign-an-mou-with-hung-thinh-incons-joint-stock-company"
+                                    class="blog-img"><img
+                                        src="/public/images/news/20220916-portcoast-sign-an-mou-with-hung-thinh-incons-joint-stock-company/cover.jpg"
+                                        class="img-responsive" alt=""></a>
+                                <div class="desc">
+                                    <span><small>Activities | September 16, 2022</small></span>
+                                    <h3><a
+                                            href="/en/news/portcoast-sign-an-mou-with-hung-thinh-incons-joint-stock-company">Portcoast
+                                            DT sign an MOU with Hung Thinh Incons Joint Stock Company</a></h3>
+                                    <p>On September 16, 2022, PORTCOAST DT signed an MOU with Hung Thinh Incons Joint
+                                        Stock Company, to apply digital transformation technology in construction, and
+                                        optimize design, planning, and construction management...</p>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -486,12 +573,12 @@
             </section>
             <!-- Section-Brands -->
             <%- include ('partials/brands.ejs')%>
-                            <!-- Section-Footer -->
-                            <%- include ('partials/footer.ejs')%>
-                        </div>
-                    </div>
+            <!-- Section-Footer -->
+            <%- include ('partials/footer.ejs')%>
+        </div>
+    </div>
 
-                    <%- include ('partials/js.ejs') %>
+    <%- include ('partials/js.ejs') %>
 </body>
 
 </html>

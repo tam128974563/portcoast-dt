@@ -33,6 +33,7 @@
                                 <label for="url_vi">URL vi: </label>
                                 <input type="text" id="url_vi" class="form-control" name="url_vi">
                             </div>
+                            <button type="button" id="generateUrlFolder">Generate URL and Folder</button>
                             <div class="form-group">
                                 <label for="folder">Folder name: </label>
                                 <input type="text" id="folder" class="form-control" name="folder">
@@ -101,6 +102,25 @@
     </div>
 </body>
 <script>
+    generateUrlFolder.addEventListener('click', () => {
+
+        const data = {
+            "title_en": `${document.getElementById('title_en').value}`,
+            "title_vi": `${document.getElementById('title_vi').value}`,
+        };
+        fetch('/api/clean-accent', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json())
+            .then(data => {
+                document.getElementById('url_en').value = data.url_en;
+                document.getElementById('url_vi').value = data.url_vi;
+                document.getElementById('folder').value = data.folder;
+            });
+    });
     const formGroup = (type, number) => {
         let formRow = document.createElement("div");
         formRow.classList.add("form-group");

@@ -1,7 +1,9 @@
 [{
     "user": "test",
-    "pass": "test"
+    "pass": "test",
+    "role": "[dashboard,list]"
 }, {
     "user": "test2",
-    "pass": "test3"
+    "pass": "test3",
+    "role": "[list]"
 }]

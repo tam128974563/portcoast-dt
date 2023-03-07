@@ -7,12 +7,8 @@ const addForm = (req, res) => {
 }
 
 const add = (req, res) => {
-    console.log(req.body)
     const project = new Project();
-
     Object.assign(project, req.body);
-    console.log(project)
-
     project.save((err) => {
         if (err) throw (err);
         res.redirect('/add/project');
@@ -42,29 +38,19 @@ const edit = (req, res) => {
     })
 }
 const pagination = async (req, res) => {
-    //     const perPage = 15;
-    //     const allProjects = await Project.find({}).sort({
-    //         index_number: -1
-    //     });
-    //     const count = await Project.countDocuments();
-    // res.render('views/project',{
-    //     content : 
-    // })
+
 }
 
 const list = async (req, res) => {
     const allProject = await Project.find({}).sort({
         _id: -1
     }).lean();
-    console.log((allProject[2].tags.join(" ")));
-    console.log(typeof (allProject[2].tags.join(" ")));
     res.render('list/project', {
         project: allProject
     });
 }
 const page = async (req, res) => {
     const url = req.url.split("/")
-    console.log(url)
     const page = await Project.findOne({
         [`url_${url[1]}`]: req.params.id
     }).lean();

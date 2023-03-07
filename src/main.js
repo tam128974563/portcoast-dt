@@ -36,12 +36,12 @@ const main = () => {
     app.set('view engine', 'ejs');
     app.locals.dir = path.join(utils.rootPath, '/views/');
     const fileStoreOptions = {
-        path: './data/session.json', // the directory where session data will be stored
+        path: './src/data/session', // the directory where session data will be stored
         ttl: 3600 // the time-to-live (in seconds) for the session data
     };
     const sessionMiddleware = session({
         store: new FileStore(fileStoreOptions),
-        secret: 'your-secret-key',
+        secret: 'test-sssecret',
         resave: false,
         saveUninitialized: false
     });
