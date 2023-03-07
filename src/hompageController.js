@@ -29,7 +29,7 @@ const route = async (req, res) => {
         en: " ",
         vi: "trang-chu",
         news: await news(3),
-        project: await project(5),
+        project: await project(6),
     };
     res.render((req.url.indexOf("/vi/")) ? "index" : "trang-chu", options)
 }

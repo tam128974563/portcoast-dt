@@ -28,20 +28,20 @@ passport.use(new LocalStrategy(
         let [
             user
         ] = users.filter(user => user.user === username);
-        console.log(user)
+
         if (user === undefined) {
-            console.log('incorect')
+
             return done(null, false), {
-                //message: 'Incorrect User'
+                message: 'Incorrect User'
             };
         }
         if (user.pass !== password) {
-            console.log('wrong passs')
+
             return done(null, false, {
-                //message: 'Incorrect password'
+                message: 'Incorrect password'
             });
         }
-        console.log(user)
+
         return done(null, user);
     }
 ));
@@ -60,9 +60,9 @@ passport.deserializeUser(function (user, cb) {
     });
 });
 const pageController = (req, res) => {
-    console.log((req.user))
+
     let url = utils.getUrl(req.url);
-    console.log(url)
+
     res.render(`${req.params.id}`, {
         lang: url.lang,
         page: req.params.id,
@@ -113,9 +113,7 @@ const clearAccent = (req, res) => {
 const loginForm = (req, res) => {
     res.render("forms/login");
 }
-const login = (req, res) => {
-    console.log(req.body)
-}
+
 
 const authenticatedCheck = (role) => {
     return (req, res, next) => {
@@ -128,7 +126,6 @@ const authenticatedCheck = (role) => {
 
 
 const dashboard = (req, res) => {
-    console.log(req.user);
     res.render('dashboard');
 }
 
@@ -173,7 +170,7 @@ const createRoutes = () => {
         failureRedirect: '/login',
         // failureMessage: true
     }), (req, res) => {
-        console.log(req.user)
+
         res.redirect('/');
     });
     route.get('/dashboard', authenticatedCheck("dashboard"), dashboard);
