@@ -62,7 +62,7 @@
                                         alt=""></a>
                                 <div class="desc">
                                     <span><small><%=item.tag.split("-")[1]%> |
-                                            <%= [item.day,item.month,item.year].join("/")%></small></span>
+                                            <%=  [item.day,(item.month<10?`0${item.month}`: item.month),item.year].join("/")%></small></span>
                                     <h3><a href="/vi/tin-tuc/<%= item.url_vi%>"><%=item.title_vi%></a></h3>
                                     <p><%= item.description_vi%></p>
                                 </div>
