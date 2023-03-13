@@ -50,7 +50,15 @@ const main = () => {
     app.use(passport.authenticate('session'));
 
     app.use('/', route);
-
+    app.use((err, req, res, next) => {
+        console.error(err.stack);
+        res.status(404).render('404', {
+            lang: "en",
+            page: "",
+            en: "",
+            vi: ""
+        });
+    });
     //app.use(passport.session());
     const server = http.createServer(app);
     const port = process.env.PORT || 5500;

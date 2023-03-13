@@ -175,7 +175,6 @@ const createRoutes = () => {
     });
     route.get('/dashboard', authenticatedCheck("dashboard"), dashboard);
     route.post('/logout', function (req, res, next) {
-
         req.logout(function (err) {
             if (err) {
                 return next(err);
@@ -184,6 +183,17 @@ const createRoutes = () => {
         });
     });
 
+    route.get('*', (req, res) => {
+        res.render('404', {
+            lang: "en",
+            page: "",
+            en: "",
+            vi: ""
+        });
+        //res.sendStatus(404);
+
+    })
+    
     return route;
 }
 const route = createRoutes();
