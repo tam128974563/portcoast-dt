@@ -980,6 +980,9 @@ body.offcanvas .pcc-nav-toggle {
   .overlap {
     margin-top: 2em;
   }
+  .blog-entry .desc {
+    height: auto;
+  }
 }
 
 .projects-entry {
