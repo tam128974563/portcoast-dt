@@ -924,9 +924,6 @@ body.offcanvas .pcc-nav-toggle {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-.blog-entry .desc {
-  height: 330px;
-}
 
 .blog-entry .desc h3 {
   font-size: 16px;
@@ -979,9 +976,6 @@ body.offcanvas .pcc-nav-toggle {
 @media screen and (max-width: 768px) {
   .overlap {
     margin-top: 2em;
-  }
-  .blog-entry .desc {
-    height: auto;
   }
 }
 
