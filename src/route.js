@@ -134,10 +134,10 @@ const createRoutes = () => {
     //Api route
     route.post('/api/clean-accent', clearAccent)
 
-    route.get('/' || '/vi/trang-chu', home.route)
+    route.get('/', home.route)
 
     //Eng route
-    route.get('/en' || '/en/', (req, res) => res.redirect('/'));
+    route.get('/en?/', (req, res) => res.redirect('/'));
     route.get('/en/projects', project.route);
     route.get('/en/projects/:id', project.page)
     route.get('/en/news', news.route);
@@ -145,6 +145,7 @@ const createRoutes = () => {
     route.get('/en/:id', pageController);
     route.get('/en/:folder/:page', subPageController);
     //Vi route
+    route.get('/vi?/trang-chu', home.route);
     route.get('/vi/du-an', project.route)
     route.get('/vi/tin-tuc', news.route)
     route.get('/vi/du-an/:id', project.page)
@@ -193,7 +194,7 @@ const createRoutes = () => {
         //res.sendStatus(404);
 
     })
-    
+
     return route;
 }
 const route = createRoutes();

@@ -31,6 +31,7 @@ const route = async (req, res) => {
         news: await news(3),
         project: await project(6),
     };
+
     res.render((req.url.indexOf("/vi/")) ? "index" : "trang-chu", options)
 }
 
