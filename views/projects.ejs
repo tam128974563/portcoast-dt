@@ -59,19 +59,19 @@
                     </div>
                     <div class="row row-bottom-padded-md">
                         <div class="filtering col-sm-12 text-center animate-box" data-animate-effect="fadeInLeft">
-                            <span style="margin: 15px;" data-filter="*" class="active">All</span>
-                            <span style="margin: 15px;" data-filter=".industry" class="">Industry</span>
-                            <span style="margin: 15px;" data-filter=".architecture" class="">Architecture</span>
-                            <span style="margin: 15px;" data-filter=".port" class="">Ports & Offshore</span>
-                            <span style="margin: 15px;" data-filter=".heritage" class="">Heritage</span>
-                            <span style="margin: 15px;" data-filter=".infrastructure" class="">Infrastructure</span>
-                            <span style="margin: 15px;" data-filter=".interior" class="">Facility Management</span>
+                            <span data-filter="*" class="active">All</span>
+                            <span data-filter=".industry" class="">Industry</span>
+                            <span data-filter=".architecture" class="">Architecture</span>
+                            <span data-filter=".port" class="">Ports & Offshore</span>
+                            <span data-filter=".heritage" class="">Heritage</span>
+                            <span data-filter=".infrastructure" class="">Infrastructure</span>
+                            <span data-filter=".interior" class="">Facility Management</span>
                         </div>
                     </div>
-                    <div class="row row-bottom-padded-md animate-box gallery" data-animate-effect="fadeInLeft">
+                    <div class="row row-bottom-padded-md gallery">
                             <%for(let i = 0; i < project.length; i++){ %>
                             <div class="col-md-4 col-sm-6 <%= project[i].tags.join(" ") %>">
-                                <div class="projects-entry">
+                                <div class="projects-entry animate-box" data-animate-effect="fadeInLeft">
                                     <a href="/en/projects/<%= project[i].url_en %>" class="projects-img"><img
                                             src="/public/images/projects/<%= project[i].folder%>/cover.jpg"
                                             class="img-responsive" alt=""></a>

@@ -770,7 +770,7 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 @media screen and (max-width: 768px) {
-  .pcc-equipment .icon { 3px;
+  .pcc-equipment .icon {
     width: 92%;
   }
 }
@@ -985,11 +985,6 @@ body.offcanvas .pcc-nav-toggle {
   background: #fff;
 }
 
-@media screen and (max-width: 768px) {
-  .projects-entry {
-    margin-bottom: 3em;
-  }
-}
 
 .projects-entry .projects-img {
   width: 100%;
@@ -1671,19 +1666,20 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 .filtering .active {
-  border-color: #5cb85c;
+  border-bottom: 1px solid #5cb85c;
   color: #5cb85c;
+  -webkit-transition: all .3s ease 0s;
 }
 
-.filtering span {
-  border-bottom: 2px solid transparent;
+.filtering span{
+  font-size: 14px;
+  margin: 10px 20px;
+  text-transform: uppercase;
   cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-right: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  -webkit-transition: all .3s ease 0s;
   display: inline-block;
-  margin-bottom: 5px;
 }
 
 .single-gallery-image {
