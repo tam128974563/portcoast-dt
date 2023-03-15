@@ -983,10 +983,15 @@ body.offcanvas .pcc-nav-toggle {
   width: 100%;
   float: left;
   background: #fff;
-
 }
 
-.projects-entry .projects-img {
+@media screen and (max-width: 768px) {
+  .projects-entry {
+    margin-bottom: 3em;
+  }
+}
+
+.projects-entry .blog-img {
   width: 100%;
   float: left;
   overflow: hidden;
@@ -995,8 +1000,7 @@ body.offcanvas .pcc-nav-toggle {
   margin-bottom: 25px;
 }
 
-
-.projects-entry .projects-img img {
+.projects-entry .blog-img img {
   position: relative;
   max-width: 100%;
   -webkit-transform: scale(1);
@@ -1011,12 +1015,10 @@ body.offcanvas .pcc-nav-toggle {
 
 .projects-entry .desc h3 {
   font-size: 16px;
-  margin-bottom: 25px;
-  line-height: 25px;
+  line-height: auto;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-
 }
 
 .projects-entry .desc h3 a {
@@ -1024,26 +1026,6 @@ body.offcanvas .pcc-nav-toggle {
   text-decoration: none;
 }
 
-.projects-entry .desc span {
-  display: block;
-  margin-bottom: 20px;
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.4) !important;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 400;
-}
-
-.projects-entry .desc span small i {
-  color: #999999;
-}
-
-.projects-entry .desc .lead {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #000;
-}
 
 .projects-entry:hover .projects-img img {
   -webkit-transform: scale(1.1);

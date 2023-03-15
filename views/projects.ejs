@@ -68,10 +68,10 @@
                             <span style="margin: 15px;" data-filter=".interior" class="">Facility Management</span>
                         </div>
                     </div>
-                    <div class="row row-bottom-padded-md animate-box" data-animate-effect="fadeInLeft">
+                    <div class="row row-bottom-padded-md animate-box gallery" data-animate-effect="fadeInLeft">
                             <%for(let i = 0; i < project.length; i++){ %>
                             <div class="col-md-4 col-sm-6 <%= project[i].tags.join(" ") %>">
-                                <div class="blog-entry">
+                                <div class="projects-entry">
                                     <a href="/en/projects/<%= project[i].url_en %>" class="blog-img"><img
                                             src="/public/images/projects/<%= project[i].folder%>/cover.jpg"
                                             class="img-responsive" alt=""></a>
