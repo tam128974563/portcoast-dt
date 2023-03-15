@@ -991,7 +991,7 @@ body.offcanvas .pcc-nav-toggle {
   }
 }
 
-.projects-entry .blog-img {
+.projects-entry .projects-img {
   width: 100%;
   float: left;
   overflow: hidden;
@@ -1000,7 +1000,7 @@ body.offcanvas .pcc-nav-toggle {
   margin-bottom: 25px;
 }
 
-.projects-entry .blog-img img {
+.projects-entry .projects-img img {
   position: relative;
   max-width: 100%;
   -webkit-transform: scale(1);
