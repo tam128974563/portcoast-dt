@@ -23,9 +23,10 @@ const news = (limit) => {
 }
 
 const route = async (req, res) => {
+    const check = req.url.indexOf("/vi/");
     let options = {
-        lang: (req.url.indexOf("/vi/")) ? "en" : "vi",
-        page: " ",
+        lang: check ? "en" : "vi",
+        page: check ? " " : "trang-chu",
         en: " ",
         vi: "trang-chu",
         news: await news(3),
