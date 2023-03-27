@@ -47,10 +47,19 @@
 
 <body>
     <div id="pcc-page">
-        <a href="#" class="js-pcc-nav-toggle pcc-nav-toggle"><i></i></a>
+     
         <%- include(dir+'partials/nav.ejs') %>
-        <div id="pcc-main">
+              <div id="pcc-main">
+         <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
             <section class="pcc-services">
+                <div class="container">
                 <div class="pcc-narrow-content">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
@@ -68,12 +77,18 @@
                                 <li><strong>Total area: </strong> 1,687 ha; 12km (594 ha) berth for vessels up to 250,000DWT; 2.70km (90ha) berth for barges up to 7,000T</li>
                                 <li><strong>Products provide:</strong> 3D Point cloud model - 3D Photogrammetry model - 3D Visualization of planning</li>
                             </ul>
-                            <p>Cai Mep Ha Logistic Center is one of the key projects of Ba Ria - Vung Tau province, aimed at leveraging the province's coastal port advantages to contribute significantly to the development of the province, the region, and the country. The total area of the project is approximately 1,763 hectares, including the Logistics Center and Cai Mep Ha downstream port, which occupy an area of over 984 hectares and over 455 hectares of water surface, including channels, shipyards, and water areas in front of the port. In addition, the project also has an area reserved for clean energy of about 197 hectares and a potential water area of 125.34 hectares. Cai Mep Ha Logistic Center is built as a regional and global-scale cargo transshipment center, with the task of receiving and transshipping goods to/from provinces and cities throughout the country and countries around the world through sea routes, inland waterways, and roads.</p>
+                            <div class="mb-4">
+                                <a href="https://portal.furioos.com/share/jvzsKWNqPea52TjCW?autoRun=true" class="btn btn-primary btn-learn">Game</a>
+                                <a href="https://sketchfab.com/models/959a2573f9a34e61a8e960e47b92f946/embed" class="btn btn-primary btn-learn">3D Model (AR/VR)</a>
+                                <a href="https://docs.b360.autodesk.com/session?redirect=%2Fprojects%2F0cef0844-e205-4723-bc39-2edcd7149e9b%2Ffolders%2Furn%3Aadsk.wipprod%3Afs.folder%3Aco.JjOHWf4WQgKDGmsizcNXug%2Fdocuments%2Furn%3Aadsk.wipprod%3Adm.lineage%3AcGx83IacTjavFHXdT9FxDA" class="btn btn-primary btn-learn">BIM 360</a>
+                                <a href="https://arcg.is/iKfuH0" class="btn btn-primary btn-learn">BIM - GIS</a>
+                            </div>
                         </div>
                         <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
                             <img class="img-fluid" src="/public/images/projects/logistics-cai-mep-ha/cover.jpg">
                         </div>
-                        <div class="col-md-12 animate-box" data-animate-effect="fadeInRight">
+                        <div class="col-md-12 animate-box mt-4" data-animate-effect="fadeInRight">
+                            <p>Cai Mep Ha Logistic Center is one of the key projects of Ba Ria - Vung Tau province, aimed at leveraging the province's coastal port advantages to contribute significantly to the development of the province, the region, and the country. The total area of the project is approximately 1,763 hectares, including the Logistics Center and Cai Mep Ha downstream port, which occupy an area of over 984 hectares and over 455 hectares of water surface, including channels, shipyards, and water areas in front of the port. In addition, the project also has an area reserved for clean energy of about 197 hectares and a potential water area of 125.34 hectares. Cai Mep Ha Logistic Center is built as a regional and global-scale cargo transshipment center, with the task of receiving and transshipping goods to/from provinces and cities throughout the country and countries around the world through sea routes, inland waterways, and roads.</p>
                             <p>We utilize various survey solutions to collect data on a large area encompassing rivers, swamps, and coastal inlets, including unmanned aerial vehicles (UAV), 3D laser scanning, mobile mapping, multibeam depth soundings using unmanned surface vehicles (USV), and sub-bottom profiling survey, to survey the entire terrain from shore to seabed and subsurface. The survey data will be compiled into a platform that facilitates easy access and application for various purposes such as dredging, excavation, and planning.</p>
                         </div>
                     </div>
@@ -137,6 +152,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </section>
             <%- include (dir+'partials/footer.ejs')%>

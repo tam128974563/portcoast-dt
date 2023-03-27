@@ -50,10 +50,19 @@
 
 <body>
     <div id="pcc-page">
-        <a href="#" class="js-pcc-nav-toggle pcc-nav-toggle"><i></i></a>
+     
         <%- include(dir+'partials/nav.ejs') %>
-        <div id="pcc-main">
+              <div id="pcc-main">
+         <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
             <div class="pcc-solution">
+                <div class="container">
                 <div class="pcc-narrow-content">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
@@ -92,7 +101,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingTwo">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseTwo" aria-expanded="false"
                                                     aria-controls="collapseTwo">Single Beam Sonar
                                                 </a>
@@ -107,7 +116,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingThree">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseThree" aria-expanded="false"
                                                     aria-controls="collapseThree">Multibeam Sonar
                                                 </a>
@@ -122,7 +131,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingFour">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseFour" aria-expanded="false"
                                                     aria-controls="collapseFour">Side Scan Sonar
                                                 </a>
@@ -138,7 +147,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingFive">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseFive" aria-expanded="false"
                                                     aria-controls="collapseFive">Magnetometer
                                                 </a>
@@ -154,7 +163,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingSix">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseSix" aria-expanded="false"
                                                     aria-controls="collapseSix">Sub-bottom Profiling
                                                 </a>
@@ -172,9 +181,11 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
             <!-- Section-Equipment -->
             <section class="pcc-equipment">
+                <div class="container">
                 <div class="pcc-narrow-content">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
@@ -227,6 +238,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </section>
             <%- include (dir+'partials/brands.ejs')%>

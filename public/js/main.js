@@ -100,52 +100,19 @@
     };
 
 
-    var burgerMenu = function () {
-
-        $('.js-pcc-nav-toggle').on('click', function (event) {
-            event.preventDefault();
-            var $this = $(this);
-
-            if ($('body').hasClass('offcanvas')) {
-                $this.removeClass('active');
-                $('body').removeClass('offcanvas');
-            } else {
-                $this.addClass('active');
-                $('body').addClass('offcanvas');
-            }
-        });
-
-
-
-    };
-
-    // Click outside of offcanvass
-    var mobileMenuOutsideClick = function () {
-
-        $(document).click(function (e) {
-            var container = $("#pcc-aside, .js-pcc-nav-toggle");
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
-
-                if ($('body').hasClass('offcanvas')) {
-
-                    $('body').removeClass('offcanvas');
-                    $('.js-pcc-nav-toggle').removeClass('active');
-
-                }
-
-            }
-        });
-
+    var Menu = function () {
+        // Sticky Navbar
         $(window).scroll(function () {
-            if ($('body').hasClass('offcanvas')) {
-
-                $('body').removeClass('offcanvas');
-                $('.js-pcc-nav-toggle').removeClass('active');
-
+            if ($(this).scrollTop() > 0) {
+                $('.navbar').addClass('nav-sticky');
+            } else {
+                $('.navbar').removeClass('nav-sticky');
             }
         });
 
+
     };
+
 
     var sliderMain = function () {
 
@@ -275,21 +242,22 @@
         counter();
         counterWayPoint();
         contentWayPoint();
-        burgerMenu();
-        mobileMenuOutsideClick();
+        Menu();
         sliderMain();
         stickyFunction();
         owlCrouselFeatureSlide();
     });
-    
-   
+
+
     // Fillter
-    $(function(){
+    $(function () {
         $(".filtering").on("click", "span", function () {
             var a = $(".gallery").isotope({});
             var e = $(this).attr("data-filter");
-            a.isotope({ filter: e,
-                layoutMode: 'fitRows' });
+            a.isotope({
+                filter: e,
+                layoutMode: 'fitRows'
+            });
         });
         $(".filtering").on("click", "span", function () {
             $(this).addClass("active").siblings().removeClass("active");

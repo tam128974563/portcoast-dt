@@ -46,10 +46,19 @@
 
 <body>
     <div id="pcc-page">
-        <a href="#" class="js-pcc-nav-toggle pcc-nav-toggle"><i></i></a>
+     
         <%- include('partials/nav.ejs') %>
-        <div id="pcc-main">
+              <div id="pcc-main">
+         <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
             <div class="pcc-solution">
+                <div class="container">
                 <div class="pcc-narrow-content">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
@@ -65,13 +74,13 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="cong-nghe-3d-laser-la-gi">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                                <a data-bs-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                                                     aria-expanded="true" aria-controls="collapseOne">Công nghệ quét 3D
                                                     Laser là gì?
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                        <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel"
                                             aria-labelledby="cong-nghe-3d-laser-la-gi">
                                             <div class="panel-body">
                                                 <div class="row">
@@ -94,7 +103,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingTwo">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseTwo" aria-expanded="false"
                                                     aria-controls="collapseTwo">Các ứng dụng quét 3D Laser?
                                                 </a>
@@ -138,7 +147,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingThree">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseThree" aria-expanded="false"
                                                     aria-controls="collapseThree">Sự kết hợp BIM-GIS-GAME?
                                                 </a>
@@ -192,6 +201,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
             <%- include ('partials/footer.ejs')%>

@@ -1,80 +1,134 @@
 <% if(lang == "en"){%>
-<aside id="pcc-aside" role="complementary" class="border js-fullheight">
-    <a href="/" id="pcc-logo">
-        <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
-    </a>
-    <nav id="pcc-main-menu" role="navigation">
-        <ul>
-            <li <%if(page == " "){%> class="pcc-active" <% }%>><a href="/">Home</a></li>
-            <li <%if(page == "about"){%> class="pcc-active" <% }%>><a href="/en/about">About us</a></li>
-            <li <%if(page == "solutions"){%> class="pcc-active" <% }%>><a href="/en/solutions">Solutions</a></li>
-            <li <%if(page == "products"){%> class="pcc-active" <% }%>><a href="/en/products">Products</a>
-            </li>
-            <li <%if(page == "projects"){%> class="pcc-active" <% }%>><a href="/en/projects">Projects</a></li>
-            <li <%if(page == "news"){%> class="pcc-active" <% }%>><a href="/en/news">News</a></li>
-            <li <%if(page == "frequently-asked-questions"){%> class="pcc-active" <% }%>><a href="/en/frequently-asked-questions">FAQs</a></li>
-            <li <%if(page == "contact"){%> class="pcc-active" <% }%>><a href="/en/contact">Contact</a></li>
-            <!-- <li><img src="/public/images/icon/vietnam.svg"> <img src="/public/images/icon/united-kingdom.svg"></li> -->
-        </ul>
-    </nav>
-    <div class="pcc-footer">
-        <ul style="margin: 2rem 0;">
-            <li style="font-size: 14px; ">
-                <a <% if(lang != "en"){ %> class="pcc-active" <% } %> href="/vi/<%= vi%>">VIE</a>
-                |
-                <a <% if(lang == "en"){ %> class="pcc-active" <% } %> href="/en/<%= en %>">ENG</a>
-        </ul>
-        <ul>
-            <li><a href="https://www.facebook.com/portcoastdt" target="_blank"><i class="icon-facebook2"></i></a></li>
-            <li><a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>
-            </li>
-            <li><a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i class="icon-linkedin2"></i></a>
-            </li>
-            <li><a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber" target="_blank"><i class="icon-youtube"></i></a>
-            </li>
-        </ul>
-    </div>
+          <!-- Top Bar Start -->
+          <div class="top-bar d-none d-md-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="icon-phone3"></i>
+                                <a href = "tel:02862970345"><p>(84 - 28) 62970345</p></a>
+                            </div>
+                            <div class="text">
+                                <i class="icon-mail6"></i>
+                                <a href = "mailto:portcoast@portcoast.com.vn"><p>portcoast@portcoast.com.vn</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href="https://www.facebook.com/portcoastdt" target="_blank"><i class="icon-facebook2"></i></a>
+                                <a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>                
+                                <a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i class="icon-linkedin2"></i></a>
+                                <a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber" target="_blank"><i class="icon-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <nav class="navbar navbar-expand-xxl navbar-dark bg-info p-3">
+            <div class="container">
+                <a href="/" id="pcc-logo">
+                    <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item"><a class=" <%if(page == " "){%>active <% }%>nav-link mx-2" href="/">Home</a></li>
+                    <li class="nav-item"><a class=" <%if(page == "about"){%>active <% }%>nav-link mx-2" href="/en/about">About us</a></li>
+                    <li class="nav-item"><a class=" <%if(page == "solutions"){%>active <% }%>nav-link mx-2" href="/en/solutions">Solutions</a></li>
+                    <li class="nav-item"><a class=" <%if(page == "products"){%>active <% }%> nav-link mx-2" href="/en/products">Products</a></li>
+                    <li class="nav-item"><a class=" <%if(page == "projects"){%>active <% }%>nav-link mx-2" href="/en/projects">Projects</a></li>
+                    <li class="nav-item"><a class=" <%if(page == "news"){%>active <% }%>nav-link mx-2"href="/en/news">News</a></li>
+                    <li class="nav-item"><a class=" <%if(page == "frequently-asked-questions"){%>active <% }%>nav-link mx-2" href="/en/frequently-asked-questions">FAQs</a></li>
+                    <li class="nav-item"><a class=" <%if(page == "contact"){%>active <% }%>nav-link mx-2" href="/en/contact">Contact</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto d-lg-inline-flex">
+                  <li class="nav-item mx-2">
+                    <a class="nav-link text-dark h5 <% if(lang == "en"){ %> active <% } %> " href="/en/<%= en %>"><img width="25px" src="/public/images/icon/united.png"></a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link text-dark h5 <% if(lang != "en"){ %> active <% } %>"  href="/vi/<%= vi%>"><img width="25px" src="/public/images/icon/vietnam.png"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <!-- Nav Bar End -->
 
     <% } else { %>
-    <aside id="pcc-aside" role="complementary" class="border js-fullheight">
-
-        <a href="/vi/trang-chu" id="pcc-logo">
-            <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
-        </a>
-        <nav id="pcc-main-menu" role="navigation">
-            <ul>
-                <li <%if(page == "trang-chu"){%> class="pcc-active" class="pcc-active" <% }%>><a
-                        href="/vi/trang-chu">Trang chủ</a></li>
-                <li <%if(page == "gioi-thieu"){%> class="pcc-active" <% }%>><a href="/vi/gioi-thieu">Giới
-                        thiệu</a>
-                </li>
-                <li <%if(page == "giai-phap"){%> class="pcc-active" <% }%>><a href="/vi/giai-phap">Giải pháp</a></li>
-                <li <%if(page == "san-pham"){%> class="pcc-active" <% }%>><a href="/vi/san-pham">Sản phẩm</a></li>
-                <li <%if(page == "du-an"){%> class="pcc-active" <% }%>><a href="/vi/du-an">Dự án</a></li>
-                <li <%if(page == "tin-tuc"){%> class="pcc-active" <% }%>><a href="/vi/tin-tuc">Tin tức</a></li>
-                <li <%if(page == "nhung-cau-hoi-thuong-gap-faqs"){%> class="pcc-active" <% }%>><a href="/vi/nhung-cau-hoi-thuong-gap-faqs">FAQS</a></li>
-                <li <%if(page == "lien-he"){%> class="pcc-active" <% }%>><a href="/vi/lien-he">Liên hệ</a></li>
-
-            </ul>
-        </nav>
-        <div class="pcc-footer">
-            <!-- <p><small>Điện thoại: <a>(84-28) 62970345; 62970341</a>
-				<span>Email: <a>info@portcoast.com.vn</a></span></small></p> -->
-            <ul style="margin: 2rem 0;">
-                <li style="font-size: 14px; ">
-                    <a <% if(lang != "en"){ %> class="pcc-active" <% } %> href="/vi/<%= vi%>">VIE</a>
-                    |
-                    <a <% if(lang == "en"){ %> class="pcc-active" <% } %> href="/en/<%= en %>">ENG</a>
-            </ul>
-            <ul>
-                <li><a href="https://www.facebook.com/portcoastdt" target="_blank"><i class="icon-facebook2"></i></a></li>
-                <li><a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i class="icon-linkedin2"></i></a>
-                </li>
-                <li><a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber" target="_blank"><i class="icon-youtube"></i></a>
-                </li>
-            </ul>
-        </div>
+            <!-- Top Bar Start -->
+            <div class="top-bar d-none d-md-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                          <div class="top-bar-left">
+                            <div class="text">
+                                <i class="icon-phone3"></i>
+                                <a href = "tel:02862970345"><p>(84 - 28) 62970345</p></a>
+                            </div>
+                            <div class="text">
+                                <i class="icon-mail6"></i>
+                                <a href = "mailto:portcoast@portcoast.com.vn"><p>portcoast@portcoast.com.vn</p></a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="top-bar-right">
+                                <div class="social">
+                                    <a href="https://www.facebook.com/portcoastdt" target="_blank"><i class="icon-facebook2"></i></a>
+                                    <a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>                
+                                    <a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i class="icon-linkedin2"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber" target="_blank"><i class="icon-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+    
+            <!-- Nav Bar Start -->
+            <nav class="navbar navbar-expand-xxl navbar-dark bg-info p-3">
+                <div class="container">
+                    <a href="/" id="pcc-logo">
+                        <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
+                    </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+              
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item"><a class=" <%if(page == "trang-chu"){%>active <% }%>nav-link mx-2" href="/vi/trang-chu">Trang chủ</a></li>
+                        <li class="nav-item"><a class=" <%if(page == "gioi-thieu"){%>active <% }%>nav-link mx-2" href="/vi/gioi-thieu">Giới thiệu</a></li>
+                        <li class="nav-item"><a class=" <%if(page == "giai-phap"){%>active <% }%>nav-link mx-2" href="/vi/giai-phap">Giải pháp</a></li>
+                        <li class="nav-item"><a class=" <%if(page == "san-pham"){%>active <% }%> nav-link mx-2" href="/vi/san-pham">Sản phẩm</a></li>
+                        <li class="nav-item"><a class=" <%if(page == "du-an"){%>active <% }%>nav-link mx-2" href="/vi/du-an">Dự án</a></li>
+                        <li class="nav-item"><a class=" <%if(page == "tin-tuc"){%>active <% }%>nav-link mx-2"href="/vi/tin-tuc">Tin tức</a></li>
+                        <li class="nav-item"><a class=" <%if(page == "nhung-cau-hoi-thuong-gap-faqs"){%>active <% }%>nav-link mx-2" href="/vi/nhung-cau-hoi-thuong-gap-faqs">FAQs</a></li>
+                        <li class="nav-item"><a class=" <%if(page == "lien-he"){%>active <% }%>nav-link mx-2" href="/vi/lien-he">Liên hệ</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto d-lg-inline-flex">
+                      <li class="nav-item mx-2">
+                        <a class="nav-link text-dark h5 <% if(lang == "en"){ %> active <% } %> " href="/en/<%= en %>"><img width="25px" src="/public/images/icon/united.png"></a>
+                      </li>
+                      <li class="nav-item mx-2">
+                        <a class="nav-link text-dark h5 <% if(lang != "en"){ %> active <% } %>"  href="/vi/<%= vi%>"><img width="25px" src="/public/images/icon/vietnam.png"></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            <!-- Nav Bar End -->
         <% } %>
-    </aside>
+
+

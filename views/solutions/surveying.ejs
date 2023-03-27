@@ -46,10 +46,19 @@
 </head>
 <body>
     <div id="pcc-page">
-        <a href="#" class="js-pcc-nav-toggle pcc-nav-toggle"><i></i></a>
+     
         <%- include(dir+'partials/nav.ejs') %>
-        <div id="pcc-main">
+              <div id="pcc-main">
+         <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
             <section class="pcc-services">
+                <div class="container">
                 <div class="pcc-narrow-content">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
@@ -78,12 +87,13 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 animate-box" data-animate-effect="fadeInRight">
+                            <div class="accordion" id="myAccordion">                        
                             <div class="fancy-collapse-panel">
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingFour">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseFour" aria-expanded="false"
                                                     aria-controls="collapseFour">Topographical Survey (UAV/Drone)
                                                 </a>
@@ -114,7 +124,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingThree">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseThree" aria-expanded="false"
                                                     aria-controls="collapseThree">3D Laser Scanning
                                                 </a>
@@ -152,7 +162,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingFive">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseFive" aria-expanded="false"
                                                     aria-controls="collapseFive">Mobile Mapping
                                                 </a>
@@ -179,8 +189,8 @@
                                     </div>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingTwo">
-                                            <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                            <h4 class="panel-title accordion-header">
+                                                <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion"
                                                     href="#collapseTwo" aria-expanded="false"
                                                     aria-controls="collapseTwo">Hydrological Survey
                                                 </a>
@@ -217,9 +227,12 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                </div>
             </section>
             <!-- Section-Equipment -->
             <section class="pcc-equipment">
+                <div class="container">
                 <div class="pcc-narrow-content">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
@@ -420,6 +433,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </section>
             <%- include (dir+'partials/brands.ejs')%>

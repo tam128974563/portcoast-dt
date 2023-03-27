@@ -44,31 +44,32 @@
 
 <body>
     <div id="pcc-page">
-        <a href="#" class="js-pcc-nav-toggle pcc-nav-toggle"><i></i></a>
+     
         <%- include('partials/nav.ejs') %>
-
-        <div id="pcc-main">
-            <section class="pcc-projects">
-                <div class="pcc-narrow-content">
+            <div id="pcc-main">
+            <!-- Page Header Start -->
+               <div class="page-header">
+                <div class="container">
                     <div class="row">
-                        <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
-                            data-animate-effect="fadeInLeft">
-                            <span class="heading-meta">Projects</span>
-                            <h2 class="pcc-heading">Typical Projects</h2>
-                        </div>
                     </div>
-                    <div class="row row-bottom-padded-md">
-                        <div class="filtering col-sm-12 text-center animate-box" data-animate-effect="fadeInLeft">
-                            <span data-filter="*" class="active">All</span>
-                            <span data-filter=".industry" class="">Industry</span>
-                            <span data-filter=".architecture" class="">Architecture</span>
-                            <span data-filter=".port" class="">Ports & Offshore</span>
-                            <span data-filter=".heritage" class="">Heritage</span>
-                            <span data-filter=".infrastructure" class="">Infrastructure</span>
-                            <span data-filter=".interior" class="">Facility Management</span>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-projects">
+                <div class="container">
+                    <div class="pcc-narrow-content">
+                        <div class="row row-bottom-padded-md">
+                            <div class="filtering col-sm-12 text-center animate-box" data-animate-effect="fadeInLeft">
+                                <span data-filter="*" class="active">All</span>
+                                <span data-filter=".industry" class="">Industry</span>
+                                <span data-filter=".architecture" class="">Architecture</span>
+                                <span data-filter=".port" class="">Ports & Offshore</span>
+                                <span data-filter=".heritage" class="">Heritage</span>
+                                <span data-filter=".infrastructure" class="">Infrastructure</span>
+                                <span data-filter=".interior" class="">Facility Management</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row row-bottom-padded-md gallery">
+                        <div class="row row-bottom-padded-md gallery">
                             <%for(let i = 0; i < project.length; i++){ %>
                             <div class="col-md-4 col-sm-6 <%= project[i].tags.join(" ") %>">
                                 <div class="projects-entry animate-box" data-animate-effect="fadeInLeft">
@@ -83,20 +84,21 @@
                                 </div>
                             </div>
                             <%}%>
-                            <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                            <!-- <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                 <ul style="float: right;" class="pagination">
                                     <li class="disabled"><a href="#">&laquo;</a></li>
                                     <li class="active"><a href="#">1</a></li>
                                     <li><a href="#">&raquo;</a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                     </div>
+                </div>
                 </div>
             </section>
             <%- include ('partials/footer.ejs')%>
-        </div>
-    </div>
-    <%- include('partials/js.ejs') %>
+                        </div>
+                    </div>
+                    <%- include('partials/js.ejs') %>
 
 </body>
 
