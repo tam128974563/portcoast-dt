@@ -73,6 +73,7 @@
                                 </div>
                                 <div class="row row-bottom-padded-md">
                                     <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <img src="/public/images/solutions/3dsurvey.gif" class="img-fluid mb-3">
                                         <p>This high definition surveying (HDS) method or laser scanning is primarily
                                             responsible
                                             for capturing high quality and speed data of a building or an object that is
@@ -84,7 +85,6 @@
                                             measure bridges, buildings, roadways, etc. These eye-safe beams then grab
                                             the accurate
                                             X, Y, and Z, values in minutes.</p>
-                                        <img src="/public/images/solutions/3dsurvey.gif" class="img-fluid">
                                         <p>Infrastructure Digital Transformation Center is proud to be the leading 3D
                                             Laser
                                             service provider in Vietnam. Along with our experience and constantly
@@ -95,7 +95,7 @@
                                             surveying..</p>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row row-bottom-padded-md mb-5">
                                     <div class="col-md-12 animate-box" data-animate-effect="fadeInRight">
                                         <div class="accordion" id="myAccordion">
                                             <div class="fancy-collapse-panel">
@@ -280,25 +280,26 @@
                         <div class="col-lg-4">
                             <div class="pcc-narrow-content">
                                 <!-- Category Start -->
-                                <div class="mb-5">
+                                <div class="mb-5 animate-box"
+                                data-animate-effect="fadeInLeft">
                                     <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-5">Solutions</h4>
                                     <div class="d-flex flex-column justify-content-start">
-                                        <a class="bg-light rounded py-2 px-3 mb-2" href="#"><i
+                                        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/surveying"><i
                                                 class="fa fa-angle-right me-2"></i>Surveying</a>
-                                        <a class="bg-light rounded py-2 px-3 mb-2" href="#"><i
-                                                class="fa fa-angle-right me-2"></i>BIM and Scan to BIM</a>
-                                        <a class="bg-light rounded py-2 px-3 mb-2" href="#"><i
-                                                class="fa fa-angle-right me-2"></i>GIS and BIM Integration</a>
-                                        <a class="bg-light rounded py-2 px-3 mb-2" href="#"><i
+                                        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/bim"><i
+                                                class="fa fa-angle-right me-2"></i>BIM & Scan to BIM</a>
+                                        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/gis-and-bim-integration"><i
+                                                class="fa fa-angle-right me-2"></i>GIS & BIM Integration</a>
+                                        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/digital-twin"><i
                                                 class="fa fa-angle-right me-2"></i>Digital Twin</a>
                                     </div>
                                 </div>
                                 <!-- Category End -->
 
                                 <!-- Recent Post Start -->
-                                <div class="mb-5" id="project">
-                                    <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-4">Projects</h4>
-
+                                <div class="mb-5 animate-box"
+                                data-animate-effect="fadeInLeft" id="project">
+                                    <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-5">Projects</h4>
 
                                 </div>
                                 <!-- Recent Post End -->
@@ -556,7 +557,7 @@
                     document.getElementById("project").innerHTML += ` <div class="d-flex rounded overflow-hidden mb-3">
     <img class="img-fluid" src="/public/images/projects/${item.folder}/cover.jpg"
         style="width: 100px; height: 100px; object-fit: cover;" alt="">
-    <a href="${item.url_en}" class="d-flex align-items-center px-3 mb-0">${item.title_en}
+    <a href="/en/projects/${item.url_en}" class="d-flex align-items-center px-3 mb-0">${item.title_en}
     </a>
 </div>`
                 }
