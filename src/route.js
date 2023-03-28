@@ -128,11 +128,14 @@ const authenticatedCheck = (role) => {
 const dashboard = (req, res) => {
     res.render('dashboard');
 }
+const projectList = (req, res) => {
 
+}
 const createRoutes = () => {
     const route = Router();
     //Api route
     route.post('/api/clean-accent', clearAccent)
+    route.get('/api/project', project.api)
 
     route.get('/', home.route)
 

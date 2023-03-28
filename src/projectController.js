@@ -1,6 +1,5 @@
 const Project = require('./models/project');
 const utils = require('./utils');
-const api = require('./api');
 
 const addForm = (req, res) => {
     res.render('forms/project');
@@ -78,6 +77,13 @@ const route = async (req, res) => {
     }
 }
 
+const api = async (req, res) => {
+    let data = await Project.find({}).sort({
+        index_number: -1
+    }).limit(6).lean();
+    res.json(data);
+}
+
 module.exports = {
     route,
     addForm,
@@ -86,5 +92,6 @@ module.exports = {
     editForm,
     edit,
     pagination,
-    page
+    page,
+    api
 }

@@ -296,48 +296,10 @@
                                 <!-- Category End -->
 
                                 <!-- Recent Post Start -->
-                                <div class="mb-5">
+                                <div class="mb-5" id="project">
                                     <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-4">Projects</h4>
-                                    <div class="d-flex rounded overflow-hidden mb-3">
-                                        <img class="img-fluid"
-                                            src="/public/images/projects/merryland-quy-nhon/cover.jpg"
-                                            style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                                        <a href="" class="d-flex align-items-center px-3 mb-0">MerryLand Quy
-                                            Nhon
-                                        </a>
-                                    </div>
-                                    <div class="d-flex rounded overflow-hidden mb-3">
-                                        <img class="img-fluid"
-                                            src="/public/images/projects/merryland-quy-nhon/cover.jpg"
-                                            style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                                        <a href="" class="d-flex align-items-center px-3 mb-0">MerryLand Quy
-                                            Nhon
-                                        </a>
-                                    </div>
-                                    <div class="d-flex rounded overflow-hidden mb-3">
-                                        <img class="img-fluid"
-                                            src="/public/images/projects/merryland-quy-nhon/cover.jpg"
-                                            style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                                        <a href="" class="d-flex align-items-center px-3 mb-0">MerryLand Quy
-                                            Nhon
-                                        </a>
-                                    </div>
-                                    <div class="d-flex rounded overflow-hidden mb-3">
-                                        <img class="img-fluid"
-                                            src="/public/images/projects/merryland-quy-nhon/cover.jpg"
-                                            style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                                        <a href="" class="d-flex align-items-center px-3 mb-0">MerryLand Quy
-                                            Nhon
-                                        </a>
-                                    </div>
-                                    <div class="d-flex rounded overflow-hidden mb-3">
-                                        <img class="img-fluid"
-                                            src="/public/images/projects/merryland-quy-nhon/cover.jpg"
-                                            style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                                        <a href="" class="d-flex align-items-center px-3 mb-0">MerryLand Quy
-                                            Nhon
-                                        </a>
-                                    </div>
+
+
                                 </div>
                                 <!-- Recent Post End -->
                             </div>
@@ -585,7 +547,21 @@
     </div>
 
     <%- include(dir+'partials/js.ejs') %>
-
+    <script>
+        fetch('/api/project', {
+                method: "GET",
+            }).then(response => response.json())
+            .then(data => {
+                for (let item of data) {
+                    document.getElementById("project").innerHTML += ` <div class="d-flex rounded overflow-hidden mb-3">
+    <img class="img-fluid" src="/public/images/projects/${item.folder}/cover.jpg"
+        style="width: 100px; height: 100px; object-fit: cover;" alt="">
+    <a href="${item.url_en}" class="d-flex align-items-center px-3 mb-0">${item.title_en}
+    </a>
+</div>`
+                }
+            })
+    </script>
 </body>
 
 </html>
