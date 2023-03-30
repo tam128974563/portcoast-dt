@@ -1,0 +1,53 @@
+<%if(lang === 'en'){%>
+<div class="mb-5 animate-box" data-animate-effect="fadeInLeft">
+    <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-5">Products
+    </h4>
+    <div class="d-flex flex-column justify-content-start">
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/surveying"><i
+                class="fa fa-angle-right me-2"></i>3D Point Cloud Models</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/bim"><i
+                class="fa fa-angle-right me-2"></i>Truviews</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/gis-and-bim-integration"><i
+                class="fa fa-angle-right me-2"></i>GIS & BIM Integration</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/digital-twin"><i
+                class="fa fa-angle-right me-2"></i>Digital Twin</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/surveying"><i
+                class="fa fa-angle-right me-2"></i>Surveying</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/bim"><i class="fa fa-angle-right me-2"></i>BIM &
+            Scan to BIM</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/gis-and-bim-integration"><i
+                class="fa fa-angle-right me-2"></i>GIS & BIM Integration</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/digital-twin"><i
+                class="fa fa-angle-right me-2"></i>Digital Twin</a>
+
+    </div>
+</div>
+<%} else {%>
+<div class="mb-5 animate-box" data-animate-effect="fadeInLeft">
+    <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-5">Sản phẩm
+    </h4>
+    <div class="d-flex flex-column justify-content-start">
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/surveying"><i
+                class="fa fa-angle-right me-2"></i>Mô hình đám mây điểm</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/bim"><i
+                class="fa fa-angle-right me-2"></i>Truviews</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/gis-and-bim-integration"><i
+                class="fa fa-angle-right me-2"></i>GIS & BIM Integration</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/digital-twin"><i
+                class="fa fa-angle-right me-2"></i>Digital Twin</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/surveying"><i
+                class="fa fa-angle-right me-2"></i>Surveying</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/bim"><i class="fa fa-angle-right me-2"></i>BIM
+            & Scan to BIM</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/gis-and-bim-integration"><i
+                class="fa fa-angle-right me-2"></i>GIS & BIM Integration</a>
+        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/digital-twin"><i
+                class="fa fa-angle-right me-2"></i>Digital Twin</a>
+    </div>
+</div>
+<%}%>
+  <script>
+      document.querySelectorAll("#shortcut").forEach((current) => {
+          if (window.location.href === current.href) current.classList.add("active")
+      })
+  </script>
