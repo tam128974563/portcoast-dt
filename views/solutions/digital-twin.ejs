@@ -47,10 +47,10 @@
 
 <body>
     <div id="pcc-page">
-     
+
         <%- include(dir+'partials/nav.ejs') %>
-              <div id="pcc-main">
-         <!-- Page Header Start -->
+        <div id="pcc-main">
+            <!-- Page Header Start -->
             <div class="page-header">
                 <div class="container">
                     <div class="row">
@@ -60,42 +60,53 @@
             <!-- Page Header End -->
             <section class="pcc-services">
                 <div class="container">
-                <div class="pcc-narrow-content">
                     <div class="row">
-                        <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
-                            data-animate-effect="fadeInLeft">
-                            <span class="heading-meta">
-                                Comprehensive Solutions</span>
-                            <h2 class="pcc-heading animate-box">Digital Twin</h2>
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+                                        data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            Comprehensive Solutions</span>
+                                        <h2 class="pcc-heading animate-box">Digital Twin</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="animate-box" data-animate-effect="fadeInLeft">
+                                        <p>A Digital Twin is a digital representation of a physical object, process, or
+                                            service such as a wind farm, building, or even an entire city.
+                                        </p>
+                                        <p>
+                                            The digital twin provides a 3D model that integrates a variety of
+                                            information from geometry to real-time data allowing management, performance
+                                            simulation studies, simulation of impact scenarios from natural disasters to
+                                            possible incidents, in order to provide solutions to prevent risks as well
+                                            as develop response scenarios.</p>
+                                    </div>
+                                    <div class="animate-box" data-animate-effect="fadeInRight">
+                                        <figure>
+                                            <img src="/public/images/solutions/digital-twin/digital-twin-01.jpg" alt=""
+                                                class="img-fluid">
+                                            <figcaption>The basic Digital Twin model simulates the Cai Mep - Thi Vai
+                                                port system</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="/public/images/solutions/digital-twin/digital-twin-02.jpg" alt=""
+                                                class="img-fluid">
+                                            <figcaption>Simulation of ships docking inside the Digital Twin model
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row row-bottom-padded-md">
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                            <p>A Digital Twin is a digital representation of a physical object, process, or service such as a wind farm, building, or even an entire city.
-                            </p>
-                            <p>
-                                The digital twin provides a 3D model that integrates a variety of information from geometry to real-time data allowing management, performance simulation studies, simulation of impact scenarios from natural disasters to possible incidents, in order to provide solutions to prevent risks as well as develop response scenarios.</p>
-                        </div>
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                            <figure>
-                                <img src="/public/images/solutions/digital-twin/digital-twin-01.jpg"
-                                    alt="" class="img-fluid">
-                                <figcaption>The basic Digital Twin model simulates the Cai Mep - Thi Vai port system</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="/public/images/solutions/digital-twin/digital-twin-02.jpg"
-                                    alt="" class="img-fluid">
-                                <figcaption>Simulation of ships docking inside the Digital Twin model</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </section>
-            <%- include (dir+'partials/brands.ejs')%>
             <%- include (dir+'partials/footer.ejs')%>
         </div>
     </div>
     <%- include(dir+'partials/js.ejs') %>
 </body>
+
 </html>
