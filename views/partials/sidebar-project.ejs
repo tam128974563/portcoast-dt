@@ -1,6 +1,7 @@
 <div class="mb-5 animate-box" data-animate-effect="fadeInLeft" id="project">
-    <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-5"><%lang === 'en'?"Project":"Dự án"%></h4>
-
+    <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-5">
+        <%=lang === 'en'?'Project':'Dự án'%>
+    </h4>
 </div>
 <script>
     fetch('/api/project', {
@@ -12,7 +13,7 @@
     <img class="img-fluid" src="/public/images/projects/${item.folder}/cover.jpg"
         style="width: 100px; height: 100px; object-fit: cover;" alt="">
     <a href="/en/projects/${item.url_<%= lang %>}" class="d-flex align-items-center px-3 mb-0">${item.title_<%=lang%>}
-    </a>
+        </a>
 </div>`
             }
         })
