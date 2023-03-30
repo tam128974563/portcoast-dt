@@ -1,134 +1,229 @@
 <% if(lang == "en"){%>
-          <!-- Top Bar Start -->
-          <div class="top-bar d-none d-md-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="top-bar-left">
-                            <div class="text">
-                                <i class="icon-phone3"></i>
-                                <a href = "tel:02862970345"><p>(84 - 28) 62970345</p></a>
-                            </div>
-                            <div class="text">
-                                <i class="icon-mail6"></i>
-                                <a href = "mailto:portcoast@portcoast.com.vn"><p>portcoast@portcoast.com.vn</p></a>
-                            </div>
-                        </div>
+<!-- Top Bar Start -->
+<div class="top-bar d-none d-md-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="top-bar-left">
+                    <div class="text">
+                        <i class="icon-phone3"></i>
+                        <a href="tel:02862970345">
+                            <p>(84 - 28) 62970345</p>
+                        </a>
                     </div>
-                    <div class="col-md-4">
-                        <div class="top-bar-right">
-                            <div class="social">
-                                <a href="https://www.facebook.com/portcoastdt" target="_blank"><i class="icon-facebook2"></i></a>
-                                <a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>                
-                                <a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i class="icon-linkedin2"></i></a>
-                                <a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber" target="_blank"><i class="icon-youtube"></i></a>
-                            </div>
-                        </div>
+                    <div class="text">
+                        <i class="icon-mail6"></i>
+                        <a href="mailto:portcoast@portcoast.com.vn">
+                            <p>portcoast@portcoast.com.vn</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="top-bar-right">
+                    <div class="social">
+                        <a href="https://www.facebook.com/portcoastdt" target="_blank"><i
+                                class="icon-facebook2"></i></a>
+                        <a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>
+                        <a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i
+                                class="icon-linkedin2"></i></a>
+                        <a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber"
+                            target="_blank"><i class="icon-youtube"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Top Bar End -->
+    </div>
+</div>
+<!-- Top Bar End -->
 
-        <!-- Nav Bar Start -->
-        <nav class="navbar navbar-expand-xxl navbar-dark bg-info p-3">
-            <div class="container">
-                <a href="/" id="pcc-logo">
-                    <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
-                </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-          
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item"><a class=" <%if(page == " "){%>active <% }%>nav-link mx-2" href="/">Home</a></li>
-                    <li class="nav-item"><a class=" <%if(page == "about"){%>active <% }%>nav-link mx-2" href="/en/about">About us</a></li>
-                    <li class="nav-item"><a class=" <%if(page == "solutions"){%>active <% }%>nav-link mx-2" href="/en/solutions">Solutions</a></li>
-                    <li class="nav-item"><a class=" <%if(page == "products"){%>active <% }%> nav-link mx-2" href="/en/products">Products</a></li>
-                    <li class="nav-item"><a class=" <%if(page == "projects"){%>active <% }%>nav-link mx-2" href="/en/projects">Projects</a></li>
-                    <li class="nav-item"><a class=" <%if(page == "news"){%>active <% }%>nav-link mx-2"href="/en/news">News</a></li>
-                    <li class="nav-item"><a class=" <%if(page == "frequently-asked-questions"){%>active <% }%>nav-link mx-2" href="/en/frequently-asked-questions">FAQs</a></li>
-                    <li class="nav-item"><a class=" <%if(page == "contact"){%>active <% }%>nav-link mx-2" href="/en/contact">Contact</a></li>
-                </ul>
-                <ul class="navbar-nav ms-auto d-lg-inline-flex">
-                  <li class="nav-item mx-2">
-                    <a class="nav-link text-dark h5 <% if(lang == "en"){ %> active <% } %> " href="/en/<%= en %>"><img width="25px" src="/public/images/icon/united.png"></a>
-                  </li>
-                  <li class="nav-item mx-2">
-                    <a class="nav-link text-dark h5 <% if(lang != "en"){ %> active <% } %>"  href="/vi/<%= vi%>"><img width="25px" src="/public/images/icon/vietnam.png"></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        <!-- Nav Bar End -->
+<!-- Nav Bar Start -->
+<nav class="navbar navbar-expand-xxl navbar-dark bg-info p-3">
+    <div class="container">
+        <a href="/" id="pcc-logo">
+            <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item"><a class=" <%if(page == " "){%>active <% }%>nav-link mx-2" href="/">Home</a></li>
+                <li class="nav-item"><a class=" <%if(page == "about"){%>active <% }%>nav-link mx-2"
+                        href="/en/about">About us</a></li>
 
-    <% } else { %>
-            <!-- Top Bar Start -->
-            <div class="top-bar d-none d-md-block">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                          <div class="top-bar-left">
-                            <div class="text">
-                                <i class="icon-phone3"></i>
-                                <a href = "tel:02862970345"><p>(84 - 28) 62970345</p></a>
-                            </div>
-                            <div class="text">
-                                <i class="icon-mail6"></i>
-                                <a href = "mailto:portcoast@portcoast.com.vn"><p>portcoast@portcoast.com.vn</p></a>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="top-bar-right">
-                                <div class="social">
-                                    <a href="https://www.facebook.com/portcoastdt" target="_blank"><i class="icon-facebook2"></i></a>
-                                    <a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>                
-                                    <a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i class="icon-linkedin2"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber" target="_blank"><i class="icon-youtube"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                <li class="nav-item dropdown">
+                    <a class=" <%if(page == "solutions"){%>active <% }%>nav-link mx-2 dropdown-toggle"
+                       href="/en/solutions">Solutions</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item dropend">
+                            <a href="/en/solutions/surveying" class="dropdown-toggle nav-link mx-2">Surveying</a>
+                            <ul class="dropdown-menu submenu">
+                                <li class="nav-item"><a href="/en/solutions/topographical-survey" class="nav-link mx-2">Topographical Survey</a></li>
+                                <li class="nav-item"><a href="/en/solutions/3d-laser-scanning" class="nav-link mx-2">3D Laser Scanning</a></li>
+                                <li class="nav-item"><a href="/en/solutions/mobile-mapping" class="nav-link mx-2">Mobile Mapping</a></li>
+                                <li class="nav-item"><a href="/en/solutions/hydrological-survey" class="nav-link mx-2">Hydrological Survey</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="/en/solutions/bim" class="nav-link mx-2">BIM & Scan to BIM</a></li>
+                        <li class="nav-item"><a href="/en/solutions/gis-and-bim-integration" class="nav-link mx-2">GIS & BIM Integration</a></li>
+                        <li class="nav-item"><a href="/en/solutions/digital-twin" class="nav-link mx-2">Digital Twin</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class=" <%if(page == "products"){%>active <% }%>nav-link mx-2 dropdown-toggle"
+                       href="/en/products">Products</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="/en/products/point-cloud-model" class="nav-link mx-2">3D Point Cloud Model</a></li>
+                        <li class="nav-item"><a href="/en/products/truviews" class="nav-link mx-2">Truviews</a></li>
+                        <li class="nav-item"><a href="/en/products/bim-models" class="nav-link mx-2">BIM Model</a></li>
+                        <li class="nav-item"><a href="/en/products/3d-mesh-models" class="nav-link mx-2">3D Mesh Model</a></li>
+                        <li class="nav-item"><a href="/en/products/deformation-and-deflection-survey" class="nav-link mx-2">Deformation & Deflection Survey</a></li>
+                        <li class="nav-item"><a href="/en/products/volume-survey" class="nav-link mx-2">Volume Survey</a></li>
+                        <li class="nav-item"><a href="/en/products/clash-detection" class="nav-link mx-2">Clash Detection</a></li>
+                        <li class="nav-item"><a href="/en/products/3d-mapping" class="nav-link mx-2">3D Mapping</a></li>
+                        <li class="nav-item"><a href="/en/products/visualization" class="nav-link mx-2">Visualization (VR/AR/MR)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class=" <%if(page == "projects"){%>active <% }%>nav-link mx-2"
+                        href="/en/projects">Projects</a></li>
+                <li class="nav-item"><a class=" <%if(page == "news"){%>active <% }%>nav-link mx-2"
+                        href="/en/news">News</a></li>
+                <li class="nav-item"><a class=" <%if(page == "frequently-asked-questions"){%>active <% }%>nav-link mx-2"
+                        href="/en/frequently-asked-questions">FAQs</a></li>
+                <li class="nav-item"><a class=" <%if(page == "contact"){%>active <% }%>nav-link mx-2"
+                        href="/en/contact">Contact</a></li>
+            </ul>
+            <ul class="navbar-nav ms-auto d-lg-inline-flex">
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-dark h5 <% if(lang == "en"){ %> active <% } %> " href="/en/<%= en %>"><img
+                            width="25px" src="/public/images/icon/united.png"></a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-dark h5 <% if(lang != "en"){ %> active <% } %>" href="/vi/<%= vi%>"><img
+                            width="25px" src="/public/images/icon/vietnam.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Nav Bar End -->
+
+<% } else { %>
+<!-- Top Bar Start -->
+<div class="top-bar d-none d-md-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="top-bar-left">
+                    <div class="text">
+                        <i class="icon-phone3"></i>
+                        <a href="tel:02862970345">
+                            <p>(84 - 28) 62970345</p>
+                        </a>
+                    </div>
+                    <div class="text">
+                        <i class="icon-mail6"></i>
+                        <a href="mailto:portcoast@portcoast.com.vn">
+                            <p>portcoast@portcoast.com.vn</p>
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- Top Bar End -->
-    
-            <!-- Nav Bar Start -->
-            <nav class="navbar navbar-expand-xxl navbar-dark bg-info p-3">
-                <div class="container">
-                    <a href="/" id="pcc-logo">
-                        <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
-                    </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-              
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item"><a class=" <%if(page == "trang-chu"){%>active <% }%>nav-link mx-2" href="/vi/trang-chu">Trang chủ</a></li>
-                        <li class="nav-item"><a class=" <%if(page == "gioi-thieu"){%>active <% }%>nav-link mx-2" href="/vi/gioi-thieu">Giới thiệu</a></li>
-                        <li class="nav-item"><a class=" <%if(page == "giai-phap"){%>active <% }%>nav-link mx-2" href="/vi/giai-phap">Giải pháp</a></li>
-                        <li class="nav-item"><a class=" <%if(page == "san-pham"){%>active <% }%> nav-link mx-2" href="/vi/san-pham">Sản phẩm</a></li>
-                        <li class="nav-item"><a class=" <%if(page == "du-an"){%>active <% }%>nav-link mx-2" href="/vi/du-an">Dự án</a></li>
-                        <li class="nav-item"><a class=" <%if(page == "tin-tuc"){%>active <% }%>nav-link mx-2"href="/vi/tin-tuc">Tin tức</a></li>
-                        <li class="nav-item"><a class=" <%if(page == "nhung-cau-hoi-thuong-gap-faqs"){%>active <% }%>nav-link mx-2" href="/vi/nhung-cau-hoi-thuong-gap-faqs">FAQs</a></li>
-                        <li class="nav-item"><a class=" <%if(page == "lien-he"){%>active <% }%>nav-link mx-2" href="/vi/lien-he">Liên hệ</a></li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto d-lg-inline-flex">
-                      <li class="nav-item mx-2">
-                        <a class="nav-link text-dark h5 <% if(lang == "en"){ %> active <% } %> " href="/en/<%= en %>"><img width="25px" src="/public/images/icon/united.png"></a>
-                      </li>
-                      <li class="nav-item mx-2">
-                        <a class="nav-link text-dark h5 <% if(lang != "en"){ %> active <% } %>"  href="/vi/<%= vi%>"><img width="25px" src="/public/images/icon/vietnam.png"></a>
-                      </li>
-                    </ul>
-                  </div>
+            <div class="col-md-4">
+                <div class="top-bar-right">
+                    <div class="social">
+                        <a href="https://www.facebook.com/portcoastdt" target="_blank"><i
+                                class="icon-facebook2"></i></a>
+                        <a href="https://twitter.com/portcoast" target="_blank"><i class="icon-twitter2"></i></a>
+                        <a href="https://www.linkedin.com/in/portcoast/" target="_blank"><i
+                                class="icon-linkedin2"></i></a>
+                        <a href="https://www.youtube.com/channel/UCRpMKTsHC7bdBM02gY9JRjg?view_as=subscriber"
+                            target="_blank"><i class="icon-youtube"></i></a>
+                    </div>
                 </div>
-              </nav>
-            <!-- Nav Bar End -->
-        <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top Bar End -->
 
+<!-- Nav Bar Start -->
+<nav class="navbar navbar-expand-xxl navbar-dark bg-info p-3">
+    <div class="container">
+        <a href="/" id="pcc-logo">
+            <img src="/public/images/logo-portcoast-dt.png" alt="Portcoast DT">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item"><a class=" <%if(page == "trang-chu"){%>active <% }%>nav-link mx-2"
+                        href="/vi/trang-chu">Trang chủ</a></li>
+                <li class="nav-item"><a class=" <%if(page == "gioi-thieu"){%>active <% }%>nav-link mx-2"
+                        href="/vi/gioi-thieu">Giới thiệu</a></li>
+                <li class="nav-item dropdown">
+                    <a class=" <%if(page == "giai-phap"){%>active <% }%>nav-link mx-2 dropdown-toggle"
+                    href="/vi/giai-phap">Giải pháp</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item dropend">
+                            <a href="/vi/giai-phap/khao-sat-xay-dung" class="dropdown-toggle nav-link mx-2">Khảo sát xây dựng</a>
+                            <ul class="dropdown-menu submenu">
+                                <li class="nav-item"><a href="/vi/giai-phap/khao-sat-dia-hinh-uav" class="nav-link mx-2">Khảo sát Địa hình Drone/UAV</a></li>
+                                <li class="nav-item"><a href="/vi/giai-phap/khao-sat-hien-trang-3d-laser" class="nav-link mx-2">Khảo sát hiện trạng 3D Laser</a></li>
+                                <li class="nav-item"><a href="/vi/giai-phap/lap-ban-do-di-dong-mobile-mapping" class="nav-link mx-2">Lập bản đồ di động (Mobile Mapping)</a></li>
+                                <li class="nav-item"><a href="/vi/giai-phap/khao-sat-thuy-van" class="nav-link mx-2">Khảo sát thủy văn</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="/vi/giai-phap/bim" class="nav-link mx-2">BIM & Scan to BIM</a></li>
+                        <li class="nav-item"><a href="/vi/giai-phap/ket-hop-gis-va-bim" class="nav-link mx-2">Kết hợp GIS & BIM</a></li>
+                        <li class="nav-item"><a href="/vi/giai-phap/ban-sao-ky-thuat-so" class="nav-link mx-2">Bản sao kỹ thuật số (Digital Twin)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class=" <%if(page == "san-pham"){%>active <% }%> nav-link mx-2  dropdown-toggle"
+                        href="/vi/san-pham">Sản phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="/vi/san-pham/mo-hinh-dam-may-diem" class="nav-link mx-2">Mô hình đám mây điểm</a></li>
+                        <li class="nav-item"><a href="/vi/san-pham/truviews" class="nav-link mx-2">Truviews</a></li>
+                        <li class="nav-item"><a href="/vi/san-pham/mo-hinh-bim" class="nav-link mx-2">Mô hình BIM</a></li>
+                        <li class="nav-item"><a href="/vi/san-pham/mo-hinh-luoi" class="nav-link mx-2">Mô hình lưới</a></li>
+                        <li class="nav-item"><a href="/vi/san-pham/khao-sat-bien-dang-va-chuyen-vi" class="nav-link mx-2">Khảo sát biến dạng & Chuyển vị</a></li>
+                        <li class="nav-item"><a href="/vi/san-pham/khao-sat-khoi-luong" class="nav-link mx-2">Khảo sát khối lượng</a></li>
+                        <li class="nav-item"><a href="/vi/san-pham/phat-hien-xung-dot" class="nav-link mx-2">Phát hiện xung đột</a></li>
+                        <li class="nav-item"><a href="/vi/san-pham/lap-ban-do-3d" class="nav-link mx-2">Lập bản đồ 3D</a></li>
+                        <li class="nav-item"><a href="/vi/san-pham/truc-quan-hoa" class="nav-link mx-2">Trực quan hóa (AR/VR/MR)</a></li>
+                        <li class="nav-item"><a href="/vi/san-pham/tham-quan-ao-360" class="nav-link mx-2">Tham quan ảo 360°</a></li>
+
+                    </ul>
+                </li>
+                <li class="nav-item"><a class=" <%if(page == "du-an"){%>active <% }%>nav-link mx-2" href="/vi/du-an">Dự
+                        án</a></li>
+                <li class="nav-item"><a class=" <%if(page == "tin-tuc"){%>active <% }%>nav-link mx-2"
+                        href="/vi/tin-tuc">Tin tức</a></li>
+                <li class="nav-item"><a
+                        class=" <%if(page == "nhung-cau-hoi-thuong-gap-faqs"){%>active <% }%>nav-link mx-2"
+                        href="/vi/nhung-cau-hoi-thuong-gap-faqs">FAQs</a></li>
+                <li class="nav-item"><a class=" <%if(page == "lien-he"){%>active <% }%>nav-link mx-2"
+                        href="/vi/lien-he">Liên hệ</a></li>
+            </ul>
+            <ul class="navbar-nav ms-auto d-lg-inline-flex">
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-dark h5 <% if(lang == "en"){ %> active <% } %> " href="/en/<%= en %>"><img
+                            width="25px" src="/public/images/icon/united.png"></a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-dark h5 <% if(lang != "en"){ %> active <% } %>" href="/vi/<%= vi%>"><img
+                            width="25px" src="/public/images/icon/vietnam.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Nav Bar End -->
+<% } %>

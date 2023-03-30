@@ -47,10 +47,10 @@
 
 <body>
     <div id="pcc-page">
-     
+
         <%- include(dir+'partials/nav.ejs') %>
-              <div id="pcc-main">
-         <!-- Page Header Start -->
+        <div id="pcc-main">
+            <!-- Page Header Start -->
             <div class="page-header">
                 <div class="container">
                     <div class="row">
@@ -60,34 +60,54 @@
             <!-- Page Header End -->
             <section class="pcc-services">
                 <div class="container">
-                <div class="pcc-narrow-content">
                     <div class="row">
-                        <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
-                            data-animate-effect="fadeInLeft">
-                            <span class="heading-meta">
-                                Products</span>
-                            <h2 class="pcc-heading animate-box">BIM Model</h2>
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+                                        data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            Products</span>
+                                        <h2 class="pcc-heading animate-box">BIM Model</h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                        <p>Building Information Modeling (BIM) is quickly becoming an industry standard
+                                            for construction projects. It not only provides a digital representation of
+                                            a building project, but also allows for increased collaboration between
+                                            design teams, architects, engineers, and contractors in the design and
+                                            construction environment.</p>
+                                        <p>Our services include Architectural BIM Modeling, Structural BIM Modeling, MEP
+                                            BIM Modeling, and BIM Coordination in construction. In addition, we also
+                                            provide Scan to BIM modeling services, Virtual Design and Construction
+                                            (VDC), 4D simulation, and Revit Landscape Architecture.</p>
+                                        <p>The benefits of BIM model in construction projects include:</p>
+                                        <ul class="pcc-list">
+                                            <li>Increased efficiency: BIM helps contractors and construction teams
+                                                optimize the construction process and reduce project completion time
+                                            </li>
+                                            <li>Cost reduction: BIM provides accurate cost information, helping
+                                                investors and contractors manage project costs accurately and
+                                                effectively</li>
+                                            <li>Increased collaboration: BIM increases collaboration between
+                                                contractors, construction teams, and investors, making project
+                                                management easier and more effective</li>
+                                            <li>Time savings: BIM optimizes time in the construction process and reduces
+                                                project completion time</li>
+                                            <li>Increased safety: BIM identifies risks and provides safety solutions
+                                                before construction begins</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                                        <img class="img-fluid" src="/public/images/products/bim-modeling/cover.jpg">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <!-- Sidebar Start -->
                     </div>
-                    <div class="row row-bottom-padded-md">
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                            <p>Building Information Modeling (BIM) is quickly becoming an industry standard for construction projects. It not only provides a digital representation of a building project, but also allows for increased collaboration between design teams, architects, engineers, and contractors in the design and construction environment.</p>
-                            <p>Our services include Architectural BIM Modeling, Structural BIM Modeling, MEP BIM Modeling, and BIM Coordination in construction. In addition, we also provide Scan to BIM modeling services, Virtual Design and Construction (VDC), 4D simulation, and Revit Landscape Architecture.</p>
-                            <p>The benefits of BIM model in construction projects include:</p>
-                            <ul class="pcc-list">
-                                <li>Increased efficiency: BIM helps contractors and construction teams optimize the construction process and reduce project completion time</li>
-                                <li>Cost reduction: BIM provides accurate cost information, helping investors and contractors manage project costs accurately and effectively</li>
-                                <li>Increased collaboration: BIM increases collaboration between contractors, construction teams, and investors, making project management easier and more effective</li>
-                                <li>Time savings: BIM optimizes time in the construction process and reduces project completion time</li>
-                                <li>Increased safety: BIM identifies risks and provides safety solutions before construction begins</li>
-                            </ul>
-                  
-                        </div>
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                            <img class="img-fluid" src="/public/images/products/bim-modeling/cover.jpg">
-                        </div>
-                    </div>
-                </div>
                 </div>
             </section>
             <%- include (dir+'partials/footer.ejs')%>
