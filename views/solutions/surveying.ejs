@@ -276,36 +276,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Sidebar Start -->
-                        <div class="col-lg-4">
-                            <div class="pcc-narrow-content">
-                                <!-- Category Start -->
-                                <div class="mb-5 animate-box"
-                                data-animate-effect="fadeInLeft">
-                                    <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-5">Solutions</h4>
-                                    <div class="d-flex flex-column justify-content-start">
-                                        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/surveying"><i
-                                                class="fa fa-angle-right me-2"></i>Surveying</a>
-                                        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/bim"><i
-                                                class="fa fa-angle-right me-2"></i>BIM & Scan to BIM</a>
-                                        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/gis-and-bim-integration"><i
-                                                class="fa fa-angle-right me-2"></i>GIS & BIM Integration</a>
-                                        <a class="bg-light rounded py-2 px-3 mb-2" href="/en/solutions/digital-twin"><i
-                                                class="fa fa-angle-right me-2"></i>Digital Twin</a>
-                                    </div>
-                                </div>
-                                <!-- Category End -->
-
-                                <!-- Projects -->
-                                <div class="mb-5 animate-box"
-                                data-animate-effect="fadeInLeft" id="project">
-                                    <h4 class="pcc-heading d-inline-block text-uppercase border-5 mb-5">Projects</h4>
-
-                                </div>
-                                <!-- Recent Post End -->
-                            </div>
-                            <!-- Sidebar End -->
-                        </div>
+                        <%- include(dir+'partials/solutions.ejs') %>
                     </div>
                 </div>
             </section>
@@ -548,7 +519,7 @@
     </div>
 
     <%- include(dir+'partials/js.ejs') %>
-    <%- include (dir+'partials/sidebar-project.ejs')%>
+
 </body>
 
 </html>
