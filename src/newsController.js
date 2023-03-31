@@ -65,6 +65,7 @@ const page = async (req, res) => {
         page: url[2],
         en: `news/${page.url_en}`,
         vi: `tin-tuc/${page.url_vi}`,
+        news: page,
     }
     res.render(`${url[2]}/${page[`url_${url[1]}`]}`, options);
 }
