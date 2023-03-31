@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>'
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>'" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>'" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Source: <a href="https://blog.hexagongeosystems.com/5-tips-to-laser-scanning-in-a-challenging-environment/">Leica Geosystems</a>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"><%= news.title_en %></h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-001.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p><strong>
+                                                <%= news.description_en %> The new port is a part of the Hyosung
+                                                Chemical Complex and the construction of the LPG jetty (which Portcoast
+                                                were to build an as-built model of) was one of the final tasks in the
+                                                development, meaning that while some aspects of the port were already
+                                                operational others were still under construction.</strong></p>
+                                        <p>The topographic survey Portcoast conducted covered an area of over 30
+                                            hectares – and with much of the area located in the water, Portcoast’s level
+                                            of specialist knowledge and experience was essential for collecting data in
+                                            these hard to reach areas. While the details of their work on this site were
+                                            unique, many of the challenges are common to other sites. Portcoast have
+                                            shared their top 5 tips and explained how Leica Geosystems laser scanning
+                                            technology helped to address these challenges.</p>
+                                        <h5>1. Find a scanning position where you can avoid instability and disruption
+                                        </h5>
+                                        The disruption of ongoing construction work and traffic on site can make it
+                                        challenging to find the stability needed for precision scanning. To mitigate
+                                        these challenges, Portcoast decided to conduct scans from elevated locations
+                                        above the internal road.
+                                        <div class="pcc-quotes">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-002.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p><i>Dr. Hoang Hiep of Portcoast explained: “Working from high
+                                                            above the site provided greater stability, but the elevation
+                                                            therefore required a scanner which could deliver a high
+                                                            level of accuracy over a large measurable range. The Leica
+                                                            ScanStation P50 delivered accuracy of 1mm over a distance of
+                                                            1km so we could cover the full range with confidence and
+                                                            precision.”</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>2. Prevent data loss in an unpredictable climate through rapid data transfer
+                                        </h5>
+                                        <p>When operating in tropical environments, weather conditions can change
+                                            rapidly increasing the risk of losing data in the field so it’s vital to be
+                                            able to transfer data quickly between the field and office. With Leica
+                                            Cyclone and Leica Cyclone 3DR, Portcoast were able to collect the point
+                                            cloud data from the geodetic equipment and verify the data quickly.</p>
+                                        <p>Designed as a holistic solution the Cyclone software modules support users
+                                            through every stage of a point cloud project and the modular approach means
+                                            the software can be adapted to the specific needs of each project. The
+                                            intuitive design and simplicity of the Cyclone 3DR technology makes it
+                                            accessible even for new users enabling them to create a variety of reports
+                                            and 3D visualisations for inspection.</p>
+                                        <div class="pcc-quotes">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-003.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p><i>“The high-speed and high-level accuracy of capturing field
+                                                            data helped to avoid delays in office post-processing as the
+                                                            software helped us to check the points every time we needed
+                                                            to. With Infinity, it is easy to transfer data between the
+                                                            field and the office within 1 minute” added Dr. Hoang
+                                                            Hiep.</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>3. Use customisation and a combination of 3D laser scanners to reach
+                                            inaccessible areas</h5>
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-004.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p>The liquid tanks, pipeline systems, the marine loading arm and
+                                                        areas under the access bridge all provide challenging
+                                                        environments to scan. Yet, by using a combination of the Leica
+                                                        ScanStation P50 above ground for long range and the portable
+                                                        Leica RTC360 and Leica BLK360 to reach into the narrow areas,
+                                                        Portcoast were able to capture highly detailed scan data even
+                                                        underground and in the narrow areas of the pipeline where the
+                                                        distance was only 20 centimetres. Thanks to their one-button
+                                                        operation design, these devices could be lowered into position
+                                                        using customised cranes and were operated remotely.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>4. Keep the team small and limit hours on site to reduce operational risk
+                                        </h5>
+                                        <p>Bringing a large team to the site increases project costs and operational
+                                            risk, but this can be mitigated by selecting the right equipment. As Dr.
+                                            Hoang Hiep explains:</p>
+                                        <div class="pcc-quotes">
+                                            <p>“Not only was the training time for the team almost halved by working
+                                                with the Leica Geosystems team, but the high speed of capturing data
+                                                with Leica Geosystems’ equipment significantly reduced the survey time.
+                                                In a project like this, the topographic survey of revetment would
+                                                usually take around 12 hours with a survey grid of 20 metres per
+                                                measured point. Whereas, it can be reduced to 3 hours when using the
+                                                ScanStation P50. Accelerating the process also reduced our operational
+                                                risk and the number of employees required for this work”.</p>
+                                        </div>
+                                        <p>Reducing a task from 12 hours to three means each member of the team can do
+                                            significantly more, so fewer members of the team need to be trained and
+                                            prepared for work on the site. Not only does this reduce the operational
+                                            risk, but, by reducing time spent on training, you can supply a more
+                                            competitive quote.</p>
+                                        <div class="pcc-quotes">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-005.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p><i>“With the Leica Geosystems products it took around two weeks
+                                                            to prepare the team to use the equipment, whereas with other
+                                                            providers it has taken nearly twice as long. What was
+                                                            particularly helpful in the training was the fact that the
+                                                            Leica Geosystems trainers were able to share practical
+                                                            examples from their experiences of using the equipment on
+                                                            actual projects, rather than simply providing more
+                                                            theoretical instructions,” added Dr. Hoang Hiep.</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>So, it’s important to consider both the time-savings on site and the
+                                            time-saving in training the team when selecting a provider and to look into
+                                            the style of training they provide.</p>
+                                        <h5>5. Use extended reality capture techniques to mitigate future challenges
+                                        </h5>
+                                        <p>By using the Leica Cyclone REGISTER and Leica Cyclone REGISTER 360 office
+                                            software to create virtual models to explore the site using AR and VR
+                                            techniques, Portcoast were able to further reduce time on site and
+                                            operational risk for other contractors. The model provides a reference,
+                                            which can identify when problems are emerging and need to be addressed.</p>
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-006.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p>In this case, the port owners will be able to check how far the concrete beams have bent or the displacement of the concrete pipes against the measurements in the 3D model. Using these virtual models, the port owners can plan and model future developments to manage the facility without having to re-enter the site. Moreover, thanks to the integration of the designs, a change to one aspect in the model will automatically be reflected in others facilitating collaborative planning with multiple contractors.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>Every site and every project will present its own unique set of challenges, but many of these can be mitigated by selecting the right equipment. It’s important to identify as many of the challenges as possible in advance. In doing so, look at how your proposed technology partner may be able to address these holistically. Consider, not just how the suite of products fits itself works together, but how this will help your office and on-site teams to work together and crucially, how you and the provider can work together. If the technology saves you a day on site, but it takes a further three days to train the team to get started on site, how will this impact your work and your costs? Remember that the challenges presented by the site itself extend far beyond the work on site. However, by taking this into account early on in your equipment selection, you can avoid many potential pain points later on.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>

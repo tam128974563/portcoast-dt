@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="vi" />
+    <title><%=news.title_vi%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_vi%>" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi" content="<%=news.title_vi%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%=news.title_vi%>" />
+    <meta property="og:description" content="<%= news.description_vi%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_vi%>" />
+    <meta name="twitter:description" content="<%= news.description_vi%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <%- include (dir+'partials/css.ejs')%>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include (dir+'partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->    
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[1]%> |
+                                            <%=  [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Nguồn: <a href="https://blog.hexagongeosystems.com/5-tips-to-laser-scanning-in-a-challenging-environment/">Leica Geosystems</a></span>
+                                        <h2 class="pcc-heading animate-box">
+                                            <%= news.title_vi %>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-001.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p><strong><%= news.description_vi%> Cảng mới là một phần của Khu liên hợp hóa học Hyosung và việc xây dựng cầu cảng LPG (mà Portcoast xây dựng theo mô hình xây dựng) là một trong những nhiệm vụ cuối cùng trong quá trình phát triển, có nghĩa là trong khi một số khía cạnh của cảng là đã hoạt động những người khác vẫn đang được xây dựng.</strong></p>
+                                        <p>Bảng khảo sát địa hình được Portcoast tiến hành bao phủ một khu vực hơn 30 ha - và vì phần lớn khu vực nằm trong nước, mức độ chuyên môn và kinh nghiệm của Portcoast là cần thiết để thu thập dữ liệu trong những khu vực khó tiếp cận này. Trong khi các chi tiết của công việc của họ trên trang web này là độc đáo, nhiều thách thức là chung cho các trang web khác. Portcoast đã chia sẻ năm lời khuyên hàng đầu của họ và giải thích cách công nghệ quét laser của Leica Geosystems đã giúp giải quyết những thách thức này.</p>
+                                        <h5>1. Tìm vị trí quét ổn định và tránh gián đoạn
+                                        </h5>
+                                        Sự gián đoạn của công trình xây dựng đang diễn ra và giao thông trên công trường có thể làm khó khăn trong việc tìm độ ổn định cần thiết cho việc quét chính xác. Để giảm thiểu những thách thức này, Portcoast quyết định tiến hành quét từ các vị trí cao hơn trên đường nội bộ.
+                                        <div class="pcc-quotes">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-002.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p><i>Tiến sĩ Hoàng Hiệp của Portcoast đã giải thích: "Làm việc từ độ cao, cao hơn địa điểm quét, cung cấp độ ổn định lớn hơn, nhưng độ cao này lại yêu cầu một máy quét có thể cung cấp độ chính xác cao trên một phạm vi đo lường lớn. Leica ScanStation P50 cung cấp độ chính xác 1mm trên một khoảng cách 1km nên chúng tôi có thể bao phủ toàn bộ phạm vi với độ tin cậy và chính xác cao."</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>2. Tránh mất dữ liệu trong khí hậu khó lường thông qua truyền dữ liệu nhanh chóng
+                                        </h5>
+                                        <p>Khi hoạt động trong môi trường nhiệt đới, điều kiện thời tiết có thể thay đổi nhanh chóng, tăng nguy cơ mất dữ liệu trên thực địa, vì vậy rất quan trọng để có thể truyền dữ liệu nhanh chóng giữa công trình và văn phòng. Với Leica Cyclone và Leica Cyclone 3DR, Portcoast đã có thể thu thập dữ liệu điểm từ thiết bị địa đo đo lường và xác minh dữ liệu nhanh chóng.</p>
+                                        <p>Được thiết kế như một giải pháp toàn diện, các module phần mềm Cyclone hỗ trợ người dùng qua mỗi giai đoạn của một dự án điểm mây và cách tiếp cận theo module cho phép phần mềm có thể được điều chỉnh để phù hợp với nhu cầu cụ thể của mỗi dự án. Thiết kế trực quan và tính đơn giản của công nghệ Cyclone 3DR khiến nó dễ tiếp cận ngay cả với người dùng mới, giúp họ tạo ra nhiều báo cáo và hình ảnh 3D để kiểm tra.</p>
+                                        <div class="pcc-quotes">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-003.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p><i>"Việc thu thập dữ liệu nhanh và chính xác giúp tránh trì hoãn trong việc xử lý dữ liệu sau khi thu thập. Phần mềm giúp chúng tôi kiểm tra các điểm cần thiết mỗi khi cần. Với Infinity, việc chuyển dữ liệu giữa công trường và văn phòng dễ dàng chỉ trong 1 phút" - Tiến sĩ Hoàng Hiệp nói thêm.</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>3. Sử dụng tùy chỉnh và kết hợp các máy quét laser 3D để đạt tới các khu vực không thể tiếp cận</h5>
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-004.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p>Các bể chứa chất lỏng, hệ thống đường ống, tay cần nạp hàng hải và các khu vực dưới cây cầu tiếp cận đều tạo ra môi trường khó khăn để quét. Tuy nhiên, bằng cách sử dụng kết hợp máy quét laser 3D Leica ScanStation P50 trên mặt đất để quét khoảng cách xa và Leica RTC360 và Leica BLK360 cầm tay để đạt tới các khu vực hẹp, Portcoast đã có thể thu thập dữ liệu quét chi tiết cao ngay cả dưới lòng đất và ở các khu vực hẹp của đường ống, nơi khoảng cách chỉ có 20 centimet. Nhờ vào thiết kế với một nút bấm, các thiết bị này có thể được hạ xuống vị trí sử dụng cần cẩu được tùy chỉnh và được vận hành từ xa.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>4. 
+                                            Giữ nhóm nhỏ và giới hạn số giờ tại chỗ để giảm rủi ro hoạt động
+                                        </h5>
+                                        <p>Mang đội nhóm lớn tới công trường tăng chi phí dự án và rủi ro hoạt động, nhưng điều này có thể được giảm thiểu bằng cách lựa chọn đúng thiết bị. Tiến sĩ Hoàng Hiệp giải thích:</p>
+                                        <div class="pcc-quotes">
+                                            <p>"Thời gian đào tạo cho đội nhóm gần như giảm một nửa khi làm việc với đội ngũ của Leica Geosystems, và tốc độ cao của việc thu thập dữ liệu với thiết bị của Leica Geosystems giảm thiểu đáng kể thời gian khảo sát. Trong một dự án như thế này, khảo sát địa hình của bờ chắn sẽ mất khoảng 12 giờ với lưới khảo sát 20 mét mỗi điểm đo. Trong khi đó, thời gian đó có thể giảm xuống 3 giờ khi sử dụng ScanStation P50. Tăng tốc quá trình này cũng giảm thiểu rủi ro hoạt động và số lượng nhân viên cần thiết cho công việc này".</p>
+                                        </div>
+                                        <p>Giảm nhiệm vụ từ 12 giờ xuống còn 3 giờ có nghĩa là mỗi thành viên trong đội có thể làm nhiều hơn đáng kể, do đó ít hơn các thành viên của đội cần được đào tạo và chuẩn bị cho công việc tại công trường. Việc giảm thiểu thời gian đào tạo cũng giúp bạn cung cấp báo giá cạnh tranh hơn.</p>
+                                        <div class="pcc-quotes">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-005.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p><i>"Với sản phẩm của Leica Geosystems, mất khoảng hai tuần để chuẩn bị đội ngũ sử dụng thiết bị, trong khi với nhà cung cấp khác thì mất gần gấp đôi thời gian. Điều đặc biệt hữu ích trong quá trình đào tạo là các huấn luyện viên của Leica Geosystems có thể chia sẻ các ví dụ thực tế từ kinh nghiệm sử dụng thiết bị trên các dự án thực tế, thay vì chỉ cung cấp hướng dẫn lý thuyết hơn," Tiến sĩ Hoàng Hiệp cho biết.</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>"Với sản phẩm của Leica Geosystems, mất khoảng hai tuần để chuẩn bị đội ngũ sử dụng thiết bị, trong khi với nhà cung cấp khác thì mất gần gấp đôi thời gian. Điều đặc biệt hữu ích trong quá trình đào tạo là các huấn luyện viên của Leica Geosystems có thể chia sẻ các ví dụ thực tế từ kinh nghiệm sử dụng thiết bị trên các dự án thực tế, thay vì chỉ cung cấp hướng dẫn lý thuyết hơn," Tiến sĩ Hoàng Hiệp cho biết.
+
+                                            Vì vậy, khi lựa chọn nhà cung cấp, quan trọng là cân nhắc cả việc tiết kiệm thời gian trên công trường và thời gian đào tạo đội ngũ, và tìm hiểu về phong cách đào tạo mà họ cung cấp.</p>
+                                        <h5>5. Sử dụng các kỹ thuật thu thập thực tế ảo để giảm thiểu những thách thức trong tương lai
+                                        </h5>
+                                        <p>Bằng cách sử dụng phần mềm Leica Cyclone REGISTER và Leica Cyclone REGISTER 360 để tạo mô hình ảo để khám phá địa điểm sử dụng các kỹ thuật thực tế ảo và thực tế mở rộng, Portcoast đã có thể giảm thiểu thời gian trên công trường và rủi ro hoạt động cho các nhà thầu khác. Mô hình cung cấp một tài liệu tham khảo, giúp nhận biết khi nào các vấn đề đang xuất hiện và cần được giải quyết.</p>
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <figure>
+                                                        <img src="/public/images/news/<%= news.folder %>/portcoast-5-tips-to-laser-scanning-006.jpg"
+                                                            alt="<%= news.title_en%>" class="img-fluid">
+                                                        <figcaption></figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p>Trong trường hợp này, chủ cảng sẽ có thể kiểm tra xem thanh sàn bê tông đã uốn cong đến đâu hoặc sự di chuyển của ống bê tông có khác biệt so với các đo lường trong mô hình 3D. Sử dụng những mô hình ảo này, chủ cảng có thể lập kế hoạch và mô hình các phát triển trong tương lai để quản lý cơ sở hạ tầng mà không cần quay lại công trường. Hơn nữa, nhờ tích hợp các thiết kế, việc thay đổi một khía cạnh trong mô hình sẽ tự động phản ánh trong các khía cạnh khác, giúp việc lập kế hoạch đồng tác với nhiều nhà thầu trở nên dễ dàng hơn.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>Mỗi công trường và mỗi dự án sẽ đặt ra những thách thức riêng của nó, nhưng nhiều thách thức này có thể được giảm thiểu bằng cách lựa chọn thiết bị phù hợp. Quan trọng là xác định càng nhiều thách thức càng tốt trước khi bắt đầu. Trong quá trình này, hãy xem xét cách đối tác công nghệ đề xuất của bạn có thể giải quyết chúng một cách toàn diện. Hãy xem xét không chỉ cách bộ sản phẩm phù hợp với nhau, mà còn cách điều này sẽ giúp các nhóm văn phòng và trên công trường của bạn làm việc cùng nhau và đặc biệt, cách bạn và nhà cung cấp có thể hợp tác với nhau. Nếu công nghệ giúp bạn tiết kiệm một ngày trên công trường, nhưng nó lại mất thêm ba ngày để đào tạo nhóm bắt đầu làm việc trên công trường, điều này sẽ ảnh hưởng đến công việc và chi phí của bạn như thế nào? Hãy nhớ rằng những thách thức mà công trường đặt ra không chỉ xuất hiện trên công trường. Tuy nhiên, bằng cách tính đến điều này sớm trong quá trình lựa chọn thiết bị của bạn, bạn có thể tránh được nhiều điểm đau đầu tiềm ẩn sau này.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include (dir+'partials/js.ejs')%>
+</body>
+
+</html>

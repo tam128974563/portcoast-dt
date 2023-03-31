@@ -1889,3 +1889,10 @@ iframe {
 .sidebar .active {
     color: #0093dd;
 }
+
+.pcc-quotes {
+   background-color: #f1f1f1;
+   margin-top: 30px;
+   padding: 30px;
+   margin-bottom: 30px;
+}
