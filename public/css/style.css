@@ -114,6 +114,9 @@ figure figcaption {
     font-weight: 600;
     font-size: larger;
 }
+#pcc-page h5 {
+    font-weight: 900;
+}
 
 #particles-js {
     z-index: -1;

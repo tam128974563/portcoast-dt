@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/heritage-bim-model-to-future-proof-an-opera-house-001.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Author: <i>Hazlinda Mohd Nuron</i></p>
+                                        <p>The Saigon Opera House, one of Ho Chi Minh City’s most elegant and historical cultural
+                                            assets, has a new digital identity to manage, preserve and protect this iconic building.
+                                        </p>
+                                        <p>Built in 1898 by architect Eugene Ferret, and modelled on the Petit Palais in Paris, the
+                                            much-loved municipal performing arts venue is also a heritage tourist attraction. The
+                                            building was identified as being at risk because of its location in the heart of South
+                                            Vietnam’s busy city.</p>
+                                        <p>Work carried out on the Metro beneath the theatre might further degrade the historic
+                                            structure. Accurate digital condition surveys were needed to help the authorities
+                                            successfully manage future renovations or even a complete reconstruction.</p>
+                                        <p>News of the fire that almost destroyed Notre Dame Cathedral in Paris gave the project
+                                            an added impetus.</p>
+                                        <p>The General Director of Vietnam’s Portcoast Consultant Corporation, Mr Pham Anh Tuan,
+                                            took responsibility for the work, assembling a 30-strong survey and engineering team
+                                            to tackle it.</p>
+                                        <p>With vast previous experience of Leica Geosystems products, Mr Tuan chose a fleet
+                                            of Leica Geosystems’ total stations, GNSS and 3D laser scanners, together with
+                                            the latest integrated software, to deliver the project’s ambitious goals.</p>
+                                        <h5>A three-phased approach</h5>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/heritage-bim-model-to-future-proof-an-opera-house-002.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>The first phase of work was to construct a base heritage-BIM model. As the original
+                                            design documents and structural drawings had been lost over time, two data sets from
+                                            different sources were required.</p>
+                                        <p>The raw spatial data of the existing structures was collected using geodetic
+                                            equipment, cameras, UAV and 3D laser scanners, while the technical, historical
+                                            information was sourced from national archives and research centres.</p>
+                                        <p>The second phase involved the modelling and processing of point cloud data to
+                                            construct a 3D digital representation of the current status of the theatre.
+                                            Additional information on colours, materials, patterns, as well as details of
+                                            origin, history and cultural significance were integrated to create a complete BIM
+                                            model.</p>
+                                        <p>The third and final phase utilised the BIM model to create a precise 3D
+                                            visualisation, which could be shared with stakeholders, using Leica TruView and
+                                            JetStream Viewer.</p>
+                                        <p>Mr. Tuan said, <i>“The digitalised deliverables could only be achieved with cutting
+                                                edge
+                                                equipment and software.
+                                                Using the resulting BIM model we created a precise reality capture visualisation
+                                                using VR (Virtual Reality), AR,
+                                                (Augmented Reality), and MR (Mixed Reality) techniques, ultimately sharing this with
+                                                stakeholders and the public
+                                                through an impressive interactive virtual tour, featuring an accurate 3D model of
+                                                the Saigon Opera House.”</i>
+                                        </p>
+                                        <p>The extensive Leica Geosystems software portfolio was used in all phases of the project:
+                                            Leica Infinity for georeferencing the point cloud data, Leica Cyclone 3DR to create the
+                                            digital model of the statues and reliefs and the Leica CloudWorx plug-in for Revit to
+                                            add the top roof frame truss system to the BIM model</p>
+                                        <h5>Capturing reality inside and out</h5>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/heritage-bim-model-to-future-proof-an-opera-house-003.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Using a Leica Nova TS60, two GNSS GS18 T, one iCON iCR80 and two iCON gps70, the survey
+                                            team set up over 350 georeferenced scanning stations to accurately capture point cloud
+                                            data, from the stage and auditorium to the roof dome, basement, and outer walls.</p>              
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/heritage-bim-model-to-future-proof-an-opera-house-004.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>As it was not possible to physically climb onto the roof, a crane was used to lift a
+                                            Leica ScanStation P50 3D laser scanner into position to capture up to 1km of the area
+                                            around the opera house in High-Dynamic Range (HDR) imagery and survey-grade quality.</p>
+                                        <p>For the complex interior geometry, particularly in the narrow attic and basement
+                                            spaces, where fast scanning time, accuracy, stability and manoeuvrability were
+                                            essential, the Leica RTC360 and the Leica BLK360 were ideal.
+                                        </p>          
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/heritage-bim-model-to-future-proof-an-opera-house-005.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Four Leica RTC360 3D laser scanners were used for the columns, statues, reliefs,
+                                            patterns, chandeliers and exterior details. The light and compact design of the BLK360
+                                            overcame the challenge of scanning the air-conditioning system located in the confined
+                                            attic space.</p>
+                                        <p><i>“The accuracy of measurement and the density of the measured points was a key
+                                                factor in our choice of hardware. High efficiency, flexibility and reliability
+                                                of this equipment saved us time and manpower in every aspect of the project
+                                                from initial control and georeferencing to the laser scanning and registration
+                                                process”</i>, said Mr. Tuan.</p>
+                                        <h5>A priceless return on investment</h5>
+                                        <p>Confidence in Leica Geosystem’s digital technology amongst Portcoast’s young engineering
+                                            team has engendered a renewed sense of pride in the history and cultural values the
+                                            building represents.</p>
+                                        <p>Mr. Tuan explains,<i>“In the event of a catastrophe, the entire structure could be
+                                                rebuilt from the digital record. When necessary in the months and years to come,
+                                                the digitalised data can also be used to print 3D models needed for high
+                                                accuracy casting to replicate the original decorative features. Digitalisation
+                                                has ensured the beauty and majesty of the Saigon Opera House will continue to
+                                                inspire future generations of residents and visitors to the city.”</i></p>
+                                        <p>Following the success of this heritage project, the municipal authorities now have scope
+                                            to consider applying digital
+                                            documentation methods to some 150 buildings of historical, cultural and artistic
+                                            significance in Ho Chi Minh City.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>

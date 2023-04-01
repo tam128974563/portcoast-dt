@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="vi" />
+    <title><%=news.title_vi%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_vi%>" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi" content="<%=news.title_vi%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%=news.title_vi%>" />
+    <meta property="og:description" content="<%= news.description_vi%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_vi%>" />
+    <meta name="twitter:description" content="<%= news.description_vi%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <%- include (dir+'partials/css.ejs')%>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include (dir+'partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[1]%> |
+                                            <%=  [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Nguồn: <a href="https://blog.hexagongeosystems.com/5-best-practices-for-construction-companies-to-emerge-strong-in-a-post-crisis-world/">Leica Geosystems</a></span>
+                                        <h2 class="pcc-heading animate-box">
+                                            <%= news.title_vi%>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/construction-companies-to-emerge-strong-in-a-post-crisis-world-001.jpg"
+                                                alt="<%= news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p><strong><%= news.description_vi %></strong></p>
+                                        <p>Với tốc độ chuyển đổi đang gia tăng để hỗ trợ phục hồi kinh tế, các công ty
+                                            đầu tư vào các công nghệ và quy trình địa lý thông minh đổi mới đang định vị
+                                            cho doanh nghiệp của mình để cung cấp các dự án phức tạp đúng thời gian,
+                                            đúng ngân sách và đúng các thông số kỹ thuật.</p>
+                                        <p>Vượt quá ngân sách - trên toàn thế giới - là một trong những thách thức lớn
+                                            nhất của ngành xây dựng. Theo Forbes, Vịnh Ba Tam ở Trung Quốc, ví dụ, vượt
+                                            ngân sách đến 163%, nhưng chi phí quá tải không giới hạn ở châu Á.</p>
+                                        <p>Áp lực đối với các doanh nghiệp để duy trì sự cạnh tranh, bằng cách thể hiện
+                                            hiệu quả chi phí lớn hơn trong các thực hành làm việc của họ, có thể tăng
+                                            trong tình hình kinh tế chững lại.
+                                        </p>
+                                        <p>Trong một báo cáo gần đây, Viện Nghiên cứu Toàn cầu McKinsey dự đoán một
+                                            khoản đầu tư 49 nghìn tỷ USD vào cơ sở hạ tầng dân dụng sẽ được cần đến vào
+                                            năm 2030, chỉ để bắt kịp nhu cầu toàn cầu.
+                                        </p>
+                                        <p>Với chính phủ và các bên liên quan tận dụng cơ hội để tiếp tục đầu tư vào các
+                                            công trình đô thị đổi mới và công nghệ thành phố thông minh trong 10 năm
+                                            tới, các công ty sử dụng các giải pháp địa lý thông minh kỹ thuật số tiên
+                                            tiến sẽ được đặt ở vị trí tốt để chịu đựng ảnh hưởng của bất kỳ sự gián đoạn
+                                            nào trong tương lai.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/construction-companies-to-emerge-strong-in-a-post-crisis-world-002.jpg"
+                                                alt="<%= news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Việc sử dụng các giải pháp kỹ thuật số của Hexagon, từ thiết kế đến hoàn
+                                            thành, cho phép theo dõi tính khả thi tài chính của một dự án ở mọi giai
+                                            đoạn, cung cấp cái nhìn cần thiết để thực hiện sửa đổi chi phí nhanh hơn và
+                                            sớm hơn.</p>
+                                        <p>Kỹ thuật số cũng cung cấp kết nối giữa các nhóm làm việc trong văn phòng,
+                                            trên công trường và tại nhà. Việc truy cập ngay lập tức vào một nguồn thông
+                                            tin chính xác duy nhất tránh được các quy trình tốn thời gian và tốn kém,
+                                            đặc biệt là khi kết hợp dữ liệu từ các thiết bị khác nhau.
+
+                                        </p>
+                                        <p>Một liên minh gồm bốn công ty, do Kanatsugiken dẫn đầu và được Bộ đất đai, Hạ
+                                            tầng và Vận tải của Nhật Bản (MLIT) mời thực hiện dự án xây dựng thử nghiệm,
+                                            cho thấy cách công nghệ đổi mới cải thiện năng suất và giảm thiểu sai sót
+                                            trên các công trình xây dựng.
+                                        </p>
+                                        <p>Kanatsugiken đã chọn Leica Nova MS60 MultiStation của Leica Geosystems, một
+                                            công cụ có khả năng quét laser 3D và chụp ảnh, với các chức năng khảo sát
+                                            của một trạm toàn đạo vật lý. Các cấu trúc bê tông đã được quét và dữ liệu
+                                            điểm đám mây được sử dụng cho việc xác nhận as-built.</p>
+                                        <p>Việc xác nhận as-built bằng các phương pháp khảo sát truyền thống tốn thời
+                                            gian và tốn sức lao động vì phần lớn các phép đo và phân tích sai khác được
+                                            thực hiện bằng tay, ảnh hưởng đến chi phí dự án. Liên minh đã tiến hành đo
+                                            lường và phân tích dữ liệu trên năm công trình. MS60 không chỉ giảm đáng kể
+                                            thời gian làm việc cho công tác đo lường xuống dưới một nửa mà còn giảm thời
+                                            gian chết đáng kể từ 83,3 giờ đến 37,27 giờ so với các phương pháp và kỹ
+                                            thuật truyền thống.</p>
+                                        <h5>2. Tăng cường kiểm tra từ xa</h5>
+                                        <p>Làm việc từ xa có nhiều lợi ích, ngoài việc truy cập dữ liệu của công trình.
+                                            Các nhóm có thể cho phép quá trình kiểm tra từ xa để tài liệu hóa điều kiện
+                                            hiện tại, giữ cho dự án trên đúng tiến độ và đạt đúng các tiêu chuẩn chất
+                                            lượng.</p>
+                                        <p>Với các hạn chế về giãn cách xã hội ảnh hưởng đến hoạt động trên công trường,
+                                            các giải pháp số của Hexagon có thể giúp doanh nghiệp hoạt động hiệu quả và
+                                            bảo vệ nhân viên của họ thông qua việc sử dụng các thiết bị bắt trọn thực tế
+                                            ảo 1 người.</p>
+                                        <p>Nhanh chóng và hiệu quả, các máy quét laser, thiết bị mobile mapping và UAV,
+                                            cùng với loạt công nghệ địa lý số, bao gồm BIM, có thể được sử dụng để tạo
+                                            ra một bản sao kỹ thuật số chính xác của các điều kiện trên công trình. Công
+                                            việc có thể được tài liệu hóa trong các kiểm tra ảo và khi các nhà thầu phụ
+                                            và các bên liên quan có quyền truy cập thông tin theo thời gian thực, các
+                                            quyết định được đưa ra thông qua làm việc từ xa.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/construction-companies-to-emerge-strong-in-a-post-crisis-world-003.jpg"
+                                                alt="<%= news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+
+                                        <h5>3. Nâng cao hiệu suất và lợi nhuận</h5>
+                                        <p>Ngay trước khi đại dịch hiện tại xảy ra, các tổ chức đã sử dụng công nghệ số
+                                            để cộng tác, tăng năng suất và giúp họ duy trì mức độ công việc giữa tình
+                                            trạng thiếu nhân lực chuyên môn.</p>
+                                        <p>Các chính sách của chính phủ có tầm nhìn trước, bao gồm kế hoạch thực hiện
+                                            Chuyển đổi Số Tích hợp (IDD) của Cơ quan Xây dựng và Xây dựng Singapore
+                                            (BCA), đang khuyến khích các công ty trong ngành môi trường xây dựng sử dụng
+                                            công nghệ số.</p>
+                                        <p>Công nghệ số hóa quy trình làm việc và tự động hóa quy trình, đồng thời đảm
+                                            bảo tất cả các bên liên quan đều có quyền truy cập thông tin quan trọng,
+                                            động, giúp tiết kiệm thời gian, giảm chi phí dự án và giảm thiểu rủi ro hoạt
+                                            động.</p>
+                                        <p>Công nghệ địa lý số cho phép các nhóm cộng tác và duy trì năng suất ngay cả
+                                            khi hạn chế về khoảng cách xã hội và kiểm soát biên giới hạn chế cung cấp
+                                            nhân sự.</p>
+                                        <h5>4. Giảm thiểu rủi ro an toàn và sức khỏe</h5>
+                                        <p>Các giải pháp thu thập dữ liệu thực tế như máy quét laser, bản đồ di động và
+                                            hệ thống UAV cho phép một thành viên trong nhóm thu thập dữ liệu hiện trường
+                                            một cách nhanh chóng và chính xác, giảm thiểu rủi ro đối với an toàn cá
+                                            nhân.</p>
+                                        <p>Cảng Phú Mỹ ở miền Nam Việt Nam, bận rộn với hoạt động 24 giờ một ngày, yêu
+                                            cầu sử dụng máy quét laser để thu thập dữ liệu cho mô hình BIM 3D. Mang một
+                                            đội ngũ lớn đến hiện trường tăng rủi ro vận hành, đặc biệt là trong điều
+                                            kiện thời tiết nhiệt đới thay đổi nhanh chóng và khu vực có lưu lượng giao
+                                            thông nặng.</p>
+                                        <p>Công ty tư vấn và khảo sát hàng hải hàng đầu của Việt Nam <a
+                                                href="https://www.portcoast.com.vn/">(Portcoast)</a> đã từng thực hiện
+                                            công việc tiên phong sử dụng <a
+                                                href="https://leica-geosystems.com/products/laser-scanners/scanners/leica-scanstation-p50">Leica
+                                                ScanStation P50</a> để thu thập dữ liệu tại cảng hóa chất Hyosung Vina,
+                                            giảm thời gian khảo sát địa hình tại đó từ 12 giờ xuống chỉ còn 3 giờ, với
+                                            ít nhân sự hơn.</p>
+                                        <p>Tại cảng Phú Mỹ, Portcoast được ủy thác để tạo báo cáo kiểm tra cho bến
+                                            chính dài 132 mét và cầu tiếp cận dài 72 mét, cùng với việc quét laser
+                                            3D toàn bộ khu vực để tạo bản sao kỹ thuật số cho việc kiểm tra và bảo
+                                            trì liên tục.</p>
+                                        <p>Portcoast đã sử dụng ScanStation P50 trên các khu vực lớn và máy quét
+                                            laser Leica RTC360 và Leica BLK360 để quét 3D trên các khu vực khó tiếp
+                                            cận dưới bến. Việc thu thập và truyền dữ liệu nhanh chóng là rất quan
+                                            trọng trong khí hậu nhiệt đới thất thường và thay đổi liên tục của khu
+                                            vực. Sử dụng phần mềm Leica Infinity và Leica Cyclone, việc truyền dữ
+                                            liệu là ngay lập tức để cả nhóm văn phòng và nhóm hiện trường có thể xem
+                                            và xử lý dữ liệu trong thời gian thực.</p>
+                                        <p>Portcoast đã xây dựng mô hình điểm đám mây cho toàn bộ cảng bao gồm tất
+                                            cả thông tin từ mỗi phần tử vào mô hình BIM. Độ chính xác của việc thu
+                                            thập dữ liệu cho phép dự án được xem qua công nghệ thực tại ảo / thực
+                                            tại tăng cường, cho phép nhóm tiến hành kiểm tra chất lượng và các bên
+                                            liên quan theo dõi tất cả dữ liệu khảo sát mà không cần phải đến thực
+                                            địa xây dựng.</p>
+                                        <h5>5. Đổi mới để tồn tại và cạnh tranh</h5>
+                                        <p>Giới hạn do đại dịch tăng thêm sự quan trọng của các giải pháp kỹ thuật
+                                            số cho phép sự hợp tác giữa nhân viên văn phòng, nhân viên công trường,
+                                            nhân viên làm việc tại nhà và khách hàng trong suốt quá trình xây dựng.
+                                            Từ các cấp độ kỹ thuật số, máy đo tự động và robot, đến GPR, GNSS và
+                                            công cụ thu thập thực tế, bộ sản phẩm và giải pháp đo lường của Leica
+                                            Geosystems được thiết kế để đáp ứng bất kỳ thách thức xây dựng nào trong
+                                            tương lai.</p>
+                                        <p>Để trở nên hiệu quả hơn và cạnh tranh hơn, các công ty xây dựng cần xem
+                                            xét các thủ tục, sản phẩm và giải pháp hiện tại của họ để có thể phù hợp
+                                            với sự kỹ thuật số hóa.
+                                        </p>
+                                        <p>Leica Geosystems đã cách mạng hoá thế giới đo lường và khảo sát trong 200
+                                            năm và các sản phẩm bao gồm nhiều sản phẩm đầu tiên trên thế giới, chẳng
+                                            hạn như MS60 MultiStation, tích hợp total station và công nghệ thu thập
+                                            thực tế.</p>
+                                        <p>Phá vỡ các ngành khác, công nghệ địa thăm dò bề mặt của Leica Geosystems
+                                            (GPR) mang lại hiệu quả và các luồng công việc được kỹ thuật số hóa cho
+                                            bản đồ tiện ích. Giải pháp phát hiện tiện ích Leica DSX được thiết kế
+                                            cho các nhà khảo sát không có kinh nghiệm GPR cần tìm vị trí, tránh hoặc
+                                            xây dựng bản đồ các tiện ích được chôn vùi một cách an toàn, nhanh chóng
+                                            và đáng tin cậy.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/construction-companies-to-emerge-strong-in-a-post-crisis-world-004.jpg"
+                                                alt="<%= news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <h5>Hỗ trợ doanh nghiệp đạt được mục tiêu của mình</h5>
+                                        <p>Với mỗi công trình và dự án đều đặt ra những thách thức độc đáo, những
+                                            thách thức này có thể được giảm thiểu bằng cách làm việc với một nhà
+                                            cung cấp công nghệ hàng đầu thế giới để xác định các công cụ phù hợp và
+                                            thúc đẩy một phương pháp toàn diện. Danh mục sản phẩm tích hợp và chuyên
+                                            gia kỹ thuật của Leica Geosystems hướng dẫn các doanh nghiệp thực hiện
+                                            các thay đổi giúp họ đạt được lợi thế cạnh tranh.</p>
+                                        <p>Các công ty đầu tư vào số hóa sẽ tăng độ chính xác và hiệu quả của các dự
+                                            án của mình, đồng thời đảm bảo rằng kinh doanh của họ luôn đi đầu trong
+                                            cuộc chơi, khi ngành xây dựng chuyển sang một kỷ nguyên thông minh tập
+                                            trung vào số hóa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include (dir+'partials/js.ejs')%>
+</body>
+
+</html>

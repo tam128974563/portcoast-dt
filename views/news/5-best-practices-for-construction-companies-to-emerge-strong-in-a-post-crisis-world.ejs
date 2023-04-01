@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Source: <a href="https://blog.hexagongeosystems.com/5-best-practices-for-construction-companies-to-emerge-strong-in-a-post-crisis-world/">Leica Geosystems</a>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/construction-companies-to-emerge-strong-in-a-post-crisis-world-001.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p><strong>
+                                                <%= news.description_en %></strong></p>
+                                        <p>With the pace of transition accelerating to support economic recovery,
+                                            companies investing in
+                                            innovative geospatial technologies and processes are positioning their
+                                            businesses to deliver complex
+                                            projects on time, on budget and within specification.</p>
+                                        <p>Budget overruns – worldwide – are one of the construction industry’s greatest
+                                            challenges. According to
+                                            Forbes, China’s Three Gorges Dam, for example, was 163% over budget, but
+                                            overspends are not limited to
+                                            Asia.</p>
+                                        <p>The pressure on businesses to stay competitive, by demonstrating greater
+                                            cost-effectiveness in their
+                                            work practices, is likely to increase in the wake of an economic slowdown.
+                                        </p>
+                                        <p>In a recent report, the McKinsey Global Institute predicts a $49 trillion
+                                            investment in civil
+                                            infrastructure will be needed by 2030, just to keep pace with global demand.
+                                        </p>
+                                        <p>With governments and stakeholders taking the opportunity to further invest in
+                                            transformative urban
+                                            construction and smart city technology over the next 10 years, companies
+                                            using advanced, digital
+                                            geospatial solutions will be well placed to withstand the impact of any
+                                            future disruption.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/construction-companies-to-emerge-strong-in-a-post-crisis-world-002.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>The use of Hexagon’s digital solutions, from design to completion allows the
+                                            financial sustainability
+                                            of a project to be tracked at every stage, providing the insight needed to
+                                            make faster and earlier cost
+                                            corrections.</p>
+                                        <p>Digitalisation also provides connectivity between office, field, and home
+                                            working teams. Gaining
+                                            instant access to a single source of accurate information avoids
+                                            time-consuming, costly processes,
+                                            especially when combining data from different devices.</p>
+                                        <p>A consortium of four companies, led by Kanatsugiken, and invited by the
+                                            Japanese Ministry of Land,
+                                            Infrastructure and Transport (MLIT), undertook a trial as-built project,
+                                            showing how innovative
+                                            technology improves productivity and reduces errors on construction sites.
+                                        </p>
+                                        <p>Kanatsugiken chose Leica Geosystems’ Leica Nova MS60 MultiStation, an
+                                            instrument capable of 3D laser
+                                            scanning and photography, with the surveying functions of a robotic total
+                                            station. Concrete structures
+                                            were scanned and the acquired point cloud data was used for as-built
+                                            verification.</p>
+                                        <p>Using traditional survey methods, the as-built verification is time-consuming
+                                            and labour intensive
+                                            because much of the measurement and analysis of disparities is done
+                                            manually, impacting on project
+                                            costs. The consortium conducted field measurements and data analysis at five
+                                            sites. The MS60 not only
+                                            cut the manhours for the measurement work to less than half, but also
+                                            <b>reduced downtime significantly
+                                                from 83.3 man hours to 37.27 hours</b>, as compared to conventional
+                                            methods and techniques.</p>
+                                        <h5>2. Increase remote offsite inspection</h5>
+                                        <p>Working remotely has many benefits, over and above accessing site data. Teams
+                                            can enable remote
+                                            inspection processes to document existing conditions, keeping projects on
+                                            track and to the correct
+                                            quality standards.</p>
+                                        <p>With social distancing restrictions impacting on-site operations, digital
+                                            solutions by Hexagon can keep
+                                            businesses productive and their employees safe through the use of one-man
+                                            reality capture devices.</p>
+                                        <p>Fast and efficient, laser scanners, mobile mapping devices and UAVs, together
+                                            with a range of digital
+                                            geospatial technology, including Building Information Modeling (BIM), can be
+                                            used to create a precise
+                                            digital replica of onsite conditions. Work can be documented in virtual
+                                            inspections and as
+                                            subcontractors and stakeholders have access to real-time information,
+                                            informed decisions can be made
+                                            whilst working remotely.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/construction-companies-to-emerge-strong-in-a-post-crisis-world-003.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+
+                                        <h5>3. Improve performance and profitability</h5>
+                                        <p>Even before the current crisis, organisations have been using digital
+                                            technology to collaborate,
+                                            increase their productivity, and help them maintain the level of work amid a
+                                            shortage of skilled
+                                            workers.</p>
+                                        <p>Forward-thinking government initiatives, including Singapore’s Building and
+                                            Construction Authority’s
+                                            (BCA) Integrated Digital Delivery (IDD) implementation plan, are encouraging
+                                            more built environment
+                                            sector firms to go digital.</p>
+                                        <p>Digitalising workflows and automating processes, whilst also ensuring all
+                                            stakeholders have access to
+                                            dynamic, critical information, saves time, keeps projects costs down and
+                                            reduces operational risk.</p>
+                                        <p>Digital geospatial technology enables teams to collaborate and stay
+                                            productive even when social
+                                            distancing restrictions apply and border controls limit the supply of
+                                            personnel.</p>
+                                        <h5>4. Reduce health and safety risks</h5>
+                                        <p>Reality capture solutions such as laser scanning, mobile mapping and UAV
+                                            systems allow a single team
+                                            member to gather site data quickly and accurately, minimising risks to
+                                            personal safety.</p>
+                                        <p>The busy cargo port, Phu My Port in southern Vietnam, operational 24 hours a
+                                            day, required laser
+                                            scanning to collect data for a 3D BIM model. Bringing a large team to a site
+                                            increases operational risk,
+                                            especially in rapidly changing tropical weather conditions, with heavy
+                                            traffic areas.</p>
+                                        <p>Vietnam’s leading port and coastal survey consultants <a
+                                                href="https://www.portcoast.com.vn/">Portcoast</a> had previously
+                                            carried out pioneering
+                                            work using the <a
+                                                href="https://leica-geosystems.com/products/laser-scanners/scanners/leica-scanstation-p50">Leica
+                                                ScanStation P50</a> for data capture at Hyosung Vina Chemicals Port,
+                                            reducing the
+                                            topographic survey time there from 12 hours to just three, and with less
+                                            personnel.</p>
+                                        <p>At Phu My Port, Portcoast was commissioned to produce an inspection report
+                                            for the 132-metre main berth
+                                            and 72-metre long access bridge, along with 3D laser scanning the whole site
+                                            to create a digital twin
+                                            for ongoing inspection and maintenance.</p>
+                                        <p>Portcoast used the ScanStation P50 across large areas and the Leica RTC360
+                                            and Leica BLK360 laser
+                                            scanners for 3D scanning the isolated and inaccessible areas under the
+                                            berth. Rapid capture and transfer
+                                            of data was imperative in the unpredictable and ever-changing tropical
+                                            climate of the region. Using
+                                            Leica Infinity and Leica Cyclone software, data transfer was immediate so
+                                            both office and field teams
+                                            could view and process in real-time.</p>
+                                        <p>Portcoast built the point cloud model for the whole port incorporating all
+                                            the information from each
+                                            element into the BIM model. The accuracy of data capture allows the project
+                                            to be viewed through VR/AR,
+                                            enabling the team to carry out quality checks, and stakeholders to monitor
+                                            all the survey data without
+                                            visiting the construction site.</p>
+                                        <h5>5. Innovate to stay relevant and survive</h5>
+                                        <p>The limitations imposed by a pandemic further highlight the relevance of
+                                            digital solutions that enable
+                                            collaboration between office, field, home workers and clients, throughout
+                                            the construction process. From
+                                            digital levels, manual and robotic total stations, to GPR, GNSS and reality
+                                            capture instrumentation,
+                                            Leica Geosystems’ suite of geomatics products and solutions are designed to
+                                            meet any future construction
+                                            challenge.</p>
+                                        <p>To become more efficient and remain competitive, construction companies need
+                                            to examine their current
+                                            procedures, products, and solutions in order to accommodate digitalisation.
+                                        </p>
+                                        <p>Leica Geosystems has been revolutionising the world of measurement and survey
+                                            for 200 years and the
+                                            products include many world firsts, such as the MS60 MultiStation,
+                                            integrating total station and reality
+                                            capture technology.</p>
+                                        <p>Disrupting other sectors, Leica Geosystems ground penetrating radar (GPR)
+                                            technology brings efficiency
+                                            and digitalised workflows to utility mapping. The Leica DSX utility
+                                            detection solution was designed for
+                                            surveyors with no GPR experience who need to locate, avoid or map buried
+                                            utilities in a safe, fast, and
+                                            reliable way.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/construction-companies-to-emerge-strong-in-a-post-crisis-world-004.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <h5>Helping businesses achieve their goals</h5>
+                                        <p>As every site and project presents unique challenges, these can be mitigated
+                                            by working with a
+                                            world-leading technology provider to identify the right tools and foster a
+                                            holistic approach. Leica
+                                            Geosystems’ portfolio of integrated products and technical specialists guide
+                                            businesses to make the
+                                            changes that will help them gain a competitive advantage.</p>
+                                        <p>Companies that invest in digitalisation increase the accuracy and proficiency
+                                            of their projects, whilst
+                                            ensuring their business stays ahead of the game, as construction moves into
+                                            a digitally focussed, smart
+                                            era.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="vi" />
+    <title><%=news.title_vi%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_vi%>" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi" content="<%=news.title_vi%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%=news.title_vi%>" />
+    <meta property="og:description" content="<%= news.description_vi%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_vi%>" />
+    <meta name="twitter:description" content="<%= news.description_vi%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <%- include (dir+'partials/css.ejs')%>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include (dir+'partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[1]%> |
+                                            <%=  [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%></span>
+                                        <h2 class="pcc-heading animate-box">
+                                            <%= news.title_vi%>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/heritage-bim-model-to-future-proof-an-opera-house-001.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Tác giả: <i>Hazlinda Mohd Nuron</i></p>
+                                        <p>Nhà hát Lớn Sài Gòn, một trong những tài sản văn hóa lịch sử và thanh lịch nhất của Thành phố Hồ Chí Minh, có một bản sắc kỹ thuật số mới để quản lý, bảo tồn và bảo vệ tòa nhà mang tính biểu tượng này.</p>
+                                        <p>Được xây dựng vào năm 1898 bởi kiến trúc sư Eugene Ferret và được mô phỏng theo Petit Palais ở Paris, tòa nhà nghệ thuật biểu diễn của thành phố được yêu thích và cũng là một điểm thu hút khách du lịch di sản. Tòa nhà đã được xác định là có nguy cơ do nằm ở trung tâm của thành phố sôi động của miền Nam Việt Nam.</p>
+                                        <p>Công trình xây dựng tuyến đường sắt đô thị bên dưới nhà hát có thể làm suy yếu cấu trúc lịch sử. Việc khảo sát tình trạng kỹ thuật số chính xác là cần thiết để giúp các cơ quan quản lý thành công các công trình sửa chữa trong tương lai hoặc thậm chí là một công trình tái thiết hoàn toàn.</p>
+                                        <p>Thông tin về vụ cháy gần như phá hủy Nhà thờ Đức Bà Paris đã thúc đẩy dự án.</p>
+                                        <p>Tổng Giám đốc Công ty Portcoast Việt Nam, ông Phạm Anh Tuấn, đã đảm nhận công việc này, tập hợp một đội ngũ khảo sát và kỹ sư gồm 30 người để giải quyết.</p>
+                                        <p>Với kinh nghiệm rộng lớn về các sản phẩm của Leica Geosystems, ông Tuấn đã chọn một đội tàu đo đạc toàn bộ của Leica Geosystems, GNSS và máy quét laser 3D, cùng với phần mềm tích hợp mới nhất, để đạt được các mục tiêu đầy tham vọng của dự án.</p>
+                                        <h5>Một phương pháp ba giai đoạn</h5>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/heritage-bim-model-to-future-proof-an-opera-house-002.jpg"
+                                                alt="<%= news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Giai đoạn đầu tiên của công việc là xây dựng một mô hình Heritage-BIM cơ sở. Vì các tài liệu thiết kế ban đầu và các bản vẽ kết cấu đã bị mất theo thời gian, cần phải sử dụng hai tập dữ liệu từ các nguồn khác nhau.</p>
+                                        <p>Dữ liệu không gian của cấu trúc hiện có được thu thập bằng thiết bị địa đo lường, máy ảnh, máy bay không người lái và máy quét laser 3D, trong khi thông tin kỹ thuật, lịch sử được thu thập từ các viện nghiên cứu và lưu trữ quốc gia.</p>
+                                        <p>Giai đoạn thứ hai liên quan đến việc xử lý dữ liệu điểm để tạo ra một mô hình số 3D của tình trạng hiện tại của nhà hát. Thông tin bổ sung về màu sắc, vật liệu, hoa văn cũng như chi tiết về nguồn gốc, lịch sử và ý nghĩa văn hóa đã được tích hợp để tạo ra một mô hình BIM hoàn chỉnh.</p>
+                                        <p>Giai đoạn cuối cùng sử dụng mô hình BIM để tạo ra một hình ảnh 3D chính xác, có thể chia sẻ với các bên liên quan, sử dụng Leica TruView và JetStream Viewer.</p>
+                                        <p>Ông Tuấn nói: <i>"Các sản phẩm kỹ thuật số chỉ có thể đạt được với các thiết bị và phần mềm hiện đại. Sử dụng mô hình BIM kết quả, chúng tôi đã tạo ra một hình ảnh chụp thực tế chính xác bằng cách sử dụng các kỹ thuật VR (Thực tế ảo), AR (Tăng cường thực tế) và MR (Thực tế kết hợp), cuối cùng chia sẻ điều này với các bên liên quan và công chúng thông qua một chuyến tham quan ảo tương tác ấn tượng, có chứa một mô hình 3D chính xác của Nhà hát lớn Sài Gòn".</i>
+                                        </p>
+                                        <p>Các sản phẩm phần mềm của Leica Geosystems được sử dụng trong tất cả các giai đoạn của dự án: Leica Infinity để định vị địa lý cho dữ liệu điểm đám mây, Leica Cyclone 3DR để tạo mô hình số các tượng và các bức tường, và plug-in Leica CloudWorx cho Revit để thêm hệ thống khung mái trên cùng vào mô hình BIM.</p>
+                                        <h5>Nắm bắt thực tế từ trong ra ngoài</h5>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/heritage-bim-model-to-future-proof-an-opera-house-003.jpg"
+                                                alt="<%= news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Thu thập dữ liệu bằng thiết bị địa đo quang học 3D bao gồm từ sân khấu và khán đài đến mái nhà, tầng hầm và các bức tường bên ngoài được đặt hơn 350 trạm quét được định vị bằng Leica Nova TS60, hai GNSS GS18 T, một iCON iCR80 và hai iCON gps70 để thu thập dữ liệu điểm đám mây.</p>              
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/heritage-bim-model-to-future-proof-an-opera-house-004.jpg"
+                                                alt="<%= news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Do không thể leo lên mái nhà, một cần cẩu đã được sử dụng để nâng một máy quét laser 3D Leica ScanStation P50 vào vị trí để quét lên đến 1km vùng xung quanh nhà hát ở chất lượng độ phân giải cao và chất lượng khảo sát.
+                                        </p>
+                                        <p>Đối với hình học phức tạp bên trong, đặc biệt là trong không gian gác mái và tầng hầm hẹp, nơi thời gian quét nhanh, độ chính xác, ổn định và khả năng điều khiển quan trọng, Leica RTC360 và Leica BLK360 là lý tưởng.
+                                        </p>          
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/heritage-bim-model-to-future-proof-an-opera-house-005.jpg"
+                                                alt="<%= news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Bốn máy quét laser 3D Leica RTC360 được sử dụng cho các cột, tượng, tấm vật liệu trang trí, đèn chùm và chi tiết bên ngoài. Thiết kế nhẹ và nhỏ gọn của BLK360 giải quyết được thách thức quét hệ thống điều hòa không khí ở không gian gác mái hẹp.</p>
+                                        <p><i>"Độ chính xác của đo lường và mật độ các điểm được đo là một yếu tố quan trọng trong lựa chọn phần cứng của chúng tôi. Hiệu quả cao, linh hoạt và đáng tin cậy của các thiết bị này đã tiết kiệm cho chúng tôi thời gian và nhân lực trong mọi khía cạnh của dự án từ việc kiểm soát và định vị ban đầu đến quá trình quét và đăng ký."</i>, Ông Tuấn cho biết.</p>
+                                        <h5>Một khoản đầu tư quý giá</h5>
+                                        <p>Sự tự tin trong công nghệ kỹ thuật số của Leica Geosystem giữa đội ngũ kỹ sư trẻ của Portcoast đã tạo ra một cảm giác tự hào mới về lịch sử và giá trị văn hóa mà tòa nhà đại diện.</p>
+                                        <p><i>"Trong trường hợp xảy ra thảm họa, toàn bộ cấu trúc có thể được xây dựng lại từ hồ sơ kỹ thuật số. Khi cần thiết trong những tháng và năm sắp tới, dữ liệu số hóa cũng có thể được sử dụng để in các mô hình 3D cần thiết để đúc chính xác các chi tiết trang trí ban đầu. Số hóa đã đảm bảo rằng vẻ đẹp và vĩ đại của Nhà hát Thành phố Hồ Chí Minh sẽ tiếp tục truyền cảm hứng cho thế hệ tương lai của cư dân và khách tham quan đến thành phố",</i> Ông Tuấn giải thích.</p>
+                                        <p>Sau thành công của dự án di sản này, các cơ quan chính quyền địa phương hiện đã có khả năng xem xét áp dụng các phương pháp tài liệu số hóa cho khoảng 150 tòa nhà có ý nghĩa lịch sử, văn hóa và nghệ thuật tại Thành phố Hồ Chí Minh.
+                                        </p>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include (dir+'partials/js.ejs')%>
+</body>
+
+</html>
