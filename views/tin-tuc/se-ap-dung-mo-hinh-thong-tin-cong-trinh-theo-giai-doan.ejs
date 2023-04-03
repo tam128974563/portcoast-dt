@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="vi" />
+    <title><%=news.title_vi%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_vi%>" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi" content="<%=news.title_vi%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%=news.title_vi%>" />
+    <meta property="og:description" content="<%= news.description_vi%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_vi%>" />
+    <meta name="twitter:description" content="<%= news.description_vi%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <%- include (dir+'partials/css.ejs')%>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include (dir+'partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[1]%> |
+                                            <%=  [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Nguồn: <a href="https://www.most.gov.vn/vn/tin-tuc/19182/chuyen-doi-so-toan-dien-co-so-ha-tang-trong-thoi-dai-4-0.aspx">most.gov.vn</a></span>
+                                        <h2 class="pcc-heading animate-box">
+                                            <%= news.title_vi%>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p><strong><%= news.description_vi%></strong></p>
+                                            <figure>
+                                                <img src="/public/images/news/<%= news.folder%>/20230401-applying-the-construction-information-modeling-in-stages-001.jpg"
+                                                    alt="<%=news.title_vi%>" class="img-fluid">
+                                                <figcaption>Hội thảo trực tuyến "Áp dụng mô hình thông tin công trình (BIM) trong hoạt động xây dựng - hiện trạng, lộ trình và giải pháp". Ảnh: Thu Hằng/BNEWS/TTXVN</figcaption>
+                                            </figure>
+                                          <p>Đây là thông tin ghi nhận tại hội thảo “Áp dụng mô hình thông tin công trình trong hoạt động xây dựng - hiện trạng, lộ trình và giải pháp” do Tạp chí Xây dựng phối hợp với Viện Kinh tế xây dựng, Công ty CP Searefico E&C và Công ty CP Đầu tư xây dựng Xuân Mai (Xuân Mai Corp) tổ chức ngày 1/4 theo hình thức trực tuyến.</p>
+                                          <h5>* Sẽ áp dụng thực hiện BIM theo giai đoạn</h5>
+                                          <p>Tổng kết thực hiện Đề án số 2500/QĐ-TTg ngày 22/12/2016 của Thủ tướng Chính phủ phê duyệt Đề án áp dụng mô hình thông tin công trình (BIM) trong hoạt động xây dựng và kết quả theo dõi việc áp dụng BIM của Bộ Xây dựng giai đoạn 2017-2021 cho thấy, áp dụng BIM góp phần rút ngắn thời gian và nâng cao chất lượng thiết kế, thi công cũng như quản lý dự án đầu tư xây dựng.</p>
+                                          <p>Ông Nguyễn Thái Bình - Tổng biên tập Tạp chí Xây dựng cho biết, từ hiệu quả thiết thực này, theo đề nghị của Bộ Xây dựng, ngày 17/3/2023, Thủ tướng Chính phủ đã ban hành Quyết định số 258/QĐ-TTg phê duyệt Lộ trình áp dụng BIM trong hoạt động xây dựng, bắt buộc áp dụng BIM đối với các dự án đầu tư xây dựng mới sử dụng vốn đầu tư công, vốn nhà nước ngoài đầu tư công và đầu tư theo phương thức đối tác công tư.</p>
+                                          <p>Chính phủ quy định việc áp dụng BIM thực hiện theo giai đoạn. Trong đó, giai đoạn 1 thực hiện từ năm 2023, áp dụng BIM bắt buộc đối với các công trình cấp I, cấp đặc biệt của các dự án đầu tư xây dựng mới sử dụng vốn đầu tư công, vốn nhà nước ngoài đầu tư công và đầu tư theo phương thức đối tác công tư bắt đầu thực hiện các công việc chuẩn bị dự án.</p>
+                                          <p>Giai đoạn 2 sẽ thực hiện từ năm 2025, áp dụng BIM bắt buộc đối với các công trình cấp II trở lên của các dự án đầu tư xây dựng mới sử dụng vốn đầu tư công, vốn nhà nước ngoài đầu tư công và đầu tư theo phương thức đối tác công tư bắt đầu thực hiện các công việc chuẩn bị dự án – ông Bình thông tin.</p>
+                                          <p>Tham gia Chương trình thí điểm BIM Quốc gia cho Dự án Bệnh viện chấn thương chỉnh hình Trung ương Cần Thơ, ông Phạm Phú Đức - Phó giám đốc Công ty CP Tư vấn thiết kế xây dựng Đà Nẵng chia sẻ, tổng thầu tư vấn thiết kế đóng vai trò rất quan trọng trong quy trình BIM. Họ thường được đặt ở vị trí cao nhất trong các nhà thầu tham gia quy trình BIM, có trách nhiệm đề xuất kế hoạch triển khai BIM, quản lý và điều phối hoạt động của các bên liên quan trong quy trình.</p>
+                                          <p>Chia sẻ kinh nghiệm về lộ trình áp dụng BIM của một doanh nghiệp Nhật Bản tại Singapore, ông Phạm Trường Giang - Trưởng phòng BIM & Engineering, Shimizu Việt Nam cho biết, để thích ứng trong việc áp dụng BIM tuân thủ theo lộ trình và yêu cầu của Chính phủ Singapore, Shimizu văn phòng quốc tế đã thiết lập lộ trình của mình gồm 3 giai đoạn. Hiện tại việc ứng dụng BIM của Tập đoàn Shimizu thông qua Ủy ban BIM đã được chia sẻ và áp dụng cho toàn bộ các chi nhánh của Tập đoàn như một lời khẳng định về tính hữu dụng và cần thiết.</p>
+                                          <p>Ông Hoàng Hiệp - Phó tổng giám đốc Công ty CP Tư vấn thiết kế cảng - kỹ thuật biển (Portcoast) đánh giá BIM như là đại diện kỹ thuật số phản ánh các đặc tính và chức năng của công trình; là một nguồn thông tin và kiến thức đáng tin cậy và duy nhất được chia sẻ giữa tất cả những đơn vị tham gia dự án, tạo thành cơ sở đáng tin cậy cho các quyết định diễn ra trong suốt vòng đời của dự án từ khi hình thành đến khi tháo dỡ. Việc tạo ra mô hình thông tin công trình sẽ mang đến rất nhiều lợi ích cho dự án, tạo ra một khối lượng thông tin cực kỳ lớn dẫn đến yêu cầu về lưu trữ cũng như khả năng sử dụng nguồn dữ liệu đó.</p>
+                                          <p>Dưới góc độ doanh nghiệp, ông Đỗ Thế Anh - Trưởng phòng BIM, Công ty CP Đầu tư xây dựng Xuân Mai (Xuân Mai Corp) khẳng định, trong lĩnh vực sản xuất bê tông tiền chế, BIM còn có nhiều ứng dụng đặc biệt hữu ích như tối ưu hóa sản xuất, điều khiển quá trình sản xuất, tăng tính đồng bộ và cải thiện năng suất sản xuất thi công.</p>
+                                          <p>Xuân Mai Corp đã sử dụng công nghệ BIM để tối ưu hóa toàn bộ quy trình xây dựng từ thiết kế, sản xuất đến thi công kể từ năm 2014. Xuân Mai đã áp dụng BIM để triển khai các hồ sơ thiết kế, kiểm soát xung đột và va chạm, phối hợp 3D đa bộ môn để tăng tính trực quan và kiểm soát phương án thiết kế tốt hơn. Điều này giúp giảm thiểu lỗi xung đột trong quá trình sản xuất và thi công.</p>
+                                          <p>Cùng đó, Xuân Mai đã tự xây dựng hệ thống quản lý trao đổi BIM chung (CDE) để thuận tiện cho việc áp dụng BIM trong giai đoạn sản xuất, thi công và quản lý điều phối. Hệ thống này đã trở thành nền tảng dữ liệu cho việc số hóa các quy trình làm việc của Xuân Mai, giúp quản lý hiệu quả, tiết kiệm chi phí và nhân lực…</p>
+                                          <h5>* Những thách thức cần giải quyết</h5>
+                                            <figure>
+                                                <img src="/public/images/news/<%= news.folder%>/20230401-applying-the-construction-information-modeling-in-stages-001.jpg"
+                                                    alt="<%=news.title_vi%>" class="img-fluid">
+                                                <figcaption>Từ năm 2023, áp dụng BIM bắt buộc đối với các công trình cấp 1, cấp đặc biệt của các dự án đầu tư xây dựng mới sử dụng vốn đầu tư công. Ảnh: Thu Hằng/BNEWS/TTXVN</figcaption>
+                                            </figure>
+                                          <p>Dưới góc nhìn chuyên ngành, ông Nguyễn Phạm Quang Tú - Phó viện trưởng Viện Kinh tế Xây dựng cho biết, yêu cầu đối với việc áp dụng BIM nhằm nâng cao năng suất, chất lượng, năng lực cạnh tranh của ngành xây dựng, thúc đẩy chuyển đổi số.</p>
+                                          <p>Tuy nhiên, theo ông Tú, hiện cần phải giải quyết một số thách thức như: cơ chế chính sách liên quan đến áp dụng BIM chưa đủ, thiếu phần mềm cốt lõi trong nước; thách thức về bảo mật thông tin, các hướng dẫn, tiêu chuẩn chưa hoàn thiện, chưa đầy đủ; nhân lực BIM còn thiếu…</p>
+                                          <p>Đánh giá về triển vọng phát triển BIM tại Việt Nam, bà Trương Thùy Linh - Phụ trách phát triển khối kiến trúc và xây dựng Việt Nam, Autodesk Asia Pte Ltd cho rằng, quy trình này vẫn còn một số thách thức phía trước chưa được giải quyết. Cụ thể như thực trạng làm việc trên 2D vẫn khá phổ biến trong ngành xây dựng hay kỹ năng của nhân lực cũng cần được cải thiện. Cùng đó, tiêu chuẩn và hướng dẫn pháp lý cũng cần sửa đổi lại để hỗ trợ doanh nghiệp đi nhanh hơn và bài bản hơn.</p>
+                                          <p>Bà Trương Thùy Linh đề xuất các bộ, ngành cần hỗ trợ thúc đẩy việc ứng dụng BIM vào các dự án vốn đầu tư công theo Quyết định số 258 của Chính phủ, phối hợp liên bộ để có được hướng dẫn chi tiết cùng khung pháp lý cho hồ sơ BIM; đồng thời, nâng cao nhân thức cho việc phê duyệt, kiểm soát dự án BIM ở các bộ, ngành liên quan.</p>
+                                          <p>Ngoài ra, khối học thuật cũng cần đổi mới trong việc cập nhật chương trình đào tạo sinh viên, đào tạo nguồn nhân lực đáp ứng nhu cầu thị trường; kết nối, liên kết với các doanh nghiệp cho việc phát triển công nghệ từ nghiên cứu, học tập đến thực tiễn ứng dụng… - bà Linh nêu vấn đề.</p>
+                                          <p>Bên cạnh đó, các chuyên gia cho rằng, để áp dụng BIM hiệu quả, mỗi đơn vị cần xác định 3 yếu tố quan trọng: nhân lực (100%), quy trình (60%), công cụ (40%); trong đó, con người là yếu tố then chốt trong quá trình chuyển đổi, đặc biệt ở những vai trò quan trọng. Tuy nhiên, rào cản mà yếu tố con người cần cải thiện và cần vượt qua được chính là tư duy, nhận thức và làm việc nhóm.</p>
+                                          <p>Không chỉ chuyên gia trong ngành mà ngay cả các doanh nghiệp đều kỳ vọng việc áp dụng BIM sẽ đem đến tầm nhìn và tương lai rộng mở hơn, hiện đại hơn, bền vững hơn cho ngành xây dựng.</p>
+                                          <p><b>Thu Hằng/BNEWS/TTXVN</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include (dir+'partials/js.ejs')%>
+</body>
+
+</html>

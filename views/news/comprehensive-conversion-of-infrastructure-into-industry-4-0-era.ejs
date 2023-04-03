@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p><strong>
+                                                <%= news.description_en %></strong></p>
+                                               <p>The discussion aimed to promote cooperation in technology transfer, application, and development, enhance efficiency, and orientate scientific and technological development towards the crucial role of digital transformation. Participants included units within and outside the Ministry, notably the leadership and staff of <a href="https://www.portcoast.com.vn/">PORTCOAST</a>, a design consultancy company specializing in maritime and port-related fields in Vietnam. The company has successfully applied digital conversion in implementing projects in these fields.</p>
+                                                <figure>
+                                                    <img src="/public/images/news/<%= news.folder%>/comprehensive-digital-transformation-of-infrastructure-in-the-4-0-era-001.jpg"
+                                                        alt="<%=news.title_en%>" class="img-fluid">
+                                                    <figcaption></figcaption>
+                                                </figure>
+                                                <figure>
+                                                    <img src="/public/images/news/<%= news.folder%>/comprehensive-digital-transformation-of-infrastructure-in-the-4-0-era-002.jpg"
+                                                        alt="<%=news.title_en%>" class="img-fluid">
+                                                    <figcaption>Introduction and demonstration of BIM technology</figcaption>
+                                                </figure>
+                                                <p>At the discussion, Mr. Tran Tan Phuc - Chairman of the Board of Directors of the company introduced and demonstrated the technology of BIM (Building Information Modeling) and scan to BIM in specific projects such as the Hyosung LPG Port in Ba Ria - Vung Tau and the digitalization of equipment and technology in the Ho Chi Minh City Theater. Additionally, PORTCOAST also demonstrated the experimental headquarters of the Ministry of Science and Technology.</p>
+                                                <p>Mr. Tran Tan Phuc also expressed his willingness to support and promote cooperation with the Ministry of Construction and Socio-Economic Development.</p>
+        
+        
+                                                <figure>
+                                                    <img src="/public/images/news/<%= news.folder%>/comprehensive-digital-transformation-of-infrastructure-in-the-4-0-era-003.jpg"
+                                                        alt="<%=news.title_en%>" class="img-fluid">
+                                                    <figcaption>Deputy Minister of Science and Technology, Tran Van Tung, delivered the closing remarks.</figcaption>
+                                                </figure>
+                                                <p>At the end of the working session, Deputy Minister Tran Van Tung instructed the Department of Application and Technology Development to take the lead in coordinating closely with other units within the Ministry and promoting cooperation with PORTCOAST in the coming time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>

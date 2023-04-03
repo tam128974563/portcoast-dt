@@ -73,8 +73,8 @@ figure {
 }
 
 figure figcaption {
-    font-size: 16px;
-    width: 80%;
+    font-size: 15px;
+    width: 90%;
     margin: 10px auto 0px auto;
     color: #b3b3b3;
     font-style: italic;
@@ -1899,3 +1899,8 @@ iframe {
    padding: 30px;
    margin-bottom: 30px;
 }
+
+
+
+
+

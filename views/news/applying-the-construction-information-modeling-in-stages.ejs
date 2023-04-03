@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Source: <a href="https://www.most.gov.vn/vn/tin-tuc/19182/chuyen-doi-so-toan-dien-co-so-ha-tang-trong-thoi-dai-4-0.aspx">most.gov.vn</a>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p><strong>
+                                                <%= news.description_en %></strong></p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/20230401-applying-the-construction-information-modeling-in-stages-001.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption>Webminar "Applying Building Information Modeling (BIM) in construction activities - current status, roadmap, and solutions" Photo: Thu Hang/BNEWS/TTXVN</figcaption>
+                                        </figure>
+                                        <p>This is information recorded at the seminar "Applying Building Information Modeling in Construction
+                                            Activities - Status, Roadmap, and Solutions" organized online on April 1 by Construction Magazine in
+                                            coordination with the Institute of Construction Economics, Searefico E&C, and Xuan
+                                            Mai Corporation.</p>
+                                          <h5>* BIM will be implemented in stages</h5>
+                                          <p>The summary of the implementation of Decision No. 2500/QD-TTg dated December 22, 2016, approved by the
+                                            Prime Minister on the application of Building Information Modeling (BIM) in construction activities and
+                                            the results of monitoring the application of BIM by the Ministry of Construction in the period of
+                                            2017-2021 show that applying BIM helps shorten the time and improve the quality of design, construction,
+                                            and project management.</p>
+                                          <p>Mr. Nguyen Thai Binh, Editor-in-Chief of Construction Magazine, said that based on this practical
+                                            effectiveness, at the request of the Ministry of Construction, on March 17, 2023, the Prime Minister
+                                            issued Decision No. 258/QD-TTg approving the roadmap for applying BIM in construction activities,
+                                            requiring the application of BIM for new construction investment projects using public investment
+                                            capital, foreign state investment capital, and investment under the public-private partnership method.
+                                          </p>
+                                          <p>The government regulates the implementation of BIM in stages. In which, stage 1 will be implemented
+                                            from 2023, with mandatory application of BIM for Grade I and special-grade construction works of new
+                                            investment projects using public investment capital, foreign state investment capital, and investment
+                                            under the public-private partnership method starting to carry out project preparation tasks.</p>
+                                          <p>Stage 2 will be implemented from 2025, with mandatory application of BIM for Grade II and above
+                                            construction works of new investment projects using public investment capital, foreign state investment
+                                            capital, and investment under the public-private partnership method starting to carry out project
+                                            preparation tasks, Mr. Binh informed.</p>
+                            
+                                          <p>Participating in the National BIM Pilot Program for the Can Tho Central Orthopedic Hospital Project,
+                                            Mr. Pham Phu Duc - Deputy Director of Danang Construction Designing & Consultancy Joint
+                                            Stock Company (CDC DANANG) shared that the overall design and consultancy contractor plays a very
+                                            important role in
+                                            the BIM process. They are often placed in the highest position among contractors participating in the
+                                            BIM process, with responsibilities to propose BIM deployment plans, manage and coordinate the activities
+                                            of related parties in the process.</p>
+                                          <p>Sharing experience on the BIM application roadmap of a Japanese company in Singapore, Mr. Pham Truong
+                                            Giang - Head of BIM & Engineering, Shimizu Vietnam said that in order to adapt to the BIM application in
+                                            compliance with the roadmap and requirements of the Singaporean government, Shimizu's international
+                                            office has established its own roadmap consisting of 3 stages. Currently, the application of BIM by the
+                                            Shimizu Group through the BIM Committee has been shared and applied to all branches of the Group as an
+                                            affirmation of its usefulness and necessity.</p>
+                                          <p>Mr. Hoang Hiep - Deputy General Director of Portcoast Consultant Corporation (PORTCOAST) evaluates BIM
+                                            as a digital representation of the characteristics and functions of the project; it is a reliable and
+                                            unique source of information and knowledge shared among all units participating in the project, forming
+                                            a reliable basis for decisions throughout the project's life cycle from formation to dismantlement.
+                                            Creating a construction information model will bring many benefits to the project, creating a huge
+                                            amount of information leading to requirements for storage and the ability to use that data.</p>
+                                          <p>From a business perspective, Mr. Do The Anh - Head of BIM Department at Xuan Mai Corporation asserts
+                                            that in the precast concrete production industry, BIM has many useful applications such as optimizing
+                                            production, controlling the production process, increasing synchronization, and improving construction
+                                            productivity.</p>
+                                          <p>Xuan Mai Corp has been using BIM technology to optimize the entire construction process from design,
+                                            production to construction since 2014. Xuan Mai has applied BIM to implement design documents, control
+                                            conflicts and collisions, coordinate multidisciplinary 3D to enhance visuality, and better control the
+                                            design plan. This helps minimize conflicts in the production and construction process.</p>
+                                          <p>In addition, Xuan Mai has built its own common BIM exchange management system (CDE) to facilitate the
+                                            application of BIM in the production, construction, and coordination management phase. This system has
+                                            become the data platform for digitizing Xuan Mai's work processes, helping to manage effectively, save
+                                            costs, and human resources...</p>
+                                          <h5>* Challenges that need to be addressed</h5>
+                                           <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/20230401-applying-the-construction-information-modeling-in-stages-002.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption>Starting from 2023, BIM application is mandatory for level 1 and special level construction works of new projects using public investment funds. Photo: Thu Hang/BNEWS/TTXVN</figcaption>
+                                          </figure>
+                                          <p>From a professional perspective, Mr. Nguyen Pham Quang Tu - Deputy Director of the Institute of
+                                            Construction Economics said that the requirement for applying BIM is to improve productivity, quality,
+                                            and competitive capacity of the construction industry, and promote digital transformation. </p>
+                                          <p>However, according to Mr. Tu, there are some challenges that need to be addressed, such as insufficient
+                                            policy mechanisms related to BIM application, lack of core software domestically, challenges in
+                                            information security, incomplete guidelines and standards, and lack of BIM human resources.</p>
+                                          <p>Regarding the prospects for BIM development in Vietnam, Ms. Truong Thuy Linh - Head of Architecture and
+                                            Construction Development at Autodesk Asia Pte Ltd believes that there are still some challenges ahead.
+                                            Specifically, the current practice of working on 2D is still quite common in the construction industry,
+                                            and the skills of BIM human resources also need to be improved. In addition, standards and legal
+                                            guidelines need to be revised to support faster and more systematic business operations.</p>
+                                          <p>Ms. Truong Thuy Linh proposed that ministries and sectors should support the application of BIM in
+                                            publicly invested projects under Government Decision No. 258, coordinate inter-ministerially to provide
+                                            detailed guidance and legal framework for BIM documents, and improve awareness of approving and
+                                            controlling BIM projects in related ministries and sectors.</p>
+                                          <p>In addition, academic institutions need to innovate in updating their student training programs and
+                                            providing human resources to meet market demand. They should also connect and collaborate with
+                                            businesses to develop technology from research, learning to practical application.</p>
+                                          <p>Furthermore, experts believe that to effectively apply BIM, each unit needs to determine three
+                                            important factors: personnel (100%), processes (60%), and tools (40%), with people being the key factor
+                                            in the transformation process, especially in important roles. However, the barriers that the human
+                                            factor needs to improve and overcome are mindset, perception, and teamwork.</p>
+                                          <p>Not only experts in the industry, but also businesses expect that the application of BIM will bring a
+                                            broader, more modern, and sustainable vision and future for the construction industry.</p>
+                                        <p><b>Thu Hang/BNEWS/TTXVN</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>
