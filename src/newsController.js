@@ -60,7 +60,6 @@ const page = async (req, res) => {
     const page = await News.findOne({
         [`url_${url[1]}`]: req.params.id
     }).lean();
-
     const options = {
         lang: url[1],
         page: url[2],
