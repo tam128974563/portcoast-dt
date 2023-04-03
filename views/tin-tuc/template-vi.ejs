@@ -64,8 +64,9 @@
                                             <% if(news.tag === "News-Tin Tức" ){%>
                                             | Nguồn: <a href="<%= news.original_url %>">
                                                 <%= new URL(news.original_url).hostname.replace('www.','') %>
-                                            </a></span>
+                                            </a>
                                         <%}%>
+                                    </span>
                                         <h2 class="pcc-heading animate-box">
                                             <%= news.title_vi%>
                                         </h2>
