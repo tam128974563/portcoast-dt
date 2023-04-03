@@ -60,6 +60,12 @@ const page = async (req, res) => {
     const page = await News.findOne({
         [`url_${url[1]}`]: req.params.id
     }).lean();
+    console.log(page)
+    console.log(page.sort([
+        ["year", 1],
+        ["month", 1],
+        ["day", 1]
+    ]));
     const options = {
         lang: url[1],
         page: url[2],
@@ -73,6 +79,15 @@ const route = async (req, res) => {
     const news = await News.find({}).sort({
         index_number: -1
     }).lean();
+    const compareDate = (a, b) => {
+        if (a.year !== b.year) return b.year - a.year;
+        if (a.month !== b.month) return b.month - a.month;
+        if (a.day !== b.day) return b.day - a.day;
+    }
+    news.sort(
+        compareDate
+    );
+
     const options = {
         page: `${req.url.substring(4)}`,
         news,
