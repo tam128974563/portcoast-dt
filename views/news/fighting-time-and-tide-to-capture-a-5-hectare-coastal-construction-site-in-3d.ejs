@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/capture-a-5-hectare-coastal-construction-site-in-3d-cover.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>In 2018 the construction of Hyosung Vina Chemicals Port began in the Ba Ria-VungTau province, southern Vietnam. A collaboration between the Vietnamese Government and South Korean industrial conglomerate Hyosung Corporation, the new port is a part of the Hyosung Chemical Complex. Once completed, the Hyosung Chemical Complex will include a propane dehydrogenation (PDH) production plant, a polypropylene (PP) plant, a liquefied petroleum gas (LPG) storage tank and an LPG and petrochemical product warehouse in the Cai Mep Industrial Zone in Ba Ria-Vung Tau, located near Ho Chi Minh City.</p>
+                                        <p>One of the final tasks in the development was the construction of the port’s LPG jetty. With over 30 years’ experience in marine, waterway and transport infrastructure, Portcoast are Vietnam’s leading port and coastal survey consultants. The company was engaged in creating the 3D mapping for the topographic survey, the as-built model of the LPG jetty and facilities, and to conduct the inspection report for the revetment protecting the jetty.</p>
+                                        <p>The topographic survey covered an area of over 5 hectares – and with much of the area located in the water, Portcoast’s level of specialist knowledge and experience was essential for collecting data in these hard-to-reach areas. To compound the inaccessibility challenges, whilst some areas of the complex were still under construction, others were already operational.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/capture-a-5-hectare-coastal-construction-site-in-3d-001.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Dr. Hoang Hiep, the Portcoast team leader on the project commented,<i> “The
+                                                main challenge for scanning the whole port was the selection of scanning
+                                                positions in a complex where there was significant traffic and where
+                                                disturbances from the ongoing construction work could compromise the
+                                                stability required for precision scanning.”</i></p>
+                                        <p>To mitigate the challenges of working in this disruptive, heavy traffic
+                                            environment, Portcoast decided to conduct the scans from elevated locations
+                                            above the internal road.</p>
+                                        <p>Dr. Hoang Hiep of Portcoast explained, <i>“Working from high above the site
+                                                required a scanner which could deliver a high level of precision over a
+                                                long measurable range. The Leica ScanStation P50 delivered an accuracy
+                                                of up to 3mm so we could cover the full range with confidence and
+                                                precision.”</i></p>
+                                        <p>Whilst the ScanStation P50 was used to capture the data on top of the bridge,
+                                            under the bridge the team used specially modified equipment, such as
+                                            customised cranes to install the Leica RTC360 and Leica BLK360 to measure
+                                            and capture highly-detailed data in the complex, narrow and inaccessible
+                                            areas, such as the liquid tanks, the pipeline systems, access bridge and the
+                                            marine loading arm.</p>
+                                        <h5>Time is money</h5>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/capture-a-5-hectare-coastal-construction-site-in-3d-002.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Promising to offer significant economic benefits for the region, the construction project alone is estimated to have created jobs for about 2,000 workers during its construction. Once completed, the port is estimated to contribute 80 million USD annually to the state budget so it was imperative to ensure that the port can be fully operational as quickly as possible. Speed was, therefore, a key factor in the selection of equipment for Portcoast and in training the team in the use of this equipment.</p>
+                                        <p><i>“Not only was the training time for the team almost halved by working with the Leica Geosystems team, but the high speed of capturing data with Leica’s equipment significantly reduced the survey time. In a project like this, the topographic survey of revetment would usually take around 12 hours with a survey grid of 20m per setup. Whereas it can be reduced to 3 hours when using the ScanStation P50. Accelerating the process also reduced our operational risk and the number of employees required for this work,”</i> explained Dr. Hoang Hiep.</p>
+                                        <h5>Enhancing collaboration between site and data analysis office</h5>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/capture-a-5-hectare-coastal-construction-site-in-3d-003.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <h5>Reduce errors and control costs</h5>
+                                        <p>To scan the port, Portcoast needed to combine thousands of points and to combine the data from different devices, such as total stations, GNSS and laser scanners – something that would usually prove to be a very complex and time-consuming process. The seamless integration of Leica Geosystems’ equipment and software solutions meant the data could easily be passed between the off-site team processing the data and the field team.</p>
+                                        <p>Having worked in similar projects across Southeast Asia, Pakistan and U.A.E, Portcoast were particularly conscious of the importance of fast data transfer in tropical countries. The rapidly changing weather conditions demand fast data transfer between field and office teams to verify data and prevent any loss of data. After collecting the point cloud data from the geodetic equipment, Portcoast used the Leica Cyclone, Leica Cyclone 3DR and Leica Infinity off-site to process the data.</p>
+                                        <p><i>The high-speed and high-level accuracy of capturing field data helped to avoid delays in office post-processing as the software helped us to check the points every time we needed to. With Infinity and ConX it is easy to transfer data between the field and the office within 1 min,”</i> added Dr. Hoang Hiep.</p>
+                                        <p><i>“The outcome map produced by Cyclone is a very accurate model, which we can use to create a 3D model and VR system. Using Cyclone 3DR we can then further refine the model to provide high levels of accuracy and visibility.”</i></p>
+                                        <p>By collecting point cloud data at different times and using Leica CloudWorx for Revit to convert this into as-built drawings, the margin (a matter of millimetres) for settlement or displacement of the pipe racks could be estimated with the utmost precision.</p>                                   
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/capture-a-5-hectare-coastal-construction-site-in-3d-004.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>The as-built drawings and BIM will support the Facilities Management aspect of the port providing a reference for the inspection report and enabling Hyosung to plan and model future developments and renovations for the port using the digital model.</p>
+                                        <p>The work that took the team of seven engineers just weeks to complete will significantly reduce the site visits required for future maintenance and can be used to enhance and protect the operations of the port for decades to come.</p>
+                                        <p><i>“When we took on this project, only half of the team had any prior experience with this geodetic equipment. The increased efficiency from the integration across the Leica Geosystems product ecosystem saved considerable time, and now the whole team is eager to use the Leica Geosystems geodetic equipment regularly,”</i> concluded Dr. Hoang Hiep.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>
