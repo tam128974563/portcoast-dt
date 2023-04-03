@@ -62,7 +62,7 @@
                                     <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                         <span class="heading-meta">
                                             <%=news.tag.split("-")[0]%> |
-                                            <%= [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Source: <a href="https://blog.hexagongeosystems.com/5-best-practices-for-construction-companies-to-emerge-strong-in-a-post-crisis-world/">Leica Geosystems</a>
+                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Source: <a href="https://blog.hexagongeosystems.com/5-best-practices-for-construction-companies-to-emerge-strong-in-a-post-crisis-world/">Leica Geosystems</a>
                                         </span>
                                         <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
                                     </div>

@@ -62,7 +62,7 @@
                                     <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                         <span class="heading-meta">
                                             <%=news.tag.split("-")[0]%> |
-                                            <%= [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Source: <a href="https://www.most.gov.vn/vn/tin-tuc/19182/chuyen-doi-so-toan-dien-co-so-ha-tang-trong-thoi-dai-4-0.aspx">most.gov.vn</a>
+                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Source: <a href="https://www.most.gov.vn/vn/tin-tuc/19182/chuyen-doi-so-toan-dien-co-so-ha-tang-trong-thoi-dai-4-0.aspx">most.gov.vn</a>
                                         </span>
                                         <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
                                     </div>
