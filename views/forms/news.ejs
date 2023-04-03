@@ -124,7 +124,7 @@
             400 === 0;
         const daysInMonth = [31, isLeapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
         console.log(selectedMonth);
-        console.log(daysInMonth[selectedMonth])
+        console.log(daysInMonth[selectedMonth]);
         dayDropdown.innerHTML = "";
 
         for (let day = 1; day <= daysInMonth[selectedMonth]; day++) {
@@ -217,11 +217,11 @@
     });
     const tags = document.getElementById('tag');
     const originURL = document.getElementById('original_url');
-    if (tags.value !== "news") {
+    if (tags.value !== "News-Tin Tức") {
         originURL.disabled = true;
     } else originURL.disabled = false;
     tags.addEventListener('change', () => {
-        if (tags.value !== "news") {
+        if (tags.value !== "News-Tin Tức") {
             originURL.disabled = true;
         } else originURL.disabled = false;
     });
