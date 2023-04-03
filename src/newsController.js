@@ -60,12 +60,7 @@ const page = async (req, res) => {
     const page = await News.findOne({
         [`url_${url[1]}`]: req.params.id
     }).lean();
-    console.log(page)
-    console.log(page.sort([
-        ["year", 1],
-        ["month", 1],
-        ["day", 1]
-    ]));
+
     const options = {
         lang: url[1],
         page: url[2],
