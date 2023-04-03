@@ -95,6 +95,7 @@
 
     // Generate options for days from 1 to 31
     for (let day = 1; day <= 31; day++) {
+        if (day < 10) day = `0${day}`
         dayDropdown.innerHTML += `<option value="${day}">${day}</option>`;
     }
 
@@ -146,6 +147,7 @@
             dayDropdown.innerHTML = "";
 
             for (let day = 1; day <= daysInMonth[selectedMonth]; day++) {
+                if (day < 10) day = `0${day}`
                 dayDropdown.innerHTML += `<option value="${day}">${day}</option>`;
             }
         })
@@ -163,10 +165,6 @@
         const selectedYear = parseInt(yearDropdown.value);
         //const selectedMonth = parseInt(monthDropdown.value);
 
-
-
-
-
         const today = new Date();
         document.getElementById('year').value = today.getFullYear();
         document.getElementById('month').selectedIndex = today.getMonth();
@@ -179,6 +177,7 @@
         dayDropdown.innerHTML = "";
 
         for (let day = 1; day <= daysInMonth[selectedMonth]; day++) {
+            if (day < 10) day = `0${day}`
             dayDropdown.innerHTML += `<option value="${day}">
               ${day}
               </option>`;
