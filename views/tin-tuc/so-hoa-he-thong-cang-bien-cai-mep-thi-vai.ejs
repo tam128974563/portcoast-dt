@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="vi" />
+    <title><%=news.title_vi%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_vi%>" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi" content="<%=news.title_vi%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%=news.title_vi%>" />
+    <meta property="og:description" content="<%= news.description_vi%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_vi%>" />
+    <meta name="twitter:description" content="<%= news.description_vi%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <%- include (dir+'partials/css.ejs')%>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include (dir+'partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[1]%> |
+                                            <%=  [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Nguồn: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                        <%}%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box">
+                                            <%= news.title_vi%>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p><strong><%= news.description_vi%>, mô hình số của hệ thống cảng biển Cái Mép -Thị Vải đã được giới thiệu tới Thủ tướng Chính phủ, lãnh đạo các bộ ngành, đối tác. Đây là mô hình số hóa về quản lý, đầu tư, quy hoạch cảng biển hiện đại vào loại bậc nhất của nước ta.
+                                        </strong></p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/digitizing-cai-mep-thi-vai-seaport-system-001.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>Portcoast báo cáo mô hình số hóa cảng biển Cái Mép -Thị Vải</figcaption>
+                                        </figure>
+                                        <p>Khu cảng Cái Mép – Thị Vải là cửa ngõ ra biển của vùng kinh tế trọng điểm phía Nam đồng thời cũng là
+                                            cửa
+                                            ngõ hội nhập, giao thương với thế giới bằng đường biển lớn nhất, quan trọng nhất Nam bộ. Theo quy hoạch
+                                            phát triển hệ thống cảng biển Việt Nam, nơi đây là đầu mối giao lưu quốc tế cho cả khu vực phía Nam và
+                                            đặc biệt là Vùng Kinh tế trọng điểm phía Nam, trong đó có TPHCM, nơi giữ vai trò đặc biệt quan trọng đối
+                                            với nền kinh tế Việt Nam</p>
+                                          <p>Với vai trò quan trọng, việc số hóa từ khâu quy hoạch, quản lý cho tới vận hành của hệ thống cảng
+                                            mang một ý nghĩa rất lớn, giúp cơ quan chức năng cũng như chủ đầu tư, nhà khai thác có thể quản lý và
+                                            khai thác cảng biển hiệu quả hơn.</p>
+                                          <p>Theo ông Trần Tấn Phúc, Chủ tịch HĐQT Công ty Cổ phần tư vấn thiết kế cảng - kỹ thuật biển
+                                            (Portcoast), đơn vị thực hiện số hóa hệ thống cảng biển Cái Mép - Thị Vải, việc số hóa sẽ giúp tối đa
+                                            hóa công suất vận hành, an toàn khai thác, giảm thiểu sự cố ảnh hưởng đến môi trường và giúp hệ thống
+                                            cảng hòa nhập vào tiến trình phát triển của hệ sinh thái cảng biển, vận tải hàng hải thế giới.</p>
+                                          <p>Hiện tại, với hệ thống thiết bị và công nghệ quét laser scan 3D tiên tiến, Portcoast đã xây dựng gần
+                                            như hoàn chỉnh
+                                            mô hình số cơ sở hạ tầng cảng biển, tích hợp hệ thống thông tin từng công trình với hệ thống thông tin
+                                            địa lý 3D. Đây
+                                            cũng là hệ thống cảng biển đầu tiên và duy nhất trong cả nước xây dựng mô hình số hệ thống cảng biển.
+                                          </p>
+                                          <p>Mô hình số hệ thống cảng được tích hợp từ mô hình hiện trạng, mô hình quy hoạch các bến cảng mới, các
+                                            mô hình hành hải của tàu, mô hình thủy hải văn, các mô hình mô phỏng hoạt động khai thác… nhằm giúp các
+                                            cơ quan quản lý, các doanh nghiệp khai thác cảng biển, hãng tàu và cả nhà đầu tư dễ dàng nắm bắt trực
+                                            quan toàn bộ hệ thống cảng biển.</p>
+                                          <p>Mô hình số cơ sở hạ tầng cảng biển (bản sao số - Digital Twin) cho phép nghiên cứu quy hoạch phát
+                                            triển không gian, chi tiết hình học hay tọa độ, cao độ của từng điểm bất kỳ của công trình, nhìn tường
+                                            tận hệ thống hạ tầng kỹ thuật ngầm dưới mặt đất, đáy sông, địa tầng địa chất, các thông tin liên quan
+                                            đến quản lý, duy tu, bảo trì… Trong tương lai còn cho phép tái tạo những gì đang xảy ra trong hệ thống
+                                            cảng, thiết lập các kịch bản mô phỏng mọi hoạt động của cảng như các hoạt động giao thông, các tình
+                                            huống sự cố có thể xảy ra,… để xây dựng các kịch bản ứng phó, tiến tới hoàn thiện hệ thống quản lý
+                                            cảng biển một cách toàn diện, đáp ứng xu thế phát triển cảng thông minh. </p>
+                                          <p>Việc đi tiên phong áp dụng số hóa của hệ thống cảng biển Cái Mép - Thị Vải sẽ là khởi đầu tốt cho
+                                            việc áp dụng rộng rãi ở tất cả các hệ thống cảng biển trên cả nước.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include (dir+'partials/js.ejs')%>
+</body>
+
+</html>

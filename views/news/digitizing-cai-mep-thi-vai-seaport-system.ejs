@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Source: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                            <%}%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p><strong>
+                                                <%= news.description_en %>, the digital model of the Cai Mep - Thi Vai
+                                                seaport system was introduced to the Prime Minister, leaders of
+                                                ministries and partners. This is the most modern digitized model of port
+                                                management, investment and planning in our country.</strong></p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/digitizing-cai-mep-thi-vai-seaport-system-001.jpg"
+                                                alt="<%=news.title_en%>" class="img-fluid">
+                                            <figcaption>Portcoast reported on the digitalization model of the Cai Mep -
+                                                Thi Vai seaport.
+                                            </figcaption>
+                                        </figure>
+                                        <p>Cai Mep - Thi Vai port area is the gateway to the sea for the key economic
+                                            region in the South and is also the most important gateway for integration
+                                            and trade with the world by the largest sea route in the South. According to
+                                            the development plan for the Vietnam seaport system, this is the
+                                            international exchange hub for the Southern region and particularly the key
+                                            economic region in the South, including Ho Chi Minh City, which plays a
+                                            particularly important role in Vietnam's economy.
+
+                                        </p>
+                                        <p>With such an important role, digitizing the port system from planning,
+                                            management to operation carries great significance, enabling functional
+                                            agencies as well as investors and operators to manage and exploit the
+                                            seaport system more effectively.</p>
+                                        <p>According to Mr. Tran Tan Phuc, Chairman of Portcoast Consultant Corporation
+                                            (Portcoast) - a company that implements the digitization
+                                            of the Cai Mep - Thi Vai seaport system - digitization will help maximize
+                                            operational capacity, ensure safety of exploitation, reduce environmental
+                                            impacts, and help the seaport system integrate into the development process
+                                            of the seaport ecosystem and global maritime transport.</p>
+                                        <p>Currently, with advanced laser scan 3D scanning equipment and technology, Portcoast has almost completed the digital model of the seaport infrastructure, integrating information systems of each project with 3D geographic information systems. This is also the first and only seaport system in the country to build a digital model of the seaport system.
+                                        </p>
+                                        <p>The digital model of the seaport system is integrated from the current status model, the model of new wharves planning, ship navigation models, hydro-meteorological models, simulation models of exploitation activities, etc., to help management agencies, seaport operators, shipping companies, and investors easily visualize the entire seaport system.</p>
+                                        <p>The digital model of the seaport infrastructure (digital twin) allows for the study of spatial development planning, geometry details, or coordinates, altitude of any point of the work, thoroughly observing technical infrastructure systems underground, riverbeds, geology, and related information regarding management, maintenance, and repair. In the future, it will allow the reproduction of what is happening in the seaport system, setting up simulation scenarios for all port activities such as transportation, possible emergency situations, etc., to build responsive scenarios, moving toward the comprehensive completion of seaport management systems in a smart port development trend.
+                                        </p>
+                                        <p>Pioneering the digitalization application of the Cai Mep - Thi Vai seaport system will be a good start for widespread application at all seaport systems nationwide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>
