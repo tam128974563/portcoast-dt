@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Source: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                            <%}%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p><strong>
+                                                <%= news.description_en %></strong></p>
+                                        <p>Thanh Nien conducted an interview with Mr. Pham Anh Tuan, General Director of
+                                            Portcoast, about these breakthrough applications.</p>
+                                        <p><i>"Sir, why did Portcoast decide to invest in human resources, machinery,
+                                                and equipment to apply modern technology to many ports, port clusters,
+                                                and urban infrastructure projects?"</i></p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/infrastructure-digitization-001.jpg"
+                                                alt="<%=news.title_en%>" class="img-fluid">
+                                            <figcaption>3D model of Cai Mep Ha Logistics Center</figcaption>
+                                        </figure>
+                                        <p>Today, we often hear about Industry 4.0, the digital age, or digital
+                                            transformation. It's not just about communication, camera systems, or
+                                            documents being converted to electronic form, but all areas and activities
+                                            in life can integrate digital technology.</p>
+                                        <p>As a leading consultancy in the port and maritime construction industry,
+                                            Portcoast understands the need to apply the achievements of Industry 4.0 to
+                                            quickly achieve the goal of digitalizing seaport infrastructure and moving
+                                            towards building smart ports, which is an inevitable development trend.
+                                        </p>
+                                        <p>For Vietnam, the government has set out strategies to make our country a
+                                            strong maritime nation, including the task of developing the seaport system.
+                                            Therefore, applying scientific and technological achievements to the seaport
+                                            system that is suitable for the new development stage is the shortest path
+                                            for the Vietnamese seaport system to develop in parallel with the world's
+                                            leading seaport countries.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/infrastructure-digitization-002.jpg"
+                                                alt="<%=news.title_en%>" class="img-fluid">
+                                            <figcaption>Mr. Pham Anh Tuan</figcaption>
+                                        </figure>
+                                        <p><i>How has Portcoast applied digital technology in Vietnam?</i></p>
+                                        <div class="pcc-quotes">
+                                            <p>
+                                                Portcoast has made significant progress in digital transformation and
+                                                research on digital technical copies. Readers can refer to the website
+                                                <a href="https://www.portcoast.com.vn">https://www.portcoast.com.vn</a>
+                                                for more information.
+                                            </p>
+                                        </div>
+                                        <p>In recent years, despite the explosive growth of Building Information
+                                            Modeling (BIM) due to its many benefits, especially its application in
+                                            creating Digital Twins, the technology has been slow to develop and faces
+                                            many challenges in the Vietnamese maritime industry. Understanding the
+                                            benefits, Portcoast has invested heavily in and researched BIM and
+                                            Scan-to-BIM technologies, digitizing many ports towards the goal of
+                                            consulting and developing Digital Twins for the maritime industry.</p>
+                                        <p>In the past 2 years, Portcoast has digitized and researched the
+                                            implementation of Digital Twins for many ports and port clusters in Vietnam
+                                            and abroad, notably the Cai Mep - Thi Vai port cluster. The unique feature
+                                            of the port is that it includes both onshore and underwater structures.
+                                            Therefore, Portcoast uses both digital equipment for onshore and underwater
+                                            structures.</p>
+                                        <p>For the onshore area, we use 3D laser scanning devices placed on fixed
+                                            stations (Terrestrial Laser Scanning) and on vehicles (Mobile mapping)
+                                            integrated with GPS positioning system for simultaneous movement and
+                                            scanning. Furthermore, another technology integrates 3D laser scanners and
+                                            unmanned aerial vehicles (UAVs) to scan data in large areas. The two devices
+                                            that Portcoast uses come from famous brands such as Stormbee integrated with
+                                            Faro S350-A scanner and DJI Matrice 300 RTK integrated with Zenmuse L1
+                                            module.</p>
+                                        <p>For the underwater area, Portcoast uses a mobile mapping solution on an
+                                            unmanned surface vehicle (USV). The devices mounted on the USV include a 3D
+                                            laser scanner (NORBIT iLidar) placed on the bow of the ship to record
+                                            surrounding data, and a device mounted on the bottom of the ship (NORBIT
+                                            iWBMS) to scan the seabed topography and riverbed.</p>
+                                        <p>With the application of current technology and equipment, Portcoast can
+                                            create an accurate digital model of a port or port system with complete
+                                            information, like a twin sibling to the actual construction, serving
+                                            management and operation.
+                                        </p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/infrastructure-digitization-003.jpg"
+                                                alt="<%=news.title_en%>" class="img-fluid">
+                                            <figcaption>Point cloud model of Hyosung Vina Chemicals Port on land and
+                                                underwater</figcaption>
+                                        </figure>
+                                        <p>Is it because of Portcoast's technological and experiential potential in
+                                            implementing digital projects that they continue to advance and research the
+                                            application of these modern technology processes to urban infrastructure?
+                                        </p>
+                                        <p>That's right. Imagine we have a small-scale map of the entire city, we can
+                                            already have an overview of the urban space development plan to consider
+                                            development directions. So now we have a digital model at a 1:1 scale,
+                                            representing the entire above and underground infrastructure with full
+                                            information, what can we do? This digital model of the entire city not only
+                                            allows us to study urban development planning, clearly see the underground
+                                            technical infrastructure system, and related information on management,
+                                            maintenance, and repairs but also allows us to reproduce what is happening
+                                            in the city, establish scenarios simulating all activities in the city such
+                                            as traffic activities, potential incidents that may occur... to build
+                                            response scenarios and move towards comprehensive city management systems.
+                                        </p>
+                                        <p>Therefore, to have a smart city, we need to build a digital model, which can
+                                            start from a neighborhood, an area, and then move on to the entire city. Ho
+                                            Chi Minh City was chosen by Portcoast as the city to implement the pilot
+                                            project, using modern equipment as mentioned above to scan data of cultural
+                                            heritage or iconic architecture such as the Municipal Theatre, Independence
+                                            Palace, City Hall, Bitexco, Vietcombank Tower... or to scan data of streets
+                                            and sidewalks on both sides.
+                                        </p>
+                                        <p>Currently, some specific projects such as the City Theater and the
+                                            surrounding roads, and the Vietcombank Tower have been digitally modeled by
+                                            us. We hope to soon deploy mobile mapping applications to scan data for
+                                            streets.</p>
+                                        <p><i>Currently, some specific projects such as the City Theater and the
+                                                surrounding roads, and the Vietcombank Tower have been digitally modeled
+                                                by us. We hope to soon deploy mobile mapping applications to scan data
+                                                for streets.
+                                                Therefore, Portcoast owns a comprehensive and ready-made solution for
+                                                large-scale projects. What is Portcoast's goal for the future?</i></p>
+                                        <p>With significant developments and notable achievements in the past, Portcoast
+                                            is aiming for even more ambitious goals in the future. Specifically,
+                                            Portcoast aims to complete the digitization of the entire Thi Vai-Cai Mep
+                                            port system in 2021.</p>
+                                        <p>In addition, a complete and modern solution system has been developed for the
+                                            purpose of collecting data to serve the urban infrastructure digitization
+                                            process in Vietnam. In terms of modernity, this system is currently on par
+                                            with the world and ready for the urban digitization process. Specifically,
+                                            Portcoast aims to complete the digitization of some areas in Ho Chi Minh
+                                            City.</p>
+                                        <p>For example, in the case of Covid-19 prevention and control, assuming we have
+                                            a complete digital model of the entire city, combined with an AI
+                                            identification system and real-time data, we can manage traffic flows to
+                                            limit overcrowding in a specific location or area on a virtual 1:1 scale.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>

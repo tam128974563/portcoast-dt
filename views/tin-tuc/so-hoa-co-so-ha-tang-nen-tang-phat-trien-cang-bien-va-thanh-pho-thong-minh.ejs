@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="vi" />
+    <title><%=news.title_vi%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_vi%>" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi" content="<%=news.title_vi%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%=news.title_vi%>" />
+    <meta property="og:description" content="<%= news.description_vi%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_vi%>" />
+    <meta name="twitter:description" content="<%= news.description_vi%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <%- include (dir+'partials/css.ejs')%>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include (dir+'partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[1]%> |
+                                            <%=  [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Nguồn: <a href="<%= news.original_url %>"><%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                            <%}%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box">
+                                            <%= news.title_vi%>
+                                            </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p><strong><%= news.description_vi%></strong></p>
+                                        <p>Thanh Niên đã có cuộc phỏng vấn ông Phạm Anh Tuấn, Tổng giám đốc Portcoast về
+                                            những ứng
+                                            dụng đột phá này.</p>
+                                        <p><i>Thưa ông, vì sao Portcoast, quyết định đầu tư vào nhân lực, máy móc, thiết
+                                                bị để ứng
+                                                dụng công nghệ hiện đại cho nhiều cảng, cụm cảng và nhiều công trình hạ
+                                                tầng đô
+                                                thị?</i></p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/infrastructure-digitization-001.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>Mô hình 3D Trung tâm Logistics Cái Mép Hạ</figcaption>
+                                        </figure>
+                                        <p>Ngày nay chúng ta hay nghe nói về công nghiệp 4.0, kỷ nguyên số hay chuyển
+                                            đổi số. Nó
+                                            không chỉ đơn thuần là thông tin liên lạc, hệ thống camera hay các hồ sơ tài
+                                            liệu được
+                                            chuyển sang dạng bản điện tử mà tất cả các lĩnh vực, mọi hoạt động của đời
+                                            sống đều có
+                                            thể tích hợp các công nghệ kỹ thuật số.</p>
+                                        <p>Là đơn vị tư vấn đầu ngành trong lĩnh vực cảng, công trình biển, Portcoast
+                                            hiểu rằng cần
+                                            áp dụng thành tựu của công nghệ 4.0 để nhanh chóng hoàn thành mục tiêu số
+                                            hóa hạ tầng
+                                            cảng biển, tiến đến xây dựng cảng thông minh là xu hướng phát triển tất yếu.
+                                        </p>
+                                        <p>Đối với Việt Nam, Chính phủ đã đề ra các chiến lược với mục tiêu đưa nước ta
+                                            trở thành
+                                            quốc gia biển mạnh, trong đó
+                                            có nhiệm vụ phát triển hệ thống cảng biển. Vì vậy, việc ứng dụng các thành
+                                            tựu khoa học
+                                            công nghệ cho hệ thống cảng
+                                            biển phù hợp với giai đoạn phát triển mới là con đường ngắn nhất để hệ thống
+                                            cảng biển
+                                            Việt Nam có thể phát triển
+                                            song hành với các quốc gia mạnh về cảng biển trên thế giới.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/infrastructure-digitization-002.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p><i>Portcoast đã ứng dụng công nghệ số hóa như thế nào tại Việt Nam?</i></p>
+                                        <div class="pcc-quotes">
+                                        <p>
+                                            Portcoast đã có nhiều bước tiến đáng kể trong công nghệ số hóa và nghiên cứu
+                                            ứng dụng
+                                            bản sao kỹ thuật số. Bạn đọc có thể tham khảo thêm tại địa chỉ:
+                                            <a href="https://www.portcoast.com.vn">https://www.portcoast.com.vn</a>
+                                        </p>
+                                        </div>
+                                        <p>Những năm qua, mặc dù Mô hình thông tin công trình (BIM) bùng nổ bởi nó mang
+                                            lại rất
+                                            nhiều lợi ích, đặc biệt là ứng dụng trong việc xây dựng bản sao kỹ thuật số
+                                            (Digital
+                                            Twin), nhưng trong ngành cảng biển Việt Nam công nghệ này phát triển chậm và
+                                            còn nhiều
+                                            thách thức. Hiểu được những lợi ích đó, Portcoast đã đẩy mạnh đầu tư và
+                                            nghiên cứu làm
+                                            chủ công nghệ BIM và Scan-to-BIM, thực hiện số hóa nhiều bến cảng để hướng
+                                            đến mục tiêu
+                                            tư vấn và phát triển Digital Twin cho cảng biển.</p>
+                                        <p>Trong vòng 2 năm qua, Portcoast đã số hóa và nghiên cứu thực hiện Digital
+                                            Twin của
+                                            nhiều cảng, cụm cảng lớn tại Việt Nam và nước ngoài, tiêu biểu là cụm cảng
+                                            Cái Mép -
+                                            Thị Vải. Đặc thù của cảng là bao gồm cả công trình trên mặt đất và dưới
+                                            nước. Do đó
+                                            Portcoast sử dụng cả công nghệ, thiết bị số hóa công trình trên bờ và dưới
+                                            nước.</p>
+                                        <p>Đối với khu vực trên mặt đất, chúng tôi đồng thời sử dụng các thiết bị quét
+                                            3D laser
+                                            đặt trên các trạm cố định (Terrestrial Laser Scanning) và gắn trên xe
+                                            (Mobile
+                                            mapping) có tích hợp hệ thống định vị GPS để vừa di chuyển vừa quét. Không
+                                            chỉ thế,
+                                            một công nghệ nữa là tích hợp máy quét 3D laser và thiết bị bay không người
+                                            lái UAV
+                                            (Unmanned Aerial Vehicle) để quét dữ liệu ở những khu vực rộng lớn. Hai
+                                            thiết bị mà
+                                            Portcoast sử dụng đến từ các hãng nổi tiếng là Stormbee tích hợp máy quét
+                                            Faro
+                                            S350-A và DJI Matrice 300 RTK tích hợp Module Zenmuse L1.</p>
+                                        <p>Đối với khu vực dưới nước, Portcoast sử dụng giải pháp mobile mapping trên
+                                            thiết bị
+                                            tàu không người lái USV. Các thiết bị được gắn trên USV bao gồm thiết bị
+                                            quét 3D
+                                            laser (NORBIT iLidar) đặt trên mũi tàu ghi dữ liệu xung quanh, một thiết bị
+                                            gắn dưới
+                                            đáy tàu (NORBIT iWBMS) scan địa mạo đáy biển, lòng sông.</p>
+                                        <p>Với việc áp dụng công nghệ và thiết bị hiện có, Portcoast có thể xây dựng mô
+                                            hình số
+                                            của một bến cảng hoặc một hệ thống cảng chính xác với đầy đủ thông tin, như
+                                            một anh
+                                            em song sinh với công trình thực, phục vụ cho quản lý, khai thác.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/infrastructure-digitization-003.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <p>Có phải từ tiềm lực về công nghệ và kinh nghiệm trong thực hiện các dự án số
+                                            hóa mà
+                                            Portcoast tiếp tục tiến xa hơn,
+                                            nghiên cứu áp dụng các quy trình công nghệ hiện đại này cho hạ tầng đô thị?
+                                        </p>
+                                        <p>Đúng vậy. Thử tưởng tượng chúng ta có một sa bàn thu nhỏ toàn bộ thành phố
+                                            (TP),
+                                            chúng ta đã có thể có một cái nhìn tổng thể về quy hoạch phát triển không
+                                            gian đô
+                                            thị để cân nhắc các định hướng phát triển. Vậy giờ chúng ta cũng có sa bàn
+                                            nhưng là
+                                            mô hình số với tỷ lệ 1:1, thể hiện toàn bộ hạ tầng trên mặt đất, dưới mặt
+                                            đất với
+                                            đầy đủ thông tin, thì chúng ta có thể làm gì? Mô hình số toàn TP này không
+                                            chỉ cho
+                                            phép chúng ta nghiên cứu quy hoạch phát triển không gian, nhìn rõ hệ thống
+                                            hạ tầng
+                                            kỹ thuật ngầm dưới mặt đất, các thông tin liên quan đến quản lý, duy tu, bảo
+                                            trì… mà
+                                            còn cho phép tái tạo những gì đang xảy ra trong TP, thiết lập các kịch bản
+                                            mô phỏng
+                                            mọi hoạt động của TP như các hoạt động giao thông, các tình huống sự cố có
+                                            thể xảy
+                                            ra… để xây dựng các kịch bản ứng phó, tiến tới hoàn thiện hệ thống quản lý
+                                            TP một
+                                            cách toàn diện.</p>
+                                        <p>Như vậy, để có một TP thông minh, chúng ta cần xây dựng mô hình số, có thể
+                                            bắt đầu từ
+                                            một khu phố, một khu vực rồi tiến đến cho toàn bộ TP. TP.HCM được Portcoast
+                                            chọn làm
+                                            đô thị triển khai thí điểm, sử dụng các thiết bị hiện đại như nói ở trên để
+                                            quét dữ
+                                            liệu các công trình di sản hoặc kiến trúc mang tính biểu tượng như: Nhà hát
+                                            TP, Dinh
+                                            Độc lập, UBND TP, Bitexco, Vietcombank Tower… hay để quét dữ liệu mặt đường
+                                            và phố
+                                            xá hai bên.</p>
+                                        <p>Hiện nay một số công trình cụ thể như Nhà hát TP và đường sá xung quanh, tòa
+                                            nhà
+                                            Vietcombank Tower đã được chúng tôi xây dựng mô hình số. Chúng tôi hy vọng
+                                            sớm triển
+                                            khai ứng dụng mobile mapping để quét dữ liệu các đường phố.</p>
+                                        <i>
+                                            <p>Như vậy, Portcoast đang sở hữu một bộ giải pháp toàn diện và sẵn sàng cho
+                                                những dự án
+                                                quy mô lớn. Portcoast đang hướng tới mục tiêu gì trong tương lai?</p>
+                                        </i>
+                                        <p>Với những bước phát triển lớn và nhiều thành tựu đáng kể trong thời gian qua,
+                                            Portcoast đang hướng đến nhiều mục tiêu xa hơn trong tương lai. Cụ thể
+                                            Portcoast đặt
+                                            ra mục tiêu hoàn thành việc số hóa toàn bộ hệ thống cảng Thị Vải - Cái Mép
+                                            trong năm
+                                            2021.</p>
+                                        <p>Bên cạnh đó, một hệ thống giải pháp hoàn chỉnh và hiện đại đã được đưa ra cho
+                                            mục
+                                            đích thu thập dữ liệu phục vụ quá trình số hóa hạ tầng đô thị tại Việt Nam.
+                                            Về mức
+                                            độ hiện đại, hệ thống này hiện đang song hành cùng thế giới và sẵn sàng cho
+                                            quá
+                                            trình số hóa đô thị. Cụ thể Portcoast đặt ra mục tiêu hoàn thành việc số hóa
+                                            cho một
+                                            số khu vực tại TP.HCM.</p>
+                                        <p>Đơn cử như đối với việc phòng chống dịch Covid-19. Giả sử chúng ta đã có mô
+                                            hình số
+                                            toàn TP, kết hợp hệ thống nhận dạng AI với dữ liệu theo thời gian thực,
+                                            chúng ta có
+                                            thể quản lý tốt các luồng giao thông nhằm hạn chế sự tập trung đông người ở
+                                            một địa
+                                            điểm, khu vực nào đó hoàn toàn trên mô hình ảo với tỷ lệ 1:1.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include (dir+'partials/js.ejs')%>
+</body>
+
+</html>
