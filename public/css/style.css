@@ -868,10 +868,17 @@ body.offcanvas .pcc-nav-toggle {
 
 .pcc-equipment .pcc-text p {
     padding: 0;
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
     float: left;
 }
-
+.pcc-equipment a {
+    cursor: pointer;
+}
+@media screen and (min-width: 576px) {
+    .pcc-equipment .equipment-item {
+        padding: 0 1rem;
+    }
+}
 .pcc-feature {
     text-align: left;
     /* width: 100%; */
