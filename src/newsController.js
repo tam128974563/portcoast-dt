@@ -12,8 +12,7 @@ const add = (req, res) => {
     Object.assign(news, req.body);
     news.save((err) => {
         if (err) throw (err);
-        fs.copyFileSync(path.join(utils.rootPath, '/views/news/template-en.ejs'), path.join(utils.rootPath, `views/news/${req.body.url_en}.ejs`));
-        fs.copyFileSync(path.join(utils.rootPath, '/views/tin-tuc/template-vi.ejs'), path.join(utils.rootPath, `views/tin-tuc/${req.body.url_vi}.ejs`));
+        utils.fileGenerate('news', news.url_en, news.url_vi);
         res.redirect('/add/news');
     });
 };

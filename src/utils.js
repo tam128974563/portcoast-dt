@@ -1,7 +1,8 @@
 const path = require('path');
 
 const root = path.dirname(__dirname);
-const pages = require('./data/pages.json')
+const pages = require('./data/pages.json');
+const fs = require('fs');
 const getUrl = (url) => {
 
     if (url.indexOf("/en/") !== -1) {
@@ -46,8 +47,8 @@ const clearAccent = (str) => {
 };
 const fileGenerate = (type, url_en, url_vi) => {
     if (type === 'news') {
-        fs.copyFileSync(path.join(utils.rootPath, '/views/news/template-en.ejs'), path.join(utils.rootPath, `views/news/${url_en}.ejs`));
-        fs.copyFileSync(path.join(utils.rootPath, '/views/tin-tuc/template-vi.ejs'), path.join(utils.rootPath, `views/tin-tuc/${url_vi}.ejs`));
+        fs.copyFileSync(path.join(root, '/views/news/template-en.ejs'), path.join(root, `views/news/${url_en}.ejs`));
+        fs.copyFileSync(path.join(root, '/views/tin-tuc/template-vi.ejs'), path.join(root, `views/tin-tuc/${url_vi}.ejs`));
         return;
     }
 }
@@ -58,4 +59,5 @@ module.exports = {
     rootPath: root,
     getUrl,
     clearAccent,
+    fileGenerate
 }
