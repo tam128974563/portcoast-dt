@@ -44,7 +44,13 @@ const clearAccent = (str) => {
 
     return str;
 };
-
+const fileGenerate = (type, url_en, url_vi) {
+    if (type === 'news') {
+        fs.copyFileSync(path.join(utils.rootPath, '/views/news/template-en.ejs'), path.join(utils.rootPath, `views/news/${url_en}.ejs`));
+        fs.copyFileSync(path.join(utils.rootPath, '/views/tin-tuc/template-vi.ejs'), path.join(utils.rootPath, `views/tin-tuc/${url_vi}.ejs`));
+        return;
+    }
+}
 
 
 

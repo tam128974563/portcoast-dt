@@ -1,6 +1,8 @@
 const News = require('./models/news.js');
 const utils = require('./utils');
 const api = require('./api');
+const fs = require('fs');
+const path = require('path');
 
 const addForm = (req, res) => {
     res.render('forms/news');
@@ -10,6 +12,8 @@ const add = (req, res) => {
     Object.assign(news, req.body);
     news.save((err) => {
         if (err) throw (err);
+        fs.copyFileSync(path.join(utils.rootPath, '/views/news/template-en.ejs'), path.join(utils.rootPath, `views/news/${req.body.url_en}.ejs`));
+        fs.copyFileSync(path.join(utils.rootPath, '/views/tin-tuc/template-vi.ejs'), path.join(utils.rootPath, `views/tin-tuc/${req.body.url_vi}.ejs`));
         res.redirect('/add/news');
     });
 };
