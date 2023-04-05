@@ -387,6 +387,12 @@
                                                 surveying in shallow water areas such as lakes, canals, rivers, ponds
                                                 and
                                                 harbour areas.</p>
+                                            <a onclick="
+                                                document.getElementById('modelTitle').innerText='Otter Pro USV + Norbit iWBMS Multibeam sonar & iLiDAR';
+                                                changeSrc('https://sketchfab.com/models/e235c11f565a49b6bf731103e4ffacf4/embed?autospin=1&autostart=1&preload=1&transparent=1&ui_infos=0')"
+                                                data-bs-toggle="modal" data-bs-target="#myModal"><span
+                                                    style="vertical-align:middle">View
+                                                    in 3D</span></a>
                                         </div>
                                     </div>
                                     <div class="item">
@@ -419,9 +425,12 @@
                                                 conventional dual frequency side scan systems by combining EdgeTech’s
                                                 Full Spectrum and Multi-Pulse technologies into one unit. Providing high
                                                 resolution images of seabed in oceans, lakes and rivers.</p>
-                                            <!-- <p> <a href="#" data-bs-toggle="modal" data-bs-target="#myModal">
-                                                    View 3D
-                                                </a></p> -->
+                                            <a onclick="
+                                                document.getElementById('modelTitle').innerText='EdgeTech 4200-MP Side Scan Sonar System';
+                                                changeSrc('https://sketchfab.com/models/bd936f0970614f28879277efff25768f/embed?preload=1&transparent=1&ui_infos=0')"
+                                                data-bs-toggle="modal" data-bs-target="#myModal"><span
+                                                    style="vertical-align:middle">View
+                                                    in 3D</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -434,18 +443,18 @@
             <%- include ('partials/brands.ejs')%>
             <!-- The Modal -->
             <div class="modal" id="myModal">
-                <div class="modal-dialog modal-xl">
+                <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title">Modal Heading</h4>
+                            <h4 class="modal-title" id="modelTitle"></h4>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
 
                         <!-- Modal body -->
                         <div class="modal-body">
-
+                            <iframe id="iframeId" src="" frameborder="0" width="100%" height="100%"></iframe>
                         </div>
 
                         <!-- Modal footer -->
@@ -459,9 +468,11 @@
             <%- include ('partials/footer.ejs')%>
         </div>
     </div>
-
     <%- include('partials/js.ejs')%>
-
+    <script>
+        function changeSrc(loc) {
+            document.getElementById('iframeId').src = loc;
+        }
+    </script>
 </body>
-
 </html>
