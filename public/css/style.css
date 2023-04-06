@@ -1907,7 +1907,10 @@ iframe {
    margin-bottom: 30px;
 }
 
-
-
-
-
+.modal-header {
+    background-color: #0093dd;
+}
+.modal-header h4 {
+    background-color: #0093dd;
+    color: #fff;
+}
