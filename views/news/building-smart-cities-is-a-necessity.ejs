@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Source: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                        <%}%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p><strong>
+                                                <%= news.description_en %></strong></p>
+                                                <figure>
+                                                    <img src="/public/images/news/<%= news.folder%>/building-a-smart-city-is-inevitable-001.jpg"
+                                                        alt="<%=news.title_vi%>" class="img-fluid">
+                                                    <figcaption>The reception for the Chairman of the University of Medicine and Pharmacy at Ho Chi Minh City, along with the professors and students, to experience Portcoast's digital transformation technology took place on July 2nd, 2022.<br>PHOTO: DUONG PHUONG QUYNH.</figcaption>
+                                                </figure>
+                                                <h5>Benefits of digital transformation and smart city development</h5>
+                                                <p>The concept of digital transformation requires a synchronized implementation of technology and strategy, meeting the current demands and for future generations. Accordingly, digital transformation needs to ensure certain objectives to bring benefits to the people. Firstly, the goal is to achieve sustainable development through forecasting, scenario-based planning to optimize resources, reduce costs, and improve the quality of public services, while efficiently using the budget, and ensuring the benefits of resources for future generations.
+                                                </p>
+                                                <p>Next, Smart cities bring about a comfortable, safe, and convenient living environment. Residents are provided with utilities such as affordable energy use; convenient public transportation systems; high-quality schools for students; emergency response units that react quickly and promptly; clean air and water sources; low crime rates; and diverse recreational activities. Additionally, workers are provided with quality technological infrastructure services to enhance their competitiveness in the global market, including high-speed internet; low-cost clean energy; transportation systems, etc., thereby improving work efficiency.
+                                                </p>
+                                                <p>Efficient urban management is also a goal of smart cities with a new model of management replacing the inefficient traditional model (where residents have to interact with each individual service sector, data sharing is limited, leading to ineffective coordination and collaboration between sectors as well as between government and society). With a modern management model oriented towards smart cities, cities can provide the public with real-time data sources on an open and compatible platform, allowing for the integration of services and optimization of urban resources. Shared data will become an asset used for analyzing trends, development scenarios, and enhancing the effectiveness of urban planning.</p>
+                                                <h5>Portcoast promotes digital transformation and smart city development</h5>
+                                                <p>For over 30 years, Portcoast has built a reputation and brand associated with the title of leading consultant in Vietnam for port and maritime infrastructure design. In recent years, recognizing the potential and inevitable trend in the digital age, Portcoast has continuously innovated and strengthened research activities, promoted digital transformation and smart urban development, especially focusing on the goal of digital transformation in the construction industry.</p>
+                                                <p>Accompanying Portcoast in the goal of digital transformation is the deep concern of state agencies, businesses, organizations, universities, and many professors and doctors in the field. From there, Portcoast gradually became a "technology center" that many units inside and outside the country visited to learn and study. In just the last 2 months, Portcoast has participated in events and received special guests from many different fields. Specifically, in September 2022, Portcoast signed a strategic cooperation agreement with Hung Thinh Incons Joint Stock Company to apply digital transformation technology in construction. In August 2022, Portcoast welcomed Mr. Tran Dinh Hai, Chairman of Hung Hai Group; Mr. Kurosaki Yasusuke, Chairman of Nippon Koei Vietnam, and Mr. Daiki Abe, representative of Nippon Koei in Ho Chi Minh City.
+                                                </p>
+                                                <p>The digital transformation technologies in urban transportation infrastructure development have impressed both domestic and international partners, as Portcoast has focused on researching and developing modern technology-integrated Digital Twin models as the foundation of smart cities. Among the notable digital infrastructure projects that Portcoast has implemented is the Cai Mep-Thi Vai port system area, a basic Digital Twin model created from the combination of many modern technology platforms such as 3D laser scanning, mobile mapping, GIS, and game engines.</p>
+                                                <p>Portcoast possesses technologies with great potential when applied in the fields of healthcare and health care services, thus attracting special attention from many partners, including Ho Chi Minh City University of Medicine and Pharmacy and Thong Nhat Hospital (Ho Chi Minh City). Portcoast has proposed practical solutions for applying digital transformation technologies to medical examination and treatment activities and human resources training. In September 2022, Portcoast and Thong Nhat Hospital had an introduction and discussion about the plan to digitize this hospital, with the presence of Associate Prof. Dr. Le Dinh Thanh - Director, Associate Prof. Dr. Vo Thanh Toan - Deputy Director, and leaders of hospital departments.</p>
+                                                <p>Another field that Portcoast has applied digital transformation to is heritage conservation, which is extremely necessary. Portcoast has combined the use of digitization and visualization technologies to enhance the experience and effectively meet the purposes of education, tourism, and cultural dissemination. Some notable projects that Portcoast has implemented are the digitization of the Ho Chi Minh City Opera House and the statue of Tran Hung Dao (Quy Nhon, Binh Dinh).</p>
+        
+                                                <div class="pcc-quotes">
+                                                    <h5>Portcoast is capable of meeting the needs of businesses for the purpose of digital transformation and smart urban development.</h5>
+                                                    <p>Through practical experience and research, Portcoast has provided assessments of its application capabilities in each field and the needs of businesses in achieving the goal of digital transformation to meet the direction of smart urban development:</p>
+                                                    <table class="table-bordered" style="width: 100%; padding: 50px;" >
+                                                        <tr>
+                                                            <th>
+                                                                <center>
+                                                                   Field</center>
+                                                            </th>
+                                                            <th>
+                                                                <center>Business needs</center>
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <ul style="list-style-type: none; padding-right: 10px;">
+                                                                    <li>Infrastructure</li>
+                                                                    <li>Architecture, Engineering, Construction</li>
+                                                                    <li>Commerce</li>
+                                                                    <li>Conservation</li>
+                                                                    <li>Energy</li>
+                                                                    <li>Healthcare and Community Health</li>
+                                                                    <li>Resources</li>
+                                                                    <li>Oil and Gas</li>
+                                                                    <li>Telecommunications</li>
+                                                                    <li>Transportation</li>
+                                                                    <li>Defense Science</li>
+                                                                    <li>Education and Training</li>
+                                                                </ul>
+                                                            </th>
+                                                            <th>
+                                                                <ul style="list-style-type: none; padding-right: 10px;">
+                                                                    <li>Asset management</li>
+                                                                    <li>Crisis management</li>
+                                                                    <li>Economic development</li>
+                                                                    <li>Facility management</li>
+                                                                    <li>Logistics</li>
+                                                                    <li>Operational efficiency</li>
+                                                                    <li>Performance monitoring</li>
+                                                                    <li>Sustainable development planning</li>
+                                                                    <li>Real-time location tracking</li>
+                                                                    <li>Risk management</li>
+                                                                    <li>Safety and Security</li>
+                                                                    <li>Location analysis and regional planning</li>
+                                                                    <li>Supply chain digitization</li>
+                                                                </ul>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>

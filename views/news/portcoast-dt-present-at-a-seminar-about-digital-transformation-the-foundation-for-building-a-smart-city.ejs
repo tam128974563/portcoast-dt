@@ -70,7 +70,14 @@
                                 <div class="row">
                                     <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                         <span class="heading-meta">
-                                            Activities | December 17, 2022</span>
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Source: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                        <%}%>
+                                        </span>
                                         <h2 class="pcc-heading animate-box">Portcoast DT presented at a seminar about
                                             'Digital
                                             transformation - The foundation for building a smart city'</h2>

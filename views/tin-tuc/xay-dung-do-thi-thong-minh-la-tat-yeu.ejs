@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="vi" />
+    <title><%=news.title_vi%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_vi%>" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi" content="<%=news.title_vi%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%=news.title_vi%>" />
+    <meta property="og:description" content="<%= news.description_vi%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_vi%>" />
+    <meta name="twitter:description" content="<%= news.description_vi%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <%- include (dir+'partials/css.ejs')%>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include (dir+'partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[1]%> |
+                                            <%=  [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Nguồn: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                            <%}%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box">
+                                            <%= news.title_vi%>
+                                            </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p><strong><%= news.description_vi%></strong></p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/building-a-smart-city-is-inevitable-001.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>Buổi đón tiếp Chủ tịch Hội đồng Trường ĐH Y Dược TP.HCM cùng với
+                                                các
+                                                giảng
+                                                viên, sinh viên đến để trải nghiệm công nghệ chuyển đổi số của Portcoast
+                                                ngày
+                                                2.7.2022. <br>ẢNH: DƯƠNG PHƯƠNG QUỲNH</figcaption>
+                                        </figure>
+                                        <h5>Lợi ích của chuyển đổi số và phát triển ĐTTM</h5>
+                                        <p>Khái niệm ĐTTM đòi hỏi việc triển khai phải đồng bộ về công nghệ và chiến
+                                            lược, đáp ứng
+                                            các yêu cầu hiện nay và cho thế hệ tương lai. Theo đó, ĐTTM cần đảm bảo một
+                                            số mục tiêu
+                                            nhằm mang lại lợi ích cho người dân. Trước tiên là mục tiêu phát triển bền
+                                            vững thông
+                                            qua khả năng dự báo, đưa ra kịch bản giúp sử dụng hiệu quả, tối ưu hóa nguồn
+                                            lực và
+                                            tiết
+                                            kiệm chi phí, ngân sách được sử dụng một cách hợp lý, chất lượng dịch vụ
+                                            công được nâng
+                                            cao và việc sử dụng hiệu quả tài nguyên cũng đảm bảo lợi ích cho các thế hệ
+                                            tương lai.
+                                        </p>
+                                        <p>Tiếp theo, ĐTTM mang lại môi trường sống thoải mái, an toàn và tiện nghi.
+                                            Người dân được
+                                            cung cấp các tiện ích như sử dụng năng lượng với chi phí hợp lý; hệ thống
+                                            giao thông
+                                            công cộng tiện lợi; học sinh có thể học tại các trường học đạt chất lượng
+                                            tốt; các đơn
+                                            vị ứng cứu khẩn cấp phản ứng nhanh chóng, kịp thời; người dân được hưởng bầu
+                                            không khí
+                                            trong lành, sử dụng nguồn nước sạch; tỷ lệ tội phạm thấp; và các hoạt động
+                                            vui chơi
+                                            giải
+                                            trí đa dạng. Kế đến, người lao động được cung cấp các dịch vụ hạ tầng công
+                                            nghệ chất
+                                            lượng để tăng khả năng cạnh tranh tốt trên thương trường thế giới, bao gồm:
+                                            internet
+                                            tốc
+                                            độ cao; năng lượng sạch với chi phí thấp; hệ thống giao thông vận tải,... từ
+                                            đó nâng
+                                            cao
+                                            hiệu quả làm việc.</p>
+                                        <p>Quản trị đô thị hiệu quả cũng là mục tiêu của ĐTTM với mô hình mới, quản trị
+                                            mới thay
+                                            thế mô hình quản trị truyền thống vốn hoạt động kém hiệu quả (người dân phải
+                                            tự
+                                            tương tác với từng lĩnh vực dịch vụ đơn lẻ, thông tin dữ liệu được chia sẻ
+                                            hạn chế,
+                                            dẫn đến khả năng phối hợp, cộng tác giữa các lĩnh vực, cũng như giữa chính
+                                            quyền và
+                                            xã hội kém hiệu quả). Với mô hình quản lý hiện đại hướng đến ĐTTM, các đô
+                                            thị có thể
+                                            cung cấp cho công chúng các nguồn dữ liệu theo thời gian thực trên một nền
+                                            tảng mở
+                                            và đa tương thích, cho phép tích hợp các dịch vụ và tối ưu các nguồn lực của
+                                            đô thị.
+                                            Dữ liệu dùng chung sẽ trở thành tài sản được sử dụng để phân tích dự báo các
+                                            xu
+                                            hướng, kịch bản phát triển và tăng cường hiệu quả quy hoạch đô thị.</p>
+                                        <h5>Portcoast thúc đẩy chuyển đổi số và phát triển ĐTTM</h5>
+                                        <p>Trong hơn 30 năm qua, Portcoast đã xây dựng uy tín và thương hiệu gắn liền
+                                            với danh hiệu
+                                            tư vấn hàng đầu tại VN về thiết kế công trình cảng - công trình thủy. Những
+                                            năm gần
+                                            đây,
+                                            nhận thấy tiềm năng và xu hướng tất yếu trong kỷ nguyên số, Portcoast liên
+                                            tục đổi mới
+                                            và tăng cường các hoạt động nghiên cứu, thúc đẩy chuyển đổi số và phát triển
+                                            đô thị
+                                            thông minh, đặc biệt chú trọng mục tiêu chuyển đổi số trong lĩnh vực xây
+                                            dựng.</p>
+                                        <p>Đồng hành cùng với Portcoast trong mục tiêu chuyển đổi số là sự quan tâm sâu
+                                            sát của
+                                            các cơ quan nhà nước, DN, tổ chức, các trường đại học và nhiều giáo sư, tiến
+                                            sĩ
+                                            trong ngành. Từ đó, Portcoast dần trở thành một “trung tâm về công nghệ”
+                                            được nhiều
+                                            đơn vị trong và ngoài nước ghé thăm để tìm hiểu, học hỏi. Chỉ trong 2 tháng
+                                            gần đây
+                                            nhất, Portcoast lần lượt tham gia các sự kiện và đón tiếp các vị khách đặc
+                                            biệt đến
+                                            từ nhiều lĩnh vực khác nhau. Cụ thể, tháng 9.2022, Portcoast đã ký kết hợp
+                                            tác chiến
+                                            lược với Công ty CP Hưng Thịnh Incons để áp dụng công nghệ chuyển đổi số
+                                            trong xây
+                                            dựng. Trong tháng 8.2022, Portcoast đón tiếp ông Trần Đình Hải, Chủ tịch Tập
+                                            đoàn
+                                            Hưng Hải; ông Kurosaki Yasusuke, Chủ tịch Nippon Koei VN và ông Daiki Abe,
+                                            đại diện
+                                            Nippon Koei tại TP.HCM.
+                                        </p>
+                                        <p>Những công nghệ chuyển đổi số trong phát triển hạ tầng giao thông đô thị đã
+                                            gây ấn tượng
+                                            với đối tác trong và ngoài nước, bởi các mô hình bản sao số (Digital Twin)
+                                            tích hợp
+                                            công
+                                            nghệ hiện đại được Portcoast tập trung nghiên cứu và phát triển vì đây là
+                                            nền tảng của
+                                            đô thị thông minh. Nổi bật trong số những dự án số hóa hạ tầng đô thị tiêu
+                                            biểu mà
+                                            Portcoast đã thực hiện là khu vực hệ thống cảng Cái Mép - Thị Vải, một mô
+                                            hình Digital
+                                            Twin cơ bản được tạo ra từ việc kết hợp nhiều nền tảng công nghệ hiện đại:
+                                            quét 3D
+                                            laser; mobile mapping; GIS; Game engine…</p>
+                                        <p>Portcoast sở hữu những công nghệ có tiềm năng lớn khi áp dụng vào lĩnh vực y
+                                            tế, chăm
+                                            sóc sức khỏe, do vậy đã nhận được sự quan tâm đặc biệt của nhiều đối tác,
+                                            trong đó
+                                            có Trường ĐH Y Dược TP.HCM, Bệnh viện Thống Nhất (TP.HCM). Portcoast đã đưa
+                                            ra những
+                                            giải pháp thiết thực nhằm ứng dụng công nghệ chuyển đổi số vào các hoạt động
+                                            khám
+                                            chữa bệnh, đào tạo nguồn nhân lực. Tháng 9.2022, Portcoast và Bệnh viện
+                                            Thống Nhất
+                                            đã có buổi giới thiệu và thảo luận về kế hoạch số hóa công trình bệnh viện
+                                            này, với
+                                            sự có mặt của PGS-TS-BS Lê Đình Thanh - Giám đốc, PGS-TS-BS Võ Thanh Toàn -
+                                            Phó giám
+                                            đốc và lãnh đạo các khoa của bệnh viện.</p>
+                                        <p>Một lĩnh vực khác được Portcoast đưa ứng dụng chuyển đổi số vào đó là bảo tồn
+                                            di sản,
+                                            bởi việc này vô cùng cấp thiết. Portcoast đã kết hợp sử dụng các công nghệ
+                                            số hóa và
+                                            trực quan hóa nhằm tăng cường khả năng trải nghiệm, đáp ứng hiệu quả cho mục
+                                            đích
+                                            giáo dục, du lịch, truyền bá văn hóa. Các công trình tiêu biểu được
+                                            Portcoast thực
+                                            hiện như dự án số hóa Nhà hát lớn TP.HCM, tượng đài Trần Hưng Đạo (Quy Nhơn,
+                                            Bình
+                                            Định).</p>
+
+                                        <div class="pcc-quotes">
+                                            <h5>Portcoast có thể đáp ứng nhu cầu của doanh nghiệp cho mục tiêu chuyển
+                                                đổi số và phát triển đô thị thông minh</h5>
+                                            <p>Qua thực tiễn và nghiên cứu, Portcoast đã đưa ra các đánh giá về năng lực
+                                                ứng dụng trong từng lĩnh vực, nhu cầu của các doanh nghiệp trong mục
+                                                tiêu chuyển đổi số đáp ứng định hướng phát triển đô thị thông minh:</p>
+                                            <table class="table-bordered" style="width: 100%; padding: 50px;" >
+                                                <tr>
+                                                    <th>
+                                                        <center>Lĩnh vực</center>
+                                                    </th>
+                                                    <th>
+                                                        <center>Nhu cầu doanh nghiệp</center>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <ul style="list-style-type: none; padding-right: 10px;">
+                                                            <li>Cơ sở hạ tầng</li>
+                                                            <li>Kiến trúc, kỹ thuật, xây dựng</li>
+                                                            <li>Thương mại</li>
+                                                            <li>Bảo tồn</li>
+                                                            <li>Năng lượng</li>
+                                                            <li>Y tế và sức khỏe cộng đồng</li>
+                                                            <li>Tài nguyên</li>
+                                                            <li>Dầu khí</li>
+                                                            <li>Viễn thông</li>
+                                                            <li>Giao thông vận tải</li>
+                                                            <li>Quốc phòng Khoa học</li>
+                                                            <li>Giáo dục - đạo tạo</li>
+                                                        </ul>
+                                                    </th>
+                                                    <th>
+                                                        <ul style="list-style-type: none; padding-right: 10px;">
+                                                            <li>Quản lý tài sản</li>
+                                                            <li>Ứng phó với khủng hoảng</li>
+                                                            <li>Phát triển kinh tế</li>
+                                                            <li>Quản lý cơ sở</li>
+                                                            <li>Logistics</li>
+                                                            <li>Hiệu quả hoạt động</li>
+                                                            <li>Giám sát hiệu suất</li>
+                                                            <li>Lập kế hoạch phát triển bền vững</li>
+                                                            <li>Theo dõi vị trí trong thời gian thực</li>
+                                                            <li>Quản lý rủi ro</li>
+                                                            <li>An toàn và Bảo mật</li>
+                                                            <li>Phân tích địa điểm và quy hoạch vùng</li>
+                                                            <li>Số hóa chuỗi cung ứng</li>
+                                                        </ul>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include (dir+'partials/js.ejs')%>
+</body>
+
+</html>

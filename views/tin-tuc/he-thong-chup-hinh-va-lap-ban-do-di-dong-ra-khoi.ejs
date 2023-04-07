@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="vi" />
+    <title><%=news.title_vi%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_vi%>" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi" content="<%=news.title_vi%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%=news.title_vi%>" />
+    <meta property="og:description" content="<%= news.description_vi%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_vi%>" />
+    <meta name="twitter:description" content="<%= news.description_vi%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <%- include (dir+'partials/css.ejs')%>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include (dir+'partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[1]%> |
+                                            <%=  [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Nguồn: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                            <%}%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box">
+                                            <%= news.title_vi%>
+                                            </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <h5><%= news.description_vi%></h5>
+                                        <p>Một số khu vực của cảng Gemalink lớn ở miền nam Việt Nam không thể tiếp cận
+                                            bằng đất liền, làm cho việc thu thập dữ liệu cần thiết để xây dựng bản sao
+                                            kỹ thuật số toàn diện về cơ sở vật chất trở nên khó khăn. Sử dụng một phương
+                                            pháp sáng tạo, <a href="https://www.portcoast.com.vn/vi/trang-chu">Công ty
+                                                cổ phần Tư vấn Thiết kế Cảng – Kỹ thuật Biển (Portcoast)</a> đã gắn hệ
+                                            thống khảo sát di động
+                                            Trimble MX50 trên một con thuyền để quét thành công khu vực bến và bờ
+                                            sông gần đó. Kết quả được kết hợp với dữ liệu trên đất để thu được một bộ dữ
+                                            liệu đầy đủ.</p>
+                                        <h5>Cảng Gemalink phục vụ nhu cầu giao thương toàn cầu</h5>
+                                        <p>Là một trong 19 cảng lớn chỉ có khả năng tiếp nhận những tàu chở hàng
+                                            container lớn nhất thế giới, cảng Gemalink trên sông Cái Mép-Thị Vải ở Việt
+                                            Nam là một trung tâm vận chuyển trung chuyển quan trọng cho thương mại toàn
+                                            cầu. Với vị trí chiến lược của nó, nó đóng góp cho nền kinh tế đất nước
+                                            trong khi giảm chi phí và thời gian cho việc xuất khẩu đến Hoa Kỳ và châu
+                                            Âu. Giai đoạn 1 của cơ sở đã bắt đầu hoạt động vào tháng 1 năm 2021, tiếp đó
+                                            là giai đoạn 2 vào tháng 5 năm 2021.</p>
+                                        <p>Một năm sau khi khai trương khu Bến Cảng, Công ty Portcoast, là một nhà tư vấn
+                                            kiểm tra chất lượng xây dựng, đã tiến hành một cuộc khảo sát đầy đủ để cập
+                                            nhật mô hình đã xây dựng. Bản sao kỹ thuật số phục vụ nhiều nhu cầu, từ bảo
+                                            trì và ứng dụng BIM đến xác minh chiều dài của các khu bến. Portcoast dự
+                                            định tiến hành cập nhật bản đồ mỗi năm.</p>
+                                        <h5>Thu thập đám điểm mây chính xác trong những nơi khó tiếp cận</h5>
+                                        <p>Hệ thống máy quét toàn cảnh di động Trimble MX50 đã được lắp đặt trên một con
+                                            thuyền gỗ - dài 40 feet, rộng 10 feet và cao 10 feet - để thu thập dữ liệu
+                                            về cơ sở hạ tầng đối diện sông. Để giải quyết vấn đề này, hệ thống máy quét
+                                            toàn cảnh di động Trimble MX50 đã được lắp đặt trên một con thuyền gỗ - dài
+                                            40 feet, rộng 10 feet và cao 10 feet - và được lái chậm với tốc độ trung
+                                            bình khoảng 5 knots, giữ khoảng cách giữa thuyền và đối tượng quét khoảng 15
+                                            feet. Hệ thống máy quét toàn cảnh di động này đã giúp thu thập dữ liệu về
+                                            khu vực bến và bờ sông một cách chính xác.</p>
+                                        <div class="pcc-quotes">
+                                            <i>"Chúng tôi đã đảm bảo rằng các thanh mái nhà của con thuyền đủ mạnh để
+                                                chịu được trọng lượng của giá đỡ mái nhà (18 kg) và cảm biến đo đạc (23
+                                                kg)", ông Hoàng Hiệp, Phó Tổng Giám đốc của Portcoast nói. "Và chúng tôi
+                                                đã điều chỉnh vị trí giá đỡ để giữ cho mái nhà được đặt ngang càng nhiều
+                                                càng tốt. Đó là tất cả những gì chúng tôi đã làm".</i>
+                                        </div>
+                                        <h5>Lái xe hay chèo thuyền: kết quả tuyệt vời như nhau</h5>
+                                        <p>Hệ thống máy quét toàn cảnh di động MX50 thường được lắp đặt trên ô tô hoặc
+                                            xe tải và được lái với tốc độ cao trên đường cao tốc để thu thập dữ liệu cho
+                                            các dự án quản lý tài sản, địa đồ và bảo trì đường. Portcoast đã phát hiện
+                                            ra rằng thao tác trên con thuyền cũng cung cấp cho họ những hình ảnh màu sắc
+                                            360 độ và điểm mây chính xác và đáp ứng độ chính xác mong muốn là ít hơn 1
+                                            đến 2 cm. Những con sóng nhỏ trên sông không ảnh hưởng đáng kể đến hoạt
+                                            động; trong vòng 15 phút, bờ sông và cơ sở hạ tầng đối diện sông đã được
+                                            quét. Trimble Business Center và Applanix POSPac® Mobile Mapping Suite được
+                                            sử dụng để xử lý dữ liệu MX50.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/when-precision-floats-your-boat-002.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>Các khu vực của Bến container không thể tiếp cận từ đất liền
+                                                được thực hiện bản đồ từ con thuyền. Ảnh: Portcoast.</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/when-precision-floats-your-boat-001.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>Hệ thống máy quét toàn cảnh di động MX50 của Trimble đã thu thập
+                                                hình ảnh màu sắc 360 độ và điểm mây có mật độ cao để sử dụng làm đầu vào
+                                                cho một bản sao kỹ thuật số.</figcaption>
+                                        </figure>
+                                        <p>Trimble Business Center là một phần mềm khảo sát từ trường đến kết thúc, giúp
+                                            các nhà khảo sát cung cấp dữ liệu GNSS chính xác cao, phân loại điểm mây,
+                                            làm sạch dữ liệu, tạo tài liệu CAD và tận dụng tính toàn vẹn của dữ liệu
+                                            trong suốt vòng đời dự án.</p>
+                                        <p>Trimble Business Center là một phần mềm khảo sát từ trường đến kết thúc, giúp
+                                            các nhà khảo sát cung cấp dữ liệu GNSS chính xác cao, phân loại điểm mây,
+                                            làm sạch dữ liệu, tạo tài liệu CAD và tận dụng tính toàn vẹn của dữ liệu
+                                            trong suốt vòng đời dự án.
+                                            POSPac Mobile Mapping Suite là phần mềm hàng đầu của ngành của Applanix cho
+                                            định vị trực tiếp của các cảm biến bản đồ di động bằng công nghệ GNSS và cảm
+                                            biến vô hướng. Nó được tối ưu hóa cho mọi môi trường (không khí, đất liền,
+                                            đại dương) và đạt được độ chính xác tối đa cũng như độ hiệu quả tối đa.</p>
+                                        <div class="pcc-quotes">
+                                            <i>"Được gắn trên một chiếc thuyền, hệ thống bản đồ di động đa năng MX50 cho
+                                                phép chúng tôi định vị hiệu quả các khu vực khó tiếp cận từ trên nước,
+                                                và trên một phương tiện chúng tôi thu thập các khu vực rộng lớn như các
+                                                công viên công nghiệp, đường cao tốc và các thành phố." - Tiến sĩ Hoàng
+                                                Hiệp, Phó Tổng Giám đốc, Portcoast</i>
+                                        </div>
+                                        <p>Dữ liệu đất liền cho bến container được thu thập với Trimble SX12 trong vòng
+                                            7 ngày với 60 trạm quét. Những mục tiêu trên đất giúp đăng ký các lần quét
+                                            của MX50 và kết hợp một cách mượt mà cả hai bộ dữ liệu. "Chúng tôi sử dụng
+                                            cùng một hệ thống tọa độ để kết hợp dữ liệu bờ sông với dữ liệu đất", Hiep
+                                            cho biết. "Kết quả được sử dụng như đầu vào cho thiết kế bản sao kỹ thuật số
+                                            và BIM-GIS."</p>
+                                        <h5>Hình ảnh số hoàn chỉnh cải thiện hiệu quả vận hành</h5>
+                                        <p>Sau khi quét, quá trình scan-to-BIM được áp dụng để tạo ra mô hình BIM của
+                                            toàn bộ cảng container, được sử dụng làm dữ liệu đầu vào cho một động cơ mô
+                                            phỏng (tức là Unity, Unreal Engine). Chương trình mô phỏng cho cơ sở vật
+                                            chất được tạo ra để sao chép hoạt động của nó trong môi trường ảo.</p>
+                                        <p>Mô hình kỹ thuật số trong chương trình mô phỏng được liên kết với mô hình vật
+                                            lý bằng cách gắn cảm biến trên cơ sở vật chất. Chương trình cho phép người
+                                            dùng quan sát hoạt động của cảng trong thời gian thực và cung cấp dữ liệu
+                                            như điều kiện làm việc, thời gian bảo trì, nâng cấp hoặc thay thế.</p>
+                                        <p>Trimble MX50 và SX12 cung cấp hình ảnh số 3D hoàn chỉnh cần thiết cho việc
+                                            triển khai quy trình BIM để cải thiện hiệu quả của các hoạt động và bảo trì
+                                            liên tục tại cảng Gemalink.</p>
+                                        <div class="pcc-quotes">
+                                            <i>"Độ chính xác và độ tin cậy tuyệt vời của thiết bị khảo sát của Trimble,
+                                                cùng với giá cả cạnh tranh, là nhà cung cấp chính của Portcoast", ông
+                                                Hiệp cho biết.</i>
+                                        </div>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/when-precision-floats-your-boat-003.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>Mô hình số 3D hoàn chỉnh hỗ trợ các quy trình BIM để cải thiện hiệu quả vận hành và bảo trì liên tục. Ảnh chụp: Portcoast.</figcaption>
+                                        </figure>
+                                        <p><strong>Giải pháp cho dự án này bao gồm:</strong></p>
+                                        <ul>
+                                            <li>Trimble® MX50 Mobile Mapping System</li>
+                                            <li>Trimble SX12 Scanning Total Station</li>
+                                            <li>Trimble Business Center Software</li>
+                                            <li>Applanix POSPac Mobile Mapping Suite</li>
+                                        </ul>
+                                        <p><strong>Xem giải pháp đã thực hiện tại đây:</strong></p>
+                                        <div class="video-container">
+                                            <video autoplay loop muted>
+                                                <source src="/public/images/news/20220414-mobile-imaging-and-mapping-sets-sail/video.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+
+
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include (dir+'partials/js.ejs')%>
+</body>
+
+</html>

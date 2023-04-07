@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+    <title><%=news.title_en%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_en%>" />
+    <meta name="keywords" content="BIM Services, Scan to BIM, 3D Laser Scanning, Digitization" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="en-US" content="<%=news.title_en%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Ho Chi Minh City, Viet Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%= news.title_en %>" />
+    <meta property="og:description" content="<%= news.description_en%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_en%>" />
+    <meta name="twitter:description" content="<%= news.description_en%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder %>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/en/news/<%= news.title_en %>" />
+    <meta name="twitter:card" content="summary" />
+    <%- include(dir+'partials/css.ejs') %>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include(dir+'partials/nav.ejs') %>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[0]%> |
+                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Source: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                            <%}%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box"> <%= news.title_en %> </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <h5><%= news.description_en %></h5>
+                                        <p>
+                                            Some areas of the massive Gemalink Port in southern Vietnam are inaccessible
+                                            by land,
+                                            making it difficult to capture the data needed to build a comprehensive
+                                            digital twin
+                                            of
+                                            the facility. Using an innovative approach, <a href="https://www.portcoast.com.vn/">Portcoast Consultant Corporation (Portcoast)</a>
+                                            mounted a
+                                            Trimble MX50 mobile mapping system on a boat to successfully scan the
+                                            container
+                                            terminal
+                                            and nearby riverbank. The results were combined with terrestrial data to
+                                            obtain a
+                                            complete data set.
+                                        </p>
+                                        <h5>Gemalink Port serves global shipping needs</h5>
+                                        <p>As one of only 19 major ports capable of receiving the world’s largest
+                                            container ships,
+                                            Gemalink Port on the Cai Mep-Thi Vai River in Vietnam is an important
+                                            trans-shipment
+                                            center for global trade. With its strategic location, it provides the
+                                            country an
+                                            economic boost while cutting costs and reducing the time it takes exports to
+                                            reach the
+                                            United States and Europe. Phase 1 of the facility began operations in
+                                            January 2021,
+                                            followed by Phase 2 in May 2021.</p>
+                                        <p>One year after opening the terminal, Portcoast Consultant Corporation, as a
+                                            construction quality inspection consultant, conducted a full survey to
+                                            update its
+                                            as-built model. The digital twin serves many needs, from maintenance and BIM
+                                            applications to verifying the length of the berths. Portcoast plans to
+                                            conduct
+                                            mapping updates every five years.</p>
+                                        <h5>Collecting accurate point clouds in hard-to-reach places</h5>
+                                            
+                                        <p>Trimble SX12 scanning total stations were used to collect data on land;
+                                            however, a
+                                            different approach was needed to capture the infrastructure facing the
+                                            river. To
+                                            solve the problem, a Trimble MX50 mobile mapping system was mounted on a
+                                            wooden
+                                            boat—40 feet in length, 10 feet wide, and 10 feet high—and slowly driven at
+                                            an
+                                            average speed of about 5 knots, maintaining a distance between boat and
+                                            scanned
+                                            objects of around 15 feet.</p>
+                                        <div class="pcc-quotes">
+                                            <p><i>“We made sure the boat’s roof bars were strong enough to hold the roof
+                                                    rack
+                                                    (18 kg) and mapping sensor (23 kg),” said Dr. Hoang Hiep, vice
+                                                    general
+                                                    director at Portcoast. “And we adjusted the bracket position to
+                                                    orientate
+                                                    the roof rack horizontally as much as possible. That’s all there was
+                                                    to
+                                                    it.”</i>
+                                            </p>
+                                        </div>
+                                        <h5>Driving or floating: same great results</h5>
+                                        <p>The MX50 is typically mounted on a car or truck and driven at highway speeds
+                                            to capture
+                                            data for asset management, mapping, and road maintenance projects. Portcoast
+                                            found
+                                            that
+                                            the operations on the boat delivered the same 360-degree color imagery and
+                                            precise
+                                            point
+                                            cloud and met the desired accuracy of less than 1 to 2 cm. The small waves
+                                            on the
+                                            river
+                                            had negligible effect on operations; in just 15 minutes the riverbank and
+                                            river-facing
+                                            infrastructure were scanned. Trimble Business Center and Applanix POSPac®
+                                            Mobile
+                                            Mapping
+                                            Suite were used to process the MX50 data.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/when-precision-floats-your-boat-002.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption>Portions of the container terminal inaccessible from land were
+                                                mapped
+                                                from the boat. Photo credit: Portcoast</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/when-precision-floats-your-boat-001.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption>The Trimble MX50 mobile mapping system captured 360-degree color
+                                                imagery
+                                                and a high-density point cloud to be used as input for a digital twin.
+                                            </figcaption>
+                                        </figure>
+                                        <p>Trimble Business Center is a field-to-finish survey software that helps
+                                            surveyors
+                                            deliver
+                                            high-accuracy GNSS data, classify point clouds, clean up data, create CAD
+                                            deliverables
+                                            and leverage full data traceability throughout a project's lifecycle.</p>
+
+                                        <p>POSPac Mobile Mapping Suite is Applanix' next-generation, industry-leading
+                                            software
+                                            for direct georeferencing of mobile mapping sensors using GNSS and inertial
+                                            technology. It is optimized for all environments (air, land, marine) and
+                                            achieves
+                                            both maximum accuracy and maximum efficiency.</p>
+                                        <div class="pcc-quotes">
+                                            <p><i>“Mounted on a boat, the versatile MX50 mobile mapping system allows us
+                                                    to
+                                                    efficiently map hard-to-reach areas from the water, and on a vehicle
+                                                    we
+                                                    collect
+                                                    large areas such as industrial parks, express highways and cities.”
+                                                    - Dr.
+                                                    Hoang
+                                                    Hiep, Vice Director General, Portcoast</i>
+                                            </p>
+                                        </div>
+                                        <p>Terrestrial data for the container terminal was collected with the Trimble
+                                            SX12 over a
+                                            seven-day period with 60 scan stations. Targets on land helped register the
+                                            MX50 scans
+                                            and seamlessly merge both data sets.
+                                            “We used the same coordinate system to combine the riverbank data with land
+                                            data,”
+                                            said
+                                            Hiep. “The result is used as the input for digital twin design and BIM-GIS.”
+                                        </p>
+                                        <h5>Complete digital picture improves operational efficiency</h5>
+                                        <p>After scanning, the scan‐to‐BIM work was applied to create the BIM model of
+                                            the
+                                            complete
+                                            container terminal, which was used as the input data for a simulation engine
+                                            (i.e.,
+                                            Unity, Unreal Engine). The simulation program for the facility was created
+                                            to
+                                            replicate
+                                            its operation in the virtual environment.</p>
+                                        <p>The digital model in the simulation program is linked to the physical model
+                                            by
+                                            mounting sensors on the physical infrastructure. The program enables users
+                                            to
+                                            observe in real‐time the port's operation and provide data such as working
+                                            conditions, maintenance time, upgrade or replacement.</p>
+                                        <p>The Trimble MX50 and SX12 provided the complete 3D digital picture needed for
+                                            the
+                                            implementation of BIM processes to improve efficiency of operations and
+                                            ongoing
+                                            maintenance at the Gemalink Port.</p>
+                                        <div class="pcc-quotes">
+                                            <p><i>“The excellent accuracy and reliability of Trimble’s survey equipment,
+                                                    along with competitive prices, are major selling points for
+                                                    Portcoast,”
+                                                    Hiep said.</i>
+                                            </p>
+                                        </div>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder %>/when-precision-floats-your-boat-003.jpg"
+                                                alt="<%= news.title_en%>" class="img-fluid">
+                                            <figcaption>The complete 3D digital model supports BIM processes to improve efficiency of operations and ongoing maintenance. Photo credit: Portcoast.</figcaption>
+                                        </figure>
+                                        <p><strong>Solutions for this project included:</strong></p>
+                                        <ul>
+
+                                            <li>Trimble® MX50 Mobile Mapping System</li>
+                                            <li>Trimble SX12 Scanning Total Station</li>
+                                            <li>Trimble Business Center Software</li>
+                                            <li>Applanix POSPac Mobile Mapping Suite</li>
+                                        </ul>
+                                        <p><strong>Watch the solution in action here:</strong></p>
+                                        <div class="video-container">
+                                            <video autoplay loop muted>
+                                                <source src="/public/images/news/20220414-mobile-imaging-and-mapping-sets-sail/video.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include(dir+'partials/js.ejs') %>
+</body>
+
+</html>

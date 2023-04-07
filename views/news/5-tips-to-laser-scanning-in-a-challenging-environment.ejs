@@ -62,7 +62,12 @@
                                     <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                         <span class="heading-meta">
                                             <%=news.tag.split("-")[0]%> |
-                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%> | Source: <a href="https://blog.hexagongeosystems.com/5-tips-to-laser-scanning-in-a-challenging-environment/">Leica Geosystems</a>
+                                            <%= [(news.day<10?`0${news.day}`: news.day),(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Source: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                            <%}%>
                                         </span>
                                         <h2 class="pcc-heading animate-box"><%= news.title_en %></h2>
                                     </div>
@@ -231,11 +236,31 @@
                                                     </figure>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <p>In this case, the port owners will be able to check how far the concrete beams have bent or the displacement of the concrete pipes against the measurements in the 3D model. Using these virtual models, the port owners can plan and model future developments to manage the facility without having to re-enter the site. Moreover, thanks to the integration of the designs, a change to one aspect in the model will automatically be reflected in others facilitating collaborative planning with multiple contractors.</p>
+                                                    <p>In this case, the port owners will be able to check how far the
+                                                        concrete beams have bent or the displacement of the concrete
+                                                        pipes against the measurements in the 3D model. Using these
+                                                        virtual models, the port owners can plan and model future
+                                                        developments to manage the facility without having to re-enter
+                                                        the site. Moreover, thanks to the integration of the designs, a
+                                                        change to one aspect in the model will automatically be
+                                                        reflected in others facilitating collaborative planning with
+                                                        multiple contractors.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <p>Every site and every project will present its own unique set of challenges, but many of these can be mitigated by selecting the right equipment. It’s important to identify as many of the challenges as possible in advance. In doing so, look at how your proposed technology partner may be able to address these holistically. Consider, not just how the suite of products fits itself works together, but how this will help your office and on-site teams to work together and crucially, how you and the provider can work together. If the technology saves you a day on site, but it takes a further three days to train the team to get started on site, how will this impact your work and your costs? Remember that the challenges presented by the site itself extend far beyond the work on site. However, by taking this into account early on in your equipment selection, you can avoid many potential pain points later on.</p>
+                                        <p>Every site and every project will present its own unique set of challenges,
+                                            but many of these can be mitigated by selecting the right equipment. It’s
+                                            important to identify as many of the challenges as possible in advance. In
+                                            doing so, look at how your proposed technology partner may be able to
+                                            address these holistically. Consider, not just how the suite of products
+                                            fits itself works together, but how this will help your office and on-site
+                                            teams to work together and crucially, how you and the provider can work
+                                            together. If the technology saves you a day on site, but it takes a further
+                                            three days to train the team to get started on site, how will this impact
+                                            your work and your costs? Remember that the challenges presented by the site
+                                            itself extend far beyond the work on site. However, by taking this into
+                                            account early on in your equipment selection, you can avoid many potential
+                                            pain points later on.</p>
 
                                     </div>
                                 </div>
