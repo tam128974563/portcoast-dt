@@ -48,9 +48,9 @@
 
 <body>
     <div id="pcc-page">
-          <%- include ('partials/nav.ejs')%>
-              <div id="pcc-main">
-         <!-- Page Header Start -->
+        <%- include ('partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
             <div class="page-header">
                 <div class="container">
                     <div class="row">
@@ -61,39 +61,58 @@
             <!-- Secction Tin tức -->
             <section class="pcc-blog">
                 <div class="container">
-                <div class="pcc-narrow-content">
-                    <div class="row">
-                        <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
-                            data-animate-effect="fadeInLeft">
-                            <span class="heading-meta">Read</span>
-                            <h2 class="pcc-heading">News & Activities</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <%for(let item of news){%>
-                        <div class="col-lg-4 col-md-6 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="blog-entry">
-                                <a href="/en/news/<%= item.url_en%>" class="blog-img"><img style="width: 100%; height: 270px; object-fit: cover;"
-                                        src="/public/images/news/<%= item.folder%>/cover.jpg" class="img-responsive"
-                                        alt=""></a>
-                                <div class="desc">
-                                    <span><small><%=item.tag.split("-")[0]%> |
-                                            <%= [(item.day<10?`0${item.day}`: item.day),(item.month<10?`0${item.month}`: item.month),item.year].join("/")%></small> </span>
-                                    <h3><a href="/en/news/<%= item.url_en%>"><%=item.title_en%></a></h3>
-                                    <p><%= item.description_en%></p>
-                                </div>
+                    <div class="pcc-narrow-content">
+                        <div class="row">
+                            <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span class="heading-meta">Read</span>
+                                <h2 class="pcc-heading">News & Activities</h2>
                             </div>
                         </div>
-                        <%}%>
+                        <div class="row">
+                            <%for(let item of news){%>
+                            <div class="col-lg-4 col-md-6 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="blog-entry">
+                                    <a href="/en/news/<%= item.url_en%>" class="blog-img"><img
+                                            style="width: 100%; height: 270px; object-fit: cover;"
+                                            src="/public/images/news/<%= item.folder%>/cover.jpg" class="img-responsive"
+                                            alt=""></a>
+                                    <div class="desc">
+                                        <span><small><%=item.tag.split("-")[0]%> |
+                                                <%= [(item.day<10?`0${item.day}`: item.day),(item.month<10?`0${item.month}`: item.month),item.year].join("/")%></small>
+                                        </span>
+                                        <h3><a href="/en/news/<%= item.url_en%>"><%=item.title_en%></a></h3>
+                                        <p><%= item.description_en%></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <%}%>
                     </div>
                 </div>
+                <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                  </div>
                 </div>
             </section>
             <%- include ('partials/footer.ejs')%>
+                        </div>
                     </div>
-                </div>
 
-                <%- include ('partials/js.ejs')%>
+                    <%- include ('partials/js.ejs')%>
 
 </body>
+
 </html>
