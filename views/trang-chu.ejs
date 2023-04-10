@@ -44,9 +44,9 @@
 
 <body>
     <div id="pcc-page">
-     
+
         <%- include ('partials/nav.ejs')%>
-            <div id="pcc-main">
+        <div id="pcc-main">
             <aside id="pcc-intro">
                 <div class="bg-video-wrap">
                     <video loop muted autoplay playsinline>
@@ -243,7 +243,7 @@
                                             alt=""></a>
                                     <div class="desc">
                                         <span><small><%=item.tag.split("-")[0]%> |
-                                                <%=  [item.day,(item.month<10?`0${item.month}`: item.month),item.year].join("/")%></small></span>
+                                                <%=  [(item.day<10?`0${item.day}`: item.day),(item.month<10?`0${item.month}`: item.month),item.year].join("/")%></small></span>
                                         <h3><a href="/en/news/<%= item.url_vi%>"><%=item.title_vi%></a></h3>
                                         <p><%= item.description_vi%></p>
                                     </div>
