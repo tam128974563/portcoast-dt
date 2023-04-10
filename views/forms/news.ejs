@@ -92,96 +92,29 @@
     const dayDropdown = document.getElementById("day");
     const monthDropdown = document.getElementById("month");
     const yearDropdown = document.getElementById("year");
-
     // Generate options for days from 1 to 31
     for (let day = 1; day <= 31; day++) {
         if (day < 10) day = `0${day}`
         dayDropdown.innerHTML += `<option value="${day}">${day}</option>`;
     }
-
     // Generate options for months from January to December
     const monthNames = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
     for (let month = 0; month < 12; month++) {
         monthDropdown.innerHTML += `<option value="${month + 1}">
             ${monthNames[month]}</option>`;
     }
-
     // Generate options for years from 2000 to 2024
     const currentYear = new Date().getFullYear();
     for (let year = 2019; year <= 2030; year++) {
         yearDropdown.innerHTML += `<option value="${year}">${year}
                 </option>`;
     }
-    yearDropdown.selectedIndex = 0;
-    // When the year dropdown changes, regenerate the options for the days and months dropdowns
-    const selectedYear = parseInt(yearDropdown.value);
-    //const selectedMonth = parseInt(monthDropdown.value);
-
-
-    monthDropdown.addEventListener("change", () => {
-        const selectedMonth = parseInt(monthDropdown.value - 1);
-        const isLeapYear = (selectedYear % 4 === 0 && selectedYear % 100 !== 0) || selectedYear %
-            400 === 0;
-        const daysInMonth = [31, isLeapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        console.log(selectedMonth);
-        console.log(daysInMonth[selectedMonth]);
-        dayDropdown.innerHTML = "";
-
-        for (let day = 1; day <= daysInMonth[selectedMonth]; day++) {
-            dayDropdown.innerHTML += `<option value="${day}">${day}
-    </option>`;
-        }
-    })
-    yearDropdown.addEventListener("change", () => {
-        const selectedYear = parseInt(yearDropdown.value);
-        //const selectedMonth = parseInt(monthDropdown.value);
-
-
-        monthDropdown.addEventListener("change", () => {
-            const selectedMonth = parseInt(monthDropdown.value - 1);
-            const isLeapYear = (selectedYear % 4 === 0 && selectedYear % 100 !== 0) || selectedYear %
-                400 === 0;
-            const daysInMonth = [31, isLeapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-            console.log(selectedMonth);
-            console.log(daysInMonth[selectedMonth])
-            dayDropdown.innerHTML = "";
-
-            for (let day = 1; day <= daysInMonth[selectedMonth]; day++) {
-                if (day < 10) day = `0${day}`
-                dayDropdown.innerHTML += `<option value="${day}">${day}</option>`;
-            }
-        })
-        // Remove existing options for days and months
-        // dayDropdown.innerHTML = "";
-        // monthDropdown.innerHTML = "";
-
-        // Generate options for months based on the selected year
-        // Generate options for days based on the selected year and month
-
-    });
 
     const getToday = document.getElementById('getToday');
     getToday.addEventListener('click', () => {
-        const selectedYear = parseInt(yearDropdown.value);
-        //const selectedMonth = parseInt(monthDropdown.value);
-
         const today = new Date();
         document.getElementById('year').value = today.getFullYear();
         document.getElementById('month').selectedIndex = today.getMonth();
-        const selectedMonth = parseInt(monthDropdown.value - 1);
-        const isLeapYear = (selectedYear % 4 === 0 && selectedYear % 100 !== 0) || selectedYear %
-            400 === 0;
-        const daysInMonth = [31, isLeapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        console.log(selectedMonth);
-        console.log(daysInMonth[selectedMonth])
-        dayDropdown.innerHTML = "";
-
-        for (let day = 1; day <= daysInMonth[selectedMonth]; day++) {
-            if (day < 10) day = `0${day}`
-            dayDropdown.innerHTML += `<option value="${day}">
-              ${day}
-              </option>`;
-        }
         document.getElementById('day').selectedIndex = today.getDate();
 
 
