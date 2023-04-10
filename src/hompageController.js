@@ -14,12 +14,14 @@ const project = (limit) => {
     }).limit(limit).lean();
 
 };
-const news = (limit) => {
-    return News.find({
-        "selectedIndex": {
-            $te: 0
-        }
-    }).limit(limit).lean();
+const news = async (limit) => {
+    let all = await News.find({}).lean();
+    const compareDate = (a, b) => {
+        if (a.year !== b.year) return b.year - a.year;
+        if (a.month !== b.month) return b.month - a.month;
+        if (a.day !== b.day) return b.day - a.day;
+    }
+    return all.sort(compareDate).slice(0, limit);
 }
 
 const route = async (req, res) => {
