@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="vi" />
+    <title><%=news.title_vi%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= news.description_vi%>" />
+    <meta name="keywords" content="Dịch vụ BIM, Scan to BIM, Khảo sát 3D Laser, Số hóa công trình xây dựng" />
+    <meta name="author" content="PortcoastDT" />
+    <meta name="robots" content="noodp, index, follow">
+    <meta name="thumbnail" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+
+    <!-- GEO -->
+    <meta name="DC.title" lang="vi" content="<%=news.title_vi%>" />
+    <meta name="geo.region" content="VN" />
+    <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta name="geo.position" content="10.798656;106.664696" />
+    <meta name="ICBM" content="10.798656, 106.664696" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="<%=news.title_vi%>" />
+    <meta property="og:description" content="<%= news.description_vi%>" />
+    <meta property="og:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="<%=news.title_vi%>" />
+    <meta name="twitter:description" content="<%= news.description_vi%>" />
+    <meta name="twitter:image" content="https://portcoast-bim.com/public/images/news/<%= news.folder%>/cover.jpg" />
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/tin-tuc/<%= news.url_vi%>" />
+    <%- include (dir+'partials/css.ejs')%>
+</head>
+
+<body>
+    <div id="pcc-page">
+
+        <%- include (dir+'partials/nav.ejs')%>
+        <div id="pcc-main">
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+            <section class="pcc-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pcc-narrow-content">
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="heading-meta">
+                                            <%=news.tag.split("-")[1]%> |
+                                            <%=  [news.day,(news.month<10?`0${news.month}`: news.month),news.year].join("/")%>
+                                            <% if(news.tag === "News-Tin Tức" ){%>
+                                            | Nguồn: <a href="<%= news.original_url %>">
+                                                <%= new URL(news.original_url).hostname.replace('www.','') %>
+                                            </a>
+                                            <%}%>
+                                        </span>
+                                        <h2 class="pcc-heading animate-box">
+                                            <%= news.title_vi%>
+                                            </h2>
+                                    </div>
+                                </div>
+                                <div class="row row-bottom-padded-md">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <p>Trong thời gian qua, ngoài việc chủ động phối hợp với chủ tàu, chủ cảng và
+                                            các đơn vị liên quan nghiên cứu, xây dựng Phương án bảo đảm an toàn hàng hải
+                                            cho tàu có tổng trọng tải trên 200.000 DWT vào, rời các cảng khu vực Cái Mép
+                                            (trong điều kiện luồng vào cảng chỉ được thiết kế, đầu tư xây dựng chuẩn tắc
+                                            cho cỡ tàu 80.000 DWT); cho giàn khoan dầu khí, các tàu chở hàng hoá siêu
+                                            trường, siêu trọng có tổng trọng tải trên 30.000 DWT vào, rời các cảng khu
+                                            vực sông Dinh, tỉnh Bà Rịa - Vũng Tàu (trong điều kiện luồng vào cảng chỉ
+                                            được thiết kế, đầu tư xây dựng chuẩn tắc cho cỡ tàu 10.000 DWT) ..., nhận
+                                            thấy trên thế giới, mô hình cảng biển thông minh (Smart Port) cùng với bản
+                                            sao kĩ thuật số (Digital Twin) được ứng dụng hiệu quả tại Cảng Rotterdam (Hà
+                                            Lan) - Cảng biển cửa ngõ tại Châu Âu... bản sao kỹ thuật số được ứng dụng để
+                                            thiết lập, theo dõi, vận hành các hoạt động vận chuyển và quản lý hệ thống
+                                            cơ sở hạn tầng dựa trên các dữ liệu phân tích về thời tiết, địa lý, điều
+                                            kiện thuỷ hải văn mang lại nhiều lợi ích như: hỗ trợ hoạt động quản lý, khai
+                                            thác cảng; tối ưu hoá quá trình điều động tàu cập bến; giảm thời gian chờ
+                                            tàu, tiết kiệm chi phí; nâng cao công tác bảo đảm an toàn trong hoạt động
+                                            khai thác cảng; dự báo thời gian bảo trì thiết bị... và việc áp dụng thành
+                                            tựu của công nghệ 4.0 để từng bước biến mục tiêu số hoá hạ tầng cảng biển
+                                            tỉnh Bà Rịa - Vũng Tàu làm cơ sở dữ liệu, xây dựng bản sao kỹ thuật số, tiến
+                                            đến xây dựng cảng thông minh là giải pháp, lựa chọn tối ưu để cụ thể hoá chủ
+                                            trương của Chính phủ, Bộ Giao thông vận tải, Cục Hàng hải Việt Nam trong
+                                            việc áp dụng thành tựu cách mạng công nghiệp 4.0 vào hoạt động quản lý, vận
+                                            hành hệ thống cảng biển. Vì vậy, Cảng vụ Hàng hải Vũng Tàu đã làm việc và đề
+                                            nghị Công ty CP tư vấn thiết kế Cảng - Kỹ thuật biển (Portcoast) phối hợp
+                                            nghiên cứu giải pháp "số hoá" dữ liệu cảng biển Vũng Tàu.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/accelerating-the-digitization-of-vung-tau-seaport-001.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>(Lãnh đạo: Cảng vụ Hàng hải và Portcoast làm việc, trao đổi về
+                                                giải pháp phối hợp)</figcaption>
+                                        </figure>
+                                        <p>Để hiện thực hóa chủ trương và giải pháp này, Cảng vụ Hàng hải Vũng Tàu đã
+                                            chủ động cung cấp tới Portcoast thông tin, dữ liệu cảng biển (hồ sơ thiết kế
+                                            xây dựng cảng, luồng hàng hải; số liệu tổng hợp chi tiết các loại tàu thuyền
+                                            qua cảng biển Vũng Tàu; điều kiện hàng hải khu vực …) cũng như của hệ thống
+                                            gần 50 bến cảng, khu neo đậu, bến phao tại khu vực trách nhiệm quản lý; phối
+                                            hợp với Portcoast trong công tác khảo sát, thu thập dữ liệu cần thiết và tổ
+                                            chức làm việc, vận động các doanh nghiệp cảng hoạt động trong khu vực hợp
+                                            tác, cung cấp dữ liệu liên quan đến hồ sơ thiết kế/ cải tạo nâng cấp cầu
+                                            cảng, khu nước trước bến … để bảo đảm đủ cơ sở dữ liệu cần thi thiết, tạo
+                                            điều kiện cho Portcoast sử dụng Bản sao kỹ thuật số - Digital Twin (là “song
+                                            sinh” của môi trường vật chất trong không gian kỹ thuật số, chẳng hạn mô
+                                            hình 3D của công trình cảng hay công trình cơ sở hạ tầng - các dữ liệu được
+                                            tạo ra trong suốt vòng đời dự án từ khảo sát, thiết kế, xây dựng đến vận
+                                            hành, khai thác và bảo trì, tuy nhiên không giống như các mô hình dữ liệu
+                                            tĩnh, các thông tin đầu vào chỉ có được do người dùng nhập vào, mô hình
+                                            Digital Twin là mô hình “sống”, chúng tự động thu thập dữ liệu theo thời
+                                            gian thực bằng các thiết bị cảm biến, camera,… được kết nối bằng mạng lưới
+                                            Internet vạn vật “IoT”, tích hợp trí tuệ nhân tạo “AI” …) và ứng dụng
+                                            Mô hình thông tin công trình (BIM), công nghệ - quy trình Scan-to-BIM (sử
+                                            dụng các công nghệ hiện đại như máy quét 3D laser, mobile mapping hoặc
+                                            aerial mapping …) nhằm mục đích ghi lại một cách chính xác hiện trạng
+                                            của các đối tượng kết cấu bến cảng, luồng tàu, quy hoạch chi tiết cảng …
+                                            dưới dạng các đám mây điểm pointcloud (Pointcloud là tập hợp hàng triệu điểm
+                                            phản ánh chính xác môi trường thực mà nó ghi lại với tọa độ trong không gian
+                                            3 chiều X, Y, Z và thông số màu, để từ đó trở thành một đối tượng tham chiếu
+                                            tin cậy cho việc xây dựng mô hình số) để xây dựng, quản lý nội bộ hầu hết
+                                            các mô hình các bến cảng, luồng tàu tại cảng biển Vũng Tàu, thông qua các
+                                            giải pháp sau:</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/accelerating-the-digitization-of-vung-tau-seaport-002.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>(Hình ảnh minh hoạ về Mô hình số tại Cảng biển Vũng Tàu)
+                                            </figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/accelerating-the-digitization-of-vung-tau-seaport-003.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>
+                                            </figcaption>
+                                        </figure>
+                                        <p>- Quét 3D laser mặt đất (Terrestrial Laser Scanning): sử dụng các thiết bị
+                                            laser scanner từ các hãng thiết bị nổi tiếng như: Leica, Trimble, Topcon.
+                                        </p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/accelerating-the-digitization-of-vung-tau-seaport-004.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>(Portcoast tổ chức quét 3D laser và mô hình số hoá cảng Baria
+                                                Serece)</figcaption>
+                                        </figure>
+                                        <p>- Áp dụng giải pháp quét 3D laser di động - Mobile mapping, sử dụng thiết bị
+                                            quét 3D laser có tích hợp GPS gắn trên một phương tiện cơ giới để vừa di
+                                            chuyển vừa thu thập dữ liệu và sử dụng thiết bị tàu không người lái USV
+                                            “Unmanned Surface Vehicle” (Các thiết bị được gắn trên USV bao gồm thiết bị
+                                            quét 3D laser - NORBIT iLidar đặt trên mũi tàu ghi dữ liệu xung quanh, một
+                                            thiết bị gắn dưới đáy tàu “NORBIT iWBMS’ ghi lại địa hình đáy biển, lòng
+                                            sông. Giải pháp đồng bộ này cho hiệu quả thu được nhanh chóng, chính xác,
+                                            cùng lúc cả trên bờ và dưới mặt nước.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/accelerating-the-digitization-of-vung-tau-seaport-005.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>(Portcoast sử dụng thiết bị mobile mapping tại hệ thống đường
+                                                liên cảng)</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/accelerating-the-digitization-of-vung-tau-seaport-006.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>(Portcoast sử dụng thiết bị mobile mapping gắn trên USV và dữ
+                                                liệu thu được tại cảng Hyosung Vina Chemicals)</figcaption>
+                                        </figure>
+                                        <p>- Khảo sát trên không (Aerial mapping): để hoàn thiện hệ thống thu thập dữ
+                                            liệu, sử dụng là tích hợp máy quét 3D laser để ghi lại dữ liệu nhanh chóng,
+                                            chính xác, bao quát toàn cảnh mà không bị vướng vật cản. Hai thiết bị mà
+                                            Portcoast sử dụng đến từ các hãng nổi tiếng là Stormbee tích hợp máy quét
+                                            Faro S350-A và DJI Matrice 300 RTK tích hợp Module Zenmuse L1/P1/Share.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/accelerating-the-digitization-of-vung-tau-seaport-007.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>(Portcoast sử dụng thiết bị Aerial mapping khảo sát cảng biển từ
+                                                trên không)</figcaption>
+                                        </figure>
+                                        <p>- Thiết lập dữ liệu đến mô hình”: 03 giải pháp trên mang đến một bộ giải
+                                            pháp toàn diện và thích ứng với mọi yêu cầu về quy mô địa hình. Dựa trên dữ
+                                            liệu thu thập, quá trình mô hình hóa 3D công trình từ các đám mây điểm được
+                                            thực hiện trong phần mềm Autodesk Revit và các phần mềm hỗ trợ đến từ nhà
+                                            sản xuất máy quét 3D laser. Mô hình số hóa được hoàn thành và từ đó ứng dụng
+                                            trong hoạt động quản lý, cập nhật thông tin tài sản, xây dựng mô hình ảo
+                                            tham quan cảng và quan trọng nhất là phát triển bản sao kỹ thuật số (Digital
+                                            Twin).</p>
+                                        <p>Như vậy, cảng biển Vũng Tàu với vai trò là cửa ngõ - cảng trung chuyển
+                                            container quốc tế, cảng biển đặc biệt của Việt Nam và với vai trò quan trọng
+                                            như vậy thì việc chủ động phối hợp nghiên cứu, hoàn thành cơ bản ban đầu
+                                            công tác “số hóa” từ khâu Quy hoạch, quản lý cho tới vận hành của hệ thống
+                                            cảng có ý nghĩa rất lớn về mặt ứng dụng công nghệ và nhu cầu thực tiễn, giúp
+                                            các cơ quan quản lý nhà nước, chủ đầu tư, nhà khai thác và doanh nghiệp liên
+                                            quan có thể quản lý và khai thác cảng biển hiệu quả hơn; việc số hóa sẽ giúp
+                                            tối đa hóa công suất vận hành, an toàn khai thác, giảm thiểu sự cố ảnh hưởng
+                                            đến môi trường và giúp hệ thống cảng hòa nhập vào tiến trình phát triển của
+                                            hệ sinh thái cảng biển, vận tải hàng hải thế giới. Trong tương lai, mô hình
+                                            số còn cho phép tái hiện những gì đang xảy ra trong hệ thống cảng, thiết lập
+                                            các kịch bản mô phỏng mọi hoạt động của cảng như các hoạt động giao thông,
+                                            các tình huống sự cố có thể xảy ra. Từ đó, xây dựng các kịch bản ứng phó,
+                                            tiến tới hoàn thiện hệ thống quản lý cảng biển một cách toàn diện, đáp ứng
+                                            xu thế phát triển cảng thông minh trong thời đại 4.0 … Đây là nỗ lực rất lớn
+                                            của Công ty Portcoast cũng như của cơ quan, đơn vị liên quan và việc sớm
+                                            hoàn thiện “số hóa cảng biển Vũng Tàu” sẽ là tiền đề để làm cơ sở đánh giá
+                                            hiệu quả, rút kinh nghiệm và tiến tới ứng dụng thí điểm rộng ra các cảng
+                                            biển quan trọng trong toàn quốc.</p>
+                                        <figure>
+                                            <img src="/public/images/news/<%= news.folder%>/accelerating-the-digitization-of-vung-tau-seaport-008.jpg"
+                                                alt="<%=news.title_vi%>" class="img-fluid">
+                                            <figcaption>(Portcoast thiết lập tính năng tham quan cảng Hyosung Vina
+                                                Chemicals... thông qua mô hình BIM và game trên website)</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include(dir+'partials/news.ejs')%>
+                    </div>
+                </div>
+            </section>
+            <%- include (dir+'partials/footer.ejs')%>
+        </div>
+    </div>
+    <%- include (dir+'partials/js.ejs')%>
+</body>
+
+</html>
