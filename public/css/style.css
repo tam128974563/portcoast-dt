@@ -1898,6 +1898,10 @@ iframe {
 .sidebar .active {
     color: #0093dd;
 }
+.sidebar a {
+    text-transform: uppercase;
+
+}
 
 .pcc-quotes {
    background-color: #f1f1f1;
