@@ -3,7 +3,7 @@
         "vi": "trang-chu"
     },
     {
-        "en": "about",
+        "en": "introduction",
         "vi": "gioi-thieu"
     },
     {
@@ -111,7 +111,16 @@
         "vi": "truc-quan-hoa"
     },
     {
+        "en": "case-studies",
+        "vi": "de-tai-nghien-cuu"
+    },
+    {
+        "en": "",
+        "vi": ""
+    },
+    {
         "en": "",
         "vi": ""
     }
+    
 ]
