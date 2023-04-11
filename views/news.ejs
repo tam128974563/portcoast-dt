@@ -65,53 +65,102 @@
                         <div class="row">
                             <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
                                 data-animate-effect="fadeInLeft">
-                                <span class="heading-meta">About us</span>
+                                <span class="heading-meta">Read</span>
                                 <h2 class="pcc-heading">News & Activities</h2>
                             </div>
                         </div>
-                        <div class="row">
-                            <%for(let item of news){%>
-                            <div class="col-lg-4 col-md-6 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="blog-entry">
-                                    <a href="/en/news/<%= item.url_en%>" class="blog-img"><img
-                                            style="width: 100%; height: 270px; object-fit: cover;"
-                                            src="/public/images/news/<%= item.folder%>/cover.jpg" class="img-responsive"
-                                            alt=""></a>
-                                    <div class="desc">
-                                        <span><small><%=item.tag.split("-")[0]%> |
-                                                <%= [(item.day<10?`0${item.day}`: item.day),(item.month<10?`0${item.month}`: item.month),item.year].join("/")%></small>
-                                        </span>
-                                        <h3><a href="/en/news/<%= item.url_en%>"><%=item.title_en%></a></h3>
-                                        <p><%= item.description_en%></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <%}%>
+                        <div class="row" id="news-post">
+
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                          <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                          </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                          </a>
-                        </li>
-                      </ul>
-                  </div>
+                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft" id="pagination">
+
+                    </div>
                 </div>
             </section>
             <%- include ('partials/footer.ejs')%>
-                        </div>
-                    </div>
+        </div>
+    </div>
 
-                    <%- include ('partials/js.ejs')%>
+    <%- include ('partials/js.ejs')%>
+    <script>
+        const renderPost = (page) => {
+            fetch('/api/news', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        page: page
+                    })
+                }).then(response => response.json())
+                .then(data => {
+                    const currentPage = page;
+
+                    const newsPart = document.getElementById('news-post');
+                    const pagination = document.getElementById('pagination');
+                    newsPart.innerHTML = " "
+                    for (let item of data.post) {
+                        newsPart.innerHTML +=
+                            `<div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="blog-entry">
+                          <a href="/en/news/${item.url_en}" class="blog-img"><img
+                                  style="width: 100%; height: 270px; object-fit: cover;"
+                                  src="/public/images/news/${item.folder}/cover.jpg" class="img-responsive" alt=""></a>
+                          <div class="desc">
+                              <span>
+                                  <small>${item.tag.split("-")[0]} |
+                                      ${[(item.day<10?`0${item.day}`: item.day),(item.month<10?`0${item.month}`:
+                                          item.month),item.year].join("/")} </small> </span> <h3><a
+                                              href="/en/news/${item.url_en}">${item.title_en}</a>
+                                          </h3>
+                                          <p>${item.description_en}</p>
+                          </div>
+                      </div>
+                  </div>`
+                    }
+                    let pageLink = ``
+                    for (let i = 1; i <= data.totalPage; i++) {
+                        pageLink += ` <li class="page-item ${(i == page)?'active':""}"><a
+                              class="page-link" href="#new-post">${i}</a></li>`
+                    };
+                    pagination.innerHTML = `
+                          <ul class="pagination justify-content-center">
+                              <li class="page-item ${(currentPage === 1)?"disabled":""}">
+                                  <a class="page-link" href="#" aria-label="Previous">
+                                      <span aria-hidden="true">&laquo;</span>
+                                  </a>
+                              </li>
+                                ${pageLink}
+                              <li class="page-item ${(currentPage === data.totalPage)?" disabled":""}"">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                              </li>
+                          </ul>
+                          `
+
+                    document.querySelectorAll('a.page-link').forEach((item) => {
+                        if (isNaN(item.innerText)) {
+                            return item.addEventListener('click', () => {
+                                let buttonToPage = (item.attributes['aria-label'].value ==
+                                        "Next") ?
+                                    currentPage + 1 : currentPage - 1
+                                console.log(buttonToPage)
+                                renderPost(buttonToPage);
+                            })
+                        }
+
+                        return item.addEventListener('click', () => {
+                            console.log(item.innerText)
+                            renderPost(item.innerText);
+                        })
+                    })
+                });
+
+        }
+        renderPost(1);
+    </script>
 
 </body>
 
