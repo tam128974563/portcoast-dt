@@ -72,7 +72,6 @@ const pageController = (req, res) => {
 }
 
 const subPageController = (req, res) => {
-
     let url;
     if (req.url.indexOf("/en/") !== -1) {
         url = {
@@ -95,6 +94,7 @@ const subPageController = (req, res) => {
         vi: `${url.folder.vi}/${url.vi}`,
     });
 }
+
 const sitemap = (req, res) => {
     res.sendFile(path.join(utils.rootPath, '/src/sitemap.xml'));
 }
