@@ -86,7 +86,7 @@ const route = async (req, res) => {
 
     const options = {
         page: `${req.url.substring(4)}`,
-        //news,
+        news,
         ...utils.getUrl(req.url)
     }
     if (req.url === "/vi/tin-tuc") {
