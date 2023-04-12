@@ -95,10 +95,10 @@
                     })
                 }).then(response => response.json())
                 .then(data => {
-                    const currentPage = page;
+                    let currentPage = Number(page);
 
-                    const newsPart = document.getElementById('news-post');
-                    const pagination = document.getElementById('pagination');
+                    let newsPart = document.getElementById('news-post');
+                    let pagination = document.getElementById('pagination');
                     newsPart.innerHTML = " "
                     for (let item of data.post) {
                         newsPart.innerHTML +=
@@ -124,16 +124,17 @@
                         pageLink += ` <li class="page-item ${(i == page)?'active':""}"><a
                               class="page-link" href="#new-post">${i}</a></li>`
                     };
+
                     pagination.innerHTML = `
                           <ul class="pagination justify-content-center">
-                              <li class="page-item ${(currentPage === 1)?"disabled":""}">
-                                  <a class="page-link" href="#" aria-label="Previous">
+                              <li class="page-item ${(currentPage == 1)?"disabled":" "}">
+                                  <a class="page-link" href="#new-post" aria-label="Previous">
                                       <span aria-hidden="true">&laquo;</span>
                                   </a>
                               </li>
                                 ${pageLink}
-                              <li class="page-item ${(currentPage === data.totalPage)?" disabled":""}"">
-                                  <a class="page-link" href="#" aria-label="Next">
+                              <li class="page-item ${(currentPage == data.totalPage)?" disabled":" "}"">
+                                  <a class="page-link" href="#news-post" aria-label="Next">
                                       <span aria-hidden="true">&raquo;</span>
                                   </a>
                               </li>
@@ -156,6 +157,7 @@
                             renderPost(item.innerText);
                         })
                     })
+                    document.getElementsByClassName('pcc-heading')[0].scrollIntoView();
                 });
 
         }
