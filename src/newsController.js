@@ -65,13 +65,13 @@ const page = async (req, res) => {
     }).lean();
     const options = {
         lang: url[1],
-        page: url[2],
+        page: (url[1] === "en") ? "about-us" : "ve-chung-toi",
         en: `news/${page.url_en}`,
         vi: `tin-tuc/${page.url_vi}`,
         news: page,
     }
     res.render(`${url[2]}/${page[`url_${url[1]}`]}`, options);
-}
+};
 const route = async (req, res) => {
     let perPage = 12;
     const news = await News.find({}).lean();
@@ -79,22 +79,21 @@ const route = async (req, res) => {
         if (a.year !== b.year) return b.year - a.year;
         if (a.month !== b.month) return b.month - a.month;
         if (a.day !== b.day) return b.day - a.day;
-    }
+    };
     news.sort(
         compareDate
     ).slice(0, perPage);
-
     const options = {
-        page: `${req.url.substring(4)}`,
+        page: req.url.includes('/en/') ? "about-us" : "ve-chung-toi",
         news,
         ...utils.getUrl(req.url)
-    }
+    };
     if (req.url === "/vi/tin-tuc") {
         res.render('tin-tuc', options)
     } else {
         res.render('news', options)
-    }
-}
+    };
+};
 const api = async (req, res) => {
     const news = await News.find({}).lean();
     const compareDate = (a, b) => {
@@ -111,10 +110,6 @@ const api = async (req, res) => {
         page
     } = req.body;
     let post = news.slice(perPage * page - perPage, perPage * page);
-    console.log({
-        post,
-        totalPage
-    })
     res.json({
         post,
         totalPage
