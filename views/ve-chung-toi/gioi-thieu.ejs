@@ -18,7 +18,7 @@
     <meta name="DC.title" lang="vi" content="Giới thiệu | Trung tâm chuyển đổi số Cơ sở hạ tầng | Số hóa xây dựng" />
     <meta name="geo.region" content="VN" />
     <meta name="geo.placename" content="Tp. Hồ Chí Minh, Việt Nam" />
-    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/gioi-thieu" />
+    <meta name="DC.identifier" content="https://portcoast-bim.com/vi/ve-chung-toi/gioi-thieu" />
     <meta name="geo.position" content="10.798656;106.664696" />
     <meta name="ICBM" content="10.798656, 106.664696" />
 
@@ -29,7 +29,7 @@
     <meta property="og:image" content="https://portcoast-bim.com/public/images/about-us/about.jpg" />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="600" />
-    <meta property="og:url" content="https://portcoast-bim.com/vi/gioi-thieu" />
+    <meta property="og:url" content="https://portcoast-bim.com/vi/ve-chung-toi/gioi-thieu" />
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:type" content="website" />
 
@@ -37,14 +37,13 @@
     <meta name="twitter:description"
         content="Chúng tôi tự hào có một đội ngũ trẻ, năng động, nhiệt huyết và luôn đi đầu trong việc tìm tòi, nghiên cứu và ứng dụng các công nghệ mới trên thế giới vào ngành xây dựng." />
     <meta name="twitter:image" content="https://portcoast-bim.com/public/images/about-us/about.jpg" />
-    <meta name="twitter:url" content="https://portcoast-bim.com/vi/gioi-thieu" />
-    <%- include('partials/css.ejs') %>
+    <meta name="twitter:url" content="https://portcoast-bim.com/vi/ve-chung-toi/gioi-thieu" />
+    <%- include(dir+'partials/css.ejs') %>
 </head>
 
 <body>
-    <div id="pcc-page">
-     
-        <%- include('partials/nav.ejs') %>
+    <div id="pcc-page">     
+        <%- include(dir+'partials/nav.ejs') %>
               <div id="pcc-main">
          <!-- Page Header Start -->
             <div class="page-header">
@@ -81,11 +80,11 @@
                 </div>
                 </div>
             </div>
-            <%- include ('partials/footer.ejs')%>
+            <%- include (dir+'partials/footer.ejs')%>
         </div>
     </div>
 
-    <%- include('partials/js.ejs') %>
+    <%- include(dir+'partials/js.ejs') %>
 
 </body>
 
