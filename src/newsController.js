@@ -1,6 +1,6 @@
 const News = require('./models/news.js');
 const utils = require('./utils');
-const api = require('./api');
+//const api = require('./api');
 const fs = require('fs');
 const path = require('path');
 
@@ -73,9 +73,8 @@ const page = async (req, res) => {
     res.render(`${url[2]}/${page[`url_${url[1]}`]}`, options);
 }
 const route = async (req, res) => {
-    const news = await News.find({}).sort({
-        index_number: -1
-    }).lean();
+    let perPage = 12;
+    const news = await News.find({}).lean();
     const compareDate = (a, b) => {
         if (a.year !== b.year) return b.year - a.year;
         if (a.month !== b.month) return b.month - a.month;
@@ -83,11 +82,11 @@ const route = async (req, res) => {
     }
     news.sort(
         compareDate
-    );
+    ).slice(0, perPage);
 
     const options = {
         page: `${req.url.substring(4)}`,
-        news,
+        //news,
         ...utils.getUrl(req.url)
     }
     if (req.url === "/vi/tin-tuc") {
@@ -96,7 +95,31 @@ const route = async (req, res) => {
         res.render('news', options)
     }
 }
-
+const api = async (req, res) => {
+    const news = await News.find({}).lean();
+    const compareDate = (a, b) => {
+        if (a.year !== b.year) return b.year - a.year;
+        if (a.month !== b.month) return b.month - a.month;
+        if (a.day !== b.day) return b.day - a.day;
+    }
+    news.sort(
+        compareDate
+    );
+    const perPage = 12;
+    const totalPage = Math.ceil(news.length / perPage);
+    const {
+        page
+    } = req.body;
+    let post = news.slice(perPage * page - perPage, perPage * page);
+    console.log({
+        post,
+        totalPage
+    })
+    res.json({
+        post,
+        totalPage
+    });
+}
 module.exports = {
     route,
     addForm,
@@ -105,5 +128,6 @@ module.exports = {
     editForm,
     edit,
     pagination,
-    page
+    page,
+    api
 }
