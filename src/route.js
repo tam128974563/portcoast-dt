@@ -136,6 +136,7 @@ const createRoutes = () => {
     //Api route
     route.post('/api/clean-accent', clearAccent)
     route.get('/api/project', project.api)
+    route.post('/api/news', news.api)
 
     route.get('/', home.route)
 
