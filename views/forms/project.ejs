@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Project</title>
+    <title>Edit Project</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -19,32 +19,38 @@
                         <div class="panel-body">
                             <div class="form-group">
                                 <label for="title_en">Project Title Eng: </label>
-                                <input type="text" id="title_en" class="form-control" name="title_en">
+                                <input type="text" id="title_en" class="form-control" name="title_en"
+                                    value="<%= item.title_en%>">
                             </div>
                             <div class="form-group">
                                 <label for="title_vi">Project Title Vi: </label>
-                                <input type="text" id="title_vi" class="form-control" name="title_vi">
+                                <input type="text" id="title_vi" class="form-control" name="title_vi"
+                                    value="<%= item.title_vi%>">
                             </div>
                             <div class="form-group">
                                 <label for="url_en">URL eng: </label>
-                                <input type="text" id="url_en" class="form-control" name="url_en">
+                                <input type="text" id="url_en" class="form-control" name="url_en"
+                                    value="<%= item.url_en%>">
                             </div>
                             <div class="form-group">
                                 <label for="url_vi">URL vi: </label>
-                                <input type="text" id="url_vi" class="form-control" name="url_vi">
+                                <input type="text" id="url_vi" class="form-control" name="url_vi"
+                                    value="<%= item.url_vi%>">
                             </div>
-                            <button type="button" id="generateUrlFolder">Generate URL and Folder</button>
                             <div class="form-group">
                                 <label for="folder">Folder name: </label>
-                                <input type="text" id="folder" class="form-control" name="folder">
+                                <input type="text" id="folder" class="form-control" name="folder"
+                                    value="<%= item.folder%>">
                             </div>
                             <div class="form-group">
                                 <label for="location_en">location Eng: </label>
-                                <input type="text" id="location_en" class="form-control" name="location_en">
+                                <input type="text" id="location_en" class="form-control" name="location_en"
+                                    value="<%= item.location_en %>">
                             </div>
                             <div class="form-group">
                                 <label for="location_vi">location Vi: </label>
-                                <input type="text" id="location_vi" class="form-control" name="location_vi">
+                                <input type="text" id="location_vi" class="form-control" name="location_vi"
+                                    value="<%= item.location_vi %>">
                             </div>
                             <div class="form-group">
                                 <label for="tags">Tags: </label>
@@ -52,43 +58,56 @@
                                     <div class="form-group">
                                         <div style="display: flex; flex-wrap: wrap;">
                                             <div style="width: 33.33%">
-                                                <input type="checkbox" name="tags[]" id="tags1" value="industry">
+                                                <input type="checkbox" name="tags[]" id="tags1" value="industry"
+                                                    <%= (item.tags.includes("industry")) ? 'checked':''%>>
                                                 <label for="tags1">Industry</label>
                                             </div>
                                             <div style="width: 33.33%">
-                                                <input type="checkbox" name="tags[]" id="tags2" value="architecture">
+                                                <input type="checkbox" name="tags[]" id="tags2" value="architecture"
+                                                    <%= (item.tags.includes("architecture")) ? 'checked':''%>>
                                                 <label style="" for="tags2">Architecture</label>
                                             </div>
                                             <div style="width: 33.33%">
-                                                <input type="checkbox" name="tags[]" id="tags3" value="port">
+                                                <input type="checkbox" name="tags[]" id="tags3" value="port"
+                                                    <%= (item.tags.includes("port")) ? 'checked':''%>>
                                                 <label for="tags3">Port & Offshore</label>
                                             </div>
                                             <div style="width: 33.33%">
-                                                <input type="checkbox" name="tags[]" id="tags4" value="heritage">
+                                                <input type="checkbox" name="tags[]" id="tags4" value="heritage"
+                                                    <%= (item.tags.includes("heritage")) ? 'checked':''%>>
                                                 <label for="tags4">Heritage</label>
                                             </div>
                                             <div style="width: 33.33%">
-                                                <input type="checkbox" name="tags[]" id="tags5" value="infrastructure">
+                                                <input type="checkbox" name="tags[]" id="tags5" value="infrastructure"
+                                                    <%= (item.tags.includes("infrastructure")) ? 'checked':''%>>
                                                 <label for="tags3">Infrastructure</label>
                                             </div>
                                             <div style="width: 33.33%">
-                                                <input type="checkbox" name="tags[]" id="tags6" value="management">
+                                                <input type="checkbox" name="tags[]" id="tags6" value="management"
+                                                    <%= (item.tags.includes("management")) ? 'checked':''%>>
                                                 <label for="tags3">Facility Management</label>
                                             </div>
                                             <!-- repeat the above code for each group of 3 checkboxes -->
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
+
+                            <%for(button in item.button){%>
                             <div class="form-group">
-                                <label for="button">Button1 Name</label>
-                                <input type="text" class="form-control" id="button" name="button[0][name]">
+                                <label for="button">Button <%= ++button %> Name</label>
+                                <input type="text" class="form-control" id="button" name="button[<%=button%>][name]"
+                                    value="<%button.name%>">
                             </div>
-                            <div class="form-group">
-                                <label for="button">Button1 URL</label>
-                                <input type="text" class="form-control" id="button" name="button[0][url]">
+                            <div class=" form-group">
+                                <label for="button">Button <%= button %> URL</label>
+                                <input type="text" class="form-control" id="button" name="button[<%=button%>][url]"
+                                    value="<%= button.url %>">
                             </div>
-                            <button type="button" onclick="addButton()">Add Button</button>
+                            <%}%>
+                        
+                             <button type="button" onclick="addButton()">Add Button</button>
                             <div class="form-group">
                                 <label for="index">Index number: </label>
                                 <input type="text" id="index" class="form-control" name="index">
@@ -102,25 +121,6 @@
     </div>
 </body>
 <script>
-    generateUrlFolder.addEventListener('click', () => {
-
-        const data = {
-            "title_en": `${document.getElementById('title_en').value}`,
-            "title_vi": `${document.getElementById('title_vi').value}`,
-        };
-        fetch('/api/clean-accent', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            }).then(response => response.json())
-            .then(data => {
-                document.getElementById('url_en').value = data.url_en;
-                document.getElementById('url_vi').value = data.url_vi;
-                document.getElementById('folder').value = data.folder;
-            });
-    });
     const formGroup = (type, number) => {
         let formRow = document.createElement("div");
         formRow.classList.add("form-group");
@@ -148,9 +148,9 @@
     const addButton = () => {
         let rowCount = document.getElementsByClassName("panel-body")[0].children;
         let buttonCount = (rowCount.length - 11) / 2;
-        document.getElementsByClassName("panel-body")[0].insertBefore(formGroup("name", buttonCount + 1),
+        document.getElementsByClassName("panel-body")[0].insertBefore(formGroup("Name", buttonCount + 1),
             rowCount[rowCount.length - 3])
-        document.getElementsByClassName("panel-body")[0].insertBefore(formGroup("url", buttonCount + 1),
+        document.getElementsByClassName("panel-body")[0].insertBefore(formGroup("URL", buttonCount + 1),
             rowCount[rowCount.length - 3])
     }
 </script>

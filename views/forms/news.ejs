@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add News</title>
+    <title>Edit News</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -13,72 +13,93 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-offset-3">
-                <h1>Add News </h1>
+                <h1>Edit News </h1>
                 <form method="post">
                     <div class="panel panel-default">
                         <div class="panel-body" id="form">
                             <div class="form-group">
                                 <label for="title_en">News Title Eng: </label>
-                                <input type="text" id="title_en" class="form-control" name="title_en">
+                                <input type="text" id="title_en" class="form-control" name="title_en"
+                                    value="<%= item.title_en%>">
                             </div>
                             <div class="form-group">
                                 <label for="title_vi">News Title Vi: </label>
-                                <input type="text" id="title_vi" class="form-control" name="title_vi">
+                                <input type="text" id="title_vi" class="form-control" name="title_vi"
+                                    value="<%=item.title_vi%>">
                             </div>
+
                             <div class="form-group" id="date">
                                 <label for="date">Date: </label>
                                 <div>
-
-                                    <label for="year">Year</label>
-                                    <select name="year" id="year">
-
+                                    <label for="day">Day</label>
+                                    <select name="day" id="day">
+                                        <option value="<%=item.day.padStart(2,'0')%>"><%=item.day.padStart(2,'0')%>
+                                        </option>
                                     </select>
                                     <label for="month">Month</label>
-                                    <select name="month" id="month"></select>
-                                    <label for="day">Day</label>
-                                    <select name="day" id="day"></select>
+                                    <select name="month" id="month">
+                                        <option value="<%=item.month.padStart(2,'0')%>"><%=item.month.padStart(2,'0')%>
+                                        </option>
+                                    </select>
+                                    <label for=" year">Year</label>
+                                    <select name="year" id="year">
+                                        <option value="<%=item.year%>"><%=item.year%></option>
+                                    </select>
                                 </div>
-                                <button type="button" id="getToday">Get today</button>
+                                <button type=" button" id="getToday">Get today</button>
                             </div>
-
-                            <button type="button" id="generateUrlFolder">Generate URL and Folder</button>
+                            <button type="button" id="myButton">Click me</button>
                             <div class="form-group">
                                 <label for="url_en">URL eng: </label>
-                                <input type="text" id="url_en" class="form-control" name="url_en">
+                                <input type="text" id="url_en" class="form-control" name="url_en"
+                                    value="<%=item.url_en%>">
                             </div>
-                            <div class="form-group">
+                            <div class=" form-group">
                                 <label for="url_vi">URL vi: </label>
-                                <input type="text" id="url_vi" class="form-control" name="url_vi">
+                                <input type="text" id="url_vi" class="form-control" name="url_vi"
+                                    value="<%=item.url_vi%>">
                             </div>
 
-                            <div class="form-group">
+                            <div class=" form-group">
                                 <label for="folder">Folder name: </label>
-                                <input type="text" id="folder" class="form-control" name="folder">
+                                <input type="text" id="folder" class="form-control" name="folder"
+                                    value="<%=item.folder%>">
                             </div>
                             <div>
-                                <label for="tag">Tag</label>
-                                <select name="tag" id="tag">
-                                    <option selected value="Activity-Hoạt Động"> Activity-Hoạt Động</option>
-                                    <option value="News-Tin Tức">News-Tin Tức</option>
+                                <label for=" tag">Tag
+                                    <select name="tag" id="tag">
 
-                                </select>
+                                        <option value="News-Tin Tức" <%=(item.tag === "News-Tin Tức")?'selected': ''%>>
+                                            News-Tin
+                                            Tức
+                                        </option>
+                                        <option <%=(item.tag === "Activity-Hoạt Động")?'selected': ''%>
+                                            value="Activity-Hoạt Động">
+                                            Activity-Hoạt Động
+                                        </option>
+
+                                    </select>
+                                </label>
                             </div>
                             <div class="form-group">
                                 <label for="original_url">Original URL </label>
-                                <input type="text" id="original_url" class="form-control" name="original_url" disabled>
+                                <input type="text" id="original_url" class="form-control" name="original_url"
+                                    value="<%=item.original_url%>">
                             </div>
                             <div class="form-group">
                                 <label for="description_en">Description Eng: </label>
-                                <input type="text" id="description_en" class="form-control" name="description_en">
+                                <input type="text" id="description_en" class="form-control" name="description_en"
+                                    value="<%=item.description_en%>">
                             </div>
                             <div class="form-group">
                                 <label for="description_vi">Description Vi: </label>
-                                <input type="text" id="description_vi" class="form-control" name="description_vi">
+                                <input type="text" id="description_vi" class="form-control" name="description_vi"
+                                    value="<%=item.description_vi%>">
                             </div>
 
                             <div class="form-group">
                                 <label for="index">Index number: </label>
-                                <input type="text" id="index" class="form-control" name="index">
+                                <input type="text" id="index" class="form-control" name="index" value="<%=item.index%>">
                             </div>
                             <button type="submit" class="btn btn-success">Submit</button>
                         </div>
@@ -94,8 +115,8 @@
     const yearDropdown = document.getElementById("year");
     // Generate options for days from 1 to 31
     for (let day = 1; day <= 31; day++) {
-        if (day < 10) day = `0${day}`
-        dayDropdown.innerHTML += `<option value="${day}">${day}</option>`;
+        dayDropdown.innerHTML +=
+            `<option value="${day.toString().padStart(2,'0')}">${day.toString().padStart(2,'0')}</option>`;
     }
     // Generate options for months from January to December
     const monthNames = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
@@ -104,29 +125,25 @@
             ${monthNames[month]}</option>`;
     }
     // Generate options for years from 2000 to 2024
-    const currentYear = new Date().getFullYear();
-    for (let year = 2019; year <= 2030; year++) {
+    for (let year = 2000; year <= 2024; year++) {
         yearDropdown.innerHTML += `<option value="${year}">${year}
                 </option>`;
     }
 
+
     const getToday = document.getElementById('getToday');
     getToday.addEventListener('click', () => {
         const today = new Date();
+        document.getElementById('day').value = today.getDate();
+        document.getElementById('month').value = today.getMonth() + 1;
         document.getElementById('year').value = today.getFullYear();
-        document.getElementById('month').selectedIndex = today.getMonth();
-        document.getElementById('day').selectedIndex = today.getDate();
-
-
     })
 
-    const generateUrlFolder = document.getElementById('generateUrlFolder');
+    const myButton = document.getElementById('myButton');
 
-    generateUrlFolder.addEventListener('click', () => {
-        const day = document.getElementById("day").value;
-        const month = (document.getElementById("month").value < 10) ?
-            `0${document.getElementById("month").value}` : document.getElementById("month").value
-        console.log(month)
+    myButton.addEventListener('click', () => {
+        const day = document.getElementById("day").value.padStart(2, '0');
+        const month = document.getElementById("month").value;
         const year = document.getElementById("year").value
         const data = {
             "title_en": `${document.getElementById('title_en').value}`,
@@ -148,6 +165,7 @@
                 document.getElementById('folder').value = data.folder;
             });
     });
+
     const tags = document.getElementById('tag');
     const originURL = document.getElementById('original_url');
     if (tags.value !== "News-Tin Tức") {
@@ -159,5 +177,6 @@
         } else originURL.disabled = false;
     });
 </script>
+
 
 </html>

@@ -1,11 +1,12 @@
 const News = require('./models/news.js');
 const utils = require('./utils');
-//const api = require('./api');
 const fs = require('fs');
 const path = require('path');
 
 const addForm = (req, res) => {
-    res.render('forms/news');
+    res.render('forms/news', {
+        item: {}
+    });
 }
 const add = (req, res) => {
     const news = new News();
@@ -17,12 +18,11 @@ const add = (req, res) => {
     });
 };
 
-
 const editForm = async (req, res) => {
     const item = await News.findById({
         _id: req.params.id
     });
-    res.render('edit/news', {
+    res.render('forms/news', {
         item
     })
 }
@@ -37,23 +37,12 @@ const edit = (req, res) => {
         if (err) console.log(err);
         res.redirect(`/edit/news/${req.params.id}`)
     })
-}
-const pagination = async (req, res) => {
-    //     const perPage = 15;
-    //     const allNewss = await news.find({}).sort({
-    //         index_number: -1
-    //     });
-    //     const count = await news.countDocuments();
-    // res.render('views/news',{
-    //     content : 
-    // })
-}
+};
 
 const list = async (req, res) => {
     const allNews = await News.find({}).sort({
         _id: -1
     }).lean();
-
     res.render('list/news', {
         news: allNews
     });
@@ -73,19 +62,8 @@ const page = async (req, res) => {
     res.render(`${url[2]}/${page[`url_${url[1]}`]}`, options);
 };
 const route = async (req, res) => {
-    let perPage = 12;
-    const news = await News.find({}).lean();
-    const compareDate = (a, b) => {
-        if (a.year !== b.year) return b.year - a.year;
-        if (a.month !== b.month) return b.month - a.month;
-        if (a.day !== b.day) return b.day - a.day;
-    };
-    news.sort(
-        compareDate
-    ).slice(0, perPage);
     const options = {
         page: req.url.includes('/en/') ? "about-us" : "ve-chung-toi",
-        news,
         ...utils.getUrl(req.url)
     };
     if (req.url === "/vi/tin-tuc") {
@@ -122,7 +100,6 @@ module.exports = {
     list,
     editForm,
     edit,
-    pagination,
     page,
     api
 }
