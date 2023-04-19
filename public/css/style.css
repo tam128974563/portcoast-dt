@@ -270,7 +270,7 @@ figure figcaption {
         width: 100%;
         top: 35px;
         padding: 20px 60px;
-        background: rgba(0, 0, 0, .1) !important;
+        background: rgba(0, 0, 0, 0.1) !important;
         z-index: 9;
     }
 
@@ -325,6 +325,7 @@ figure figcaption {
     background: #0093dd;
     left: 6%;
     width: 340px;
+    box-shadow: 0 1px 2px rgba(46, 46, 46, 0.3);
 }
 
 .dropdown-menu a.nav-link {
@@ -355,8 +356,7 @@ figure figcaption {
 
 @media only screen and (max-width:992px) {
     .dropdown-menu .submenu {
-        left: 73%;
-        top: 0px;
+        left: 20%;
     }
     .dropdown-menu .multi-menu {
         left: 95%;
@@ -367,6 +367,9 @@ figure figcaption {
 }
 
 @media only screen and (max-width:1399px) {
+    .dropdown-menu .submenu {
+        left: 85%;
+    }
     .navbar .dropdown-menu {
         width: 250px;
     }
@@ -376,6 +379,9 @@ figure figcaption {
     }
 }
 
+/**********************************/
+/*********** Video Background **********/
+/**********************************/
 #pcc-main {
     width: 100%;
     -webkit-transition: 0.5s;
