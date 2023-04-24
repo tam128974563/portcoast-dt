@@ -18,7 +18,8 @@ body {
     font-weight: 400;
     font-size: 15px;
     line-height: 1.8;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #232323;
 }
 
 @media screen and (max-width: 992px) {
@@ -28,7 +29,7 @@ body {
 }
 
 a {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.7);
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -55,9 +56,9 @@ h3,
 h4,
 h5,
 h6 {
-    color: #000;
+    color: #ffffff;
     font-family: "Quicksand", Arial, sans-serif;
-    font-weight: 400;
+    font-weight:400;
     margin: 0 0 30px 0;
     line-height: 1.5;
 }
@@ -438,7 +439,7 @@ video {
     right: 0;
     margin: auto;
     z-index: 3;
-    max-width: 1080px;
+    max-width: 1480px;
     width: 100%;
     height: 40px;
 }
@@ -457,7 +458,7 @@ video {
 .bg-video-wrap .pcc-text h1 {
     color: #fff;
     font-weight: 800;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .bg-404 {
@@ -607,7 +608,7 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 .pcc-heading {
-    font-size: 23px;
+    font-size: 28px;
     margin-bottom: 4em;
     font-weight: 600;
     text-transform: uppercase;
@@ -684,7 +685,7 @@ body.offcanvas .pcc-nav-toggle {
 .steps h3 {
     font-weight: 400;
     margin-bottom: 20px;
-    color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
     font-size: 14px;
     letter-spacing: 2px;
     line-height: 1.5;
@@ -743,7 +744,7 @@ body.offcanvas .pcc-nav-toggle {
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    background-color: rgb(54, 54, 54);
+    background-color: #1a1a1a;
     color: #fff;
     position: relative;
     -webkit-box-shadow: none !important;
@@ -783,14 +784,14 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 .panel-heading a.collapsed {
-    background: #f1f1f1;
-    border: 1px solid #e6e6e6 !important;
+    background: #e7e7e7;
+    border: 1px solid #1a1a1a !important;
     color: #333333;
 }
 
 .panel-body {
     padding: 1.5em;
-    border: 1px solid #e6e6e6 !important;
+    border: 1px solid #1a1a1a !important;
 }
 
 .services-wrap {
@@ -855,21 +856,16 @@ body.offcanvas .pcc-nav-toggle {
     margin: auto;
 }
 
-.pcc-equipment .pcc-text h2,
-.pcc-equipment .pcc-text h3 {
-    margin: 2rem 0 2rem 0;
-    padding: 0;
-}
-
 .pcc-equipment .pcc-text h3 {
     font-weight: 500;
     margin-bottom: 20px;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 14px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
     line-height: inherit;
+    font-size: 16px;
+    line-height: auto;
+    color: ;
 }
 
 .pcc-equipment .pcc-text p {
@@ -879,7 +875,9 @@ body.offcanvas .pcc-nav-toggle {
 }
 .pcc-equipment a {
     cursor: pointer;
+    text-align: center;
 }
+
 @media screen and (min-width: 576px) {
     .pcc-equipment .equipment-item {
         padding: 0 1rem;
@@ -976,7 +974,7 @@ body.offcanvas .pcc-nav-toggle {
 .blog-entry {
     width: 100%;
     float: left;
-    background: #fff;
+    background: transparent;
     margin-bottom: 3em;
 }
 
@@ -1017,7 +1015,6 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 .blog-entry .desc h3 a {
-    color: #000;
     text-decoration: none;
 }
 
@@ -1025,7 +1022,6 @@ body.offcanvas .pcc-nav-toggle {
     display: block;
     margin-bottom: 20px;
     font-size: 13px;
-    color: rgba(0, 0, 0, 0.4) !important;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 400;
@@ -1065,9 +1061,8 @@ body.offcanvas .pcc-nav-toggle {
 .projects-entry {
     width: 100%;
     float: left;
-    background: #fff;
+    background: transparent;
 }
-
 
 .projects-entry .projects-img {
     width: 100%;
@@ -1099,8 +1094,7 @@ body.offcanvas .pcc-nav-toggle {
     letter-spacing: 1px;
 }
 
-.projects-entry .desc h3 a {
-    color: #000;
+.projects-entry .desc h3{
     text-decoration: none;
 }
 
@@ -1112,7 +1106,6 @@ body.offcanvas .pcc-nav-toggle {
     -o-transform: scale(1.1);
     transform: scale(1.1);
 }
-
 
 #pcc-quote {
     position: relative;
@@ -1130,7 +1123,13 @@ body.offcanvas .pcc-nav-toggle {
         -webkit-mask-position: -50%;
     }
 }
-
+.pcc-quotes {
+    background-color: #1a1a1a;
+    margin-top: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+ }
+ 
 .pcc-quotes {
     padding: 3em 0;
     background-size: cover;
@@ -1170,7 +1169,7 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 #get-in-touch {
-    padding: 3em 0 0 0;
+    padding: 5em 0 4em 0;
 }
 
 #get-in-touch .service-item {
@@ -1238,9 +1237,11 @@ body.offcanvas .pcc-nav-toggle {
 
 
 #pcc-brands {
-    padding: 4em 0 3em 0;
+    padding: 4em 0 0em 0;
 }
-
+#pcc-brands h2 { 
+    color: #000;
+}
 #pcc-brands .logo-item {
     width: 75%;
     margin-bottom: 5rem;
@@ -1309,7 +1310,7 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 .pcc-bg-color {
-    background: #f1f1f1;
+    background: #1a1a1a;
     position: relative;
 }
 
@@ -1324,7 +1325,6 @@ body.offcanvas .pcc-nav-toggle {
 .pagination li a {
     color: #000;
     background: transparent;
-    color: #000;
     margin: 2px;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -1906,14 +1906,8 @@ iframe {
 }
 .sidebar a {
     text-transform: uppercase;
+    background-color: #1a1a1a;
 
-}
-
-.pcc-quotes {
-   background-color: #f1f1f1;
-   margin-top: 30px;
-   padding: 30px;
-   margin-bottom: 30px;
 }
 
 .video-container video {
@@ -1921,7 +1915,15 @@ iframe {
     height: 100%;
     object-fit: cover;
 }
-.modal-header {
-    background-color: #eeeeee;
+.modal-header  {
+    background-color: #212529;
 }
-
+.modal-footer {
+    background-color: #212529;
+}
+.modal-body {
+    background-color: #212529;
+}
+.modal-body {
+    padding: 0 !important;
+}
