@@ -983,7 +983,11 @@ body.offcanvas .pcc-nav-toggle {
         margin-bottom: 3em;
     }
 }
-
+.quotes-blog { 
+    background-color: #1a1a1a;
+    padding: 25px;
+    margin: 25px 0 25px 0;
+}
 .blog-entry .blog-img {
     width: 100%;
     float: left;
@@ -1123,13 +1127,7 @@ body.offcanvas .pcc-nav-toggle {
         -webkit-mask-position: -50%;
     }
 }
-.pcc-quotes {
-    background-color: #1a1a1a;
-    margin-top: 30px;
-    padding: 30px;
-    margin-bottom: 30px;
- }
- 
+
 .pcc-quotes {
     padding: 3em 0;
     background-size: cover;
