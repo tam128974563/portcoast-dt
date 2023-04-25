@@ -1317,17 +1317,17 @@ body.offcanvas .pcc-nav-toggle {
 }
 
 .pagination li {
-    margin: 2px;
+    margin: 3px;
 }
 
 .pagination li a {
-    color: #000;
-    background: transparent;
-    margin: 2px;
+    color: #fff;
+    background-color: transparent;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     border-radius: 0;
+    padding: 8px 18px;
 }
 
 .pagination li a:first-child {
